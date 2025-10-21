@@ -139,7 +139,7 @@
     if (!root) return;
     root.innerHTML = '';
 
-    // Header row – quick toggles
+    // Header row - quick toggles
     const bar = document.createElement('div');
     bar.className = 'filters-bar';
 

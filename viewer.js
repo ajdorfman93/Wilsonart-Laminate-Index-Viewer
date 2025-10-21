@@ -164,7 +164,8 @@ if (lightbox) {
   lightbox.addEventListener('click', (event) => {
     const target = event.target;
     if (!target) return;
-    if (target === lightbox || target.getAttribute('data-close') === '1') {
+    const canReadAttr = typeof target.getAttribute === 'function';
+    if (target === lightbox || (canReadAttr && target.getAttribute('data-close') === '1')) {
       hideLightbox();
     }
   });
