@@ -1,4 +1,4 @@
-// wilsonart-fetch-details.js
+// wilsonart-fetch-details.js (skip-existing + aspect-match)
 // Usage:
 //   node wilsonart-fetch-details.js
 //   node wilsonart-fetch-details.js --limit=10 --offset=0 --batch=5
@@ -7,17 +7,20 @@
 // Writes: ./wilsonart-laminate-details.json
 //
 // Flow (high level):
-//   1) Navigate to each product page
-//   2) Try clicking the gallery arrow; if present, scan HTML for "FullSheet" URLs (never pick Carousel_Main)
-//      Otherwise, scan for "full_size" URLs; if chosen URL includes "banner", add crop hint (bottom=93px)
-//   3) Detect No Repeat; derive an initial "parsed" texture scale (inches) from:
-//        URL token (feet → inches)  >  No Repeat fixed 96×48  >  Bold text inches in description
-//   4) Load the final image URL in-page to get actual pixel dimensions (naturalWidth × naturalHeight)
-//   5) **NEW**: Pick the final texture_scale by comparing aspect ratios — choose whichever of
-//        (a) the parsed scale or (b) 144×60 is closer to the image pixel ratio (considering orientation)
-//   6) Batch-write the growing output JSON every N rows and on completion
+//   1) If an existing wilsonart-laminate-details.json is present, build a map by `code`.
+//      • Skip any `code` that already exists AND already has an image URL
+//        (texture_image_url | img | image_url | image). Keep the existing entry as-is.
+//      • Otherwise, (new or missing image) scrape as usual to obtain image + metadata.
+//   2) Try clicking the gallery arrow; if present, scan HTML for "FullSheet" URLs (never pick Carousel_Main).
+//      Otherwise, scan for "full_size" URLs; if chosen URL includes "banner", add crop hint (bottom=93px).
+//   3) Detect No Repeat; derive initial "parsed" texture scale (inches) from:
+//        URL token (feet → inches)  >  No Repeat fixed 96×48  >  Bold inches in description.
+//   4) Load the final image URL in-page to get actual pixel dimensions (naturalWidth × naturalHeight).
+//   5) Choose the FINAL texture_scale by aspect-ratio match between: (a) parsed scale vs (b) 144×60,
+//      picking whichever is closer to the image pixel aspect (considering orientation).
+//   6) Batch-write JSON every N rows and on completion.
 //
-// Notes: headless=false (interactive for robustness), verbose logs, never downloads images to disk
+// Notes: headless=false (interactive for robustness), verbose logs, no image downloads.
 
 "use strict";
 
@@ -72,6 +75,10 @@ function aspectDistance(candidateRatio, imageRatio) {
   if (!isFinite(candidateRatio) || !isFinite(imageRatio) || candidateRatio <= 0 || imageRatio <= 0) return Number.POSITIVE_INFINITY;
   const inv = 1 / candidateRatio;
   return Math.min(Math.abs(candidateRatio - imageRatio), Math.abs(inv - imageRatio));
+}
+
+function hasImage(obj) {
+  return !!(obj && (obj.texture_image_url || obj.img || obj.image_url || obj.image));
 }
 
 // ----------------------------- URL helpers -----------------------------
@@ -202,7 +209,6 @@ async function robustClickXPath(page, xpath, label) {
 
 // ----------------------------- URL discovery -----------------------------
 async function findFullSheetUrlsInHTML(page) {
-  // Search the raw HTML for URLs that contain 'FullSheet'
   const matches = await page.evaluate(() => {
     const html = document.documentElement.innerHTML;
     const re = /https?:\/\/[^\s"'<>\)]*FullSheet[^\s"'<>\)]*/gi;
@@ -214,7 +220,6 @@ async function findFullSheetUrlsInHTML(page) {
 }
 
 async function findFullSizeUrlsInHTML(page) {
-  // Search the raw HTML for URLs that contain 'full_size'
   const matches = await page.evaluate(() => {
     const html = document.documentElement.innerHTML;
     const re = /https?:\/\/[^\s"'<>\)]*full_size[^\s"'<>\)]*/gi;
@@ -249,15 +254,11 @@ function pickBestFullSheetUrl(urls) {
 
 function pickBestFullSizeUrl(urls) {
   if (!urls.length) return null;
-
-  // Prefer non-banner first; otherwise banner is acceptable (we'll add crop hint)
   const nonBanner = urls.filter(u => includesFullSize(u) && !looksBanner(u));
   const banner    = urls.filter(u => includesFullSize(u) && looksBanner(u));
-
   const pickFrom = nonBanner.length ? nonBanner : banner;
   if (!pickFrom.length) return null;
 
-  // Score similarly: by feet token if present; prefer _150dpi; else longer URL
   const scored = pickFrom.map(u => {
     const m = u.match(/(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)/);
     const a = m ? parseFloat(m[1]) : 0;
@@ -319,7 +320,6 @@ function selectScaleByAspect(initialScale, imagePixels) {
 
   if (!validSize(initialScale) && !validSize(fallback)) return undefined;
   if (!validSize(imagePixels)) {
-    // No image pixels → keep whatever initial was (else use fallback)
     return validSize(initialScale) ? initialScale : fallback;
   }
 
@@ -402,6 +402,22 @@ function maybeFlush(out, processedCount, force = false) {
     process.exit(1);
   }
 
+  // Load existing details (if present) and map by code
+  let existing = [];
+  try {
+    if (fs.existsSync(OUT_JSON)) {
+      const raw = JSON.parse(fs.readFileSync(OUT_JSON, "utf-8"));
+      if (Array.isArray(raw)) existing = raw; else logStep("  • Existing details file present but not an array; ignoring.");
+    }
+  } catch (e) {
+    logStep(`  • Failed reading existing details: ${e?.message || e}`);
+  }
+  const existingByCode = new Map();
+  for (const row of existing) {
+    const key = row && (row.code || row.Code || row["laminate_code"] || row["Laminate Code"]);
+    if (key) existingByCode.set(String(key), row);
+  }
+
   const items = base.filter(r => r && r["product-link"]);
   logStep(`Total records with product-link: ${items.length}`);
 
@@ -411,7 +427,7 @@ function maybeFlush(out, processedCount, force = false) {
   // Launch
   logStep("Launching Chromium…");
   const browser = await puppeteer.launch({
-    headless: false, // per your setup
+    headless: false,
     defaultViewport: { width: 1400, height: 900 },
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
@@ -426,9 +442,19 @@ function maybeFlush(out, processedCount, force = false) {
 
   for (let i = 0; i < sliced.length; i++) {
     const rec = sliced[i];
-    const url = rec["product-link"];
-    const code = rec.code || `row_${OFFSET + i}`;
+    const code = String(rec.code || `row_${OFFSET + i}`);
+    const url  = rec["product-link"];
     logStep(`\n[${i + 1}/${sliced.length}] ${code} → ${url}`);
+
+    // If exists and already has an image, skip and keep existing
+    const prior = existingByCode.get(code);
+    if (prior && hasImage(prior)) {
+      logStep("  • Skipping (already present with image)");
+      out.push(prior);
+      processed++;
+      maybeFlush(out, processed, false);
+      continue;
+    }
 
     try {
       await page.goto(url, { waitUntil: "domcontentloaded" });
@@ -461,7 +487,7 @@ function maybeFlush(out, processedCount, force = false) {
         imageUrl = pickBestFullSizeUrl(fullSizeUrls);
 
         if (imageUrl && looksBanner(imageUrl)) {
-          cropBottom = 93; // per rule
+          cropBottom = 93; // crop hint for banner
           logStep("  • 'full_size' URL contains 'banner' → will set crop bottom = 93px");
         }
       }
@@ -469,17 +495,18 @@ function maybeFlush(out, processedCount, force = false) {
       logStep(`  • Final texture image URL: ${imageUrl || "(none)"}`);
 
       // Detect No Repeat, compute initial (parsed) scale, description, and image pixel size
-      const noRepeat   = await detectNoRepeat(page);
-      const parsed     = await computeInitialScale(page, noRepeat, imageUrl);
-      const desc       = await extractDescription(page);
-      const pixels     = imageUrl ? await getImagePixels(page, imageUrl) : undefined;
+      const noRepeat = await detectNoRepeat(page);
+      const parsed   = await computeInitialScale(page, noRepeat, imageUrl);
+      const desc     = await extractDescription(page);
+      const pixels   = imageUrl ? await getImagePixels(page, imageUrl) : undefined;
       if (validSize(pixels)) logStep(`  • Image pixels: ${pixels.width} × ${pixels.height}`);
 
-      // NEW: choose final scale by aspect match between parsed vs 144×60
+      // Choose final scale by aspect match between parsed vs 144×60
       const chosenScale = selectScaleByAspect(parsed, pixels);
 
       const merged = {
         ...rec,
+        code,
         no_repeat: noRepeat,
         texture_image_url: imageUrl || undefined,
         texture_image_pixels: validSize(pixels) ? pixels : undefined,
@@ -490,22 +517,20 @@ function maybeFlush(out, processedCount, force = false) {
 
       out.push(merged);
       processed++;
-
-      // ---- BATCHED WRITE ----
-      maybeFlush(out, processed, /*force*/ false);
+      maybeFlush(out, processed, false);
 
     } catch (err) {
       logStep(`  • ERROR on ${code}: ${String(err && err.message || err).slice(0,180)}`);
-      out.push({ ...rec, _error: String(err && err.message || err) });
+      const errorRow = { ...rec, code, _error: String(err && err.message || err) };
+      out.push(errorRow);
       processed++;
-      // ---- BATCHED WRITE on error as well ----
-      maybeFlush(out, processed, /*force*/ false);
+      maybeFlush(out, processed, false);
     }
   }
 
   // Final flush (in case the last batch < BATCH_SIZE)
   if (processed % BATCH_SIZE !== 0) {
-    maybeFlush(out, processed, /*force*/ true);
+    maybeFlush(out, processed, true);
   }
 
   await browser.close();

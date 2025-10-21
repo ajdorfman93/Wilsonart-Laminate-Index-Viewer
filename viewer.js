@@ -16,6 +16,7 @@ const filtersContainer = document.getElementById('filters') || mk('#filters');
 const lightbox = ensureLightbox();
 const lightboxImg = lightbox.querySelector('.lightbox-img');
 const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
 let lightboxLastFocus = null;
 
 let rawData = [];
@@ -145,6 +146,92 @@ function renderTable() {
     return `<tr>${tds}</tr>`;
   }).join('');
   bodyRows.innerHTML = html;
+}
+
+if (bodyRows) {
+  bodyRows.addEventListener('click', (event) => {
+    const thumb = findThumb(event.target);
+    if (!thumb) return;
+    event.preventDefault();
+    const fullUrl = thumb.getAttribute('data-full');
+    const altText = thumb.getAttribute('data-alt') || '';
+    lightboxLastFocus = thumb;
+    showLightbox(fullUrl, altText);
+  });
+}
+
+if (lightbox) {
+  lightbox.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target) return;
+    if (target === lightbox || target.getAttribute('data-close') === '1') {
+      hideLightbox();
+    }
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (!lightbox.classList.contains('is-visible')) return;
+  const key = event.key || event.keyCode;
+  if (key === 'Escape' || key === 'Esc' || key === 27) {
+    hideLightbox();
+  }
+});
+
+function findThumb(node) {
+  let current = node;
+  while (current && current !== document.body) {
+    if (current.classList && current.classList.contains('thumb')) return current;
+    current = current.parentElement;
+  }
+  return null;
+}
+
+function showLightbox(url, altText) {
+  if (!lightbox) return;
+  if (!url) return;
+  if (lightboxImg) lightboxImg.setAttribute('src', url);
+  if (lightboxImg) lightboxImg.setAttribute('alt', altText || '');
+  if (lightboxCaption) lightboxCaption.textContent = altText || '';
+  lightbox.classList.add('is-visible');
+  lightbox.setAttribute('aria-hidden', 'false');
+  if (lightboxClose) {
+    lightboxClose.focus();
+  }
+}
+
+function hideLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('is-visible');
+  lightbox.setAttribute('aria-hidden', 'true');
+  if (lightboxImg) {
+    lightboxImg.removeAttribute('src');
+    lightboxImg.setAttribute('alt', '');
+  }
+  if (lightboxCaption) lightboxCaption.textContent = '';
+  if (lightboxLastFocus && typeof lightboxLastFocus.focus === 'function') {
+    lightboxLastFocus.focus();
+  }
+  lightboxLastFocus = null;
+}
+
+function ensureLightbox() {
+  let existing = document.getElementById('image-lightbox');
+  if (existing) return existing;
+  const wrapper = document.createElement('div');
+  wrapper.id = 'image-lightbox';
+  wrapper.className = 'lightbox';
+  wrapper.setAttribute('aria-hidden', 'true');
+  wrapper.innerHTML = [
+    '<div class="lightbox-backdrop" data-close="1"></div>',
+    '<figure class="lightbox-inner" role="dialog" aria-modal="true">',
+    '  <button type="button" class="lightbox-close" data-close="1" aria-label="Close full-size image">&times;</button>',
+    '  <img class="lightbox-img" alt="" />',
+    '  <figcaption class="lightbox-caption"></figcaption>',
+    '</figure>'
+  ].join('');
+  document.body.appendChild(wrapper);
+  return wrapper;
 }
 
 // file picker support (load arbitrary JSON)

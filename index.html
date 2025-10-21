@@ -36,6 +36,7 @@
       padding: 14px 16px;
       background: rgba(18, 20, 26, .75);
       backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--border);
       position: sticky; top: 0; z-index: 10;
     }
@@ -107,7 +108,7 @@
     }
     .facet > summary::-webkit-details-marker { display: none; }
     .facet > summary::after {
-      content: '▾'; position: absolute; right: 12px; color: var(--muted);
+      content: '\\25bc'; position: absolute; right: 12px; color: var(--muted);
       transition: transform .2s ease;
     }
     .facet[open] > summary::after { transform: rotate(180deg); }
