@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Wilsonart Laminate Index — Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="header-left">
+      <h1>Wilsonart Laminate Index — Viewer</h1>
+      <span id="status" class="hint">Waiting to load data…</span>
+    </div>
+    </div>
+    <div class="controls right">
+      <input id="q" type="text" placeholder="Filter (code, name, color, finish, …)" />
+      <label class="btn" for="file">Load JSON…</label>
+      <input id="file" type="file" accept=".json,application/json" hidden />
+      <button id="reload">Reload default</button>
+    </div>
+  </header>
+
+  <div class="hint">Default source: <code>wilsonart-laminate-index.json</code> (same folder as this HTML). Use a local HTTP server to avoid browser file restrictions.</div>
+
+  <table id="grid" aria-label="Laminate Data">
+    <thead>
+      <tr id="head-row"></tr>
+    </thead>
+    <tbody id="body-rows"></tbody>
+  </table>
+
+  <script src="./viewer.js"></script>
+</body>
+</html>

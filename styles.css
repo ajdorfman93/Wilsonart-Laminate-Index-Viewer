@@ -1,0 +1,23 @@
+    :root { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+    body { margin: 24px; color: #111; background: #fff; }
+    header { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+    h1 { font-size: 20px; margin: 0 16px 0 0; }
+    .hint { color: #555; font-size: 14px; }
+    .controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    input[type="text"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 8px; min-width: 260px; }
+    button, .btn {
+      padding: 8px 12px; border: 1px solid #ccc; border-radius: 8px; background: #f7f7f7; cursor: pointer;
+    }
+    button:hover, .btn:hover { background: #eee; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; font-weight: 600; }
+    tbody td { border-bottom: 1px solid #eee; padding: 8px 10px; vertical-align: top; }
+    .nowrap { white-space: nowrap; }
+    .muted { color: #666; }
+    .pill { display: inline-block; padding: 2px 8px; margin: 2px 4px 2px 0; border-radius: 999px; background: #f1f1f1; font-size: 12px; }
+    .count { font-weight: 600; }
+    .link { color: #0b62d6; text-decoration: none; }
+    .link:hover { text-decoration: underline; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .right { margin-left: auto; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
