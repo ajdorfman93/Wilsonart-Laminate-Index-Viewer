@@ -13,6 +13,10 @@ const reloadEl = document.getElementById('reload') || mk('#reload', 'button');
 const headRow = document.getElementById('head-row') || mk('#head-row', 'tr');
 const bodyRows = document.getElementById('body-rows') || mk('#body-rows', 'tbody');
 const filtersContainer = document.getElementById('filters') || mk('#filters');
+const lightbox = ensureLightbox();
+const lightboxImg = lightbox.querySelector('.lightbox-img');
+const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+let lightboxLastFocus = null;
 
 let rawData = [];
 let visible = [];
@@ -93,7 +97,7 @@ function renderImage(row) {
       loading="lazy"
       referrerpolicy="no-referrer"
       style="max-width:140px; max-height:120px; object-fit:contain; border-radius:8px; box-shadow:0 0 0 1px rgba(0,0,0,.06);" />`;
-  return `<a href="${escapeAttr(url)}" target="_blank" rel="noopener">${img}</a>`;
+  return `<button type="button" class="thumb" data-full="${escapeAttr(url)}" data-alt="${escapeAttr(alt)}" aria-label="View ${escapeAttr(alt)} full size">${img}</button>`;
 }
 
 function setStatus(msg) {
