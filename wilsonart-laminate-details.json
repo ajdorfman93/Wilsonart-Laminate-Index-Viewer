@@ -2137,5 +2137,425 @@
       "height": 37.01
     },
     "description": "Hematite is a grey color that is similar to its stone namesake. This is an abstract pattern that gives the illusion of a solid in an organic grid pattern."
+  },
+  {
+    "code": "Y0504",
+    "surface-group": "Laminate",
+    "name": "Night",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/night-y0504",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/92e14e52-749f-4f87-818b-93971c45b15d/Y0504-Night",
+    "texture_scale": {
+      "width": 62.205,
+      "height": 37.01
+    },
+    "description": "Night is an abstracted organic grid pattern in a charcoal grey optical solid."
+  },
+  {
+    "code": "Y0503",
+    "surface-group": "Laminate",
+    "name": "Twilight",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/twilight-y0503",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/946d72fb-47fe-4ce4-bd85-89c6ef59ebb4/Y0503-Twilight",
+    "texture_scale": {
+      "width": 62.205,
+      "height": 37.01
+    },
+    "description": "Twilight is a light dusky blue optical solid pattern. The pattern is made up of a small organic grid."
+  },
+  {
+    "code": "Y0565",
+    "surface-group": "Laminate",
+    "name": "Indigo Kilim",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/indigo-kilim-y0565",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8e4501eb-d2b6-4fa6-8dcc-7cddf1f543c4/Y0565-Indigo-Kilim",
+    "texture_scale": {
+      "width": 62,
+      "height": 37
+    },
+    "description": "Indigo Kilim is a beautiful medium scale design inspired by Kilim rugs. This pattern is given a modern feel with monochromatic indigo blues and a time worn look."
+  },
+  {
+    "code": "Y0564",
+    "surface-group": "Laminate",
+    "name": "Baltic Blue Ikat",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/baltic-blue-ikat-y0564",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ced1dbf6-dd93-4bac-820f-2553d5f5f34f/Y0564-Baltic-Blue-Ikat",
+    "texture_scale": {
+      "width": 62,
+      "height": 31.02
+    },
+    "description": "Baltic Blue Ikat is a stunning cobalt blue large scale cheveron pattern. This design was inspired by the Ikat weaveing tradition."
+  },
+  {
+    "code": "Y0563",
+    "surface-group": "Laminate",
+    "name": "Fog Ikat",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/fog-ikat-y0563",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e832f7c2-bd25-4bf3-85d9-806b37cb2323/Y0563-Fog-Ikat",
+    "texture_scale": {
+      "width": 62,
+      "height": 31.02
+    },
+    "description": "Fog Ikat is a large scale warm mid-tone grey pattern. This chevron pattern is  inspired by Ikats from Central Asia."
+  },
+  {
+    "code": "Y0562",
+    "surface-group": "Laminate",
+    "name": "Shadow Ikat",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/shadow-ikat-y0562",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/411aa5d8-140e-4ad3-8cfb-bfd062562f3a/Y0562-Shadow-Ikat",
+    "texture_scale": {
+      "width": 62,
+      "height": 31.02
+    },
+    "description": "Shadow Ikat is a dark charcoal large scale chevron pattern in a woven Ikat stye."
+  },
+  {
+    "code": "Y0543",
+    "surface-group": "Laminate",
+    "name": "Carbon Cloth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carbon-cloth-y0543",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cdce3fae-5c4b-432f-bbc2-7393491b80dc/Y0543-Carbon-Cloth-5x12",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Carbon Cloth is a graphite grey woven pattern."
+  },
+  {
+    "code": "Y0513",
+    "surface-group": "Laminate",
+    "name": "Tweedish",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tweedish-y0513",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Red"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/29725241-02b8-47c3-bfae-0d1137dcd785/Y0513-Tweedish-full-rep",
+    "texture_scale": {
+      "width": 11.811,
+      "height": 15.75
+    }
+  },
+  {
+    "code": "Y0499",
+    "surface-group": "Laminate",
+    "name": "Denim",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/denim-y0499",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4cb080d1-2590-4bb8-a150-fc53017deddc/Y0499-Denim-5x12",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Denim is a textural overlapping pattern in the color of blue denim."
+  },
+  {
+    "code": "Y0437",
+    "surface-group": "Laminate",
+    "name": "Primrose Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/primrose-boucle-y0437",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Red"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b0ef17f6-97ce-4b58-9d7e-4ca66fb08b76/Y0437-Primrose-Boucle-5x12-2-1-21",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Primrose Boucle is a pale pink that can be used as a wonderful neutral in any environment. The small scale pattern is made by a woven boucle texture."
+  },
+  {
+    "code": "Y0436",
+    "surface-group": "Laminate",
+    "name": "Flint Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flint-boucle-y0436",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/83e72295-976e-4ebd-a390-93f6476334a6/Y0436-Flint-Boucle-5x12",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Flint Boucle, is a midtone cool grey made from a thick woven boucle fabric. This small scale pattern is a wonderful neural grey."
+  },
+  {
+    "code": "Y0435",
+    "surface-group": "Laminate",
+    "name": "Aloe Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/aloe-boucle-y0435",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/95134c01-4f32-4876-bccc-c7abadf56a43/Y0435-Aloe-Boucle-5X12",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Aloe Boucle, a muted soft green will add a level of sophistication wherever it is used. The pattern is made up of a heavily textured boucle."
+  },
+  {
+    "code": "Y0434",
+    "surface-group": "Laminate",
+    "name": "Tangerine Boucle",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6116/s/tangerine-boucle-y0434/category/53/",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Orange"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6b8776f8-18fc-484a-ba72-ffd9ad20f78d/Y0434-Tangerine-Boucle-5x12",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "4992",
+    "surface-group": "Laminate",
+    "name": "Tailored Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tailored-linen-4992",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      }
+    ],
+    "performace_enchancments": [
+      "Chemical Resistant"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b6dae520-e3a5-42e2-a6d2-1278ecc3289a/4992-Tailored-Linen",
+    "texture_scale": {
+      "width": 49.75,
+      "height": 61.67
+    },
+    "description": "Tailored Linen is a refined dusty blue linen look."
+  },
+  {
+    "code": "4991",
+    "surface-group": "Laminate",
+    "name": "Pressed Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-linen-4991",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      }
+    ],
+    "performace_enchancments": [
+      "Chemical Resistant"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fb8e69de-f690-4d0a-a534-52e6ec267b55/4991-Pressed-Linen_150dpi",
+    "texture_scale": {
+      "width": 49.75,
+      "height": 61.67
+    },
+    "description": "Pressed Linen is a sophisticated woven look in cool silver tones."
   }
 ]
