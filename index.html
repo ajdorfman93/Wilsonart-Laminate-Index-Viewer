@@ -1,34 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Wilsonart Laminate Index — Viewer</title>
+  <title>Wilsonart Laminate Viewer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --panel: #12141a;
+      --muted: #9aa3af;
+      --text: #e5e7eb;
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --border: #232632;
+      --green: #86efac;
+      --red: #fda4af;
+      --pill-bg: #1b1f2a;
+      --shadow: 0 6px 18px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      background: linear-gradient(180deg, #0b0c0f, #0a0b10 40%, #0b0d14);
+      color: var(--text);
+      font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    }
+    .app {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+    }
+    .toolbar {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      align-items: center;
+      padding: 14px 16px;
+      background: rgba(18, 20, 26, .75);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .toolbar .grow { flex: 1; }
+    input[type="search"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0f1219;
+      color: var(--text);
+      outline: none;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+    }
+    input[type="file"], button {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+    button {
+      cursor: pointer;
+      transition: transform .05s ease, background .2s ease;
+    }
+    button:hover { background: #171a23; }
+    button:active { transform: translateY(1px); }
+    #status { color: var(--muted); font-size: 12px; margin-left: auto; white-space: nowrap; }
+    #status .count { color: var(--accent); font-feature-settings: "tnum"; }
+
+    .content {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 0;
+      min-height: 0;
+    }
+    /* Filters panel */
+    #filters {
+      min-width: 260px;
+      max-width: 360px;
+      padding: 14px;
+      border-right: 1px solid var(--border);
+      overflow: auto;
+      background: linear-gradient(180deg, #0f1219, #0f1219 60%, #0e1118);
+    }
+    .filters-bar {
+      display: flex; gap: 10px; align-items: center;
+      margin-bottom: 8px; padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .filters-toggle input { vertical-align: middle; }
+    .filters-toggle span { margin-left: 6px; color: var(--muted); }
+    .filters-groups { display: grid; gap: 10px; }
+    .facet {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #0f1219;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .facet > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      background: #10131a;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .facet > summary::-webkit-details-marker { display: none; }
+    .facet > summary::after {
+      content: '▾'; position: absolute; right: 12px; color: var(--muted);
+      transition: transform .2s ease;
+    }
+    .facet[open] > summary::after { transform: rotate(180deg); }
+    .facet-body { padding: 10px 12px; max-height: 260px; overflow: auto; }
+    .facet-row {
+      display: flex; align-items: center; gap: 8px;
+      padding: 6px 2px; color: var(--text);
+    }
+    .facet-row input { accent-color: var(--accent-2); }
+    .facet-val { color: #e8ebf3; }
+    .facet-count { color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; }
+
+    /* Table */
+    .grid-wrap { overflow: auto; }
+    table.grid {
+      width: 100%; border-collapse: collapse; min-width: 920px;
+    }
+    table.grid thead th {
+      position: sticky; top: 0; z-index: 5;
+      background: #0e1118;
+      border-bottom: 1px solid var(--border);
+      text-align: left; font-weight: 700;
+      padding: 10px 10px;
+    }
+    table.grid tbody td {
+      padding: 10px; vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    .pill {
+      display: inline-block; padding: 3px 8px; margin: 2px 4px 2px 0;
+      font-size: 12px; border-radius: 999px;
+      background: var(--pill-bg); color: #d9e0ee;
+      border: 1px solid #222638;
+    }
+    a.link { color: var(--accent); text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+    img { image-rendering: -webkit-optimize-contrast; }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .content { grid-template-columns: 1fr; }
+      #filters { max-height: 40vh; border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
 </head>
 <body>
-    <div class="header-left">
-      <h1>Wilsonart Laminate Index — Viewer</h1>
-      <span id="status" class="hint">Waiting to load data…</span>
+  <div class="app">
+    <div class="toolbar">
+      <div class="grow">
+        <input id="q" type="search" placeholder="Search code, name, color, finish, collection…" />
+      </div>
+      <input id="file" type="file" accept="application/json" title="Load a different JSON file" />
+      <button id="reload" type="button" title="Reset filters & search">Reset</button>
+      <span id="status">Loading…</span>
     </div>
+
+    <div class="content">
+      <aside id="filters"></aside>
+
+      <main class="grid-wrap">
+        <table class="grid" role="table" aria-label="Laminate Results">
+          <thead>
+            <tr id="head-row"></tr>
+          </thead>
+          <tbody id="body-rows"></tbody>
+        </table>
+      </main>
     </div>
-    <div class="controls right">
-      <input id="q" type="text" placeholder="Filter (code, name, color, finish, …)" />
-      <label class="btn" for="file">Load JSON…</label>
-      <input id="file" type="file" accept=".json,application/json" hidden />
-      <button id="reload">Reload default</button>
-    </div>
-  </header>
+  </div>
 
-  <div class="hint">Default source: <code>wilsonart-laminate-index.json</code> (same folder as this HTML). Use a local HTTP server to avoid browser file restrictions.</div>
+  <noscript>Please enable JavaScript to view this page.</noscript>
 
-  <table id="grid" aria-label="Laminate Data">
-    <thead>
-      <tr id="head-row"></tr>
-    </thead>
-    <tbody id="body-rows"></tbody>
-  </table>
-
+  <!-- Scripts: filters first, then viewer -->
+  <script src="./filters.js"></script>
   <script src="./viewer.js"></script>
 </body>
 </html>
