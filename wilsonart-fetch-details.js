@@ -1,4 +1,4 @@
-// wilsonart-fetch-details.js (skip-existing + aspect-match)
+// wilsonart-fetch-details.js (ratio rules + overwrite-all texture_scale + incremental add)
 // Usage:
 //   node wilsonart-fetch-details.js
 //   node wilsonart-fetch-details.js --limit=10 --offset=0 --batch=5
@@ -6,21 +6,26 @@
 // Reads : ./wilsonart-laminate-index.json
 // Writes: ./wilsonart-laminate-details.json
 //
-// Flow (high level):
-//   1) If an existing wilsonart-laminate-details.json is present, build a map by `code`.
-//      • Skip any `code` that already exists AND already has an image URL
-//        (texture_image_url | img | image_url | image). Keep the existing entry as-is.
-//      • Otherwise, (new or missing image) scrape as usual to obtain image + metadata.
-//   2) Try clicking the gallery arrow; if present, scan HTML for "FullSheet" URLs (never pick Carousel_Main).
-//      Otherwise, scan for "full_size" URLs; if chosen URL includes "banner", add crop hint (bottom=93px).
-//   3) Detect No Repeat; derive initial "parsed" texture scale (inches) from:
-//        URL token (feet → inches)  >  No Repeat fixed 96×48  >  Bold inches in description.
-//   4) Load the final image URL in-page to get actual pixel dimensions (naturalWidth × naturalHeight).
-//   5) Choose the FINAL texture_scale by aspect-ratio match between: (a) parsed scale vs (b) 144×60,
-//      picking whichever is closer to the image pixel aspect (considering orientation).
-//   6) Batch-write JSON every N rows and on completion.
+// Summary of rules:
+//   • Always overwrite texture_scale for every code.
+//   • Only add new data for missing fields (preserve existing fields where present).
+//   • If a code already exists, reuse its data; scrape only when needed (e.g., missing image URL).
+//   • texture_image_pixels are (re)computed if missing.
 //
-// Notes: headless=false (interactive for robustness), verbose logs, no image downloads.
+// Ratio/URL rules for deciding FINAL texture_scale:
+//   Terms: R(img)=texture_image_pixels.width/height (if available), R(cur)=ratio of current texture_scale
+//          R(parsed)=ratio of parsed scale (from URL feet→inches; else bold inches; else No Repeat 96×48)
+//          URL feet token (e.g. 4x8, 5x12, 5x8, …) → INCHES with width=max*12 and height=min*12
+//
+//   1) If URL includes a feet token AND R(img) ≈ R(cur), set texture_scale to the INCHES version of that token
+//      (e.g., 4x8 → 96×48; 5x12 → 144×60; 5x8 → 96×60). (Orientation uses max→width.)
+//   2) If URL includes a feet token but R(img) !≈ R(cur), then if R(cur) ≈ R(parsed), set texture_scale = parsed scale.
+//   3) If URL does NOT include a feet token and R(img) ≈ R(cur), leave texture_scale as-is.
+//   4) If URL does NOT include a feet token and R(cur) ≈ R(parsed), set texture_scale = parsed scale.
+//   5) If product is No Repeat and none of the above picked a size OR the image ratio does not match any feet token
+//      in the URL, set texture_scale by assuming WIDTH=60 inches and HEIGHT = 60 / R(img). (Keep width=60.)
+//
+// Notes: headless=false (interactive where needed), verbose logs, no image file downloads.
 
 "use strict";
 
@@ -52,6 +57,7 @@ const BATCH_SIZE = parseInt(
     "5",
   10
 );
+const MAX_FETCH_ATTEMPTS = 3;
 
 // ----------------------------- Logging / Utils -----------------------------
 function logStep(msg, extra) {
@@ -61,25 +67,26 @@ function logStep(msg, extra) {
 }
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-function validSize(obj) {
-  return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0;
+function validSize(obj) { return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0; }
+function ratioOf(obj)   { return validSize(obj) ? (obj.width / obj.height) : undefined; }
+function approxEq(a, b, tol = 0.02) {
+  if (!isFinite(a) || !isFinite(b) || a <= 0 || b <= 0) return false;
+  return Math.abs(a - b) <= tol; // strict “same ratio” notion
 }
 
-function aspect(obj) {
-  if (!validSize(obj)) return undefined;
-  return obj.width / obj.height;
+// Prefer width to be the larger side
+function orientMaxAsWidth(s) {
+  if (!validSize(s)) return s;
+  return (s.width >= s.height) ? { width: +s.width, height: +s.height } : { width: +s.height, height: +s.width };
 }
 
-function aspectDistance(candidateRatio, imageRatio) {
-  // Consider both orientations: r and 1/r (swapped W×H)
-  if (!isFinite(candidateRatio) || !isFinite(imageRatio) || candidateRatio <= 0 || imageRatio <= 0) return Number.POSITIVE_INFINITY;
-  const inv = 1 / candidateRatio;
-  return Math.min(Math.abs(candidateRatio - imageRatio), Math.abs(inv - imageRatio));
-}
-
-function hasImage(obj) {
-  return !!(obj && (obj.texture_image_url || obj.img || obj.image_url || obj.image));
-}
+const pickImageUrl = (row) => {
+  if (!row) return undefined;
+  return row.texture_image_url || row.img || row.image_url || row.image || undefined;
+};
+const hasString = (val) => typeof val === "string" && val.trim().length > 0;
+const hasImageData = (row) => hasString(pickImageUrl(row));
+const hasDescriptionData = (row) => hasString(row?.description);
 
 // ----------------------------- URL helpers -----------------------------
 const hasFullSheet     = (u) => !!u && /FullSheet/i.test(u);
@@ -87,7 +94,7 @@ const hasCarouselMain  = (u) => !!u && /Carousel_Main/i.test(u);
 const looksBanner      = (u) => !!u && /banner/i.test(u);
 const includesFullSize = (u) => !!u && /full_size/i.test(u);
 
-// Feet token in URL → inches (e.g. "-5x12_150dpi" => { width: 144, height: 60 })
+// Parse the FIRST feet token in URL → inches (width=max*12, height=min*12)
 function parseUrlFeetSize(url) {
   if (!url) return undefined;
   const m = url.match(/(^|[^A-Za-z0-9])(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)(?![A-Za-z0-9])/);
@@ -95,9 +102,9 @@ function parseUrlFeetSize(url) {
   const a = parseFloat(m[2]);
   const b = parseFloat(m[3]);
   if (!isFinite(a) || !isFinite(b)) return undefined;
-  const max = Math.max(a, b);
-  const min = Math.min(a, b);
-  return { width: max * 12, height: min * 12 };
+  const W = Math.max(a, b) * 12;
+  const H = Math.min(a, b) * 12;
+  return { width: W, height: H };
 }
 
 // ----------------------------- Selectors / XPaths -----------------------------
@@ -118,7 +125,6 @@ async function waitForMain(page) {
   await sleep(150);
   logStep("  • waitForSettled: done");
 }
-
 async function waitForXPathPresence(page, xpath, timeout = 8000, poll = 150) {
   return page
     .waitForFunction(
@@ -160,11 +166,9 @@ async function robustClickXPath(page, xpath, label) {
         await page.mouse.down();
         await page.mouse.up();
         logStep(`  • ${label}: clicked inner arrow at ${cx},${cy}`);
-        await sleep(2000); // required pause
+        await sleep(2000);
         return true;
-      } catch (e) {
-        logStep(`  • ${label}: inner mouse click failed: ${e.message || e}`);
-      }
+      } catch (e) { logStep(`  • ${label}: inner mouse click failed: ${e.message || e}`); }
     }
 
     // 2) Mouse click main element center
@@ -176,11 +180,9 @@ async function robustClickXPath(page, xpath, label) {
         await page.mouse.down();
         await page.mouse.up();
         logStep(`  • ${label}: clicked main box at ${cx},${cy}`);
-        await sleep(2000); // required pause
+        await sleep(2000);
         return true;
-      } catch (e) {
-        logStep(`  • ${label}: main mouse click failed: ${e.message || e}`);
-      }
+      } catch (e) { logStep(`  • ${label}: main mouse click failed: ${e.message || e}`); }
     }
 
     // 3) JS click fallback
@@ -194,12 +196,7 @@ async function robustClickXPath(page, xpath, label) {
       return el.dispatchEvent(evt);
     }, xpath).catch(() => false);
 
-    if (ok) {
-      logStep(`  • ${label}: JS click dispatched`);
-      await sleep(2000); // required pause
-      return true;
-    }
-
+    if (ok) { logStep(`  • ${label}: JS click dispatched`); await sleep(2000); return true; }
     await sleep(200);
   }
 
@@ -218,7 +215,6 @@ async function findFullSheetUrlsInHTML(page) {
   }).catch(() => []);
   return matches || [];
 }
-
 async function findFullSizeUrlsInHTML(page) {
   const matches = await page.evaluate(() => {
     const html = document.documentElement.innerHTML;
@@ -234,7 +230,6 @@ function pickBestFullSheetUrl(urls) {
   if (!urls.length) return null;
   const cands = urls.filter(u => hasFullSheet(u) && !hasCarouselMain(u));
   if (!cands.length) return null;
-
   const scored = cands.map(u => {
     const m = u.match(/(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)/);
     const a = m ? parseFloat(m[1]) : 0;
@@ -243,22 +238,15 @@ function pickBestFullSheetUrl(urls) {
     const has150dpi = /150dpi/i.test(u) ? 1 : 0;
     return { u, areaFeet, has150dpi, len: u.length };
   });
-
-  scored.sort((A, B) => (
-    (B.areaFeet - A.areaFeet) ||
-    (B.has150dpi - A.has150dpi) ||
-    (B.len - A.len)
-  ));
+  scored.sort((A, B) => ((B.areaFeet - A.areaFeet) || (B.has150dpi - A.has150dpi) || (B.len - A.len)));
   return scored[0].u;
 }
-
 function pickBestFullSizeUrl(urls) {
   if (!urls.length) return null;
   const nonBanner = urls.filter(u => includesFullSize(u) && !looksBanner(u));
   const banner    = urls.filter(u => includesFullSize(u) && looksBanner(u));
   const pickFrom = nonBanner.length ? nonBanner : banner;
   if (!pickFrom.length) return null;
-
   const scored = pickFrom.map(u => {
     const m = u.match(/(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)/);
     const a = m ? parseFloat(m[1]) : 0;
@@ -267,12 +255,7 @@ function pickBestFullSizeUrl(urls) {
     const has150dpi = /150dpi/i.test(u) ? 1 : 0;
     return { u, areaFeet, has150dpi, len: u.length };
   });
-
-  scored.sort((A, B) => (
-    (B.areaFeet - A.areaFeet) ||
-    (B.has150dpi - A.has150dpi) ||
-    (B.len - A.len)
-  ));
+  scored.sort((A, B) => ((B.areaFeet - A.areaFeet) || (B.has150dpi - A.has150dpi) || (B.len - A.len)));
   return scored[0].u;
 }
 
@@ -280,77 +263,35 @@ function pickBestFullSizeUrl(urls) {
 async function detectNoRepeat(page) {
   logStep("  • Checking 'No Repeat'…");
   const exact = await page.$eval(SEL_NO_REPEAT_B, el => (el.textContent || "").trim().toLowerCase()).catch(() => null);
-  if (exact && exact.includes("no repeat")) {
-    logStep("  • No Repeat? YES");
-    return true;
-  }
+  if (exact && exact.includes("no repeat")) { logStep("  • No Repeat? YES"); return true; }
   const list = await page.$$eval(".qkView_description b", ns => ns.map(n => (n.textContent || "").trim().toLowerCase())).catch(() => []);
   const found = list.some(t => t.includes("no repeat"));
   logStep(`  • No Repeat? ${found ? "YES (fallback)" : "NO"}`);
   return found;
 }
 
-async function computeInitialScale(page, isNoRepeat, imageUrl) {
-  // 1) URL token override wins (feet → inches)
-  const token = parseUrlFeetSize(imageUrl || "");
-  if (token) { logStep(`  • URL token override → ${token.width} × ${token.height} in`); return token; }
-
-  // 2) No Repeat fixed size
-  if (isNoRepeat) { logStep("  • No Repeat → fixed 96 × 48 in"); return { width: 96, height: 48 }; }
-
-  // 3) Parse bold inches like: 62.205" X 49.213"
-  logStep("  • Parsing bold WxH inches…");
-  const bold = await page.$eval(SEL_REPEAT_BOLD, el => (el.textContent || "").trim()).catch(() => null);
+// Parsed scale (priority): URL feet→inches  >  No Repeat 96×48  >  bold inches
+async function computeParsedScale(page, isNoRepeat, imageUrl) {
+  const urlFeet = parseUrlFeetSize(imageUrl || "");
+  if (validSize(urlFeet)) { logStep(`  • Parsed (URL feet→in): ${urlFeet.width}×${urlFeet.height}`); return orientMaxAsWidth(urlFeet); }
+  if (isNoRepeat)         { logStep("  • Parsed (No Repeat default): 96×48"); return { width: 96, height: 48 }; }
+  // Bold inches (best effort)
+  const bold = await page?.$eval?.(SEL_REPEAT_BOLD, el => (el.textContent || "").trim()).catch(() => null);
   if (bold) {
     const m = bold.match(/(\d+(?:\.\d+)?)\s*"?\s*[x×]\s*(\d+(?:\.\d+)?)\s*"?/i);
     if (m) {
-      const scale = { width: parseFloat(m[1]), height: parseFloat(m[2]) };
-      logStep(`  • Parsed scale: ${scale.width} × ${scale.height} in`);
-      return scale;
+      const s = { width: parseFloat(m[1]), height: parseFloat(m[2]) };
+      if (validSize(s)) { logStep(`  • Parsed (bold inches): ${s.width}×${s.height}`); return orientMaxAsWidth(s); }
     }
-    logStep("  • Bold present but unparsable.");
-  } else {
-    logStep("  • Bold not found.");
   }
   return undefined;
 }
 
-function selectScaleByAspect(initialScale, imagePixels) {
-  const fallback = { width: 144, height: 60 }; // 12' × 5' (inches)
-
-  if (!validSize(initialScale) && !validSize(fallback)) return undefined;
-  if (!validSize(imagePixels)) {
-    return validSize(initialScale) ? initialScale : fallback;
-  }
-
-  const imgR = aspect(imagePixels);
-  const candidates = [
-    { name: "parsed",   ord: 0, scale: initialScale, r: aspect(initialScale) },
-    { name: "144x60",   ord: 1, scale: fallback,     r: aspect(fallback) },
-  ].filter(c => isFinite(c.r) && c.r > 0);
-
-  if (!candidates.length) return fallback;
-
-  const ranked = candidates
-    .map(c => ({ ...c, d: aspectDistance(c.r, imgR) }))
-    .sort((a, b) => (a.d - b.d) || (a.ord - b.ord)); // tie-breaker: prefer parsed
-
-  const top = ranked[0];
-  logStep(`  • Aspect match → imgR=${imgR?.toFixed(4)} parsedR=${(candidates[0]?.r)?.toFixed?.(4)} fallbackR=${(candidates[1]?.r)?.toFixed?.(4)} → choose ${top.name}`);
-  return top.scale;
-}
-
 async function extractDescription(page) {
-  logStep("  • Extracting description…");
   const exact = await page.$eval(SEL_DESC_P2, el => (el.textContent || "").trim()).catch(() => null);
-  if (exact) {
-    logStep("  • Description found");
-    return exact;
-  }
+  if (exact) return exact;
   const list = await page.$$eval(".qkView_description p", ps => ps.map(p => (p.textContent || "").trim())).catch(() => []);
-  const text = list[1] || list[0] || null;
-  logStep(`  • Fallback description ${text ? "found" : "missing"}`);
-  return text || undefined;
+  return (list[1] || list[0] || undefined);
 }
 
 // -------------------------- Actual pixel size reader --------------------------
@@ -367,16 +308,64 @@ async function getImagePixels(page, url, timeoutMs = 15000) {
           img.onload = () => { clearTimeout(t); finish({ width: img.naturalWidth || 0, height: img.naturalHeight || 0 }); };
           img.onerror = () => { clearTimeout(t); finish(undefined); };
           img.src = src;
-        } catch {
-          resolve(undefined);
-        }
+        } catch { resolve(undefined); }
       });
     }, url, timeoutMs);
-    if (res && (res.width > 0 || res.height > 0)) return res;
-    return undefined;
-  } catch {
-    return undefined;
+    return (res && (res.width > 0 || res.height > 0)) ? res : undefined;
+  } catch { return undefined; }
+}
+
+// ----------------------------- Decision: FINAL texture_scale -----------------------------
+function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat }) {
+  const urlFeet = parseUrlFeetSize(imageUrl || ""); // inches w=max*12
+  const urlFeetOriented = orientMaxAsWidth(urlFeet || {});
+  const Rimg    = ratioOf(pixels);
+  const Rcur    = ratioOf(currentScale);
+  const Rparsed = ratioOf(parsedScale);
+
+  // Helper: set to URL feet inches
+  const useUrlInches = () => (validSize(urlFeetOriented) ? urlFeetOriented : undefined);
+
+  // 1) URL token present + R(img) ≈ R(cur) → use URL inches
+  if (validSize(urlFeetOriented) && approxEq(Rimg, Rcur)) {
+    const s = useUrlInches();
+    if (s) { logStep(`  • Rule#1: URL feet & R(img)≈R(cur) → ${s.width}×${s.height}`); return s; }
   }
+
+  // 2) URL token present + R(img) !≈ R(cur) + R(cur) ≈ R(parsed) → use parsed scale
+  if (validSize(urlFeetOriented) && !approxEq(Rimg, Rcur) && approxEq(Rcur, Rparsed) && validSize(parsedScale)) {
+    const s = orientMaxAsWidth(parsedScale);
+    logStep(`  • Rule#2: URL feet & R(cur)≈R(parsed) (but not img) → ${s.width}×${s.height}`);
+    return s;
+  }
+
+  // 3) No URL token + R(img) ≈ R(cur) → keep current
+  if (!validSize(urlFeetOriented) && approxEq(Rimg, Rcur) && validSize(currentScale)) {
+    const s = orientMaxAsWidth(currentScale);
+    logStep(`  • Rule#3: no URL feet & R(img)≈R(cur) → keep ${s.width}×${s.height}`);
+    return s;
+  }
+
+  // 4) No URL token + R(cur) ≈ R(parsed) → parsed
+  if (!validSize(urlFeetOriented) && approxEq(Rcur, Rparsed) && validSize(parsedScale)) {
+    const s = orientMaxAsWidth(parsedScale);
+    logStep(`  • Rule#4: no URL feet & R(cur)≈R(parsed) → ${s.width}×${s.height}`);
+    return s;
+  }
+
+  // 5) No Repeat fallback (width=60, height=60/Rimg) when no match to URL feet or none present
+  if (noRepeat && isFinite(Rimg) && Rimg > 0) {
+    const s = { width: 60, height: +(60 / Rimg).toFixed(3) };
+    logStep(`  • Rule#5: No Repeat fallback using image ratio → ${s.width}×${s.height}`);
+    return s;
+  }
+
+  // Fallbacks
+  if (validSize(parsedScale)) { const s = orientMaxAsWidth(parsedScale); logStep(`  • Fallback: parsed → ${s.width}×${s.height}`); return s; }
+  if (validSize(currentScale)) { const s = orientMaxAsWidth(currentScale); logStep(`  • Fallback: current → ${s.width}×${s.height}`); return s; }
+  if (validSize(urlFeetOriented)) { const s = urlFeetOriented; logStep(`  • Fallback: url feet → ${s.width}×${s.height}`); return s; }
+  logStep("  • Fallback: default 96×48");
+  return { width: 96, height: 48 };
 }
 
 // ----------------------------- Batched writer -----------------------------
@@ -392,26 +381,18 @@ function maybeFlush(out, processedCount, force = false) {
 // ----------------------------- Main -----------------------------
 (async () => {
   // Load index
-  if (!fs.existsSync(INDEX_JSON)) {
-    console.error(`Index JSON not found at ${INDEX_JSON}`);
-    process.exit(1);
-  }
+  if (!fs.existsSync(INDEX_JSON)) { console.error(`Index JSON not found at ${INDEX_JSON}`); process.exit(1); }
   const base = JSON.parse(fs.readFileSync(INDEX_JSON, "utf-8"));
-  if (!Array.isArray(base)) {
-    console.error(`Index JSON must be an array.`);
-    process.exit(1);
-  }
+  if (!Array.isArray(base)) { console.error(`Index JSON must be an array.`); process.exit(1); }
 
-  // Load existing details (if present) and map by code
+  // Load existing details (if any), map by code
   let existing = [];
   try {
     if (fs.existsSync(OUT_JSON)) {
       const raw = JSON.parse(fs.readFileSync(OUT_JSON, "utf-8"));
-      if (Array.isArray(raw)) existing = raw; else logStep("  • Existing details file present but not an array; ignoring.");
+      if (Array.isArray(raw)) existing = raw; else logStep("  • Existing details present but not an array; ignoring.");
     }
-  } catch (e) {
-    logStep(`  • Failed reading existing details: ${e?.message || e}`);
-  }
+  } catch (e) { logStep(`  • Failed reading existing details: ${e?.message || e}`); }
   const existingByCode = new Map();
   for (const row of existing) {
     const key = row && (row.code || row.Code || row["laminate_code"] || row["Laminate Code"]);
@@ -426,16 +407,9 @@ function maybeFlush(out, processedCount, force = false) {
 
   // Launch
   logStep("Launching Chromium…");
-  const browser = await puppeteer.launch({
-    headless: false,
-    defaultViewport: { width: 1400, height: 900 },
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+  const browser = await puppeteer.launch({ headless: false, defaultViewport: { width: 1400, height: 900 }, args: ["--no-sandbox", "--disable-setuid-sandbox"] });
   const page = await browser.newPage();
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-    "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-  );
+  await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36");
 
   const out = [];
   let processed = 0;
@@ -443,96 +417,108 @@ function maybeFlush(out, processedCount, force = false) {
   for (let i = 0; i < sliced.length; i++) {
     const rec = sliced[i];
     const code = String(rec.code || `row_${OFFSET + i}`);
-    const url  = rec["product-link"];
-    logStep(`\n[${i + 1}/${sliced.length}] ${code} → ${url}`);
+    const productUrl = rec["product-link"];
+    logStep(`\n[${i + 1}/${sliced.length}] ${code} → ${productUrl}`);
 
-    // If exists and already has an image, skip and keep existing
-    const prior = existingByCode.get(code);
-    if (prior && hasImage(prior)) {
-      logStep("  • Skipping (already present with image)");
-      out.push(prior);
+    // Start from existing or base
+    const prior = existingByCode.get(code) || {};
+    const mergedStart = { ...rec, ...prior, code };
+
+    if (existingByCode.has(code) && hasImageData(prior) && hasDescriptionData(prior)) {
+      logStep("  • Skipping (image & description already present).");
+      out.push({ ...mergedStart });
       processed++;
       maybeFlush(out, processed, false);
       continue;
     }
 
-    try {
-      await page.goto(url, { waitUntil: "domcontentloaded" });
-      await waitForMain(page);
+    // Try to reuse what we can without navigating
+    let imageUrl = pickImageUrl(mergedStart) || null;
+    let pixels   = validSize(mergedStart.texture_image_pixels) ? mergedStart.texture_image_pixels : undefined;
+    let noRepeat = (typeof mergedStart.no_repeat === "boolean") ? mergedStart.no_repeat : undefined;
+    let desc     = hasString(mergedStart.description) ? mergedStart.description : undefined;
 
-      // Try clicking arrow; if clicked we will attempt FullSheet route, else full_size route
-      const clicked = await robustClickXPath(page, XPATH_ARROW, "Arrow (full XPath)");
-      let imageUrl = null;
-      let cropBottom = null;
-
-      if (clicked) {
-        // FULLSHEET path
-        logStep("  • Arrow clicked – scanning HTML for 'FullSheet' URLs...");
-        const fullsheetUrls = await findFullSheetUrlsInHTML(page);
-        logStep(`  • Found ${fullsheetUrls.length} 'FullSheet' candidate(s)`);
-        imageUrl = pickBestFullSheetUrl(fullsheetUrls);
-
-        if (!imageUrl) {
-          logStep("  • No acceptable FullSheet URL found (or only Carousel_Main).");
-        } else if (hasCarouselMain(imageUrl)) {
-          logStep("  • Discarding Carousel_Main URL (guard).");
-          imageUrl = null;
-        }
-
-      } else {
-        // FULL_SIZE fallback
-        logStep("  • Arrow not found – scanning HTML for 'full_size' URLs...");
-        const fullSizeUrls = await findFullSizeUrlsInHTML(page);
-        logStep(`  • Found ${fullSizeUrls.length} 'full_size' candidate(s)`);
-        imageUrl = pickBestFullSizeUrl(fullSizeUrls);
-
-        if (imageUrl && looksBanner(imageUrl)) {
-          cropBottom = 93; // crop hint for banner
-          logStep("  • 'full_size' URL contains 'banner' → will set crop bottom = 93px");
-        }
-      }
-
-      logStep(`  • Final texture image URL: ${imageUrl || "(none)"}`);
-
-      // Detect No Repeat, compute initial (parsed) scale, description, and image pixel size
-      const noRepeat = await detectNoRepeat(page);
-      const parsed   = await computeInitialScale(page, noRepeat, imageUrl);
-      const desc     = await extractDescription(page);
-      const pixels   = imageUrl ? await getImagePixels(page, imageUrl) : undefined;
-      if (validSize(pixels)) logStep(`  • Image pixels: ${pixels.width} × ${pixels.height}`);
-
-      // Choose final scale by aspect match between parsed vs 144×60
-      const chosenScale = selectScaleByAspect(parsed, pixels);
-
-      const merged = {
-        ...rec,
-        code,
-        no_repeat: noRepeat,
-        texture_image_url: imageUrl || undefined,
-        texture_image_pixels: validSize(pixels) ? pixels : undefined,
-        texture_scale: chosenScale || undefined,
-        description: desc || undefined,
-      };
-      if (cropBottom) merged.texture_image_crop_px = { bottom: cropBottom };
-
-      out.push(merged);
-      processed++;
-      maybeFlush(out, processed, false);
-
-    } catch (err) {
-      logStep(`  • ERROR on ${code}: ${String(err && err.message || err).slice(0,180)}`);
-      const errorRow = { ...rec, code, _error: String(err && err.message || err) };
-      out.push(errorRow);
-      processed++;
-      maybeFlush(out, processed, false);
+    // If we have an image URL but no pixels, we can still load pixels without visiting product page
+    if (imageUrl && !pixels) {
+      pixels = await getImagePixels(page, imageUrl).catch(() => undefined);
+      if (pixels) logStep(`  • Filled missing pixels from image URL ?+' ${pixels.width}A-${pixels.height}`);
     }
+
+    let parsedScale;
+    let needsImage = !hasString(imageUrl);
+    let needsDesc  = !hasString(desc);
+    let needsNoRepeat = (noRepeat === undefined);
+    if (needsImage || needsDesc || needsNoRepeat) {
+      for (let attempt = 1; attempt <= MAX_FETCH_ATTEMPTS; attempt++) {
+        logStep(`  • Attempt ${attempt}/${MAX_FETCH_ATTEMPTS} to fetch missing details`);
+        try {
+          await page.goto(productUrl, { waitUntil: "domcontentloaded" });
+          await waitForMain(page);
+        } catch (err) {
+          logStep(`  • Navigation attempt ${attempt} failed: ${err?.message || err}`);
+          continue;
+        }
+
+        if (needsImage && !hasString(imageUrl)) {
+          const clicked = await robustClickXPath(page, XPATH_ARROW, "Arrow (full XPath)");
+          if (clicked) {
+            const fullsheetUrls = await findFullSheetUrlsInHTML(page);
+            imageUrl = pickBestFullSheetUrl(fullsheetUrls);
+            if (imageUrl && hasCarouselMain(imageUrl)) imageUrl = null;
+          }
+          if (!hasString(imageUrl)) {
+            const fullSizeUrls = await findFullSizeUrlsInHTML(page);
+            imageUrl = pickBestFullSizeUrl(fullSizeUrls);
+          }
+          if (hasString(imageUrl)) logStep(`  • Discovered texture image URL: ${imageUrl}`);
+        }
+
+        if (imageUrl && !pixels) {
+          pixels = await getImagePixels(page, imageUrl).catch(() => undefined);
+          if (pixels) logStep(`  • Pixels from discovered URL ?+' ${pixels.width}A-${pixels.height}`);
+        }
+
+        if (needsNoRepeat && noRepeat === undefined) {
+          noRepeat = await detectNoRepeat(page);
+        }
+        if (needsDesc && !hasString(desc)) {
+          desc = await extractDescription(page);
+        }
+        parsedScale = await computeParsedScale(page, !!noRepeat, imageUrl);
+
+        needsImage = !hasString(imageUrl);
+        needsDesc = !hasString(desc);
+        needsNoRepeat = (noRepeat === undefined);
+        if (!needsImage && !needsDesc && !needsNoRepeat) break;
+      }
+      if (needsImage) logStep(`  • Unable to locate texture image after ${MAX_FETCH_ATTEMPTS} attempts.`);
+      if (needsDesc) logStep(`  • Unable to capture description after ${MAX_FETCH_ATTEMPTS} attempts.`);
+    }
+    if (!parsedScale) {
+      parsedScale = await computeParsedScale(null, !!noRepeat, imageUrl);
+    }
+
+    // Current scale BEFORE rewrite (from existing or immediate parsed)
+    const currentScale = validSize(prior.texture_scale) ? prior.texture_scale : (validSize(parsedScale) ? parsedScale : undefined);
+
+    // Decide FINAL texture_scale via ratio rules
+    const finalScale = chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat });
+
+    const outRow = {
+      ...mergedStart,
+      texture_image_url: imageUrl || mergedStart.texture_image_url || undefined,
+      texture_image_pixels: validSize(pixels) ? pixels : mergedStart.texture_image_pixels,
+      no_repeat: (typeof noRepeat === 'boolean') ? noRepeat : mergedStart.no_repeat,
+      description: desc || mergedStart.description,
+      texture_scale: finalScale, // ALWAYS overwrite
+    };
+
+    out.push(outRow);
+    processed++;
+    maybeFlush(out, processed, false);
   }
 
-  // Final flush (in case the last batch < BATCH_SIZE)
-  if (processed % BATCH_SIZE !== 0) {
-    maybeFlush(out, processed, true);
-  }
-
+  if (processed % BATCH_SIZE !== 0) maybeFlush(out, processed, true);
   await browser.close();
   logStep(`\nDONE. Processed ${processed} item(s). Details written to: ${OUT_JSON}`);
 })();
