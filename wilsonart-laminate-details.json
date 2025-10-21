@@ -6712,5 +6712,653 @@
       "height": 60
     },
     "description": "Snow White Mist is a pure white solid."
+  },
+  {
+    "code": "D513",
+    "surface-group": "Laminate",
+    "name": "Peacock Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/peacock-mist-d513",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e7dee27a-5a3e-4f21-9af8-5ae3befd9cec/D513-Peacock-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Peacock Mist is a bold bluish green solid color."
+  },
+  {
+    "code": "D512",
+    "surface-group": "Laminate",
+    "name": "Nile Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/nile-mist-d512",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d11345fd-8c49-4969-a73b-4a69e1b9a9ad/D512-Nile-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Nile Mist is a medium-dark blue-grey solid color."
+  },
+  {
+    "code": "D511",
+    "surface-group": "Laminate",
+    "name": "Silk Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silk-mist-d511",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/da8f0459-3d5f-46b4-af76-a2fa3817c7af/D511-Silk-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Silk Mist is a sandstone brown solid color."
+  },
+  {
+    "code": "D509",
+    "surface-group": "Laminate",
+    "name": "Ethereal Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ethereal-mist-d509",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/db60cc11-3aa9-4e07-bcf6-ebad844dff27/D509-Ethereal-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Ethereal Mist is an airy light green solid color with a hint of grey undertone."
+  },
+  {
+    "code": "D508",
+    "surface-group": "Laminate",
+    "name": "Icecap Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/icecap-mist-d508",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/92253018-ea5e-49d3-9734-2cbb49208815/D508-Icecap-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Icecap Mist is a nuanced soothing light blue solid color."
+  },
+  {
+    "code": "D507",
+    "surface-group": "Laminate",
+    "name": "Porcelain Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/porcelain-mist-d507",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/29f0e2ad-2fb7-41fe-acc4-45b526290a38/D507-Porcelain-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Porcelain Mist is a solid light greyish white color."
+  },
+  {
+    "code": "D506",
+    "surface-group": "Laminate",
+    "name": "Silver Mist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silver-mist-d506",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Gray"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      },
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#35",
+        "name": "Mirage"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#52",
+        "name": "Quarry"
+      },
+      {
+        "code": "#55",
+        "name": "Glaze"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ba92f042-6f56-49d3-997d-b214edb1e872/D506-Silver-Mist-PRINT-_Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Silver Mist is an elegant silver solid color."
+  },
+  {
+    "code": "15514",
+    "surface-group": "Laminate",
+    "name": "Feather Velvet",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/feather-velvet-15514",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Taupe"
+    ],
+    "finish": [],
+    "performace_enchancments": [
+      "Fingerprint Resistant",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/1f813c84-0c99-45e6-945d-ec74357fbb00/15514-Feather-Velvet_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Feather Velvet is deep taupe brown solid color in TRACELESS™ by Wilsonart: A durable ultra-matte, ultra-luxe surface with lasting beauty, fingerprint resistance, and easy repairability."
+  },
+  {
+    "code": "15519",
+    "surface-group": "Laminate",
+    "name": "Peacock Velvet",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/peacock-velvet-15519",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [],
+    "performace_enchancments": [
+      "Fingerprint Resistant",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2953091e-20cc-40b8-a71b-fad680dfbee2/15519-Peacock-Velvet_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Peacock Velvet is a bold bluish green solid color in TRACELESS™ by Wilsonart: A durable ultra-matte, ultra-luxe surface with lasting beauty, fingerprint resistance, and easy repairability."
+  },
+  {
+    "code": "15518",
+    "surface-group": "Laminate",
+    "name": "Spruce Velvet",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/spruce-velvet-15518",
+    "design_groups": [
+      "Solids & Optical Solids"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [],
+    "performace_enchancments": [
+      "Fingerprint Resistant",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/59f99364-e1ca-4d45-9df2-86a90b00372d/15518-Spruce-Velvet_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Spruce Velvet is a muted green solid color with a neutral warm grey undertone in TRACELESS™ by Wilsonart: A durable ultra-matte, ultra-luxe surface with lasting beauty, fingerprint resistance, and easy repairability."
   }
 ]
