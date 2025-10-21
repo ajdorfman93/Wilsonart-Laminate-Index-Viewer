@@ -9834,5 +9834,166 @@
       "width": 96,
       "height": 48
     }
+  },
+  {
+    "code": "Y0391",
+    "surface-group": "Laminate",
+    "name": "Polished Silver",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/polished-silver-y0391",
+    "design_groups": [
+      "Spectrum"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Optical Solids"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/2c0a20ac-3cd3-46fc-89fe-10df9e7d8dee/Y0391-Polished-Silver-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "This bold metal color is inspired by Polished Silver, created by a crossweave pattern.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0389",
+    "surface-group": "Laminate",
+    "name": "Burnished  Copper",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6032/s/burnished-copper-y0389/category/53/",
+    "design_groups": [
+      "Spectrum"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Red"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Optical Solids"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9dca6a1b-74a3-4b6a-a3cd-2b60fe3d243e/Y0389-Burnished-Copper-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Burnished Copper is a deep red brown metal color made by a soft crossweave pattern.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0388",
+    "surface-group": "Laminate",
+    "name": "New Penny",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/new-penny-y0388",
+    "design_groups": [
+      "Spectrum"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Orange"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5fb31207-0d9b-438b-9960-5349e353c472/Y0388-New-Penny-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "New Penny is an earthy copper metal color created with a crossweave pattern.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0387",
+    "surface-group": "Laminate",
+    "name": "Copper Alloy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/copper-alloy-y0387",
+    "design_groups": [
+      "Spectrum"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Orange"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Optical Solids"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/77516462-d7b8-4737-9464-df4653304b8e/Y0387-Copper-Alloy-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Copper Alloy is a beautiful raw copper metal color made with a crossweave pattern.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0386",
+    "surface-group": "Laminate",
+    "name": "Fountain Penny",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6029/s/fountain-penny-y0386/category/53/",
+    "design_groups": [
+      "Spectrum"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Red"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Optical Solids"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3f479991-3d63-4440-861c-d16a49d8eeb5/Y0386-Fountain-Penny-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Fountain Penny is made by a crossweave pattern in a beautiful deep red copper metal color, like a penny found in a fountain.",
+    "texture_scale": {
+      "width": 62,
+      "height": 37
+    }
   }
 ]
