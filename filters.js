@@ -5,36 +5,81 @@
        data,                 // array of records
        containerId: 'filters',
        queryInput: document.getElementById('q'),
-       onChange: (state) => { /* re-render table here with Filters.apply(data) */ }
-     })
+       onChange: (state) => {
+         renderTable(Filters.apply(data));
+       }
+     });
 */
 
 (function (global) {
-  const DEFAULT_STATE = {
-    query: '',
-    withImageOnly: false,
-    // facet selections are Sets of strings/booleans
-    facets: {
-      'surface-group': new Set(),
-      design_groups: new Set(),
-      color: new Set(),
-      shade: new Set(),
-      finish: new Set(),       // finish[].name
-      finish_code: new Set(),  // finish[].code
-      design_collections: new Set(),
-      no_repeat: new Set(),    // 'Yes' | 'No'
-    }
-  };
+  const FACET_KEYS = [
+    'surface-group',
+    'design_groups',
+    'color',
+    'shade',
+    'finish',
+    'finish_code',
+    'design_collections',
+    'no_repeat',
+  ];
 
-  const state = JSON.parse(JSON.stringify(DEFAULT_STATE));
+  function createDefaultState() {
+    const facets = Object.create(null);
+    for (let i = 0; i < FACET_KEYS.length; i += 1) {
+      facets[FACET_KEYS[i]] = new Set();
+    }
+    return {
+      query: '',
+      withImageOnly: false,
+      facets,
+    };
+  }
+
+  function applyState(nextState) {
+    state.query = nextState.query;
+    state.withImageOnly = nextState.withImageOnly;
+    const freshFacets = Object.create(null);
+    for (let i = 0; i < FACET_KEYS.length; i += 1) {
+      const key = FACET_KEYS[i];
+      const source = nextState.facets[key];
+      if (source instanceof Set) {
+        freshFacets[key] = new Set(source);
+      } else if (source && typeof source.forEach === 'function') {
+        const copy = new Set();
+        source.forEach((value) => copy.add(value));
+        freshFacets[key] = copy;
+      } else if (Array.isArray(source)) {
+        freshFacets[key] = new Set(source);
+      } else {
+        freshFacets[key] = new Set();
+      }
+    }
+    state.facets = freshFacets;
+  }
+
+  function resetFacetMeta(newMeta) {
+    const existingKeys = Object.keys(facetMeta);
+    for (let i = 0; i < existingKeys.length; i += 1) {
+      delete facetMeta[existingKeys[i]];
+    }
+    Object.assign(facetMeta, newMeta);
+  }
+
+  const state = createDefaultState();
   const facetMeta = {}; // { facetKey: {label, values: Map(value -> count)} }
 
-  let _opts = null;
+  let _opts = {};
   let _debTimer = null;
 
   function debounce(fn, ms = 160) {
     clearTimeout(_debTimer);
     _debTimer = setTimeout(fn, ms);
+  }
+
+  function triggerChange() {
+    if (typeof _opts.onChange === 'function') {
+      _opts.onChange(state);
+    }
   }
 
   // --------- Helpers ----------
@@ -68,9 +113,10 @@
       for (const v of arrify(r.design_collections)) bump(m.design_collections.values, v);
 
       if (Array.isArray(r.finish)) {
-        for (const f of r.finish) {
-          if (f?.name) bump(m.finish.values, f.name);
-          if (f?.code) bump(m.finish_code.values, f.code);
+        for (let i = 0; i < r.finish.length; i += 1) {
+          const f = r.finish[i];
+          if (f && f.name) bump(m.finish.values, f.name);
+          if (f && f.code) bump(m.finish_code.values, f.code);
         }
       }
 
@@ -111,7 +157,7 @@
     imgOnlyInput.checked = state.withImageOnly;
     imgOnlyInput.addEventListener('change', () => {
       state.withImageOnly = imgOnlyInput.checked;
-      _opts.onChange?.(state);
+      triggerChange();
     });
 
     // Facet groups
@@ -141,14 +187,15 @@
           <span class="facet-count">(${count})</span>
         `;
         const input = row.querySelector('input');
-        input.checked = state.facets[facetKey]?.has?.(String(val)) || false;
+        const selectable = state.facets[facetKey];
+        input.checked = !!(selectable && selectable.has(String(val)));
         input.addEventListener('change', (e) => {
           const fk = e.target.getAttribute('data-facet');
           const vv = e.target.getAttribute('data-value');
           const set = state.facets[fk] || (state.facets[fk] = new Set());
           if (e.target.checked) set.add(vv);
           else set.delete(vv);
-          _opts.onChange?.(state);
+          triggerChange();
         });
         list.appendChild(row);
       }
@@ -162,7 +209,7 @@
       _opts.queryInput.addEventListener('input', () =>
         debounce(() => {
           state.query = _opts.queryInput.value || '';
-          _opts.onChange?.(state);
+          triggerChange();
         }, 120)
       );
     }
@@ -185,8 +232,25 @@
     const matchesDG      = mustMatch('design_groups', r => arrify(r.design_groups));
     const matchesColor   = mustMatch('color', r => arrify(r.color));
     const matchesShade   = mustMatch('shade', r => arrify(r.shade));
-    const matchesFinish  = mustMatch('finish', r => (Array.isArray(r.finish) ? r.finish.map(f => f?.name).filter(Boolean) : []));
-    const matchesFCode   = mustMatch('finish_code', r => (Array.isArray(r.finish) ? r.finish.map(f => f?.code).filter(Boolean) : []));
+    const matchesFinish = mustMatch('finish', (record) => {
+      if (!Array.isArray(record.finish)) return [];
+      const values = [];
+      for (let i = 0; i < record.finish.length; i += 1) {
+        const entry = record.finish[i];
+        if (entry && entry.name) values.push(entry.name);
+      }
+      return values;
+    });
+
+    const matchesFCode = mustMatch('finish_code', (record) => {
+      if (!Array.isArray(record.finish)) return [];
+      const values = [];
+      for (let i = 0; i < record.finish.length; i += 1) {
+        const entry = record.finish[i];
+        if (entry && entry.code) values.push(entry.code);
+      }
+      return values;
+    });
     const matchesColl    = mustMatch('design_collections', r => arrify(r.design_collections));
     const matchesNR      = mustMatch('no_repeat', r => [r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '')].filter(Boolean));
 
@@ -200,37 +264,75 @@
   function matchesQuery(row) {
     const q = (state.query || '').trim().toLowerCase();
     if (!q) return true;
-    const hay = [
-      row.code, row.name, row['surface-group'], row.description, row.texture_image_url,
-      ...(arrify(row.design_groups)), ...(arrify(row.color)), ...(arrify(row.shade)),
-      ...(arrify(row.design_collections)), ...(arrify(row.performace_enchancments)),
-      ...(arrify(row.species)), ...(arrify(row.cut)), ...(arrify(row.match)),
-      ...(Array.isArray(row.finish) ? row.finish.flatMap(f => [f?.code, f?.name]) : [])
-    ].filter(Boolean).map(s => String(s).toLowerCase());
-    return hay.some(s => s.includes(q));
+    const haystack = [];
+
+    const scalarFields = [
+      row.code,
+      row.name,
+      row['surface-group'],
+      row.description,
+      row.texture_image_url,
+    ];
+
+    for (let i = 0; i < scalarFields.length; i += 1) {
+      const value = scalarFields[i];
+      if (value) haystack.push(value);
+    }
+
+    const arrayFields = [
+      arrify(row.design_groups),
+      arrify(row.color),
+      arrify(row.shade),
+      arrify(row.design_collections),
+      arrify(row.performace_enchancments),
+      arrify(row.species),
+      arrify(row.cut),
+      arrify(row.match),
+    ];
+
+    for (let i = 0; i < arrayFields.length; i += 1) {
+      const collection = arrayFields[i];
+      for (let j = 0; j < collection.length; j += 1) {
+        if (collection[j]) haystack.push(collection[j]);
+      }
+    }
+
+    if (Array.isArray(row.finish)) {
+      for (let i = 0; i < row.finish.length; i += 1) {
+        const finishEntry = row.finish[i];
+        if (!finishEntry) continue;
+        if (finishEntry.code) haystack.push(finishEntry.code);
+        if (finishEntry.name) haystack.push(finishEntry.name);
+      }
+    }
+
+    for (let i = 0; i < haystack.length; i += 1) {
+      const needle = String(haystack[i]).toLowerCase();
+      if (needle.includes(q)) return true;
+    }
+    return false;
   }
 
   // Public API
   const Filters = {
     init(opts) {
       _opts = opts || {};
-      Object.assign(state, DEFAULT_STATE);
-      Object.setPrototypeOf(state.facets, null);
-
-      // build facet dictionary
-      Object.assign(facetMeta, buildFacets(_opts.data));
+      applyState(createDefaultState());
+      const sourceData = Array.isArray(_opts.data) ? _opts.data : [];
+      resetFacetMeta(buildFacets(sourceData));
       renderUI();
-      _opts.onChange?.(state);
+      triggerChange();
       return this;
     },
     apply(data) {
-      return (data || []).filter(r => matchesFacets(r) && matchesQuery(r));
+      const source = Array.isArray(data) ? data : [];
+      return source.filter(r => matchesFacets(r) && matchesQuery(r));
     },
     selections() { return state; },
     reset() {
-      Object.assign(state, JSON.parse(JSON.stringify(DEFAULT_STATE)));
+      applyState(createDefaultState());
       renderUI();
-      _opts.onChange?.(state);
+      triggerChange();
     }
   };
 
