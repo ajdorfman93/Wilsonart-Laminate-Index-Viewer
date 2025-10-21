@@ -4874,5 +4874,265 @@
       "height": 48
     },
     "description": "Cobalt Oscar is a bold deep blue pattern. This large scale pattern was created by pouring molten metal over linen."
+  },
+  {
+    "code": "Y0427",
+    "surface-group": "Laminate",
+    "name": "Bronze Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bronze-oscar-y0427",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "description": "Bronze Oscar is a large scale abstracted pattern. This dramatic bronze tone pattern was created by pouring molten metal over linen."
+  },
+  {
+    "code": "Y0418",
+    "surface-group": "Laminate",
+    "name": "Smoked Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/smoked-steel-y0418",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "description": "Smoked Steel is a large scale pattern with rich charcoal, black and browns throughout. This abstracted wood or distressed metal look is made by acid etching metal."
+  },
+  {
+    "code": "Y0419",
+    "surface-group": "Laminate",
+    "name": "Hot Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hot-steel-y0419",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Red"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "description": "Hot Steel is a large scale design in a bold fire red color. This design is made of acid etched steel and has the look of distressed wood or metal."
+  },
+  {
+    "code": "4995",
+    "surface-group": "Laminate",
+    "name": "Forged Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/forged-steel-4995",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Black"
+    ],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_MightAlsoLike/97ec3825-fb27-4cef-a367-c1483682c766/4926-BlackAlicante_webfullsheet",
+    "texture_image_pixels": {
+      "width": 270,
+      "height": 270
+    },
+    "texture_scale": {
+      "width": 59.055,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "4830",
+    "surface-group": "Laminate",
+    "name": "Satin Stainless",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/satin-stainless-4830",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Black"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 11.33,
+      "height": 31
+    },
+    "description": "A brushed stainless steel laminate design effect in light to medium grey tones."
+  },
+  {
+    "code": "4795",
+    "surface-group": "Laminate",
+    "name": "Windswept Pewter",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/windswept-pewter-4795",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 20.47,
+      "height": 21.65
+    },
+    "description": "A medium scale abstract laminate design. A layering of dark charcoal over a pewter background creates a dimensional effect that can translate as hammered metal."
+  },
+  {
+    "code": "4794",
+    "surface-group": "Laminate",
+    "name": "Windswept Bronze",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/windswept-bronze-4794",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 20.47,
+      "height": 21.65
+    },
+    "description": "A medium scale abstract laminate design. A layering of dark bronze over a gold background creates a dimensional effect that can translate as hammered metal."
+  },
+  {
+    "code": "4779",
+    "surface-group": "Laminate",
+    "name": "Pewter Brush",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pewter-brush-4779",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 24.5,
+      "height": 43.25
+    },
+    "description": "A large scale swirling brush effect in a pewter grey laminate design."
+  },
+  {
+    "code": "1787",
+    "surface-group": "Laminate",
+    "name": "Oxide",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oxide-1787",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 18,
+      "height": 37
+    },
+    "description": "Large scale oxidized metallic laminate design with light and dark variations. It carries an overall orange/clay/rust hue with accents of golden tones."
+  },
+  {
+    "code": "4762",
+    "surface-group": "Laminate",
+    "name": "Mystique Dawn",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/mystique-dawn-4762",
+    "design_groups": [
+      "Particulates"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/f4a817b2-c1cf-4e55-8ddf-48ad14af02c6/4762-Mystique-Dawn_Scan",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1453
+    },
+    "texture_scale": {
+      "width": 36.6,
+      "height": 31
+    },
+    "description": "A small scale particulate laminate design. The light yellow beige background has subtle hints of amber. Layered with various sized grey particulates."
   }
 ]
