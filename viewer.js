@@ -51,7 +51,13 @@ function escapeAttr(v) { return String(v).replace(/"/g, '&quot;'); }
 function normalizeArray(v) { return v == null ? [] : (Array.isArray(v) ? v : [v]); }
 
 function renderPills(v, row) {
-  const arr = Array.isArray(v) ? v : normalizeArray(row?.[this?.key]);
+  let arr = Array.isArray(v) ? v : null;
+  if (!arr) {
+    const column = this || {};
+    const key = column && typeof column.key === 'string' ? column.key : null;
+    const fallback = key && row ? row[key] : undefined;
+    arr = normalizeArray(fallback);
+  }
   if (!arr || !arr.length) return '';
   return arr.map(x => `<span class="pill">${safe(x)}</span>`).join('');
 }
@@ -78,7 +84,9 @@ function renderScale(row) {
 function renderImage(row) {
   const url = row.texture_image_url;
   if (!url) return '';
-  const alt = `${row.code ?? ''} ${row.name ?? ''}`.trim() || 'preview';
+  const codeText = row && row.code ? row.code : '';
+  const nameText = row && row.name ? row.name : '';
+  const alt = `${codeText} ${nameText}`.trim() || 'preview';
   const img = `<img
       src="${escapeAttr(url)}"
       alt="${escapeAttr(alt)}"
@@ -89,13 +97,13 @@ function renderImage(row) {
 }
 
 function setStatus(msg) {
-  const total = rawData?.length ?? 0;
-  const vis = visible?.length ?? 0;
+  const total = Array.isArray(rawData) ? rawData.length : 0;
+  const vis = Array.isArray(visible) ? visible.length : 0;
   statusEl.innerHTML = `${msg} &mdash; <span class="count">${vis}</span> shown of <span class="count">${total}</span>`;
 }
 
 async function loadDefault() {
-  setStatus('Loading default JSON…');
+  setStatus('Loading default JSON...');
   try {
     const res = await fetch(DEFAULT_URL, { cache: 'no-store' });
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
@@ -136,39 +144,45 @@ function renderTable() {
 }
 
 // file picker support (load arbitrary JSON)
-fileEl?.addEventListener('change', async (e) => {
-  const file = e.target.files?.[0];
-  if (!file) return;
-  setStatus(`Loading file: ${file.name}…`);
-  try {
-    const text = await file.text();
-    const json = JSON.parse(text);
-    rawData = Array.isArray(json) ? json : [];
-    Filters.init({
-      data: rawData,
-      containerId: 'filters',
-      queryInput: qEl,
-      onChange: () => {
-        visible = Filters.apply(rawData);
-        renderTable();
-        setStatus(`Loaded ${file.name}`);
-      }
-    });
-  } catch (err) {
-    setStatus(`Failed parsing ${file.name}: ${err.message}`);
-    console.error(err);
-  } finally {
-    fileEl.value = '';
-  }
-});
+if (fileEl) {
+  fileEl.addEventListener('change', async (e) => {
+    const input = e.target;
+    const files = input && input.files ? input.files : null;
+    const file = files && files.length ? files[0] : null;
+    if (!file) return;
+    setStatus(`Loading file: ${file.name}...`);
+    try {
+      const text = await file.text();
+      const json = JSON.parse(text);
+      rawData = Array.isArray(json) ? json : [];
+      Filters.init({
+        data: rawData,
+        containerId: 'filters',
+        queryInput: qEl,
+        onChange: () => {
+          visible = Filters.apply(rawData);
+          renderTable();
+          setStatus(`Loaded ${file.name}`);
+        }
+      });
+    } catch (err) {
+      setStatus(`Failed parsing ${file.name}: ${err.message}`);
+      console.error(err);
+    } finally {
+      if (input) input.value = '';
+    }
+  });
+}
 
-reloadEl?.addEventListener('click', () => {
-  qEl.value = '';
-  Filters.reset();
-  visible = Filters.apply(rawData);
-  renderTable();
-  setStatus('Reset');
-});
+if (reloadEl) {
+  reloadEl.addEventListener('click', () => {
+    qEl.value = '';
+    Filters.reset();
+    visible = Filters.apply(rawData);
+    renderTable();
+    setStatus('Reset');
+  });
+}
 
 // kick off
 loadDefault();

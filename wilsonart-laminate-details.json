@@ -481,5 +481,201 @@
       "height": 60
     },
     "description": "Green Sew and Sew is a large-scale abstract that has the appearance of cross stitching."
+  },
+  {
+    "code": "5068",
+    "surface-group": "Laminate",
+    "name": "Crystal Quartzite",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/crystal-quartzite-5068",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performace_enchancments": [
+      "AEON 3X Durability"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Residential Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/5072c508-1697-4feb-a267-7e96c9f0e709/5068-Crystal-Quartzite_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 738
+    },
+    "texture_scale": {
+      "width": 62.5,
+      "height": 51
+    },
+    "description": "Crystal Quartzite is a white quartzite stone with medium scaled organic directional movement and accents of warm and cool quartz crystals."
+  },
+  {
+    "code": "5061",
+    "surface-group": "Laminate",
+    "name": "Midnight Carnival",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/10417/s/midnight-carnival-5061/category/53/",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#15",
+        "name": "Fieldstone"
+      }
+    ],
+    "performace_enchancments": [
+      "AEON 3X Durability"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Residential Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/9a80b793-d30f-48f4-902d-8c8daff14887/5061-Midnight-Carnival-PRINT-Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "texture_scale": {
+      "width": 62.5,
+      "height": 55
+    },
+    "description": "Midnight Carnival is a dense dark taupe granite structure featuring large scale black, cream and grey colored accents."
+  },
+  {
+    "code": "5044",
+    "surface-group": "Laminate",
+    "name": "Beachwalk",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/beachwalk-5044",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c30cf403-4eb0-4701-bb01-61c601cd8c50/5044-Beachwalk_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 738
+    },
+    "texture_scale": {
+      "width": 89.8,
+      "height": 49.2
+    },
+    "description": "Beachwalk is a tonal warm white directional stone with texture interest and sweeping movement."
+  },
+  {
+    "code": "5041",
+    "surface-group": "Laminate",
+    "name": "Granito Cascata",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/granito-cascata-5041",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#15",
+        "name": "Fieldstone"
+      }
+    ],
+    "performace_enchancments": [
+      "AEON 3X Durability"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Residential Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/725f129d-5342-4a67-932b-1091db9e82db/5041-Granito-Cascata_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 738
+    },
+    "texture_scale": {
+      "width": 62,
+      "height": 51.4
+    },
+    "description": "Granito Cascata is dynamically veined directional warm white granite with accents of warm browns and cool blue-greys."
+  },
+  {
+    "code": "5039",
+    "surface-group": "Laminate",
+    "name": "Bello Romano",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bello-romano-5039",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#15",
+        "name": "Fieldstone"
+      }
+    ],
+    "performace_enchancments": [
+      "AEON 3X Durability"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Residential Designs"
+    ],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d176a10f-143f-41de-9f32-ff6eac6e57a8/5039-Bello-Romano_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 720
+    },
+    "texture_scale": {
+      "width": 62.4,
+      "height": 51.2
+    },
+    "description": "Bello Romano is a large-scale directional granite structure with warm white, taupe, and copper colored particulates."
   }
 ]

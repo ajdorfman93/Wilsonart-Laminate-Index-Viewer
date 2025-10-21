@@ -84,7 +84,6 @@
 
   // --------- Helpers ----------
   const arrify = (v) => v == null ? [] : (Array.isArray(v) ? v : [v]);
-  const textOf = (v) => (v == null ? '' : String(v)).toLowerCase();
 
   // Build facet value maps (value -> count) from data
   function buildFacets(data) {
