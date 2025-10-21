@@ -986,5 +986,154 @@
       "height": 60
     },
     "description": "Golden Collage is a large-scale abstract that has the appearance of layered motifs in warm neutral colors."
+  },
+  {
+    "code": "Y0768",
+    "surface-group": "Laminate",
+    "name": "Blue Sew and Sew",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/blue-sew-and-sew-y0768",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Blue"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ce70bb7f-9d29-4676-9023-ef119a7ec6d0/Y0768-Blue-Sew-and-Sew-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Blue Sew and Sew is a large-scale abstract that has the appearance of cross stitching."
+  },
+  {
+    "code": "Y0757",
+    "surface-group": "Laminate",
+    "name": "South Devon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/south-devon-y0757",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8c7ef85d-1b88-43a2-aba0-f845522fc3d6/Y0757-South-Devon-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "South Devon is a large-scale distressed pattern inspired by worn leather."
+  },
+  {
+    "code": "Y0755",
+    "surface-group": "Laminate",
+    "name": "Backyard Patio",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/backyard-patio-y0755",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/17855d9f-3aa3-4a14-b715-9fd570269807/Y0755-Backyard-Patio-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Backyard Patio is a medium scale design that has the look of smooth cement."
+  },
+  {
+    "code": "Y0754",
+    "surface-group": "Laminate",
+    "name": "Wire Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/wire-mesh-y0754",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e85e3b94-bc37-4d1c-9b4d-7d73bbfb9926/Y0754-Wire-Mesh-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Wire Mesh is a medium-scale design of linear greys and black inspired by textured wire."
+  },
+  {
+    "code": "Y0751",
+    "surface-group": "Laminate",
+    "name": "Graffiti Park",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/grafitti-park-y0751",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Multicolor"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/904e3aeb-5562-4868-b3be-160dc9d6a16a/Y0751-Graffiti-Park-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    },
+    "description": "Graffiti Park is a large-scale graffiti design of multicolored spray paints on a painted brick background."
   }
 ]
