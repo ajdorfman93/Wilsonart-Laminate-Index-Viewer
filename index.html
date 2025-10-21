@@ -146,6 +146,97 @@
     a.link { color: var(--accent); text-decoration: none; }
     a.link:hover { text-decoration: underline; }
     img { image-rendering: -webkit-optimize-contrast; }
+    .thumb {
+      border: 0;
+      background: none;
+      padding: 0;
+      margin: 0;
+      cursor: zoom-in;
+    }
+    .thumb img { pointer-events: none; }
+    .thumb:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s ease;
+      z-index: 120;
+    }
+    .lightbox.is-visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .75);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+    .lightbox-inner {
+      position: relative;
+      z-index: 1;
+      background: rgba(16, 19, 26, .95);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .5);
+      max-width: 90vw;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+    .lightbox-img {
+      max-width: 80vw;
+      max-height: 65vh;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .lightbox-caption {
+      color: var(--text);
+      font-weight: 500;
+      text-align: center;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,.4);
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s ease;
+    }
+    .lightbox-close:hover {
+      background: rgba(0,0,0,.6);
+    }
+    .lightbox-close:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
 
     /* Responsive */
     @media (max-width: 1100px) {
