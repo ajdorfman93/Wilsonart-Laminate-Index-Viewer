@@ -6,16 +6,18 @@
 // Reads : ./wilsonart-laminate-index.json
 // Writes: ./wilsonart-laminate-details.json
 //
-// Flow:
-//   1) Try clicking arrow (full XPath) → wait 2s
-//   2) If clicked: scan HTML for URLs containing 'FullSheet' (NEVER return 'Carousel_Main')
-//      -> pick best FullSheet by feet token (5x12 > 4x8), prefer _150dpi
-//   3) If arrow NOT found: scan HTML for URLs containing 'full_size'
-//      -> if chosen URL includes 'banner', set texture_image_crop_px.bottom = 93
-//   4) Scale = URL token override → No Repeat (96×48) → parse bold inches
-//   5) Batched writes every N (default 5) and at end
+// Flow (high level):
+//   1) Navigate to each product page
+//   2) Try clicking the gallery arrow; if present, scan HTML for "FullSheet" URLs (never pick Carousel_Main)
+//      Otherwise, scan for "full_size" URLs; if chosen URL includes "banner", add crop hint (bottom=93px)
+//   3) Detect No Repeat; derive an initial "parsed" texture scale (inches) from:
+//        URL token (feet → inches)  >  No Repeat fixed 96×48  >  Bold text inches in description
+//   4) Load the final image URL in-page to get actual pixel dimensions (naturalWidth × naturalHeight)
+//   5) **NEW**: Pick the final texture_scale by comparing aspect ratios — choose whichever of
+//        (a) the parsed scale or (b) 144×60 is closer to the image pixel ratio (considering orientation)
+//   6) Batch-write the growing output JSON every N rows and on completion
 //
-// Notes: headless=false (interactive), very verbose logs, no image downloads
+// Notes: headless=false (interactive for robustness), verbose logs, never downloads images to disk
 
 "use strict";
 
@@ -56,6 +58,23 @@ function logStep(msg, extra) {
 }
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
+function validSize(obj) {
+  return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0;
+}
+
+function aspect(obj) {
+  if (!validSize(obj)) return undefined;
+  return obj.width / obj.height;
+}
+
+function aspectDistance(candidateRatio, imageRatio) {
+  // Consider both orientations: r and 1/r (swapped W×H)
+  if (!isFinite(candidateRatio) || !isFinite(imageRatio) || candidateRatio <= 0 || imageRatio <= 0) return Number.POSITIVE_INFINITY;
+  const inv = 1 / candidateRatio;
+  return Math.min(Math.abs(candidateRatio - imageRatio), Math.abs(inv - imageRatio));
+}
+
+// ----------------------------- URL helpers -----------------------------
 const hasFullSheet     = (u) => !!u && /FullSheet/i.test(u);
 const hasCarouselMain  = (u) => !!u && /Carousel_Main/i.test(u);
 const looksBanner      = (u) => !!u && /banner/i.test(u);
@@ -270,13 +289,13 @@ async function detectNoRepeat(page) {
   return found;
 }
 
-async function extractScale(page, isNoRepeat, imageUrl) {
-  // 1) URL token override wins
+async function computeInitialScale(page, isNoRepeat, imageUrl) {
+  // 1) URL token override wins (feet → inches)
   const token = parseUrlFeetSize(imageUrl || "");
-  if (token) { logStep(`  • URL token override → ${token.width} × ${token.height}`); return token; }
+  if (token) { logStep(`  • URL token override → ${token.width} × ${token.height} in`); return token; }
 
   // 2) No Repeat fixed size
-  if (isNoRepeat) { logStep("  • No Repeat → fixed 96 × 48"); return { width: 96, height: 48 }; }
+  if (isNoRepeat) { logStep("  • No Repeat → fixed 96 × 48 in"); return { width: 96, height: 48 }; }
 
   // 3) Parse bold inches like: 62.205" X 49.213"
   logStep("  • Parsing bold WxH inches…");
@@ -285,7 +304,7 @@ async function extractScale(page, isNoRepeat, imageUrl) {
     const m = bold.match(/(\d+(?:\.\d+)?)\s*"?\s*[x×]\s*(\d+(?:\.\d+)?)\s*"?/i);
     if (m) {
       const scale = { width: parseFloat(m[1]), height: parseFloat(m[2]) };
-      logStep(`  • Parsed scale: ${scale.width} × ${scale.height}`);
+      logStep(`  • Parsed scale: ${scale.width} × ${scale.height} in`);
       return scale;
     }
     logStep("  • Bold present but unparsable.");
@@ -293,6 +312,32 @@ async function extractScale(page, isNoRepeat, imageUrl) {
     logStep("  • Bold not found.");
   }
   return undefined;
+}
+
+function selectScaleByAspect(initialScale, imagePixels) {
+  const fallback = { width: 144, height: 60 }; // 12' × 5' (inches)
+
+  if (!validSize(initialScale) && !validSize(fallback)) return undefined;
+  if (!validSize(imagePixels)) {
+    // No image pixels → keep whatever initial was (else use fallback)
+    return validSize(initialScale) ? initialScale : fallback;
+  }
+
+  const imgR = aspect(imagePixels);
+  const candidates = [
+    { name: "parsed",   ord: 0, scale: initialScale, r: aspect(initialScale) },
+    { name: "144x60",   ord: 1, scale: fallback,     r: aspect(fallback) },
+  ].filter(c => isFinite(c.r) && c.r > 0);
+
+  if (!candidates.length) return fallback;
+
+  const ranked = candidates
+    .map(c => ({ ...c, d: aspectDistance(c.r, imgR) }))
+    .sort((a, b) => (a.d - b.d) || (a.ord - b.ord)); // tie-breaker: prefer parsed
+
+  const top = ranked[0];
+  logStep(`  • Aspect match → imgR=${imgR?.toFixed(4)} parsedR=${(candidates[0]?.r)?.toFixed?.(4)} fallbackR=${(candidates[1]?.r)?.toFixed?.(4)} → choose ${top.name}`);
+  return top.scale;
 }
 
 async function extractDescription(page) {
@@ -306,6 +351,32 @@ async function extractDescription(page) {
   const text = list[1] || list[0] || null;
   logStep(`  • Fallback description ${text ? "found" : "missing"}`);
   return text || undefined;
+}
+
+// -------------------------- Actual pixel size reader --------------------------
+async function getImagePixels(page, url, timeoutMs = 15000) {
+  if (!url) return undefined;
+  try {
+    const res = await page.evaluate(async (src, timeout) => {
+      return await new Promise((resolve) => {
+        try {
+          const img = new Image();
+          let done = false;
+          const finish = (val) => { if (!done) { done = true; resolve(val); } };
+          const t = setTimeout(() => finish(undefined), timeout);
+          img.onload = () => { clearTimeout(t); finish({ width: img.naturalWidth || 0, height: img.naturalHeight || 0 }); };
+          img.onerror = () => { clearTimeout(t); finish(undefined); };
+          img.src = src;
+        } catch {
+          resolve(undefined);
+        }
+      });
+    }, url, timeoutMs);
+    if (res && (res.width > 0 || res.height > 0)) return res;
+    return undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 // ----------------------------- Batched writer -----------------------------
@@ -390,23 +461,29 @@ function maybeFlush(out, processedCount, force = false) {
         imageUrl = pickBestFullSizeUrl(fullSizeUrls);
 
         if (imageUrl && looksBanner(imageUrl)) {
-          cropBottom = 93; // per your rule
+          cropBottom = 93; // per rule
           logStep("  • 'full_size' URL contains 'banner' → will set crop bottom = 93px");
         }
       }
 
       logStep(`  • Final texture image URL: ${imageUrl || "(none)"}`);
 
-      // Compute scale + description
-      const noRepeat = await detectNoRepeat(page);
-      const scale    = await extractScale(page, noRepeat, imageUrl);
-      const desc     = await extractDescription(page);
+      // Detect No Repeat, compute initial (parsed) scale, description, and image pixel size
+      const noRepeat   = await detectNoRepeat(page);
+      const parsed     = await computeInitialScale(page, noRepeat, imageUrl);
+      const desc       = await extractDescription(page);
+      const pixels     = imageUrl ? await getImagePixels(page, imageUrl) : undefined;
+      if (validSize(pixels)) logStep(`  • Image pixels: ${pixels.width} × ${pixels.height}`);
+
+      // NEW: choose final scale by aspect match between parsed vs 144×60
+      const chosenScale = selectScaleByAspect(parsed, pixels);
 
       const merged = {
         ...rec,
         no_repeat: noRepeat,
         texture_image_url: imageUrl || undefined,
-        texture_scale: scale || undefined,
+        texture_image_pixels: validSize(pixels) ? pixels : undefined,
+        texture_scale: chosenScale || undefined,
         description: desc || undefined,
       };
       if (cropBottom) merged.texture_image_crop_px = { bottom: cropBottom };
