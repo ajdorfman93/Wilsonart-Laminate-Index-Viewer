@@ -196,7 +196,7 @@ function finalizeRecord(rec) {
 (async () => {
   logStep("Launching Puppeteer…");
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: false,
     defaultViewport: { width: 1400, height: 900 },
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
