@@ -1,19 +1,22 @@
 // wilsonart-scrape.js
+//
 // Usage:
 //   node wilsonart-scrape.js
-//   node wilsonart-scrape.js FILTER_LIMIT=1 
+//   FILTER_LIMIT=1 node wilsonart-scrape.js --missing 
 //
+// command line arg
 // --missing 
-//   Scrape only products missing the specified field (default: texture_image_url).
-//   Example: --missing texture_image_url
+//   Scrape only filters the specified field (default: finish).
+//   Example: --missing color
 //   user can add multiple --missing arguments to check for multiple fields
-//   Example: --missing texture_image_url --missing texture_scale
+//   Example: --missing finish --missing color
 //
+// command line arg  
 // --report
-//   Print a report of all products missing the specified field (default: texture_image_url).
-//   Example: --report texture_image_url
+//   Print a report of all products missing the specified field (default: finish).
+//   Example: --report finish
 //   user can add multiple --report arguments to check for multiple fields
-//  Example: --report texture_image_url --report texture_scale
+//   Example: --report color --report finish
 //
 // List of possible headers or data contained in wilsonart-laminate-index.json that can be used with --missing or --report:
 //    code                 
@@ -31,23 +34,105 @@
 //      name             
 //    performace_enchancments        
 //    specality_features             
-//    design_collections             
-//    texture_image_url              
-//    texture_image_pixels    
-//      width                 
-//      height                
+//    design_collections       
 //    no_repeat               
-//    description             
-//    texture_scale           
-//      width                 
-//      height                
-
+//    description     
+//                  
 
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
+
+// ----------------------------------------------------
+// CLI parsing
+// ----------------------------------------------------
+const argv = process.argv.slice(2);
+
+function collectMulti(flag) {
+  const out = [];
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === flag) {
+      const next = argv[i + 1];
+      if (next && !next.startsWith("--")) {
+        out.push(next);
+        i++;
+      } else {
+        // bare flag: caller wants default for this flag (handled by caller)
+        out.push("");
+      }
+    } else if (a.startsWith(flag + "=")) {
+      out.push(a.split("=")[1] || "");
+    }
+  }
+  return out;
+}
+
+const hasMissingFlag = argv.some((a) => a === "--missing" || a.startsWith("--missing="));
+const hasReportFlag = argv.some((a) => a === "--report" || a.startsWith("--report="));
+
+const missingRaw = collectMulti("--missing");
+const reportRaw = collectMulti("--report");
+
+function normField(f) {
+  const k = String(f || "").trim().toLowerCase().replace(/[\s-]+/g, "_");
+  const map = {
+    // basic
+    code: "code",
+    name: "name",
+    product_link: "product-link",
+    "product-link": "product-link",
+    surface_group: "surface-group",
+    "surface-group": "surface-group",
+
+    // filter-backed fields
+    design_groups: "design_groups",
+    species: "species",
+    cut: "cut",
+    match: "match",
+    shade: "shade",
+    color: "colors",
+    colors: "colors",
+    finish: "finish",
+    performace_enchancments: "performance_enhancements",
+    performance_enhancements: "performance_enhancements",
+    specality_features: "specialty_features",
+    specialty_features: "specialty_features",
+    design_collections: "design_collections",
+
+    // misc that may exist in file
+    no_repeat: "no_repeat",
+    description: "description",
+  };
+  return map[k] || k;
+}
+
+// Field aliases used for reporting and merging (so we don't mis-report due to spelling/format variants)
+const FIELD_ALIASES = {
+  colors: ["colors", "color"],
+  "product-link": ["product-link", "product_link"],
+  "surface-group": ["surface-group", "surface_group"],
+  performance_enhancements: ["performance_enhancements", "performace_enchancments"],
+  specialty_features: ["specialty_features", "specality_features"],
+};
+
+function getFieldVariants(canonicalKey) {
+  return FIELD_ALIASES[canonicalKey] || [canonicalKey];
+}
+
+let missingFields = hasMissingFlag ? missingRaw.map((v) => normField(v || "finish")) : [];
+if (hasMissingFlag && missingFields.length === 0) missingFields = ["finish"]; // safety
+
+let reportFields = hasReportFlag ? reportRaw.map((v) => normField(v || "finish")) : [];
+if (hasReportFlag && reportFields.length === 0) reportFields = ["finish"]; // safety
+
+// If the user only asked for a report (and not scraping), do that quickly and exit.
+const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
+if (hasReportFlag && !hasMissingFlag) {
+  runReportAndExit();
+}
 
 // ----------------------------------------------------
 // Config
@@ -77,19 +162,22 @@ const ATTR_TO_OUTPUT = {
   shade: "shade",
   pa_finish: "finish",
   performace_enchancments: "performance_enhancements", // normalize spelling
-  specality_features: "specialty_features",            // normalize spelling
+  specality_features: "specialty_features", // normalize spelling
   design_collections: "design_collections",
   color_swatch: "colors", // plural, per user example
 };
 
-const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
+// Build reverse map: output field -> Set(site attrs)
+const OUTPUT_TO_ATTRS = Object.entries(ATTR_TO_OUTPUT).reduce((acc, [attr, out]) => {
+  (acc[out] ||= new Set()).add(attr);
+  return acc;
+}, {});
 
 // ----------------------------------------------------
 // Helpers
 // ----------------------------------------------------
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const cleanText = (t) =>
-  (t || "").replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim();
+const cleanText = (t) => (t || "").replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim();
 
 function logStep(label, data) {
   const ts = new Date().toISOString();
@@ -100,9 +188,8 @@ function logStep(label, data) {
 function sanitizeFilterUrl(href) {
   try {
     const url = new URL(href, START_URL);
-    ["availability", "price_designlibrary", "_"].forEach((p) =>
-      url.searchParams.delete(p)
-    );
+    ["availability", "price_designlibrary", "_"]
+      .forEach((p) => url.searchParams.delete(p));
     url.searchParams.set("product_list_mode", "list");
     return url.toString();
   } catch {
@@ -133,10 +220,7 @@ async function withRetry(fn, attempts = 4, pauseMs = 500, tag = "") {
         msg.includes("Cannot find context with specified id") ||
         msg.includes("Target closed");
       logStep(
-        `withRetry(${tag}) attempt ${i + 1}/${attempts} failed: ${msg.slice(
-          0,
-          160
-        )}`
+        `withRetry(${tag}) attempt ${i + 1}/${attempts} failed: ${msg.slice(0, 160)}`
       );
       if (!ctxLost || i === attempts - 1) throw e;
       await sleep(pauseMs);
@@ -167,30 +251,67 @@ async function waitForSettled(page, { needFilters = true } = {}) {
 
 // Safe write (write temp then replace)
 function writeOutput(productsMap) {
-  const final = Array.from(productsMap.values()).map(finalizeRecord);
+  // 1) Normalize current in-memory results to plain objects
+  const current = new Map();
+  for (const [code, rec] of productsMap.entries()) {
+    current.set(code, finalizeRecord(rec));
+  }
+
+  // 2) Read existing file (if any) and index by code
+  let existingArr = [];
+  try {
+    if (fs.existsSync(OUT_PATH)) {
+      existingArr = JSON.parse(fs.readFileSync(OUT_PATH, "utf-8"));
+      if (!Array.isArray(existingArr)) existingArr = [];
+    }
+  } catch (e) {
+    console.warn("Warning: failed to read existing index; proceeding with fresh write:", e && e.message ? e.message : e);
+    existingArr = [];
+  }
+  const existing = new Map();
+  for (const r of existingArr) {
+    if (r && r.code) existing.set(String(r.code).toUpperCase(), r);
+  }
+
+  // 3) Merge per code (never erase). Keep records that weren't touched.
+  const allCodes = new Set([...existing.keys(), ...current.keys()]);
+
+  const mergedOut = [];
+  for (const code of allCodes) {
+    const oldRec = existing.get(code) || { code };
+    const newRec = current.get(code) || { code };
+    const merged = mergeRecordsNoErase(oldRec, newRec);
+    mergedOut.push(merged);
+  }
+
+  // 4) Write merged output atomically
   const tmp = `${OUT_PATH}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(final, null, 2), "utf-8");
+  fs.writeFileSync(tmp, JSON.stringify(mergedOut, null, 2), "utf-8");
   fs.renameSync(tmp, OUT_PATH);
-  logStep(`writeOutput: wrote ${final.length} products → ${OUT_PATH}`);
+  logStep(`writeOutput: merged ${mergedOut.length} products → ${OUT_PATH}`);
 }
 
 function finalizeRecord(rec) {
   const out = {
     code: rec.code,
-    "surface-group": "Laminate",
+    "surface-group": rec["surface-group"] || "Laminate",
   };
   if (rec.name) out.name = rec.name;
   if (rec["product-link"]) out["product-link"] = rec["product-link"];
 
   for (const [key, val] of Object.entries(rec)) {
-    if (key === "code" || key === "name" || key === "product-link") continue;
+    if (key === "code" || key === "name" || key === "product-link" || key === "surface-group") continue;
     if (key === "finish") {
-      out.finish = Array.from(val.values());
+      // Convert internal Map to stable array of {code?, name?}
+      const arr = [];
+      for (const v of val.values()) {
+        if (v && typeof v === "object") arr.push({ code: v.code, name: v.name });
+      }
+      out.finish = arr;
       continue;
     }
     if (val instanceof Set) {
-      const arr = Array.from(val.values());
-      out[key] = arr;
+      out[key] = Array.from(val.values());
     }
   }
   return out;
@@ -279,6 +400,211 @@ async function goNextPage(page, curIndex) {
     return false;
   }
   return true;
+}
+
+// ----------------------------------------------------
+// Reporting (can be called standalone)
+// ----------------------------------------------------
+function hasField(rec, field) {
+  // Check canonical + aliases so we don't mis-report when the file uses variant keys
+  const keysToCheck = getFieldVariants(field);
+  for (const k of keysToCheck) {
+    const v = rec[k];
+    if (v === undefined || v === null) continue;
+    if (Array.isArray(v)) {
+      if (v.length > 0) return true;
+      continue;
+    }
+    if (typeof v === "object") {
+      if (Object.keys(v).length > 0) return true;
+      continue;
+    }
+    if (typeof v === "string") {
+      if (v.trim().length > 0) return true;
+      continue;
+    }
+    return true; // numbers/booleans etc.
+  }
+  return false;
+}
+
+function doReport(records, fields) {
+  for (const f of fields) {
+    const miss = records.filter((r) => !hasField(r, f)).map((r) => r.code);
+    console.log("\n============================================");
+    console.log(`Report: products missing \"${f}\" → ${miss.length}`);
+    console.log("--------------------------------------------");
+    for (const c of miss) console.log(c);
+  }
+  console.log("\n");
+}
+
+function runReportAndExit() {
+  try {
+    if (!fs.existsSync(OUT_PATH)) {
+      console.error(`No ${OUT_PATH} found. Run the scraper first.`);
+      process.exit(2);
+    }
+    const arr = JSON.parse(fs.readFileSync(OUT_PATH, "utf-8"));
+    doReport(arr, reportFields.length ? reportFields : ["finish"]);
+    process.exit(0);
+  } catch (e) {
+    console.error("Report failed:", e && e.message ? e.message : e);
+    process.exit(3);
+  }
+}
+
+// ----------------------------------------------------
+// Merge helpers – ensure we only add/append, never erase
+// ----------------------------------------------------
+function isPlainObject(x) {
+  return x && typeof x === "object" && !Array.isArray(x);
+}
+
+function normalizeFinishArray(v) {
+  if (!v) return [];
+  if (Array.isArray(v)) {
+    return v
+      .map((it) => {
+        if (it && typeof it === "object") {
+          return { code: it.code, name: it.name };
+        }
+        if (typeof it === "string") {
+          return { code: undefined, name: it };
+        }
+        return null;
+      })
+      .filter(Boolean);
+  }
+  if (isPlainObject(v)) {
+    // Some older files might store a map-like object; convert values to array
+    return Object.values(v)
+      .map((it) => (isPlainObject(it) ? { code: it.code, name: it.name } : null))
+      .filter(Boolean);
+  }
+  if (typeof v === "string") return [{ code: undefined, name: v }];
+  return [];
+}
+
+function unionFinish(aArr, bArr) {
+  const seen = new Set();
+  const out = [];
+  function key(it) {
+    const c = it && it.code ? String(it.code).trim() : "";
+    const n = it && it.name ? String(it.name).trim().toLowerCase() : "";
+    return `${c}|${n}`;
+  }
+  for (const it of [...aArr, ...bArr]) {
+    if (!it) continue;
+    const k = key(it);
+    if (seen.has(k)) continue;
+    seen.add(k);
+    out.push({ code: it.code, name: it.name });
+  }
+  return out;
+}
+
+function unionArraysGeneric(a, b) {
+  const A = Array.isArray(a) ? a : a == null ? [] : [a];
+  const B = Array.isArray(b) ? b : b == null ? [] : [b];
+  const out = [];
+  const seen = new Set();
+  const push = (val) => {
+    const k = typeof val === "object" ? JSON.stringify(val) : String(val);
+    if (seen.has(k)) return;
+    seen.add(k);
+    out.push(val);
+  };
+  for (const v of A) push(v);
+  for (const v of B) push(v);
+  return out;
+}
+
+function collectArrayFromVariants(rec, canonicalKey) {
+  const keys = getFieldVariants(canonicalKey);
+  const acc = [];
+  for (const k of keys) {
+    const v = rec[k];
+    if (Array.isArray(v)) acc.push(...v);
+    else if (typeof v === "string") acc.push(v);
+  }
+  return acc;
+}
+
+function mergeRecordsNoErase(oldRec, newRec) {
+  // Start from old; only add/append from new
+  const out = JSON.parse(JSON.stringify(oldRec || {}));
+
+  // Always keep the canonical code (uppercase)
+  const code = String((newRec.code || oldRec.code || "")).toUpperCase();
+  if (code) out.code = code;
+
+  // Scalars: only set if missing/empty
+  for (const k of ["name", "product-link", "surface-group", "description", "no_repeat"]) {
+    const variants = getFieldVariants(k);
+    const hasAny = variants.some((key) => out[key] != null && String(out[key]).trim() !== "");
+    if (!hasAny && newRec[k] != null && String(newRec[k]).trim() !== "") {
+      out[k] = newRec[k];
+    }
+  }
+
+  // Canonical array buckets – union (including alias variants from BOTH records)
+  const ARRAY_FIELDS = [
+    "design_groups",
+    "species",
+    "cut",
+    "match",
+    "shade",
+    "colors",
+    "design_collections",
+    "performance_enhancements",
+    "specialty_features",
+  ];
+  for (const key of ARRAY_FIELDS) {
+    const fromOld = collectArrayFromVariants(out, key);
+    const fromNew = collectArrayFromVariants(newRec, key);
+    const merged = Array.from(new Set([...fromOld, ...fromNew].filter((x) => x != null && `${x}`.trim() !== "")));
+    if (merged.length) out[key] = merged;
+  }
+
+  // Finish: union array of {code?, name?}
+  const oldFin = normalizeFinishArray(out.finish);
+  const newFin = normalizeFinishArray(newRec.finish);
+  const finMerged = unionFinish(oldFin, newFin);
+  if (finMerged.length) out.finish = finMerged;
+
+  // Any other keys in newRec:
+  for (const [k, v] of Object.entries(newRec)) {
+    if (k === "code") continue;
+    if (k in out) {
+      // Try to merge types sensibly
+      const existing = out[k];
+      if (Array.isArray(existing) || Array.isArray(v)) {
+        out[k] = unionArraysGeneric(existing, v);
+      } else if (isPlainObject(existing) && isPlainObject(v)) {
+        // Shallow fill – keep existing keys, add only missing keys from new
+        out[k] = { ...v, ...existing };
+      } else {
+        // Scalar – keep existing if truthy, else take new
+        if (existing == null || String(existing).trim() === "") out[k] = v;
+      }
+    } else {
+      out[k] = v;
+    }
+  }
+
+  // Ensure canonical mirrors aliases if only alias exists
+  for (const [canonical, aliases] of Object.entries(FIELD_ALIASES)) {
+    if (canonical in out) continue;
+    for (const a of aliases) {
+      if (a in out) {
+        out[canonical] = out[a];
+        break;
+      }
+    }
+  }
+
+  return out;
 }
 
 // ----------------------------------------------------
@@ -405,7 +731,17 @@ async function goNextPage(page, curIndex) {
     return true;
   });
 
-  logStep(`Total unique filters discovered: ${filters.length}`);
+  // If --missing was supplied, limit to those attribute buckets only
+  if (hasMissingFlag) {
+    const allowAttrs = new Set();
+    for (const fld of missingFields) {
+      const attrs = OUTPUT_TO_ATTRS[fld];
+      if (attrs && attrs.size) attrs.forEach((a) => allowAttrs.add(a));
+      else logStep(`Note: field \"${fld}\" does not map to a browseable filter; skipping.`);
+    }
+    filters = filters.filter((f) => allowAttrs.has(f.attr));
+    logStep(`--missing active → limiting to ${filters.length} matching filter options.`);
+  }
 
   if (Number.isFinite(TEST_LIMIT) && TEST_LIMIT > 0) {
     filters = filters.slice(0, TEST_LIMIT);
@@ -523,6 +859,14 @@ async function goNextPage(page, curIndex) {
   // --------------------------------------------------
   // Run filters one-by-one with full pagination per filter
   // --------------------------------------------------
+  if (!filters.length) {
+    logStep("No matching filters found to scrape (check --missing fields). Exiting.");
+    await browser.close();
+    // If user also asked for a report, run it against whatever file exists.
+    if (hasReportFlag) runReportAndExit();
+    process.exit(0);
+  }
+
   logStep("Starting filter iteration with full pagination…");
   for (let i = 0; i < filters.length; i++) {
     const f = filters[i];
@@ -542,14 +886,24 @@ async function goNextPage(page, curIndex) {
   logStep("Finalizing output after all filters…");
   writeOutput(products);
 
+  // Optional report after scraping
+  if (hasReportFlag) {
+    try {
+      const arr = JSON.parse(fs.readFileSync(OUT_PATH, "utf-8"));
+      doReport(arr, reportFields.length ? reportFields : ["finish"]);
+    } catch (e) {
+      console.error("Post-scrape report failed:", e && e.message ? e.message : e);
+    }
+  }
+
   logStep("All done. Closing browser.");
   await browser.close();
 })().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
 // wilsonart-scrape.js
 // Usage:
 //   node wilsonart-scrape.js
 //   FILTER_LIMIT=6 node wilsonart-scrape.js
-//
