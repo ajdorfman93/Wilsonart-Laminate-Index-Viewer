@@ -3,21 +3,20 @@
 //   node wilsonart-scrape.js
 //   node wilsonart-scrape.js --limit=6
 //   FILTER_LIMIT=6 node wilsonart-scrape.js
-//   SKIP_BASELINE=1 node wilsonart-scrape.js      // optional: skip the 1 unfiltered search
 //
 // Output file: wilsonart-laminate-index.json
 //
-// What this does (high level):
+// What this does:
 // - Opens the Wilsonart Laminate Design Library in GRID mode
-// - **Runs ONE baseline crawl with no filters** (your "search without any filter")
-//   across all result pages and lazy loads.
-// - Collects all filter options (checkboxes + color swatches), skipping Availability/Price and
-//   specific labels, then for each filter:
-//     * Navigates to the filter URL
-//     * Loads all products across **all pages** (clicks next until it stops) and via lazy scroll
-//     * Extracts code, name, product-link
-//     * Adds the active filter’s label to the correct bucket
-// - Writes the output JSON **after the baseline** and after **each filter** to keep progress on disk.
+// - Collects filters (checkbox + color swatches), skipping Availability/Price and certain labels
+// - Iterates filters one-by-one; for each filter, navigates, loads all products, extracts:
+//     * code (SKU fallback via href or image filename)
+//     * name (from <img alt>)
+//     * product-link (thumbnail <a href>)
+//   and assigns the active filter's label to that product's bucket
+// - Writes the output JSON **after each filter** to keep progress on disk
+//
+// Plenty of console.log statements show each step.
 
 "use strict";
 
@@ -29,9 +28,11 @@ const puppeteer = require("puppeteer");
 // Configuration
 // -----------------------------------------------------------------------------
 
+// Force GRID mode so your selectors exist
 const START_URL =
   "https://www.wilsonart.com/laminate/design-library?product_list_mode=grid";
 
+// TEST LIMIT (how many filters to run this session)
 const TEST_LIMIT = parseInt(
   process.env.FILTER_LIMIT ??
     (process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1] ??
@@ -42,7 +43,7 @@ const TEST_LIMIT = parseInt(
 // Skip these labels anywhere they appear
 const SKIP_LABELS = ["Quartz", "Solid Surface", "I am not sure"];
 
-// Skip whole attribute sections
+// Skip entire attribute sections
 const SKIP_ATTRIBUTES = new Set(["availability", "price_designlibrary"]);
 
 // Map site attribute -> output field
@@ -53,12 +54,13 @@ const ATTR_TO_OUTPUT = {
   match: "match",
   shade: "shade",
   pa_finish: "finish",
-  performace_enchancments: "performace_enchancments", // (site spelling)
-  specality_features: "specality_features",           // (site spelling)
+  performace_enchancments: "performace_enchancments", // site spelling
+  specality_features: "specality_features",           // site spelling
   design_collections: "design_collections",
-  color_swatch: "color",
+  color_swatch: "color", // swatch links (not checkboxes)
 };
 
+// Output path
 const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
 
 // -----------------------------------------------------------------------------
@@ -71,16 +73,21 @@ const cleanText = (t) =>
 
 function logStep(label, data) {
   const ts = new Date().toISOString();
-  if (data !== undefined) console.log(`[${ts}] ${label}`, data);
-  else console.log(`[${ts}] ${label}`);
+  if (data !== undefined) {
+    console.log(`[${ts}] ${label}`, data);
+  } else {
+    console.log(`[${ts}] ${label}`);
+  }
 }
 
 function sanitizeFilterUrl(href) {
   try {
     const url = new URL(href, START_URL);
+    // Drop noise + skip sections we don't want to couple with
     ["availability", "price_designlibrary", "_"].forEach((p) =>
       url.searchParams.delete(p)
     );
+    // Force GRID mode
     url.searchParams.set("product_list_mode", "grid");
     return url.toString();
   } catch {
@@ -123,6 +130,7 @@ async function withRetry(fn, attempts = 4, pauseMs = 500, tag = "") {
   throw lastErr;
 }
 
+// Wait for DOM to stabilize: readyState + required panels
 async function waitForSettled(page, { needFilters = true } = {}) {
   logStep("waitForSettled: waiting for document.readyState === 'complete'");
   try {
@@ -146,13 +154,16 @@ async function waitForSettled(page, { needFilters = true } = {}) {
   logStep("waitForSettled: done");
 }
 
+// Safe write (write temp then replace)
 function writeOutput(productsMap) {
   logStep("writeOutput: start");
   const final = Array.from(productsMap.values()).map(finalizeRecord);
   const tmp = `${OUT_PATH}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(final, null, 2), "utf-8");
   fs.renameSync(tmp, OUT_PATH);
-  logStep(`writeOutput: wrote ${final.length} products → ${OUT_PATH}`);
+  logStep(
+    `writeOutput: wrote ${final.length} products → ${OUT_PATH}`
+  );
 }
 
 function finalizeRecord(rec) {
@@ -179,172 +190,67 @@ function finalizeRecord(rec) {
 }
 
 // -----------------------------------------------------------------------------
-// Grid extraction + pagination
+// Main
 // -----------------------------------------------------------------------------
 
-// Count visible tiles
-async function countGridTiles(page) {
-  return (
-    (await withRetry(
-      () => page.$$eval("#product-grid-view > ol > li", (els) => els.length),
-      4,
-      500,
-      "grid-count"
-    ).catch(() => 0)) || 0
+(async () => {
+  logStep("Launching Puppeteer…");
+  const browser = await puppeteer.launch({
+    headless: "new",
+    defaultViewport: { width: 1368, height: 900 },
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
+  const page = await browser.newPage();
+
+  // Light asset throttling
+  await page.setRequestInterception(true);
+  page.on("request", (req) => {
+    const type = req.resourceType();
+    // Block heavy assets; DOM still carries img alt + src
+    if (["media", "font"].includes(type)) {
+      return req.abort();
+    }
+    req.continue();
+  });
+
+  // Realistic UA
+  await page.setUserAgent(
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+      "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   );
-}
 
-// Lazy scroll until tile count plateaus
-async function lazyScrollAll(page, maxPasses = 20) {
-  logStep("lazyScrollAll: begin");
-  let prev = -1;
-  for (let i = 0; i < maxPasses; i++) {
-    const count = await countGridTiles(page);
-    logStep(`lazyScrollAll: pass ${i + 1}: count=${count}, prev=${prev}`);
-    if (count === prev) break;
-    prev = count;
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
-    await sleep(900);
-  }
-  logStep("lazyScrollAll: done");
-}
+  logStep(`Navigating to START_URL (GRID mode): ${START_URL}`);
+  await page.goto(START_URL, { waitUntil: "networkidle2" });
+  await waitForSettled(page);
 
-async function extractGridItemsForCurrentPage(page) {
-  const total = await countGridTiles(page);
-  logStep(`extractGridItemsForCurrentPage: grid tiles detected: ${total}`);
-  if (total === 0) return [];
-  return await withRetry(async () => {
-    return await page.$$eval("#product-grid-view > ol > li", (lis) =>
-      lis
-        .map((li) => {
-          const a = li.querySelector("div.thumbnail-image > a");
-          const img = a ? a.querySelector("img") : null;
-          const link = a ? a.href : undefined;
-          const nameAlt = img ? (img.getAttribute("alt") || "").trim() : undefined;
+  // Clear existing filters (if any), via href navigation (safer than click)
+  try {
+    logStep("Checking for 'Clear All' link…");
+    const clearHref =
+      (await withRetry(
+        () =>
+          page.$eval(
+            '.filter-actions a.filter-clear, .filter-current a.clear_all_filter',
+            (a) => a.getAttribute("href")
+          ),
+        2,
+        500,
+        "clearAll"
+      ).catch(() => null)) || null;
 
-          // SKU in grid (if present)
-          const skuEl = li.querySelector(".product-item-sku a, .product-item-sku");
-          let code = skuEl && skuEl.textContent ? skuEl.textContent.trim() : undefined;
-
-          // Fallback 1: parse from href slug (…-y0394)
-          if (!code && link) {
-            const m = link.match(/-([A-Za-z]?\d{3,6})(?:\/|$)/i);
-            if (m) code = m[1].toUpperCase();
-          }
-
-          // Fallback 2: parse from image src (.../Y0395_*.jpg)
-          const src = img ? img.getAttribute("src") : null;
-          if (!code && src) {
-            const m2 = src.match(/\/([A-Za-z]?\d{3,6})[_-][^/]*\.jpg/i);
-            if (m2) code = m2[1].toUpperCase();
-          }
-
-          return code ? { code, nameAlt, link } : null;
-        })
-        .filter(Boolean)
-    );
-  }, 4, 500, "grid-map");
-}
-
-// Return absolute href for the NEXT page, or null if none/disabled
-async function getNextPageHref(page) {
-  return await withRetry(
-    () =>
-      page.evaluate(() => {
-        const nextLi = document.querySelector(
-          "#product-grid-view .pages li.item.pages-item-next"
-        );
-        if (!nextLi) return null;
-        if (nextLi.classList.contains("disabled")) return null;
-        const a = nextLi.querySelector("a");
-        if (!a) return null;
-        // prefer absolute href if possible
-        return a.href || a.getAttribute("href") || null;
-      }),
-    3,
-    300,
-    "get-next"
-  ).catch(() => null);
-}
-
-// Load **all** results for current filter (or baseline) across pages + lazy load
-async function loadAllResults(page) {
-  const seenUrls = new Set();
-  let pageNum = 1;
-  const items = [];
-
-  while (true) {
-    logStep(`Pagination: at page ${pageNum} (url=${page.url()})`);
-    await lazyScrollAll(page);
-    const here = await extractGridItemsForCurrentPage(page);
-    logStep(`Page ${pageNum}: extracted ${here.length} items`);
-    items.push(...here);
-
-    const curr = page.url();
-    seenUrls.add(curr);
-
-    const nextHref = await getNextPageHref(page);
-    if (!nextHref) {
-      logStep("Pagination: next not available; done.");
-      break;
+    if (clearHref) {
+      const url = sanitizeFilterUrl(clearHref);
+      logStep(`'Clear All' found. Navigating to: ${url}`);
+      await page.goto(url, { waitUntil: "networkidle2" });
+      await waitForSettled(page);
+    } else {
+      logStep("'Clear All' not present, continuing.");
     }
-    if (seenUrls.has(nextHref)) {
-      logStep("Pagination: next URL already visited; stopping to avoid loop.");
-      break;
-    }
-
-    logStep(`Pagination: moving to page ${pageNum + 1} via ${nextHref}`);
-    await page.goto(nextHref, { waitUntil: "networkidle2" });
-    await waitForSettled(page, { needFilters: false });
-    const after = page.url();
-    if (after === curr) {
-      logStep("Pagination: URL unchanged after navigating next; stopping to avoid loop.");
-      break;
-    }
-    pageNum++;
-    await sleep(350);
+  } catch (e) {
+    logStep("Warning: 'Clear All' handling failed, continuing.", e.message);
   }
 
-  return items;
-}
-
-// -----------------------------------------------------------------------------
-// Data store
-// -----------------------------------------------------------------------------
-
-function createStore() {
-  const products = new Map();
-  const ensureRec = (code, { nameAlt, link } = {}) => {
-    if (!products.has(code)) {
-      products.set(code, {
-        code,
-        name: undefined,
-        "product-link": undefined,
-        design_groups: new Set(),
-        species: new Set(),
-        cut: new Set(),
-        match: new Set(),
-        shade: new Set(),
-        color: new Set(),
-        finish: new Map(), // key -> {code,name}
-        performace_enchancments: new Set(),
-        specality_features: new Set(),
-        design_collections: new Set(),
-      });
-    }
-    const rec = products.get(code);
-    if (nameAlt && !rec.name) rec.name = nameAlt;
-    if (link && !rec["product-link"]) rec["product-link"] = link;
-    return rec;
-  };
-  return { products, ensureRec };
-}
-
-// -----------------------------------------------------------------------------
-// Filters collection
-// -----------------------------------------------------------------------------
-
-async function collectFilters(page) {
+  // Collect filters (checkbox anchors + color swatches)
   logStep("Collecting filters (checkbox anchors) …");
   const checkboxFilters = await withRetry(async () => {
     return await page.$$eval(
@@ -418,134 +324,168 @@ async function collectFilters(page) {
 
   logStep(`Total unique filters: ${filters.length}`);
 
+  // Apply test limit if set
   if (Number.isFinite(TEST_LIMIT) && TEST_LIMIT > 0) {
     filters = filters.slice(0, TEST_LIMIT);
     logStep(`TEST LIMIT active → will run ${filters.length} filters this session.`);
   }
 
-  return filters;
-}
+  // Data store
+  const products = new Map();
+  const ensureRec = (code, { nameAlt, link } = {}) => {
+    if (!products.has(code)) {
+      products.set(code, {
+        code,
+        name: undefined, // from <img alt>
+        "product-link": undefined, // from thumbnail <a href>
+        design_groups: new Set(),
+        species: new Set(),
+        cut: new Set(),
+        match: new Set(),
+        shade: new Set(),
+        color: new Set(),
+        finish: new Map(), // key -> {code,name}
+        performace_enchancments: new Set(),
+        specality_features: new Set(),
+        design_collections: new Set(),
+      });
+    }
+    const rec = products.get(code);
+    if (nameAlt && !rec.name) rec.name = nameAlt;
+    if (link && !rec["product-link"]) rec["product-link"] = link;
+    return rec;
+  };
 
-// -----------------------------------------------------------------------------
-// Clear filters (if any)
-// -----------------------------------------------------------------------------
+  // Extract products from GRID: code, nameAlt, product-link
+  async function extractGridItems() {
+    logStep("extractGridItems: checking grid items count…");
+    const totalLis =
+      (await withRetry(
+        () =>
+          page.$$eval("#product-grid-view > ol > li", (els) => els.length),
+        4,
+        500,
+        "grid-count"
+      ).catch(() => 0)) || 0;
 
-async function clearAllFiltersIfPresent(page) {
-  logStep("Checking for 'Clear All' link…");
-  const clearHref =
-    (await withRetry(
-      () =>
-        page.$eval(
-          '.filter-actions a.filter-clear, .filter-current a.clear_all_filter',
-          (a) => a.getAttribute("href")
-        ),
-      2,
-      500,
-      "clearAll"
-    ).catch(() => null)) || null;
+    logStep(`extractGridItems: grid tiles detected: ${totalLis}`);
+    if (totalLis === 0) return [];
 
-  if (clearHref) {
-    const url = sanitizeFilterUrl(clearHref);
-    logStep(`'Clear All' found. Navigating to: ${url}`);
-    await page.goto(url, { waitUntil: "networkidle2" });
-    await waitForSettled(page);
-  } else {
-    logStep("'Clear All' not present, continuing.");
+    logStep("extractGridItems: mapping tiles → {code, nameAlt, link}");
+    return await withRetry(async () => {
+      return await page.$$eval(
+        "#product-grid-view > ol > li",
+        (lis) =>
+          lis
+            .map((li) => {
+              const a = li.querySelector("div.thumbnail-image > a");
+              const img = a ? a.querySelector("img") : null;
+              const link = a ? a.href : undefined;
+              const nameAlt = img ? (img.getAttribute("alt") || "").trim() : undefined;
+
+              // SKU in grid (if present)
+              const skuEl = li.querySelector(".product-item-sku a, .product-item-sku");
+              let code = skuEl && skuEl.textContent ? skuEl.textContent.trim() : undefined;
+
+              // Fallback 1: parse from href slug (…-y0394)
+              if (!code && link) {
+                const m = link.match(/-([A-Za-z]?\d{3,6})(?:\/|$)/i);
+                if (m) code = m[1].toUpperCase();
+              }
+
+              // Fallback 2: parse from image src (.../Y0395_*.jpg)
+              const src = img ? img.getAttribute("src") : null;
+              if (!code && src) {
+                const m2 = src.match(/\/([A-Za-z]?\d{3,6})[_-][^/]*\.jpg/i);
+                if (m2) code = m2[1].toUpperCase();
+              }
+
+              return code ? { code, nameAlt, link } : null;
+            })
+            .filter(Boolean)
+      );
+    }, 4, 500, "grid-map");
   }
-}
 
-// -----------------------------------------------------------------------------
-// Main
-// -----------------------------------------------------------------------------
+  async function applyFilterAndCollect(filter, index, total) {
+    const url = sanitizeFilterUrl(filter.href);
+    logStep(
+      `\n[${index + 1}/${total}] Applying filter → attr="${filter.attr}" label="${filter.label}"`
+    );
+    logStep(`Navigate to: ${url}`);
 
-(async () => {
-  logStep("Launching Puppeteer…");
-  const browser = await puppeteer.launch({
-    headless: "new",
-    defaultViewport: { width: 1368, height: 900 },
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
-  const page = await browser.newPage();
-
-  // Light asset throttling
-  await page.setRequestInterception(true);
-  page.on("request", (req) => {
-    const type = req.resourceType();
-    if (["media", "font"].includes(type)) return req.abort();
-    req.continue();
-  });
-
-  // Realistic UA
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-      "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-  );
-
-  logStep(`Navigating to START_URL (GRID mode): ${START_URL}`);
-  await page.goto(START_URL, { waitUntil: "networkidle2" });
-  await waitForSettled(page);
-
-  await clearAllFiltersIfPresent(page);
-
-  const { products, ensureRec } = createStore();
-
-  // ---------------------------- Baseline (no filters) -------------------------
-  if (!process.env.SKIP_BASELINE) {
-    logStep("=== BASELINE (no filters) — single unfiltered search across all pages ===");
-    // Make sure we're on a clean, unfiltered page
-    await page.goto(START_URL, { waitUntil: "networkidle2" });
+    await page.goto(url, { waitUntil: "networkidle2" });
     await waitForSettled(page, { needFilters: false });
 
-    const baseItems = await loadAllResults(page);
-    logStep(`Baseline: ${baseItems.length} items extracted.`);
-    for (const { code, nameAlt, link } of baseItems) {
-      ensureRec(code, { nameAlt, link });
+    // Lazy load by scrolling until count plateaus
+    logStep("Scrolling to load all grid tiles…");
+    let prev = -1;
+    for (let i = 0; i < 20; i++) {
+      const count =
+        (await withRetry(
+          () => page.$$eval("#product-grid-view > ol > li", (els) => els.length),
+          4,
+          500,
+          "scroll-count"
+        ).catch(() => 0)) || 0;
+      logStep(`scroll pass ${i + 1}: count=${count}, prev=${prev}`);
+      if (count === prev) break;
+      prev = count;
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
+      await sleep(900);
     }
+
+    const items = await extractGridItems();
+    logStep(`Items extracted under this filter: ${items.length}`);
+
+    const bucket = ATTR_TO_OUTPUT[filter.attr];
+    if (!bucket) {
+      logStep(
+        `Bucket not mapped for attribute "${filter.attr}" — skipping assignment`
+      );
+      return { newCodes: 0, updatedCodes: 0 };
+    }
+
+    let newCodes = 0;
+    let updatedCodes = 0;
+    const label = cleanText(filter.label);
+
+    for (const { code, nameAlt, link } of items) {
+      const existed = products.has(code);
+      const rec = ensureRec(code, { nameAlt, link });
+
+      if (bucket === "finish") {
+        const parsed = parseFinish(label);
+        const key = parsed.code || parsed.name || label;
+        if (!rec.finish.has(key)) rec.finish.set(key, parsed);
+      } else if (bucket === "shade") {
+        rec.shade.add(label);
+      } else {
+        rec[bucket].add(label);
+      }
+
+      if (existed) updatedCodes++;
+      else newCodes++;
+    }
+
+    logStep(
+      `Assignment done for filter "${filter.label}": new=${newCodes}, updated=${updatedCodes}`
+    );
+
+    // After each filter, WRITE OUTPUT to keep progress
     writeOutput(products);
-  } else {
-    logStep("Skipping baseline due to SKIP_BASELINE env flag.");
+
+    return { newCodes, updatedCodes };
   }
 
-  // ----------------------------- Filters pass --------------------------------
-  logStep("Collecting filters…");
-  const filters = await collectFilters(page);
-
+  // ---------------------------------------------------------------------------
+  // Run filters
+  // ---------------------------------------------------------------------------
   logStep("Starting filter iteration…");
   for (let i = 0; i < filters.length; i++) {
     const f = filters[i];
     try {
-      const url = sanitizeFilterUrl(f.href);
-      logStep(
-        `\n[${i + 1}/${filters.length}] Applying filter → attr="${f.attr}" label="${f.label}"`
-      );
-      logStep(`Navigate to: ${url}`);
-      await page.goto(url, { waitUntil: "networkidle2" });
-      await waitForSettled(page, { needFilters: false });
-
-      const items = await loadAllResults(page);
-      logStep(`Filter "${f.label}": extracted ${items.length} items`);
-
-      const bucket = ATTR_TO_OUTPUT[f.attr];
-      if (!bucket) {
-        logStep(`Bucket not mapped for attribute "${f.attr}" — skipping assignment`);
-      } else {
-        const label = cleanText(f.label);
-        for (const { code, nameAlt, link } of items) {
-          const rec = ensureRec(code, { nameAlt, link });
-          if (bucket === "finish") {
-            const parsed = parseFinish(label);
-            const key = parsed.code || parsed.name || label;
-            if (!rec.finish.has(key)) rec.finish.set(key, parsed);
-          } else if (bucket === "shade") {
-            rec.shade.add(label);
-          } else {
-            rec[bucket].add(label);
-          }
-        }
-      }
-
-      // Persist after each filter
-      writeOutput(products);
+      await applyFilterAndCollect(f, i, filters.length);
       await sleep(350);
     } catch (e) {
       logStep(
@@ -556,7 +496,7 @@ async function clearAllFiltersIfPresent(page) {
     }
   }
 
-  // Final write (safety, already written after baseline + each filter)
+  // Final write (already writing after each filter, but do one last time)
   logStep("Finalizing output after all filters…");
   writeOutput(products);
 
