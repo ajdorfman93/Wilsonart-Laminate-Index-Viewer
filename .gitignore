@@ -2,3 +2,4 @@ node_modules
 .gitattributes
 instructions.txt
 wilsonart-laminate-index.json
+.env.local
