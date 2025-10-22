@@ -1,9 +1,16 @@
 /* viewer.js
    Renders wilsonart-laminate-details.json with thumbnails and uses Filters.apply() to filter.
    Include filters.js BEFORE this file and add <div id="filters"></div> in your HTML.
+
+   UPDATE: If a row has `banner_cropped: true`, we visually crop 93px from the BOTTOM of the image
+   (both in the thumbnail and in the lightbox). This is done with CSS clip-path so no pixel
+   manipulation is required.
 */
 
 const DEFAULT_URL = './wilsonart-laminate-details.json';
+
+// Inject minimal CSS needed for cropping + some safety styles
+injectViewerStyles();
 
 // Grab elements (add these to your HTML if missing)
 const statusEl = document.getElementById('status') || mk('#status');
@@ -92,13 +99,18 @@ function renderImage(row) {
   const codeText = row && row.code ? row.code : '';
   const nameText = row && row.name ? row.name : '';
   const alt = `${codeText} ${nameText}`.trim() || 'preview';
+  const isBanner = row.banner_cropped === true;
+  const bannerAttr = isBanner ? '1' : '0';
+  // Note: we add data-banner so the click handler can apply the same crop inside the lightbox
+  // CSS handles thumbnail cropping automatically via the selector below.
   const img = `<img
       src="${escapeAttr(url)}"
       alt="${escapeAttr(alt)}"
       loading="lazy"
       referrerpolicy="no-referrer"
+      class="thumb-img"
       style="max-width:140px; max-height:120px; object-fit:contain; border-radius:8px; box-shadow:0 0 0 1px rgba(0,0,0,.06);" />`;
-  return `<button type="button" class="thumb" data-full="${escapeAttr(url)}" data-alt="${escapeAttr(alt)}" aria-label="View ${escapeAttr(alt)} full size">${img}</button>`;
+  return `<button type="button" class="thumb" data-full="${escapeAttr(url)}" data-alt="${escapeAttr(alt)}" data-banner="${bannerAttr}" aria-label="View ${escapeAttr(alt)} full size">${img}</button>`;
 }
 
 function setStatus(msg) {
@@ -146,6 +158,8 @@ function renderTable() {
     return `<tr>${tds}</tr>`;
   }).join('');
   bodyRows.innerHTML = html;
+
+  // After rendering, let CSS handle thumbnail crop; no extra JS required.
 }
 
 if (bodyRows) {
@@ -155,8 +169,9 @@ if (bodyRows) {
     event.preventDefault();
     const fullUrl = thumb.getAttribute('data-full');
     const altText = thumb.getAttribute('data-alt') || '';
+    const isBanner = thumb.getAttribute('data-banner') === '1';
     lightboxLastFocus = thumb;
-    showLightbox(fullUrl, altText);
+    showLightbox(fullUrl, altText, isBanner);
   });
 }
 
@@ -188,11 +203,14 @@ function findThumb(node) {
   return null;
 }
 
-function showLightbox(url, altText) {
+function showLightbox(url, altText, isBanner) {
   if (!lightbox) return;
   if (!url) return;
-  if (lightboxImg) lightboxImg.setAttribute('src', url);
-  if (lightboxImg) lightboxImg.setAttribute('alt', altText || '');
+  if (lightboxImg) {
+    lightboxImg.setAttribute('src', url);
+    lightboxImg.setAttribute('alt', altText || '');
+    lightboxImg.classList.toggle('is-banner', !!isBanner);
+  }
   if (lightboxCaption) lightboxCaption.textContent = altText || '';
   lightbox.classList.add('is-visible');
   lightbox.setAttribute('aria-hidden', 'false');
@@ -208,6 +226,7 @@ function hideLightbox() {
   if (lightboxImg) {
     lightboxImg.removeAttribute('src');
     lightboxImg.setAttribute('alt', '');
+    lightboxImg.classList.remove('is-banner');
   }
   if (lightboxCaption) lightboxCaption.textContent = '';
   if (lightboxLastFocus && typeof lightboxLastFocus.focus === 'function') {
@@ -278,3 +297,34 @@ if (reloadEl) {
 
 // kick off
 loadDefault();
+
+// ------------------------- helpers -------------------------
+
+function injectViewerStyles() {
+  if (document.getElementById('viewer-inline-styles')) return;
+  const css = `
+  /* Pill */
+  .pill { display:inline-block; padding:2px 6px; border-radius:999px; background:rgba(0,0,0,.06); margin:2px; font-size:12px; }
+
+  /* Thumbnail button */
+  .thumb { background:transparent; border:0; padding:0; cursor:pointer; }
+  .thumb:focus { outline:2px solid #66a3ff; outline-offset:2px; }
+
+  /* Crop bottom 93 CSS pixels if banner flag is present */
+  .thumb[data-banner="1"] .thumb-img { clip-path: inset(0 0 93px 0); }
+
+  /* Lightbox */
+  .lightbox { position:fixed; inset:0; display:block; z-index:2000; opacity:0; pointer-events:none; transition:opacity .15s ease; }
+  .lightbox.is-visible { opacity:1; pointer-events:auto; }
+  .lightbox-backdrop { position:absolute; inset:0; background:rgba(0,0,0,.65); }
+  .lightbox-inner { position:absolute; inset:auto; top:50%; left:50%; transform:translate(-50%,-50%); max-width:90vw; max-height:90vh; margin:0; }
+  .lightbox-img { max-width:90vw; max-height:85vh; display:block; border-radius:8px; background:#fff; }
+  .lightbox-img.is-banner { clip-path: inset(0 0 93px 0); }
+  .lightbox-close { position:absolute; top:-40px; right:0; font-size:28px; width:36px; height:36px; line-height:32px; border-radius:6px; border:0; cursor:pointer; }
+  .lightbox-caption { margin-top:8px; color:#fff; text-align:center; font-size:14px; }
+  `;
+  const style = document.createElement('style');
+  style.id = 'viewer-inline-styles';
+  style.textContent = css;
+  document.head.appendChild(style);
+}

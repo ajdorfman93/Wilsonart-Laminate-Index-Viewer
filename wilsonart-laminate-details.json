@@ -841,35 +841,26 @@
     "surface-group": "Laminate",
     "name": "Eggplant",
     "product-link": "https://www.wilsonart.com/laminate/design-library/eggplant-y0864",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Purple"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/531ebb1f-5b1d-4666-bee7-a04e74c0174d/Y0864-Eggplant-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
     "no_repeat": false,
     "description": "A directional, wavy pattern in a saturated aubergine.",
     "texture_scale": {
       "width": 144,
       "height": 60
-    },
-    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/531ebb1f-5b1d-4666-bee7-a04e74c0174d/Y0864-Eggplant-5x12_150dpi",
-    "texture_image_pixels": {
-      "width": 2000,
-      "height": 853
     }
   },
   {
@@ -877,22 +868,13 @@
     "surface-group": "Laminate",
     "name": "Sprout",
     "product-link": "https://www.wilsonart.com/laminate/design-library/sprout-y0871",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Green"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
@@ -913,22 +895,13 @@
     "surface-group": "Laminate",
     "name": "Sweet Corn",
     "product-link": "https://www.wilsonart.com/laminate/design-library/sweet-corn-y0868",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Yellow"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
@@ -949,22 +922,13 @@
     "surface-group": "Laminate",
     "name": "Tangerine",
     "product-link": "https://www.wilsonart.com/laminate/design-library/tangerine-y0867",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Orange"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
@@ -985,22 +949,13 @@
     "surface-group": "Laminate",
     "name": "Kiwi",
     "product-link": "https://www.wilsonart.com/laminate/design-library/kiwi-y0861",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Green"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
@@ -1021,16 +976,12 @@
     "surface-group": "Laminate",
     "name": "Pomegranate",
     "product-link": "https://www.wilsonart.com/laminate/design-library/pomegranate-y0811",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Red"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -1106,30 +1057,26 @@
     "surface-group": "Laminate",
     "name": "Natural Raffia",
     "product-link": "https://www.wilsonart.com/laminate/design-library/natural-raffia-y0823",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Brown"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cb9585d3-0a7e-45d5-965c-b6248134a6e6/Y0823-Natural-Raffia-5X12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
     "no_repeat": false,
     "description": "Natural Raffia is a medium-scale woven design. This medium toned neutral pattern is the color of natural grass fiber.",
     "texture_scale": {
       "width": 144,
       "height": 60
-    },
-    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cb9585d3-0a7e-45d5-965c-b6248134a6e6/Y0823-Natural-Raffia-5X12_150dpi",
-    "texture_image_pixels": {
-      "width": 2000,
-      "height": 849
     }
   },
   {
@@ -1164,16 +1111,12 @@
     "surface-group": "Laminate",
     "name": "Java Cane",
     "product-link": "https://www.wilsonart.com/laminate/design-library/java-cane-y0822",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Brown"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -1249,16 +1192,12 @@
     "surface-group": "Laminate",
     "name": "Sugar Cane",
     "product-link": "https://www.wilsonart.com/laminate/design-library/sugar-cane-y0821",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "White"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -1928,16 +1867,12 @@
     "surface-group": "Laminate",
     "name": "Vintage Raffia",
     "product-link": "https://www.wilsonart.com/laminate/design-library/vintage-raffia-y0824",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Neutral"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -2283,16 +2218,12 @@
     "surface-group": "Laminate",
     "name": "Winter Glaze",
     "product-link": "https://www.wilsonart.com/laminate/design-library/winter-glaze-y0777",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Neutral"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -2314,16 +2245,12 @@
     "surface-group": "Laminate",
     "name": "Stormy Glaze",
     "product-link": "https://www.wilsonart.com/laminate/design-library/stormy-glaze-y0776",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -2345,9 +2272,7 @@
     "surface-group": "Laminate",
     "name": "Pressed Pewter",
     "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-pewter-y0775",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -2374,16 +2299,12 @@
     "surface-group": "Laminate",
     "name": "Pressed Gold",
     "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-gold-y0774",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "White"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -2621,16 +2542,12 @@
     "surface-group": "Laminate",
     "name": "Green Sew and Sew",
     "product-link": "https://www.wilsonart.com/laminate/design-library/green-sew-and-sew-y0767",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Green"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -2843,29 +2760,16 @@
     "surface-group": "Laminate",
     "name": "Crystal Quartzite",
     "product-link": "https://www.wilsonart.com/laminate/design-library/crystal-quartzite-5068",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "White"
-    ],
-    "finish": [
-      {
-        "code": "#22",
-        "name": "Antique"
-      }
-    ],
-    "performace_enchancments": [
-      "AEON 3X Durability"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
-    "design_collections": [
-      "Residential Designs"
-    ],
+    "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/5072c508-1697-4feb-a267-7e96c9f0e709/5068-Crystal-Quartzite_150dpi",
     "texture_image_pixels": {
       "width": 1180,
@@ -2937,29 +2841,16 @@
     "surface-group": "Laminate",
     "name": "Midnight Carnival",
     "product-link": "https://www.wilsonart.com/catalog/product/view/id/10417/s/midnight-carnival-5061/category/53/",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Brown"
-    ],
-    "finish": [
-      {
-        "code": "#15",
-        "name": "Fieldstone"
-      }
-    ],
-    "performace_enchancments": [
-      "AEON 3X Durability"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
-    "design_collections": [
-      "Residential Designs"
-    ],
+    "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/9a80b793-d30f-48f4-902d-8c8daff14887/5061-Midnight-Carnival-PRINT-Approved_150dpi",
     "texture_image_pixels": {
       "width": 2000,
@@ -5401,22 +5292,13 @@
     "surface-group": "Laminate",
     "name": "Beachwalk",
     "product-link": "https://www.wilsonart.com/laminate/design-library/beachwalk-5044",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "White"
-    ],
-    "finish": [
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
+    "color": [],
+    "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
@@ -5437,29 +5319,16 @@
     "surface-group": "Laminate",
     "name": "Granito Cascata",
     "product-link": "https://www.wilsonart.com/laminate/design-library/granito-cascata-5041",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Taupe"
-    ],
-    "finish": [
-      {
-        "code": "#15",
-        "name": "Fieldstone"
-      }
-    ],
-    "performace_enchancments": [
-      "AEON 3X Durability"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
-    "design_collections": [
-      "Residential Designs"
-    ],
+    "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/725f129d-5342-4a67-932b-1091db9e82db/5041-Granito-Cascata_150dpi",
     "texture_image_pixels": {
       "width": 1180,
@@ -5477,29 +5346,16 @@
     "surface-group": "Laminate",
     "name": "Bello Romano",
     "product-link": "https://www.wilsonart.com/laminate/design-library/bello-romano-5039",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Taupe"
-    ],
-    "finish": [
-      {
-        "code": "#15",
-        "name": "Fieldstone"
-      }
-    ],
-    "performace_enchancments": [
-      "AEON 3X Durability"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
-    "design_collections": [
-      "Residential Designs"
-    ],
+    "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d176a10f-143f-41de-9f32-ff6eac6e57a8/5039-Bello-Romano_150dpi",
     "texture_image_pixels": {
       "width": 1180,
@@ -5679,9 +5535,7 @@
     "surface-group": "Laminate",
     "name": "Tin Trellis",
     "product-link": "https://www.wilsonart.com/laminate/design-library/tin-trellis-y0796",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -5708,9 +5562,7 @@
     "surface-group": "Laminate",
     "name": "Charcoal Trellis",
     "product-link": "https://www.wilsonart.com/laminate/design-library/charcoal-trellis-y0795",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -5737,9 +5589,7 @@
     "surface-group": "Laminate",
     "name": "Gold Construct",
     "product-link": "https://www.wilsonart.com/laminate/design-library/gold-construct-y0793",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -5766,16 +5616,12 @@
     "surface-group": "Laminate",
     "name": "Misty Mountains Landscape",
     "product-link": "https://www.wilsonart.com/laminate/design-library/misty-mountains-landscape-y0792x",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Gray"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5797,16 +5643,12 @@
     "surface-group": "Laminate",
     "name": "Misty Mountains",
     "product-link": "https://www.wilsonart.com/laminate/design-library/misty-mountains-y0792",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Gray"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5828,16 +5670,12 @@
     "surface-group": "Laminate",
     "name": "Restful Doodles",
     "product-link": "https://www.wilsonart.com/laminate/design-library/restful-doodles-y0791",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Multicolor"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5859,16 +5697,12 @@
     "surface-group": "Laminate",
     "name": "Garden Dots",
     "product-link": "https://www.wilsonart.com/laminate/design-library/garden-dots-y0789",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Green"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5890,16 +5724,12 @@
     "surface-group": "Laminate",
     "name": "Coastal Dots",
     "product-link": "https://www.wilsonart.com/laminate/design-library/coastal-dots-y0788",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5921,16 +5751,12 @@
     "surface-group": "Laminate",
     "name": "Sky Collage",
     "product-link": "https://www.wilsonart.com/laminate/design-library/sky-collage-y0787",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -5952,16 +5778,12 @@
     "surface-group": "Laminate",
     "name": "Golden Collage",
     "product-link": "https://www.wilsonart.com/laminate/design-library/golden-collage-y0786",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Neutral"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6442,16 +6264,12 @@
     "surface-group": "Laminate",
     "name": "Blue Sew and Sew",
     "product-link": "https://www.wilsonart.com/laminate/design-library/blue-sew-and-sew-y0768",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6527,9 +6345,7 @@
     "surface-group": "Laminate",
     "name": "South Devon",
     "product-link": "https://www.wilsonart.com/laminate/design-library/south-devon-y0757",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -6583,9 +6399,7 @@
     "surface-group": "Laminate",
     "name": "Backyard Patio",
     "product-link": "https://www.wilsonart.com/laminate/design-library/backyard-patio-y0755",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -6612,9 +6426,7 @@
     "surface-group": "Laminate",
     "name": "Wire Mesh",
     "product-link": "https://www.wilsonart.com/laminate/design-library/wire-mesh-y0754",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
@@ -6695,16 +6507,12 @@
     "surface-group": "Laminate",
     "name": "Graffiti Park",
     "product-link": "https://www.wilsonart.com/laminate/design-library/grafitti-park-y0751",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Multicolor"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6726,16 +6534,12 @@
     "surface-group": "Laminate",
     "name": "Grateful Dyed",
     "product-link": "https://www.wilsonart.com/laminate/design-library/grateful-dyed-y0749",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Multicolor"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6757,16 +6561,12 @@
     "surface-group": "Laminate",
     "name": "Stapled Notice",
     "product-link": "https://www.wilsonart.com/laminate/design-library/stapled-notice-y0748",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6788,16 +6588,12 @@
     "surface-group": "Laminate",
     "name": "City Metal",
     "product-link": "https://www.wilsonart.com/laminate/design-library/city-metal-y0747",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Black"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6819,16 +6615,12 @@
     "surface-group": "Laminate",
     "name": "Artisan Find",
     "product-link": "https://www.wilsonart.com/laminate/design-library/artisan-find-y0746",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6850,16 +6642,12 @@
     "surface-group": "Laminate",
     "name": "Ceramic Blue",
     "product-link": "https://www.wilsonart.com/laminate/design-library/ceramic-blue-y0745",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
+    "color": [],
     "finish": [],
     "performace_enchancments": [],
     "specality_features": [],
@@ -6908,40 +6696,14 @@
     "surface-group": "Laminate",
     "name": "Sunny Side Up",
     "product-link": "https://www.wilsonart.com/laminate/design-library/sunny-side-up-13089",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Yellow"
-    ],
-    "finish": [
-      {
-        "code": "#01",
-        "name": "High Gloss"
-      },
-      {
-        "code": "#07",
-        "name": "Textured Gloss"
-      },
-      {
-        "code": "#38",
-        "name": "Fine Velvet"
-      },
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
-    "performace_enchancments": [
-      "Chemical Resistant",
-      "Enhanced Wear Resistance",
-      "Fire-Rated",
-      "Peel & Stick (RE-COVER)"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a4b6c9f2-05b5-4950-a58b-dc6949df4f3d/13089-Sunny-Side-Up_150dpi",
@@ -6961,40 +6723,14 @@
     "surface-group": "Laminate",
     "name": "Dragon Fire",
     "product-link": "https://www.wilsonart.com/laminate/design-library/dragon-fire-13088",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Orange"
-    ],
-    "finish": [
-      {
-        "code": "#01",
-        "name": "High Gloss"
-      },
-      {
-        "code": "#07",
-        "name": "Textured Gloss"
-      },
-      {
-        "code": "#38",
-        "name": "Fine Velvet"
-      },
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
-    "performace_enchancments": [
-      "Chemical Resistant",
-      "Enhanced Wear Resistance",
-      "Fire-Rated",
-      "Peel & Stick (RE-COVER)"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/75163a7d-8a11-4b7e-bbbd-5a9c9cab1217/13088-Dragon-Fire_150dpi",
@@ -7014,39 +6750,14 @@
     "surface-group": "Laminate",
     "name": "Nori",
     "product-link": "https://www.wilsonart.com/laminate/design-library/nori-13091",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Green"
-    ],
-    "finish": [
-      {
-        "code": "#01",
-        "name": "High Gloss"
-      },
-      {
-        "code": "#07",
-        "name": "Textured Gloss"
-      },
-      {
-        "code": "#38",
-        "name": "Fine Velvet"
-      },
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
-    "performace_enchancments": [
-      "Chemical Resistant",
-      "Enhanced Wear Resistance",
-      "Fire-Rated"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6c9dfa3b-5531-428f-a1a8-269ab7fa9be4/13091-Nori_150dpi",
@@ -7066,39 +6777,14 @@
     "surface-group": "Laminate",
     "name": "Catalina",
     "product-link": "https://www.wilsonart.com/laminate/design-library/catalina-13092",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Blue"
-    ],
-    "finish": [
-      {
-        "code": "#01",
-        "name": "High Gloss"
-      },
-      {
-        "code": "#07",
-        "name": "Textured Gloss"
-      },
-      {
-        "code": "#38",
-        "name": "Fine Velvet"
-      },
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
-    "performace_enchancments": [
-      "Chemical Resistant",
-      "Fire-Rated",
-      "Peel & Stick (RE-COVER)"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/710e0a87-ae01-4570-b8fc-f6f41ac0b97e/13092-Catalina-PRINT-_150dpi",
@@ -7118,40 +6804,14 @@
     "surface-group": "Laminate",
     "name": "Candy Apple",
     "product-link": "https://www.wilsonart.com/laminate/design-library/candy-apple-13096",
-    "design_groups": [
-      "Abstracts & Patterns"
-    ],
+    "design_groups": [],
     "species": [],
     "cut": [],
     "match": [],
     "shade": [],
-    "color": [
-      "Red"
-    ],
-    "finish": [
-      {
-        "code": "#01",
-        "name": "High Gloss"
-      },
-      {
-        "code": "#07",
-        "name": "Textured Gloss"
-      },
-      {
-        "code": "#38",
-        "name": "Fine Velvet"
-      },
-      {
-        "code": "#60",
-        "name": "Matte"
-      }
-    ],
-    "performace_enchancments": [
-      "Chemical Resistant",
-      "Enhanced Wear Resistance",
-      "Fire-Rated",
-      "Peel & Stick (RE-COVER)"
-    ],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
     "specality_features": [],
     "design_collections": [],
     "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ee59a890-d758-4106-aae4-3958160e6823/13096-Candy-Apple-PRINT-_150dpi",
@@ -7663,13 +7323,14 @@
     "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0632_Barn_Door_5x12_full_size_view_Banner.jpg",
     "texture_image_pixels": {
       "width": 2400,
-      "height": 1023
+      "height": 930
     },
     "no_repeat": true,
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0697",
@@ -8306,14 +7967,15 @@
     "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0636_Maize_Walnut_5x12_full_size_view_Banner.jpg",
     "texture_image_pixels": {
       "width": 2400,
-      "height": 1019
+      "height": 926
     },
     "no_repeat": false,
     "description": "Maize Walnut is a clean linear rift cut walnut. This small scale wood is a warm midtone brown color.",
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0635",
@@ -8521,13 +8183,14 @@
     "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0711_Lime_Ash_5x12_full_size_view_Banner.jpg",
     "texture_image_pixels": {
       "width": 2400,
-      "height": 1019
+      "height": 926
     },
     "no_repeat": false,
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0709",
@@ -8810,13 +8473,14 @@
     "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0698_Bonaire_5X12_full_size_view_Banner.jpg",
     "texture_image_pixels": {
       "width": 2400,
-      "height": 1019
+      "height": 926
     },
     "no_repeat": false,
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "banner_cropped": true
   },
   {
     "code": "15507",
@@ -11206,6 +10870,1742 @@
     "texture_scale": {
       "width": 96,
       "height": 48
+    }
+  },
+  {
+    "code": "Y0633",
+    "surface-group": "Laminate",
+    "name": "Arctic Voyage",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/arctic-voyage-y0633",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/200797f7-4ca4-41b3-8f32-e70d61c883a2/Y0633-GCR4-Artic-Voyage-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0631",
+    "surface-group": "Laminate",
+    "name": "Frozen Hex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/frozen-hex-y0631",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/95a82e93-77e7-4558-baa9-8468e126d1a8/Y0631-Frozen-Hex-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Frozen Hex is a medium scale abstracted stone design made up of hexagons in blues, greys, white and black.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0629",
+    "surface-group": "Laminate",
+    "name": "Polar Hex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/polar-hex-y0629",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e4eb3a28-61b0-48f2-b569-4826391a61c5/Y0629-Polar-Hex-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Polar Hex is an abstracted stone design made up of hexagons. This medium scale design is in blacks, greys and white.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0628",
+    "surface-group": "Laminate",
+    "name": "Blue Iceberg",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/blue-iceberg-y0628",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/08a08497-e265-417d-adb0-c51519198209/Y0628-CMYK-Blue-Iceberg-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0627",
+    "surface-group": "Laminate",
+    "name": "White Iceberg",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/white-iceberg-y0627",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b8d18d8c-0e5b-46a4-bc8c-2acb057a713f/Y0627-White-Iceberg-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "White Iceberg is a large scale white stone design with black and grey veining. The design was created from actual photos of glaciers.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0626",
+    "surface-group": "Laminate",
+    "name": "Diamond Ice",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/diamond-ice-y0626",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/751ff3a8-e3ec-4a4f-b8de-aa5b8c5a127d/Y0626-Diamond-Ice-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Diamond Ice is a warm white large scale stone design with large grey veining. This beautiful pattern has visual transparency creating a bold look.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0625",
+    "surface-group": "Laminate",
+    "name": "Onyx Ice",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/onyx-ice-y0625",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a7e47ff9-a43b-4269-bd5f-ac089153a927/Y0625-Onyx-Ice-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Onyx Ice is a dramatic black stone design with large white and grey veining. The large scale design has a beautiful transparency effect creating interest.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0624",
+    "surface-group": "Laminate",
+    "name": "Sapphire Ice",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sapphire-ice-y0624",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/10d1d4d8-3501-4d16-b1f2-e9751ffbb78a/Y0624-Saphire-Ice-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Sapphire Ice is a large scale stone design with white and blue veining. This dramatic deep blue design has levels of transparency, creating visual interest.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "D504",
+    "surface-group": "Laminate",
+    "name": "Fossil Shale",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/fossil-shale-d504",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ee649b89-5745-4f36-8ab4-44a4a9665b64/D504-Fossil-Shale_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Fossil Shale is a warm mid-tone grey.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0623",
+    "surface-group": "Laminate",
+    "name": "Taupe Geo",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/taupe-geo-y0623",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5ebdf39a-1bac-4eeb-99d8-4da8911c7dc6/Y0623-Taupe-Geo-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0622",
+    "surface-group": "Laminate",
+    "name": "Yaki Shiro",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/yaki-shiro-y0622",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0c5f94c4-b1c6-4d3a-b14b-9d5c96f6c2ea/Y0622-Yaki-Shiro-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "description": "Yaki Shiro is a heavily distressed warm white bleached wood. The large scale wood design’s texture looks like bleached out charring.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0621",
+    "surface-group": "Laminate",
+    "name": "Yaki Oak",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/7135/s/yaki-oak-y0621/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0ddc783c-8398-4803-b930-2f6555244713/Y0621-Yaki-Oak-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "description": "Yaki Oak is a large scale charred wood design in deep charcoal and black.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0619",
+    "surface-group": "Laminate",
+    "name": "Carpenter's Crate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carpenter-s-crate-y0619",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5a325b11-7be7-4408-b7fd-9313ea2f3fc5/Y0619-Carpenters-Crate-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0618",
+    "surface-group": "Laminate",
+    "name": "Carpenter's Bench",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carpenter-s-bench-y0618",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c9407aeb-c3cf-4bc4-9306-96702e5c444f/Y0618-Carpenters-Bench-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Carpenters Bench is a large-scale warm neutral wood design. The pattern has a rustic character with nail holes, paint splatter and saw marks.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0617",
+    "surface-group": "Laminate",
+    "name": "Herringbone Satinwood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/herringbone-satinwood-y0617",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/573a0d96-8ae0-433a-9f43-34aac26fe4a7/Y0617-Herringbone-Satinwood-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": true,
+    "description": "Herringbone Satinwood is a large-scale wood pattern with heavy black graining and medium brown color variations thoughout.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0616",
+    "surface-group": "Laminate",
+    "name": "Rich Satinwood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rich-satinwood-y0616",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/152158d3-6b41-4b48-a498-c458747c15a7/Y0616-Rich-Satinwood-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Rich Satinwood is an exotic wood design in deep brown with black graining. The large-scale design has planking throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0615",
+    "surface-group": "Laminate",
+    "name": "Sage Crosstex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sage-crosstex-y0615",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/38fa2fb1-5d98-430a-a3a1-a3114bc54374/Y0615-Sage-Crosstex-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Sage Crosstex is a distressed pattern with a visual cross texture pattern in light and medium dusty greens. This medium-scale pattern has a soft graphic look.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0614",
+    "surface-group": "Laminate",
+    "name": "Ghost Crosstex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ghost-crosstex-y0614",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b8de2b5b-6fe1-4bc5-856a-d2331d0eeeec/Y0614-Ghost-Crosstex-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "description": "Ghost Crosstex is a medium-scale pattern with a distressed visual cross texture in light and medium greys.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0613",
+    "surface-group": "Laminate",
+    "name": "Frosty Obscura",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/frosty-obscura-y0613",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/51754bb9-bb0a-4af8-9168-46747459611e/Y0613-Frost-Obscura-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Frosty Obscura is a large scale painterly pattern. This allover pattern is rich in visual texture in shades of cool steely blue and accents of purple.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0612",
+    "surface-group": "Laminate",
+    "name": "Urban Obscura",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/urban-obscura-y0612",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/923fa867-fa71-4060-9e1d-b4d179fb6e7a/Y0612-Urban-Obscura-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Urban Obscura is a large-scale visually textured allover pattern. This pattern is like an urban camo with greens, browns, white, amber and pops of deep aquamarine.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0611",
+    "surface-group": "Laminate",
+    "name": "Dusk Obscura",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/dusk-obscura-y0611",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e2f32335-d97e-4130-bee6-99bb02ee1f33/Y0611-Dusk-Obscura-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856
+    },
+    "no_repeat": false,
+    "description": "Dusk Obscura is a heavily textured allover pattern. The large-scale painterly pattern is full of shades of greys, blues, and purple.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "8218",
+    "surface-group": "Laminate",
+    "name": "Kingswood Walnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/kingswood-walnut-8218",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/439847cf-46d7-4ffa-9c85-18eb2eae6057/8218-Kingswood-Walnut_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 61.75,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "8217",
+    "surface-group": "Laminate",
+    "name": "Italian Silver Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/italian-silver-ash-8217",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b8451aef-3fa7-486b-bef6-53ce2d38b03c/8217-Italian-Silver-Ash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 61.75,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "5015",
+    "surface-group": "Laminate",
+    "name": "Nordic Linen",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6946/s/nordic-linen-5016/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d533b60d-ff06-453b-a36c-d031e8c43a32/5015-Nordic-Linen",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 61.75,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "5016",
+    "surface-group": "Laminate",
+    "name": "French Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/french-linen-5016",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fa177396-b1cc-4ecc-9fb4-056641d4925c/5016-French-Linen",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 61.75,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "Y0608",
+    "surface-group": "Laminate",
+    "name": "Cocoa Line",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cocoa-line-y0608",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ab570b2f-a07a-493c-b401-4974e858b6d7/Y0608-Cocoa-Line",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Cocoa Line is a rich deep brown wood pattern with black straight graining running through the small scaled design.",
+    "texture_scale": {
+      "width": 24,
+      "height": 24
+    }
+  },
+  {
+    "code": "Y0607",
+    "surface-group": "Laminate",
+    "name": "Midnight Tweedish",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/midnight-tweedish-y0607",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c93d6d7e-8995-496f-9824-2732244b210b/Y0607-Midnight-Tweedish",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Midnight Tweedish is a small scale cheveron inspired by tweed fabric, in a tonal dark charcoal.",
+    "texture_scale": {
+      "width": 15.75,
+      "height": 11.81
+    }
+  },
+  {
+    "code": "Y0606",
+    "surface-group": "Laminate",
+    "name": "Quito High Rise",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/quito-high-rise-y0606",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9b9533ed-ce58-46c9-8833-6d10e45397d9/Y0606-Quito-High-Rise",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Quito High Rise is a small scale pattern. The linear design is full of variations of the color green.",
+    "texture_scale": {
+      "width": 36.61,
+      "height": 30
+    }
+  },
+  {
+    "code": "Y0605",
+    "surface-group": "Laminate",
+    "name": "Newcastle High Rise",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/newcastle-high-rise-y0605",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/62701b24-83fb-4778-a486-af85af6f2482/Y0605-Newcastle-High-Rise",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Newcastle High Rise is a small-scale pattern. The linear design is full of taupe and purple color variations.",
+    "texture_scale": {
+      "width": 36.61,
+      "height": 30
+    }
+  },
+  {
+    "code": "Y0604",
+    "surface-group": "Laminate",
+    "name": "Blocked Bowtie",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/blocked-bowtie-y0604",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6baf4937-1908-4420-aaaa-5b50c05bc678/Y0604-Blocked-Bowtie",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0603",
+    "surface-group": "Laminate",
+    "name": "Umber Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/umber-walnut-crossgrain-y0603",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/66913288-368d-4eea-9ea4-dcd1c0e87c8a/Y0603-Umber-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0602",
+    "surface-group": "Laminate",
+    "name": "Smoked Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/smoked-walnut-crossgrain-y0602",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/45640ff3-a6ba-4997-bab6-c9e7e509f7de/Y0602-Smoked-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0601",
+    "surface-group": "Laminate",
+    "name": "Mineral Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/mineral-walnut-crossgrain-y0601",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a7ab0afb-c2dd-4be4-8749-951c090d35e3/Y0601-Mineral-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0599",
+    "surface-group": "Laminate",
+    "name": "Hazel Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hazel-walnut-crossgrain-y0599",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7068f6b8-7a55-44e9-b13e-93b63f030741/Y0599-Hazel-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0598",
+    "surface-group": "Laminate",
+    "name": "Fawn Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/fawn-walnut-crossgrain-y0598",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/68ad38a6-5a31-4ba0-b4ed-39b6e25cd92b/Y0598-Fawn-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0597",
+    "surface-group": "Laminate",
+    "name": "Maize Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/maize-walnut-crossgrain-y0597",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/acc3a0d2-16e6-42fe-ae40-672c619fb935/Y0597-Maize-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0596",
+    "surface-group": "Laminate",
+    "name": "Bleached Walnut Crossgrain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bleached-walnut-crossgrain-y0596",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/44f9179f-4b54-4002-a2e9-f088380d4c38/Y0596-Bleached-Walnut-Crossgrain",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 48.82,
+      "height": 36.62
+    }
+  },
+  {
+    "code": "Y0595",
+    "surface-group": "Laminate",
+    "name": "Ebony Modern Chevron",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6932/s/ebony-modern-chevron-y0595/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/77b2515f-5921-471f-919b-d1db050345a9/Y0595-Ebony-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Ebony Modern Cheveron is a large scale pieced chevron in a black ash and bleached ash.  The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0594",
+    "surface-group": "Laminate",
+    "name": "Coffee Modern Chevron",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/coffee-modern-chevron-y0594",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b6d6f183-906c-4703-8e9e-ea30753a732b/Y0594-Coffee-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Coffee Modern Chevron is a large scale pieced chevron in a dark brown ash and bleached ash. The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0592",
+    "surface-group": "Laminate",
+    "name": "Antique Barrel Chevron",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/antique-barrel-chevron-y0592",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e49725c9-1a16-43d5-b0c1-7f5f32083532/Y0592-Antique-Barrel-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Antique Barrel Chevron is a large scale light brown pattern. This rustic oak is created from bourbon barrels.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0591",
+    "surface-group": "Laminate",
+    "name": "Barrel Herringbone",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/barrel-herringbone-y0591",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/941c9551-ba5f-4a93-bc5b-06d2c0c1d903/Y0591-Barrel-Herringbone",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Barrel Herringbone is a large scale pattern in a rustic light brown. The oak planks are of varring sizes.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0589",
+    "surface-group": "Laminate",
+    "name": "Salvaged Herringbone",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/salvaged-herringbone-y0589",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8ae580a9-b1b9-4622-a69d-070a61444e32/Y0589-Salvaged-Herringbone",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Salvage Herringbone is a tonal white and grey large scale rustic chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0588",
+    "surface-group": "Laminate",
+    "name": "Diagonal Amber Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/diagonal-amber-chestnut-y0588",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a1c6be90-a999-43d2-901b-fb0d4baf4c01/Y0588-Diagonal-Amber-Chestnut_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Diagonal Amber Chestnut  is a large scale rustic woodgrain. The pattern is a pieced diagonal pattern in a amber brown perfect for the wall or ceiling.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0587",
+    "surface-group": "Laminate",
+    "name": "Big Island Koa",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6926/s/big-island-koa-y0587/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/111b38bc-252d-47e2-96c0-a3de960008d4/Y0587-Big-Island-Koa-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Big Island Koa is a large scale warm gold and red pattern full of a wavy grain characteristic of Koa",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0586",
+    "surface-group": "Laminate",
+    "name": "Endora",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/endora-y0586",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8411864b-44ac-4157-81ff-9fb17a7a67f7/Y0586-Endora",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "This small to medium scaled abstract has an overlapping box and square pattern in a fun retro color blend of pink and gold.",
+    "texture_scale": {
+      "width": 62,
+      "height": 43.31
+    }
+  },
+  {
+    "code": "Y0585",
+    "surface-group": "Laminate",
+    "name": "Betty",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/betty-y0585",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6f1f8667-d92c-4a83-a0d3-d342ba0580d5/Y0585-Betty",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "This small to medium scaled abstract has an overlapping box and square pattern in a fun retro color blend of teal and orange.",
+    "texture_scale": {
+      "width": 62,
+      "height": 43.31
+    }
+  },
+  {
+    "code": "Y0584",
+    "surface-group": "Laminate",
+    "name": "Diagonal Rediscovered Planked",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/diagonal-rediscovered-planked-y0584",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5ac05d9a-eb45-48f4-8ac3-5adf01a1edab/Y0584-Diagonal-Rediscovered-Planked",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0546",
+    "surface-group": "Laminate",
+    "name": "Misty Crown",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/misty-crown-y0546",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/95ac2ea6-90dc-4943-ad22-6a54369b5e52/Y0546-Misty-Crown",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Misty Crown is a large scale Maple wood design full of cathedrals. This pattern is a warm mid-tone taupe.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0545",
+    "surface-group": "Laminate",
+    "name": "Plymouth Planked Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/plymouth-planked-chestnut-y0545",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/68f98377-48c2-47b8-85d3-be652422f0bb/Y0545-Plymouth-Planked-Chestnut",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Plymouth Planked Chestnut is a 2\" planked wood design with rustic features in an amber scorched coloring.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "5010",
+    "surface-group": "Laminate",
+    "name": "Drama Marble",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/drama-marble-5010",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_MightAlsoLike/905eff0e-0d5c-4526-b8ba-a2342ff67a4e/4924-White-Carrara_webfullsheet",
+    "texture_image_pixels": {
+      "width": 270,
+      "height": 270
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 62,
+      "height": 51.417
+    }
+  },
+  {
+    "code": "5008",
+    "surface-group": "Laminate",
+    "name": "Praline Antico",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/praline-antico-5008",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_CarouselThumbnail_1/aa2e350d-510d-4cd9-99a8-e8a06c2868d8/5008-Praline-Antico_webfullsheet",
+    "texture_image_pixels": {
+      "width": 81,
+      "height": 81
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 62,
+      "height": 49
+    }
+  },
+  {
+    "code": "Y0609",
+    "surface-group": "Laminate",
+    "name": "Cocoa Marquetry",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cocoa-marquetry-y0609",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8b8b91ac-5458-486c-b5df-f7ebad15b8b5/Y0609-Cocoa-Marquetry",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "description": "Cocoa Marquetry is a dark rich brown woodgrain that has been pieced together to make a geometric marquetry design. This large scale modern look is a coordinate to Cocoa Line.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0593",
+    "surface-group": "Laminate",
+    "name": "Natural Modern Chevron",
+    "product-link": "https://www.wilsonart.com/high-pressure-laminate/design-library/natural-modern-chevron-y0593",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ee9adbca-1dad-455e-bcc2-43e2046c65f6/Y0593-Natural-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Natural Modern Chevron is a large-scale pieced chevron in bleached ash and maple.  The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "1530",
+    "surface-group": "Laminate",
+    "name": "Beige",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/beige-1530",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c32d5869-e111-4f1e-8cc4-84a8a4015a52/1530_Beige",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Solid beige color laminate design.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0502",
+    "surface-group": "Laminate",
+    "name": "Chilly Aqua",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/chilly-aqua-y0502",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/56f18bbe-e712-4b4d-9dc5-87381bb9c8d9/Y0502-Chilly-Aqua",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Chilly Aqua is a midtone dusky blue abstract design. The pattern is made up of small organic grids that look like a solid.",
+    "texture_scale": {
+      "width": 62.205,
+      "height": 37.01
+    }
+  },
+  {
+    "code": "Y0583",
+    "surface-group": "Laminate",
+    "name": "Maui Falls",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6853/s/maui-falls-y0583/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/58c3f0d4-b0f4-4788-a0dd-f48f57e4d31e/Y0583-Maui-Falls",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Maui Falls is a linear abstract pattern. The small scale overlapping transparent rectangles has a wash of bright blue allover with white and grey intermixed.",
+    "texture_scale": {
+      "width": 62.21,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "Y0582",
+    "surface-group": "Laminate",
+    "name": "Bali Falls",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bali-falls-y0582",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a1581678-4850-40f0-8657-929e2c29e935/Y0582-Bali-Falls",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Bali Falls is a linear abstract pattern in warm greys and browns. The small scaled abstract is made up of overlapping transparent rectangles adding depth in the pattern.",
+    "texture_scale": {
+      "width": 62.21,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "Y0579",
+    "surface-group": "Laminate",
+    "name": "Berlin Mod",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/berlin-mod-y0579",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/da61ec02-c415-4c4f-b8aa-add44e71b90c/Y0579-Berlin-Mod",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Berlin Mod is a large scale graphic wood pattern. Aged wood pairs with overlapping painted geometric shapes in whites and greys.",
+    "texture_scale": {
+      "width": 62.21,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "Y0578",
+    "surface-group": "Laminate",
+    "name": "London Mod",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/london-mod-y0578",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3a892a93-af40-4f20-836b-514a3a739b30/Y0578-London-Mod",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "London Mod is a graphic wood pattern with large painted overlapping geometric shapes. The Grey wood has a white graining paired with tonal greys.",
+    "texture_scale": {
+      "width": 62.21,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "Y0574",
+    "surface-group": "Laminate",
+    "name": "Weathered Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/weathered-olive-y0574",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ba113f76-ccfe-4b8f-ae21-28d7e216aa3e/Y0574-Weathered-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Weathered Olive is a large scale wood design full of movement and features. The wood pattern is a medium brown with dark and light browns throughout.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
+    }
+  },
+  {
+    "code": "Y0573",
+    "surface-group": "Laminate",
+    "name": "Sun Bleached Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sun-bleached-olive-y0573",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ace166fb-65b9-48f1-a70d-b45518979aeb/Y0573-Sun-Bleached-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Sun Bleached Olive is a light tan monochromatic large scale wood design full of movement and visual interest.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
+    }
+  },
+  {
+    "code": "Y0572",
+    "surface-group": "Laminate",
+    "name": "Gunmetal Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/gunmetal-olive-y0572",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4274f268-97ce-4853-8ba4-28e6b1e58e8c/Y0572-Gunmetal-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Gunmetal Olive is a large scale wood design rendered in monochromatic charcoal with movement and unique characteristics.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
+    }
+  },
+  {
+    "code": "Y0571",
+    "surface-group": "Laminate",
+    "name": "Silver Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silver-olive-y0571",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8e2e5759-4e41-4eab-8951-a40692990f0b/Y0571-Silver-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Silver Olive is a large scale mid toned grey monochromatic wood design. The pattern is full of movement and visual interest.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
+    }
+  },
+  {
+    "code": "Y0569",
+    "surface-group": "Laminate",
+    "name": "Polished Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/polished-olive-y0569",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/742720cd-e2b1-4508-ba46-e7dc85d948f3/Y0569-Polished-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Polished Olive is a monochromatic pale grey and white wood pattern. The large scale design is full of movement and visual interest.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
+    }
+  },
+  {
+    "code": "Y0568",
+    "surface-group": "Laminate",
+    "name": "Recon Olive",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/recon-olive-y0568",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c9948358-5e27-4bc5-a137-e922bf8c2f32/Y0568-Recon-Olive",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Recon Olive is a large scale wood full of unique color play and movement. The design is made up of reds, browns and blacks.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 35.43
     }
   }
 ]

@@ -1,37 +1,44 @@
-// wilsonart-fetch-details.js (ratio rules + overwrite-all texture_scale + incremental add)
-// Usage:
-//   node wilsonart-fetch-details.js
-//   node wilsonart-fetch-details.js --limit=10 --offset=0 --batch=5
-//
-// Reads : ./wilsonart-laminate-index.json
-// Writes: ./wilsonart-laminate-details.json
-//
-// Summary of rules:
-//   • Always overwrite texture_scale for every code.
-//   • Only add new data for missing fields (preserve existing fields where present).
-//   • If a code already exists, reuse its data; scrape only when needed (e.g., missing image URL).
-//   • texture_image_pixels are (re)computed if missing.
-//
-// Ratio/URL rules for deciding FINAL texture_scale:
-//   Terms: R(img)=texture_image_pixels.width/height (if available), R(cur)=ratio of current texture_scale
-//          R(parsed)=ratio of parsed scale (from URL feet→inches; else bold inches; else No Repeat 96×48)
-//          URL feet token (e.g. 4x8, 5x12, 5x8, …) → INCHES with width=max*12 and height=min*12
-//
-//   1) If URL includes a feet token AND R(img) ≈ R(cur), set texture_scale to the INCHES version of that token
-//      (e.g., 4x8 → 96×48; 5x12 → 144×60; 5x8 → 96×60). (Orientation uses max→width.)
-//   2) If URL includes a feet token but R(img) !≈ R(cur), then if R(cur) ≈ R(parsed), set texture_scale = parsed scale.
-//   3) If URL does NOT include a feet token and R(img) ≈ R(cur), leave texture_scale as-is.
-//   4) If URL does NOT include a feet token and R(cur) ≈ R(parsed), set texture_scale = parsed scale.
-//   5) If product is No Repeat and none of the above picked a size OR the image ratio does not match any feet token
-//      in the URL, set texture_scale by assuming WIDTH=60 inches and HEIGHT = 60 / R(img). (Keep width=60.)
-//
-// Notes: headless=false (interactive where needed), verbose logs, no image file downloads.
-
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
+
+/**
+ * wilsonart-fetch-details.js
+ *
+ * Usage:
+ *   node wilsonart-fetch-details.js
+ *   node wilsonart-fetch-details.js --limit=10 --offset=0 --batch=5
+ *
+ * Reads : ./wilsonart-laminate-index.json
+ * Writes: ./wilsonart-laminate-details.json
+ *
+ * Summary of rules & behavior:
+ *   • Always overwrite texture_scale for every code.
+ *   • Only add new data for missing fields (preserve existing fields where present).
+ *   • If a code already exists, reuse its data; scrape only when needed (e.g., missing image URL).
+ *   • texture_image_pixels are (re)computed when needed or when banner crop logic applies.
+ *
+ * NEW (banner crop) — If the chosen image URL contains 'banner' (case-insensitive),
+ * we treat the image as if 93px are cropped from the bottom. This affects:
+ *   • texture_image_pixels (height reduced by 93px, min 1)
+ *   • Any ratio calculations that depend on texture_image_pixels (e.g., chooseFinalScale)
+ *   • A new flag banner_cropped: true will be set on rows where the crop was applied.
+ *
+ * Ratio/URL rules for deciding FINAL texture_scale:
+ *   Terms: R(img)=texture_image_pixels.width/height (if available), R(cur)=ratio of current texture_scale
+ *          R(parsed)=ratio of parsed scale (from URL feet→inches; else bold inches; else No Repeat 96×48)
+ *          URL feet token (e.g. 4x8, 5x12, 5x8, …) → INCHES with width=max*12 and height=min*12
+ *
+ *   1) If URL includes a feet token AND R(img) ≈ R(cur), set texture_scale to the INCHES version of that token
+ *      (e.g., 4x8 → 96×48; 5x12 → 144×60; 5x8 → 96×60). (Orientation uses max→width.)
+ *   2) If URL includes a feet token but R(img) !≈ R(cur), then if R(cur) ≈ R(parsed), set texture_scale = parsed scale.
+ *   3) If URL does NOT include a feet token and R(img) ≈ R(cur), leave texture_scale as-is.
+ *   4) If URL does NOT include a feet token and R(cur) ≈ R(parsed), set texture_scale = parsed scale.
+ *   5) If product is No Repeat and none of the above picked a size OR the image ratio does not match any feet token
+ *      in the URL, set texture_scale by assuming WIDTH=60 inches and HEIGHT = 60 / R(img). (Keep width=60.)
+ */
 
 // ----------------------------- CLI / Paths -----------------------------
 const INDEX_JSON = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
@@ -278,7 +285,7 @@ async function computeParsedScale(page, isNoRepeat, imageUrl) {
   // Bold inches (best effort)
   const bold = await page?.$eval?.(SEL_REPEAT_BOLD, el => (el.textContent || "").trim()).catch(() => null);
   if (bold) {
-    const m = bold.match(/(\d+(?:\.\d+)?)\s*"?\s*[x×]\s*(\d+(?:\.\d+)?)\s*"?/i);
+    const m = bold.match(/(\d+(?:\.\d+)?)\s*\"?\s*[x×]\s*(\d+(?:\.\d+)?)\s*\"?/i);
     if (m) {
       const s = { width: parseFloat(m[1]), height: parseFloat(m[2]) };
       if (validSize(s)) { logStep(`  • Parsed (bold inches): ${s.width}×${s.height}`); return orientMaxAsWidth(s); }
@@ -313,6 +320,20 @@ async function getImagePixels(page, url, timeoutMs = 15000) {
     }, url, timeoutMs);
     return (res && (res.width > 0 || res.height > 0)) ? res : undefined;
   } catch { return undefined; }
+}
+
+/**
+ * Apply banner crop rule: if URL looks like a banner, subtract 93px from height.
+ * Never let height drop below 1.
+ */
+function applyBannerCrop(url, pixels) {
+  if (!validSize(pixels)) return pixels;
+  if (!looksBanner(url)) return pixels;
+  const croppedHeight = Math.max(1, Math.round(pixels.height - 93));
+  if (croppedHeight !== pixels.height) {
+    logStep(`  • Banner detected → cropping 93px from height: ${pixels.width}×${pixels.height} → ${pixels.width}×${croppedHeight}`);
+  }
+  return { width: Math.round(pixels.width), height: croppedHeight };
 }
 
 // ----------------------------- Decision: FINAL texture_scale -----------------------------
@@ -432,16 +453,28 @@ function maybeFlush(out, processedCount, force = false) {
       continue;
     }
 
+    // Track if we applied a banner crop for this record
+    let bannerCropped = false;
+
     // Try to reuse what we can without navigating
     let imageUrl = pickImageUrl(mergedStart) || null;
     let pixels   = validSize(mergedStart.texture_image_pixels) ? mergedStart.texture_image_pixels : undefined;
     let noRepeat = (typeof mergedStart.no_repeat === "boolean") ? mergedStart.no_repeat : undefined;
     let desc     = hasString(mergedStart.description) ? mergedStart.description : undefined;
 
-    // If we have an image URL but no pixels, we can still load pixels without visiting product page
-    if (imageUrl && !pixels) {
-      pixels = await getImagePixels(page, imageUrl).catch(() => undefined);
-      if (pixels) logStep(`  • Filled missing pixels from image URL ?+' ${pixels.width}A-${pixels.height}`);
+    // If we have an image URL but either (a) no pixels, or (b) it's a banner (crop must apply),
+    // fetch the natural pixels freshly so we don't double-apply crops from older runs.
+    const mustRefreshPixels = !!imageUrl && ( !pixels || looksBanner(imageUrl) );
+    if (mustRefreshPixels) {
+      const fresh = await getImagePixels(page, imageUrl).catch(() => undefined);
+      if (fresh) {
+        const cropped = applyBannerCrop(imageUrl, fresh);
+        if (looksBanner(imageUrl) && validSize(fresh) && validSize(cropped) && cropped.height !== fresh.height) {
+          bannerCropped = true;
+        }
+        pixels = cropped;
+        logStep(`  • Pixels from image URL: ${pixels.width}×${pixels.height}${bannerCropped ? " (banner-cropped)" : ""}`);
+      }
     }
 
     let parsedScale;
@@ -473,9 +506,17 @@ function maybeFlush(out, processedCount, force = false) {
           if (hasString(imageUrl)) logStep(`  • Discovered texture image URL: ${imageUrl}`);
         }
 
+        // Always (re)compute pixels if we have an URL and no pixels yet
         if (imageUrl && !pixels) {
-          pixels = await getImagePixels(page, imageUrl).catch(() => undefined);
-          if (pixels) logStep(`  • Pixels from discovered URL ?+' ${pixels.width}A-${pixels.height}`);
+          const fresh = await getImagePixels(page, imageUrl).catch(() => undefined);
+          if (fresh) {
+            const cropped = applyBannerCrop(imageUrl, fresh);
+            if (looksBanner(imageUrl) && validSize(fresh) && validSize(cropped) && cropped.height !== fresh.height) {
+              bannerCropped = true;
+            }
+            pixels = cropped;
+            logStep(`  • Pixels from discovered URL: ${pixels.width}×${pixels.height}${bannerCropped ? " (banner-cropped)" : ""}`);
+          }
         }
 
         if (needsNoRepeat && noRepeat === undefined) {
@@ -501,7 +542,7 @@ function maybeFlush(out, processedCount, force = false) {
     // Current scale BEFORE rewrite (from existing or immediate parsed)
     const currentScale = validSize(prior.texture_scale) ? prior.texture_scale : (validSize(parsedScale) ? parsedScale : undefined);
 
-    // Decide FINAL texture_scale via ratio rules
+    // Decide FINAL texture_scale via ratio rules — uses (possibly banner-cropped) pixels.
     const finalScale = chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat });
 
     const outRow = {
@@ -511,6 +552,8 @@ function maybeFlush(out, processedCount, force = false) {
       no_repeat: (typeof noRepeat === 'boolean') ? noRepeat : mergedStart.no_repeat,
       description: desc || mergedStart.description,
       texture_scale: finalScale, // ALWAYS overwrite
+      // Only add the flag when it's true, or preserve a prior true.
+      ...(bannerCropped || mergedStart.banner_cropped === true ? { banner_cropped: true } : {}),
     };
 
     out.push(outRow);
