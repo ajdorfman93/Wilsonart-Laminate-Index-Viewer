@@ -15018,5 +15018,2433 @@
       "width": 96,
       "height": 48
     }
+  },
+  {
+    "code": "Y0483",
+    "surface-group": "Laminate",
+    "name": "Eclipse Moxie",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eclipse-moxie-y0483",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c13bf615-8341-43f5-874d-019a194f740f/Y0483-Eclipse-Moxie-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Eclipse Moxie is a planked wood in shades of grey and charcoal. This small scale pattern has ribbon like veining running through the design.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0481",
+    "surface-group": "Laminate",
+    "name": "Jute Moxie",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/jute-moxie-y0481",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/db27de5e-5e4b-47f4-9e56-a62e2e371fdc/Y0481-Jute-Moxie-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850
+    },
+    "no_repeat": false,
+    "description": "Jute Moxie is a small scale planked wood. The planks are reminiscent of ribbon  with thin black graining found throughout the taupe planks.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0478",
+    "surface-group": "Laminate",
+    "name": "Timber Moxie",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/timber-moxie-y0478",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a7c59622-5cff-4033-a07c-472ba65c3578/Y0478",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Timber Moxie is a mini-planked woodgrain in a warm fawn with organic black ribboning which flows throughout the pattern.",
+    "texture_scale": {
+      "width": 62,
+      "height": 37
+    }
+  },
+  {
+    "code": "Y0482",
+    "surface-group": "Laminate",
+    "name": "Eclipse Marquetry",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eclipse-marquetry-y0482",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/48f3eb45-2b25-40ff-97c4-ca275debb61e/Y0482-Eclipse-Marquetry-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Eclipse Marquetry is a large scale modern marquetry design. Shades of grey and charcoal make up this design with black veining running throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0479",
+    "surface-group": "Laminate",
+    "name": "Jute Marquetry",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/jute-marquetry-y0479",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f04d61e7-ee8c-4123-848b-2044fc9d021c/Y0479-Jute-Marquetry-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850
+    },
+    "no_repeat": true,
+    "description": "Jute Marquetry is a modern marquetry in a large scale geometric pattern in  taupe with ribboning of black throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0477",
+    "surface-group": "Laminate",
+    "name": "Timber Marquetry",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/timber-marquetry-y0477",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8860c2cc-041d-4cbe-b9d1-05143f46464e/Y0477-Timber-Marquetry-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Timber Marquetry is an updated large scale marquetry pattern in a warm fawn color with black graining running throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0474",
+    "surface-group": "Laminate",
+    "name": "Newport Marquetry",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/newport-marquetry-y0474",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e63ecef8-c8ce-4054-b070-4fa58ee598e7/Y0474-Newport-Marquetry-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Newport Marquetry is a modern pieced wood look that was inspired by the free-spirited surf and skate culture. Different species of wood in different colors are playfully placed in a geometric layout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0473",
+    "surface-group": "Laminate",
+    "name": "Lost Pine",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lost-pine-y0473",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/fbaa23c8-42f9-4d98-b59b-cbe05dd98242/Y0473-Lost-Pine-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Lost Pine is a heavily distressed, charactered wood comprised of warm and cool grey and taupe tones.",
+    "texture_scale": {
+      "width": 62,
+      "height": 49
+    }
+  },
+  {
+    "code": "Y0472",
+    "surface-group": "Laminate",
+    "name": "Salem Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/salem-chestnut-y0472",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8dfbd8de-baef-4009-8241-7df229dffca5/Y0472-Salem-Chestnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Salem Chestnut is an aged wood with rich red brown and black graining. Distressing of the wood, worm holes, knots and  full cathedrals are found throughout.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0471",
+    "surface-group": "Laminate",
+    "name": "Salem Planked Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/salem-planked-chestnut-y0471",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3ca06fe9-b8b6-4808-97bf-ad13fe152808/Y0471-Salem-Planked-Chestnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Salem Planked Chestnut is a time-worn planked wood with nail and worm hole charachteristics. A deep rich red brown with black graining is found throughout.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0469",
+    "surface-group": "Laminate",
+    "name": "Antique Limed Pine",
+    "product-link": "https://www.wilsonart.com/high-pressure-laminate/design-library/antique-limed-pine-y0469",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c0bfc7b8-2a48-4db6-88b8-5c3da9e5ead1/Y0469-Antique-Limed-Pine-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850
+    },
+    "no_repeat": true,
+    "description": "Antique Limed Pine is a white washed wood of varying sized planks. A rustic beauty with warm white and browns mixed with cool grey and charcoal.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0468",
+    "surface-group": "Laminate",
+    "name": "Antique Barrel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/antique-barrel-y0468",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d2ca32de-bbd7-4a0a-b1bc-9fb1959ff260/Y0468-RGB-Antique-Barrell-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Antique Barrel was once an old oak whisky cask. The distressed markings and fawn color elevates this design to a refined industrial look.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0467",
+    "surface-group": "Laminate",
+    "name": "Whiskey Barrel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/whiskey-barrel-y0467",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/dc9f3d60-da04-4efd-9b0e-8c5992c12f8f/Y0467-RGB-Whiskey-Barrell-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Whiskey Barrel was once an old whisky cask. Soft distressing and faded markings are found throughout the pattern giving it a sophisticated industrial look in warm mid-tone browns.",
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0466",
+    "surface-group": "Laminate",
+    "name": "Planked Texas Walnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/planked-texas-walnut-y0466",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9d980cec-a385-47f1-8753-171268f7d118/Y0466-Planked-Texas-Walnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Planked Texas Walnut is a red brown and charcoal design. The woods beauty is showcased with full cathedrals and light to dark variations.",
+    "texture_scale": {
+      "width": 51,
+      "height": 34
+    }
+  },
+  {
+    "code": "Y0465",
+    "surface-group": "Laminate",
+    "name": "Planked California Walnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/planked-california-walnut-y0465",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/814cc010-28c3-4803-a97e-e0ab25fa9643/Y0465-Planked-California-Walnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Planked California Walnut is a beautiful and sophisticated planked walnut. The beauty of the wood is showcased in this design in deep brown and chocolate.",
+    "texture_scale": {
+      "width": 51,
+      "height": 34
+    }
+  },
+  {
+    "code": "Y0464",
+    "surface-group": "Laminate",
+    "name": "Amber Planked Alona",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/amber-planked-alona-y0464",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/15428ff6-edeb-4ed3-b74f-9b1bed6a0ebf/Y0464-Amber-Planked-Alona-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Amber Alona is an oak look with a warm amber color on a plain sliced open grain with strong cathedrals in a 5\" plank..",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0463",
+    "surface-group": "Laminate",
+    "name": "Pepper Planked Alona",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pepper-planked-alona-y0463",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9796bc6c-32c0-47a6-b418-3fca1d79507b/Y0463-Pepper-Planked-Alona_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Pepper Alona is an open grained, plain sliced oak look with strong cathedrals in a medium grey color in a 5\" plank.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0462",
+    "surface-group": "Laminate",
+    "name": "Monarch Planked Alona",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/monarch-planked-alona-y0462",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d94249e8-aebc-43bd-915e-83f165e5cc55/Y0462-Monarch-Planked-Alona-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Monarch Alona is an oak look with strong cathedrals in a honey colored plain sliced open grain, in a 5\" plank.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0459",
+    "surface-group": "Laminate",
+    "name": "Thomas Hickory",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/thomas-hickory-y0459",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3a492d9f-1b31-473a-843e-4c605780b44f/Y0459-Thomas-Hickory_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "A medium toned brown planked hickory with partial cathedrals.",
+    "texture_scale": {
+      "width": 62,
+      "height": 51
+    }
+  },
+  {
+    "code": "Y0365",
+    "surface-group": "Laminate",
+    "name": "Repurposed Oak",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/repurposed-oak-y0365",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c22d97a3-c368-4990-9922-45b39b03e1e7/Y0365-Repurposed-Oak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Repurposed Oak is a sun kissed barnwood. It has a beautiful warm patina that is the perfect rustic look.",
+    "texture_scale": {
+      "width": 60,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0362",
+    "surface-group": "Laminate",
+    "name": "Remade Oak Planked",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/remade-oak-planked-y0362",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ab6ed9f8-bd13-485c-a395-ba2483fcb8c2/Y0362-Remade-Oak-Planked-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 848
+    },
+    "no_repeat": false,
+    "description": "A weather beaten wood. Remade Oak Planked looks like it was taken from a building with history, planked and rustic.",
+    "texture_scale": {
+      "width": 60,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0364",
+    "surface-group": "Laminate",
+    "name": "Repurposed Oak Planked",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6233/s/repurposed-oak-planked-y0364/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6fcd779f-4938-46c6-b1e6-9dbdec7b4545/Y0364-Repurposed-Oak-Plank_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "An oak barnwood that is planked with light and dark naturally occurring color variations..",
+    "texture_scale": {
+      "width": 60,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0363",
+    "surface-group": "Laminate",
+    "name": "Remade Oak",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/amber-alona-y0289-1",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ace6cf1b-75a7-4448-8d0d-fcadb91efd86/Y0363-Remade-Oak-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "A  sun worn wood. Remade oak is a warm wood with a story. Barnwood and rustic with no planking.",
+    "texture_scale": {
+      "width": 60,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0425",
+    "surface-group": "Laminate",
+    "name": "Bone Birch",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6161/s/bone-birch-y0425/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/62d5621f-0a52-4b35-b277-4b2c96c6c8d5/Y0425-Bone-Birch-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Bone Birch is a  midtone warm grey small scale pattern. The pattern come from hand troweled plaster.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0461",
+    "surface-group": "Laminate",
+    "name": "Detroit Concrete",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/detroit-concrete-y0461",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c1eb0cf4-8e6d-486b-86fc-b3ee58542a7f/Y0461-Detroit-Concrete-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 851
+    },
+    "no_repeat": false,
+    "description": "Detroit Concrete is a large scale hand troweled concrete look. Inspired by the urban city, this concrete has dimension and depth in a traditional warm grey.",
+    "texture_scale": {
+      "width": 62,
+      "height": 51
+    }
+  },
+  {
+    "code": "Y0403",
+    "surface-group": "Laminate",
+    "name": "Detroit Celluloid",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/detroit-celluloid-y0403",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/924bc22a-9724-4b78-b413-acc7d06c86ff/Y0403-Detroit-Celluloid-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Detroit Celluloid is a warm tonal copper colored small scale pattern, inspired by old celluloid film clippings.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0402",
+    "surface-group": "Laminate",
+    "name": "Detroit Film",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/detroit-film-y0402",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/47c6a98a-419c-422b-a199-b5b866fb0e84/Y0402-Detroit-Film-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Detroit Film is a small scale pattern in a dimensional tonal  pattern in sepia . The design was inspired from old movie houses and the reels of film.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0399",
+    "surface-group": "Laminate",
+    "name": "Detroit Black and White",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/detroit-black-and-white-y0399",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e4da4603-cb76-4ddf-8a10-b98491980ce7/Y0399-Detroit-Black-and-White-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Detroit Black and White is a dimensional tone on tone small scale pattern. Reminiscent of old film found on the floor of a movie house in tonal shades of warm grey.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0401",
+    "surface-group": "Laminate",
+    "name": "Detroit Reel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/detroit-reel-y0401",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cffd7e52-1f8e-42c5-a774-6dcc3bec3e56/Y0401-Detroit-Reel-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Detroit Reel is inspired by cuttings of old film reels creating a dimensional tonal small scale pattern in cool greys.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0398",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Oxide",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-oxide-y0398",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0398_Milwaukee_Junction_Oxide_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Oxide is a  deep grey oxidized steel with an allover distressed look. The large scale design is stunning with varying shades of grey.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0397",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Rust",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-rust-y0397",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Rust is a large scale steel design changed by the elements. Rust and grey intermingle with bits of white throughout creating a bold look.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0396",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Zinc",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-zinc-y0396",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0396_Milwaukee_Junction_Zinc_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Zinc is a cool grey steel changed by the elements .This  large scale design has varied shades of cool grey with specs of rust throughout.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0395",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Copper",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-copper-y0395",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0395_Milwaukee_Junction_Copper_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Copper is a large scale rusty steel.  A beautiful movement of tonal copper colors are seen throughout the pattern.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0394",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-steel-y0394",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0394_Milwaukee_Junction_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Steel is a timeworn large scale distressed steel. Warm mid-tone greys with bits of rust and white are seen throughout the pattern.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0375",
+    "surface-group": "Laminate",
+    "name": "Hale St. Concrete",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hale-st-concrete-y0375",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d262cfa3-e269-4893-aef2-2aae02ccb330/Y0375-Hale-Street-Concrete-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Hale St. Concrete is a  warm grey large scale pressed form wood concrete. This design is inspired by timeworn sidewalks of Eastern Market in Detroit.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0374",
+    "surface-group": "Laminate",
+    "name": "Mack Ave. Concrete",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6149/s/mack-ave-concrete-y0374/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a9cf139b-2577-4481-99a7-f56bcd3fc4fe/Y0374-Mack-Ave-Concrete-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Mack Ave. Concrete is a large scale cool grey  pressed form wood concrete. This design is inspired by timeworn sidewalks of Eastern Market in Detroit.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0373",
+    "surface-group": "Laminate",
+    "name": "Dubois St. Concrete",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/dubois-st-concrete-y0373",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a6f7be5e-82e3-41e4-a3f3-1639f42b30fc/Y0373-Dubois-Street-Concrete-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Dubois St. Concrete is a dark charcoal and black large scale  form wood  concrete. This design is inspired by timeworn sidewalks of Eastern Market in Detroit.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0372",
+    "surface-group": "Laminate",
+    "name": "Arden Park Marble",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/arden-park-marble-y0372",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/627f5b60-83e4-47e8-8984-b592c886cb8c/Y0372-Arden-Park-Marble-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Arden Park Marble is a large scale abstracted black marble with white  veining found throughout the design. It was inspired by the Arden Park neighborhood.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0371",
+    "surface-group": "Laminate",
+    "name": "Arden Park Carrera",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/arden-park-carrera-y0371",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/19d2c985-0b07-4d2d-9e3b-4d5c247ddd55/Y0371-Arden-Park-Carrera-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Arden Park Carrera is a large scale abstracted white marble with grey movement that creates depth. Inspiration came from the Arden Park neighborhood.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0369",
+    "surface-group": "Laminate",
+    "name": "Brush Park Slate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/brush-park-slate-y0369",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6c826c5b-de48-434b-892b-279b0a3fd4ed/Y0369-Brush-Park-Slate-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Brush Park Slate is a deep slate-grey worn by the elements. This large scale soapstone is  inspired by the slate roofs of the  old homes in the Brush Park neighborhood.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0368",
+    "surface-group": "Laminate",
+    "name": "Brush Park Fountain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/brush-park-fountain-y0368",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f61e6cc4-bb08-4433-ba5d-4d162fdabb5a/Y0368-Brush-Park-Fountain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Brush Park Fountain is a large scale soapstone weather beaten to  a  variety of greyed-off greens, and inspired by the aged grand homes in the Brush Park neighborhood.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0367",
+    "surface-group": "Laminate",
+    "name": "Brush Park Column",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/brush-park-column-y0367",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5aa8112d-f514-496e-a7ae-3fd387b073e8/Y0367-Brush-Park-Column-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Brush Park Column is a distressed large scale soapstone in a warm clay color, inspired by the aged grand homes in Brush Park neighborhood.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0366",
+    "surface-group": "Laminate",
+    "name": "Brush Park Statue",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/brush-park-statue-y0366",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/eac322dc-7199-4c20-ae4e-699bdb05ed52/Y0366-Brush-Park-Statue-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Brush Park Statue is a timeworn large scale soapstone in a cool dark grey. This design is inspired by the aged grand homes in the  Brush Park neighborhood.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0415",
+    "surface-group": "Laminate",
+    "name": "Linear Chisel Slate",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6133/s/linear-chisel-slate-y0415/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ee96b267-58b5-4ee9-abaa-44076582239f/Y0415-Linear-Chisel-Slate-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Linear Chisel Slate is a deep slate grey marble with a chiseled lineal pattern.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0426",
+    "surface-group": "Laminate",
+    "name": "Gold Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/gold-oscar-y0426",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0426_Gold_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Gold Oscar is a beautiful gold color large scale pattern. The pattern was created by pouring molten metal over linen.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0449",
+    "surface-group": "Laminate",
+    "name": "Cobalt Shagreen",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6130/s/cobalt-shagreen-y0449/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/abd05c5f-7c5b-4dcd-9b5c-d49d20e885b1/Y0449-Cobalt-Shagreen-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Cobalt Shagreen is a bold stingray pattern that is a small scale all over design in a rich cobalt blue.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0448",
+    "surface-group": "Laminate",
+    "name": "Platinum Shagreen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/platinum-shagreen-y0448",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3a13c475-8a86-46a3-b474-b131e6faaccc/Y0448-Platnium-Shagreen-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Platinum Shagreen is a warm pale grey in a traditional small scale all over pattern taken from a stingray.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0447",
+    "surface-group": "Laminate",
+    "name": "Slate Jigsaw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/slate-jigsaw-y0447",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9e33f307-d970-4fd5-9a2c-a7e0ede7d477/Y0447-Slate-Jigsaw-2-2-21-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Slate Jigsaw is a dark cool grey that was created from a bas-relief trapezoid creating a geometric large scale pattern.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0446",
+    "surface-group": "Laminate",
+    "name": "Shadow Jigsaw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/shadow-jigsaw-y0446",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0502f1ac-a5c8-4b42-8d1e-02d41af55e2a/Y0446-Shadow-Jigsaw-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Shadow Jigsaw is a warm grey in a large scale pattern create from a bas-relief trapezoid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0445",
+    "surface-group": "Laminate",
+    "name": "Coral Jigsaw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/coral-jigsaw-y0445",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a92ca5bd-17c1-46aa-8ef4-99dbb896d330/Y0445-Coral-Jigsaw-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Coral Jigsaw is a bright and happy coral in a large scale pattern. The bright pattern was created from bas-relief trapezoids.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0444",
+    "surface-group": "Laminate",
+    "name": "Lagoon Jigsaw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lagoon-jigsaw-y0444",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/66454ece-44e5-48df-a94b-6efe33aac472/Y0444-Lagoon-Jigsaw-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Lagoon Jigsaw is a dusky pop of aqua. The large scale pattern was created from bas-relief trapezoids.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0443",
+    "surface-group": "Laminate",
+    "name": "Crystalized  Capri",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/crystalized-capri-y0443",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f18be025-9f89-4874-989c-01ae723ea32b/Y0443-Crystallized-Capri-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Crystallized Capri is a medium toned blue dimensional pattern. The pattern was created by pieces of glass overlaying each other.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0442",
+    "surface-group": "Laminate",
+    "name": "Crystalized  White",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/crystalized-white-y0442",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e5b906f3-b0e9-49da-bc6f-2c15f3616b69/Y0442-Crystallized-White-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Crystalized White is a warm white medium scale pattern. The pattern is created by transparent pieces of glass scattered throughout.",
+    "texture_scale": {
+      "width": 13.3,
+      "height": 7
+    }
+  },
+  {
+    "code": "Y0441",
+    "surface-group": "Laminate",
+    "name": "Slate Horizon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/slate-horizon-y0441",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6c0c7210-6c50-4e8a-a5c7-f0b4b2e82c27/Y0441-Slate-Horizon-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Slate Horizon is a charcoal grey medium scale pattern. A rich grey cross grain stripe of various widths.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0439",
+    "surface-group": "Laminate",
+    "name": "Flint Horizon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flint-horizon-y0439",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c8b8c1b1-8f47-4ea3-bd82-7df56a9c1f3c/Y0439-Flint-Horizon-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Flint Horizon is a cool grey pattern in a medium scale. This pattern is a crossgrain with various widths of stripes..",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0438",
+    "surface-group": "Laminate",
+    "name": "Ash Horizon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ash-horizon-y0438",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/22555777-1259-4f14-bc70-6550f87b5a97/Y0438-Ash-Horizon5x12-3-11",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Ash Horizon is medium scale crossgrain striated design. The stripes are of varying widths in this warm grey pattern.",
+    "texture_scale": {
+      "width": 70,
+      "height": 62
+    }
+  },
+  {
+    "code": "Y0437",
+    "surface-group": "Laminate",
+    "name": "Primrose Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/primrose-boucle-y0437",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b0ef17f6-97ce-4b58-9d7e-4ca66fb08b76/Y0437-Primrose-Boucle-5x12-2-1-21",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Primrose Boucle is a pale pink that can be used as a wonderful neutral in any environment. The small scale pattern is made by a woven boucle texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0436",
+    "surface-group": "Laminate",
+    "name": "Flint Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flint-boucle-y0436",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/83e72295-976e-4ebd-a390-93f6476334a6/Y0436-Flint-Boucle-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Flint Boucle, is a midtone cool grey made from a thick woven boucle fabric. This small scale pattern is a wonderful neural grey.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0435",
+    "surface-group": "Laminate",
+    "name": "Aloe Boucle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/aloe-boucle-y0435",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/95134c01-4f32-4876-bccc-c7abadf56a43/Y0435-Aloe-Boucle-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Aloe Boucle, a muted soft green will add a level of sophistication wherever it is used. The pattern is made up of a heavily textured boucle.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0434",
+    "surface-group": "Laminate",
+    "name": "Tangerine Boucle",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6116/s/tangerine-boucle-y0434/category/53/",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6b8776f8-18fc-484a-ba72-ffd9ad20f78d/Y0434-Tangerine-Boucle-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0433",
+    "surface-group": "Laminate",
+    "name": "Hammered Light Bronze",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hammered-light-bronze-y0433",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/y/0/y0433_hammered_light_bronze_full_size_view.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1019
+    },
+    "no_repeat": true,
+    "description": "Hammered Light Bronze is a small scale pattern in a warm light bronze color. A small scale non directional pattern with movement, created by hammering metal.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0432",
+    "surface-group": "Laminate",
+    "name": "Hammered Shadow",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hammered-shadow-y0432",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0432_Hammered_Shadow_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Hammered Light Bronze is a small scale pattern in a warm light bronze color. A small scale non directional pattern with movement, created by hammering metal.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0431",
+    "surface-group": "Laminate",
+    "name": "Glacier Aspen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/glacier-aspen-y0431",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8c69ec4b-658d-4516-bf0f-1642ca9d2679/Y0431-Glacier-Aspen-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Glacier Aspen is a cool white pattern. This large scale look was inspired by birch bark.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0429",
+    "surface-group": "Laminate",
+    "name": "Crisp Aspen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/crisp-aspen-y0429",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8fe1866f-9760-49c3-9ff0-b2fd1a27c25e/Y0429-Crisp-Aspen-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Crisp Aspen is a warm neutral large scale pattern that is inspired by birch bark.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0428",
+    "surface-group": "Laminate",
+    "name": "Cobalt Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cobalt-oscar-y0428",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0428_Cobalt_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Cobalt Oscar is a bold deep blue pattern. This large scale pattern was created by pouring molten metal over linen.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0427",
+    "surface-group": "Laminate",
+    "name": "Bronze Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bronze-oscar-y0427",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0427_Bronze_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Bronze Oscar is a large scale abstracted pattern. This dramatic bronze tone pattern was created by pouring molten metal over linen.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0424",
+    "surface-group": "Laminate",
+    "name": "Slate Birch",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/slate-birch-y0424",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c8014497-4219-4eaf-a1b3-f20d905fdf79/Y0424-Slate-Birch-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Slate Birch is created by hand troweling plaster. The small scale pattern is in dimensional grey and black colors.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0423",
+    "surface-group": "Laminate",
+    "name": "Mountain White Birch",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/mountain-white-birch-y0423",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8655ebeb-ed3a-4e66-9455-f51c1ab7fc9d/Y0423-Mountain-White-Birch-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Mountain White Birch is a small scale abstract in warm neutrals. The pattern was inspired from hand troweled plaster..",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0422",
+    "surface-group": "Laminate",
+    "name": "Lilac Etched Cement",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lilac-etched-cement-y0422",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1093a0ac-cf9e-4707-90b5-6783ec7ab6fd/Y0422-Lilac-Etched-Cement-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Lilac Etched Cement is a large scale grid like pattern. A fun concrete look in a dusky lilac purple.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0421",
+    "surface-group": "Laminate",
+    "name": "Bone Etched Cement",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bone-etched-cement-y0421",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/723f1bca-31e7-4aa1-8b58-3b23af8a0a46/Y0421-Bone-Etched-Cement-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Bone Etched Cement is a large scale concrete grid like pattern in a light grey.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0418",
+    "surface-group": "Laminate",
+    "name": "Smoked Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/smoked-steel-y0418",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "description": "Smoked Steel is a large scale pattern with rich charcoal, black and browns throughout. This abstracted wood or distressed metal look is made by acid etching metal.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0419",
+    "surface-group": "Laminate",
+    "name": "Hot Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hot-steel-y0419",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0419_Hot_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Hot Steel is a large scale design in a bold fire red color. This design is made of acid etched steel and has the look of distressed wood or metal.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0417",
+    "surface-group": "Laminate",
+    "name": "Striation Planked",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/striation-planked-y0417",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/dc87d807-c326-45a8-83ec-8ed8440e1f72/Y0417-Striation-Planked-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Striation Planked is a warm white color. The pattern is a tonal abstracted look in planks.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0416",
+    "surface-group": "Laminate",
+    "name": "Striation",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/striation-y0416",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/302b2191-ba15-4971-be77-5f39f84eb33c/Y0416-Striation-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Striation is an abstracted tonal pattern in a warm white.",
+    "texture_scale": {
+      "width": 6.5,
+      "height": 5.4
+    }
+  },
+  {
+    "code": "Y0414",
+    "surface-group": "Laminate",
+    "name": "Linear Chisel Flint",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/linear-chisel-flint-y0414",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1b482521-a472-428f-885b-fe42afdcb4b9/Y0414-Linear-Chisel-Flint-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Linear Chisel Flint is a medium toned flint grey in a lineal abstract pattern, created by chiseling marble.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0413",
+    "surface-group": "Laminate",
+    "name": "Linear Chisel Aloe",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/linear-chisel-aloe-y0413",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/705c02ab-e93a-4dcf-89b8-c3bb47d7f43d/Y0413-Linear-Chisel-Aloe-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Linear Chisel Aloe is a soft aloe green color. The pattern is made up of a chiseled marble.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0412",
+    "surface-group": "Laminate",
+    "name": "Linear Chisel Denim",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/linear-chisel-denim-y0412",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e9953605-50bb-481d-9c69-23c2f51df772/Y0412",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Linear Chiseled Denim, is a deep denim blue color, created from chiseled marble.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "8200",
+    "surface-group": "Laminate",
+    "name": "White Driftwood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/white-driftwood-8200",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c3e4870e-ba7f-4f0d-98a7-06a783f921f0/8200-White-Driftwood_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000
+    },
+    "no_repeat": false,
+    "description": "White Driftwood is a warm bleached pine with distressed straight grain and occasional knots.",
+    "texture_scale": {
+      "width": 60,
+      "height": 51.41
+    }
+  },
+  {
+    "code": "8204",
+    "surface-group": "Laminate",
+    "name": "Weathered Char",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/weathered-char-8204",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fc8bb308-0162-4dd2-be5c-f3a405293dd0/8204-Weathered-Char_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302
+    },
+    "no_repeat": false,
+    "description": "Weathered Char is an aged teak in warm grey tones in a subtle planked look and celebrates the wood charring technique that produces such an elegant and unique look.",
+    "texture_scale": {
+      "width": 51.18,
+      "height": 25.19
+    }
+  },
+  {
+    "code": "8209",
+    "surface-group": "Laminate",
+    "name": "Veranda Teak",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/veranda-teak-8209",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8a5317ff-449f-4624-916a-c63771eb6538/8209-Veranda-Teak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1223
+    },
+    "no_repeat": false,
+    "description": "Veranda Teak is a stylish linear wood look in pale shades of brown.",
+    "texture_scale": {
+      "width": 51.14,
+      "height": 34.75
+    }
+  },
+  {
+    "code": "4992",
+    "surface-group": "Laminate",
+    "name": "Tailored Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tailored-linen-4992",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b6dae520-e3a5-42e2-a6d2-1278ecc3289a/4992-Tailored-Linen",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Tailored Linen is a refined dusty blue linen look.",
+    "texture_scale": {
+      "width": 61.67,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "8203",
+    "surface-group": "Laminate",
+    "name": "Silver Oak Ply",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silver-oak-ply-8203",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8c3951e3-d471-483d-b0a7-5d8b0d88baf7/8203-Silver-Oak-Ply",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1298
+    },
+    "no_repeat": false,
+    "description": "Silver Oak Ply has the industrial beauty of a plywood edge in variegated tones of cool silver oak.",
+    "texture_scale": {
+      "width": 660,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "8206",
+    "surface-group": "Laminate",
+    "name": "Saddle Oak",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/saddle-oak-8206",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/24df7768-22dc-44c8-a19b-f19204671ce4/8206-Saddle-Oak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1317
+    },
+    "no_repeat": false,
+    "description": "Saddle Oak is a large scale planked oak with distinctive characteristics in a rich tan color.",
+    "texture_scale": {
+      "width": 62.2,
+      "height": 49.21
+    }
+  },
+  {
+    "code": "4991",
+    "surface-group": "Laminate",
+    "name": "Pressed Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-linen-4991",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fb8e69de-f690-4d0a-a534-52e6ec267b55/4991-Pressed-Linen_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Pressed Linen is a sophisticated woven look in cool silver tones.",
+    "texture_scale": {
+      "width": 61.67,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "8210",
+    "surface-group": "Laminate",
+    "name": "Portico Teak",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/portico-teak-8210",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/547f42ed-1aec-40b7-b111-64dd016148c1/8210-Portico-Teak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1223
+    },
+    "no_repeat": false,
+    "description": "Portico Teak has a consistent linear grain in shades of cool silver brown with dark streaks.",
+    "texture_scale": {
+      "width": 51.14,
+      "height": 34.75
+    }
+  },
+  {
+    "code": "8211",
+    "surface-group": "Laminate",
+    "name": "Phantom Pearl",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/phantom-pearl-8211",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2f011ce4-6865-481c-ba08-f467c8c9cd91/8211-Phantom-Pearl_5x8_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302
+    },
+    "no_repeat": false,
+    "description": "Phantom Pearl is a subtle reconstituted wood grain effect in a soothing overall cool white color.",
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "8212",
+    "surface-group": "Laminate",
+    "name": "Phantom Ecru",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/phantom-ecru-8212",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/584f8653-1804-4872-9e3f-3a5ce7dd994e/8212-Phantom-Ecru_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Phantom Ecru is a soft gold color with a subtle reconstituted woodgrain effect.",
+    "texture_scale": {
+      "width": 51.1,
+      "height": 28.07
+    }
+  },
+  {
+    "code": "8213",
+    "surface-group": "Laminate",
+    "name": "Phantom Cocoa",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/phantom-cocoa-8213",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/74833e64-4049-4b60-a527-659353045f76/8213-Phantom-Cocoa-150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302
+    },
+    "no_repeat": false,
+    "description": "Phantom Cocoa has an overall warm brown color with a subtle reconstituted wood grain effect.",
+    "texture_scale": {
+      "width": 51.1,
+      "height": 28.07
+    }
+  },
+  {
+    "code": "8214",
+    "surface-group": "Laminate",
+    "name": "Phantom Charcoal",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/phantom-charcoal-8214",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/88705ad1-58d1-44cf-814a-8e73ffe76583/8214-Phantom-Charcoal_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302
+    },
+    "no_repeat": false,
+    "description": "Phantom Charcoal is a subtle reconstituted wood grain effect in a versatile charcoal color.",
+    "texture_scale": {
+      "width": 51.1,
+      "height": 28.07
+    }
+  },
+  {
+    "code": "4996",
+    "surface-group": "Laminate",
+    "name": "High Rise",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/high-rise-4996",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/0a1e9034-f311-49cf-a43b-037d0a900696/4996-High-Rise_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "High Rise is a sophisticated linear abstract in hushed neutrals of beige, grey, and white.",
+    "texture_scale": {
+      "width": 36.614,
+      "height": 30
+    }
   }
 ]
