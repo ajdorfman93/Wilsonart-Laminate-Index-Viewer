@@ -1,5 +1,6 @@
 /**
- * wilsonart-retry-missing-images.js
+ * wilsonart-retry-missing-images.banner-xpath.js
+ * (updated: fix logStep 'undefined' printing, banner-first + XPath fallback)
  *
  * Purpose:
  *   For any records missing `texture_image_url`, visit the product page and:
@@ -10,8 +11,8 @@
  *      `banner_cropped: true` and crop 93px off height in `texture_image_pixels`.
  *
  * Usage:
- *   node wilsonart-retry-missing-images.js
- *   node wilsonart-retry-missing-images.js --src=./wilsonart-laminate-details.json --out=./wilsonart-laminate-details.json --headless=true --limit=0 --offset=0 --batch=10
+ *   node wilsonart-retry-missing-images.banner-xpath.js
+ *   node wilsonart-retry-missing-images.banner-xpath.js --src=./wilsonart-laminate-details.json --out=./wilsonart-laminate-details.json --headless=true --limit=0 --offset=0 --batch=10
  *
  * Notes:
  *   - Writes progress every N items (batch).
@@ -44,7 +45,11 @@ const XPATH_FALLBACK = '//*[@id="html-body"]/div[6]/div[2]/div[1]/div[3]/div/img
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 function logStep(msg, extra) {
   const ts = new Date().toISOString();
-  console.log(extra === undefined ? `[${ts}] ${msg}` : `[${ts}] ${msg}`, extra);
+  if (arguments.length > 1 && typeof extra !== "undefined") {
+    console.log(`[${ts}] ${msg}`, extra);
+  } else {
+    console.log(`[${ts}] ${msg}`);
+  }
 }
 const hasStr = (v) => typeof v === "string" && v.trim().length > 0;
 const looksBanner = (u) => !!u && /banner/i.test(u);
@@ -106,7 +111,9 @@ async function getXPathImageSrc(page, xpath) {
     try {
       const el = document.evaluate(xp, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
       if (!el) return null;
-      const raw = el.getAttribute("src") || el.getAttribute("data-src") || el.getAttribute("data-original") || "";
+      const raw = el.getAttribute("src") || el.getAttribute("data-src") || el.getAttribute("data-original") || el.getAttribute("srcset") || "";
+      // If srcset, pick first candidate
+      if (raw && raw.includes("srcset")) return null;
       return raw || null;
     } catch { return null; }
   }, xpath);

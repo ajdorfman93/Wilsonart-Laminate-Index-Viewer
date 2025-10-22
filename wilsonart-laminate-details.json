@@ -4992,7 +4992,13 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0418_Smoked_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0419",
@@ -14529,7 +14535,13 @@
     "texture_scale": {
       "width": 62,
       "height": 49.22
-    }
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0709_Teal_Ash_5x12_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0708",
@@ -31910,7 +31922,13 @@
     "texture_scale": {
       "width": 62,
       "height": 49.22
-    }
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0709_Teal_Ash_5x12_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "PINE",
