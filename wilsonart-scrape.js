@@ -197,7 +197,7 @@ function finalizeRecord(rec) {
   logStep("Launching Puppeteer…");
   const browser = await puppeteer.launch({
     headless: "new",
-    defaultViewport: { width: 1368, height: 900 },
+    defaultViewport: { width: 1400, height: 900 },
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
