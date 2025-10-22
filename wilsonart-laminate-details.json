@@ -14752,5 +14752,271 @@
       "width": 51.42,
       "height": 28.5
     }
+  },
+  {
+    "code": "5005",
+    "surface-group": "Laminate",
+    "name": "Sierra Cascade",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sierra-cascade-5005",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_MightAlsoLike/e903d4dd-4e2e-4c44-9df1-33a1636c4224/5003-White-Cascade_webfullsheet",
+    "texture_image_pixels": {
+      "width": 270,
+      "height": 270
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 37.04,
+      "height": 37.04
+    }
+  },
+  {
+    "code": "5004",
+    "surface-group": "Laminate",
+    "name": "Dusk Cascade",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/dusk-cascade-5004",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_MightAlsoLike/e903d4dd-4e2e-4c44-9df1-33a1636c4224/5003-White-Cascade_webfullsheet",
+    "texture_image_pixels": {
+      "width": 270,
+      "height": 270
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 37.04,
+      "height": 37.04
+    }
+  },
+  {
+    "code": "5003",
+    "surface-group": "Laminate",
+    "name": "White Cascade",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/white-cascade-5003",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_CarouselThumbnail_1/e903d4dd-4e2e-4c44-9df1-33a1636c4224/5003-White-Cascade_webfullsheet",
+    "texture_image_pixels": {
+      "width": 81,
+      "height": 81
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 37.04,
+      "height": 37.04
+    }
+  },
+  {
+    "code": "1884",
+    "surface-group": "Laminate",
+    "name": "Cipollino Con Panna",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cipollino-con-panna-1884",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ae1dce8b-0634-4e7f-b805-ccc2bf05ae92/1884-Cippolino-Con-Panna-full-rep",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Cipollino Con Panna is a dramatic large scale stone look with unique veining and crystal structures in light cream and caramel tones with taupe accents.",
+    "texture_scale": {
+      "width": 43.3,
+      "height": 39.37
+    }
+  },
+  {
+    "code": "Y0491",
+    "surface-group": "Laminate",
+    "name": "Shadow Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/shadow-ash-y0491",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f91943d6-1e6f-45e7-a890-2d63d51f941f/Y0491-Shadow-Ash-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Shadow Ash is a medium toned warm grey ash that has partial cathedrals.",
+    "texture_scale": {
+      "width": 62.5,
+      "height": 49.2
+    }
+  },
+  {
+    "code": "Y0489",
+    "surface-group": "Laminate",
+    "name": "Stone Alona",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/stone-alona-y0489",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1dd9a888-52c4-4ca8-b1fd-497aa6dff126/Y0489-Stone-Alona-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0487",
+    "surface-group": "Laminate",
+    "name": "Scorched Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/scortched-chestnut-y0487",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9c6d75a7-e3a4-4314-9597-3efa1fdcbdb2/Y0487-Scorched-Chestnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 62,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0486",
+    "surface-group": "Laminate",
+    "name": "Timeworn Copper",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/timeworn-copper-y0486",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0486_Timeworn_Copper_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Timeworn Copper is an all over distressed metal pattern. The ground is a deep copper red with patinad green creating a dramatic pattern running throughout, with accents of light copper.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    },
+    "banner_cropped": true
+  },
+  {
+    "code": "Y0485",
+    "surface-group": "Laminate",
+    "name": "Border Blue Pine",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/border-blue-pine-y0485",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3e356938-989d-4df6-93f7-e9134c2854f5/Y0485-Border-Blue-Pine_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850
+    },
+    "no_repeat": true,
+    "description": "Border Blue Pine is a rustic planked woodgrain of varying sizes. The naked woodgrain comes through the overlay of turquoise like timeworn barnwood.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0484",
+    "surface-group": "Laminate",
+    "name": "Rancho Red Pine",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/salem-chestnut-y0472-1",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f98c08df-8f01-4de3-8eaf-293337a3b19e/Y0484-Rancho-Red-Pine_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850
+    },
+    "no_repeat": true,
+    "description": "Rancho Red is a deep red planked woodgrain. The deep charcoals of the woodgrain show throught like time worn barnwood.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   }
 ]
