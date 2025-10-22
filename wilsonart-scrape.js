@@ -60,6 +60,10 @@ const ATTR_TO_OUTPUT = {
   color_swatch: "color", // swatch links (not checkboxes)
 };
 
+const NEXT_PAGE_SELECTOR =
+  "#product-grid-view > div.category-pager > div.pages > ul > li.item.pages-item-next > a";
+const MAX_PAGINATION_PAGES = 100;
+
 // Output path
 const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
 

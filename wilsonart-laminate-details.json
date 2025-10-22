@@ -14456,5 +14456,160 @@
       "width": 62.5,
       "height": 51.2
     }
+  },
+  {
+    "code": "Y0711",
+    "surface-group": "Laminate",
+    "name": "Lime Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lime-ash-y0711",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [
+      "Reverse Slipmatch"
+    ],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0711_Lime_Ash_5x12_full_size_view_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1019
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0709",
+    "surface-group": "Laminate",
+    "name": "Teal Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/teal-ash-y0709k",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [
+      "Reverse Slipmatch"
+    ],
+    "shade": [],
+    "color": [
+      "Blue"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Teal Ash is a large-scale abstracted ash wood design. This two color design has a white ground and teal blue green graining.",
+    "texture_scale": {
+      "width": 62,
+      "height": 49.22
+    }
+  },
+  {
+    "code": "Y0708",
+    "surface-group": "Laminate",
+    "name": "Cobalt Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cobalt-ash-y0708",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [
+      "Reverse Slipmatch"
+    ],
+    "shade": [],
+    "color": [
+      "Blue"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/851a3c23-927b-4c35-a51e-eaf39da7e26d/Y0708-Cobalt-Ash-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0665",
+    "surface-group": "Laminate",
+    "name": "Greige Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/greige-ash-y0665",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/91c46977-92bc-4d08-83dd-70815e057db6/Y0665_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "description": "Greige Ash is a wood design in a warm medium grey color with black graining. The large scale design is an ash species.",
+    "texture_scale": {
+      "width": 62.5,
+      "height": 49.2
+    }
+  },
+  {
+    "code": "Y0664",
+    "surface-group": "Laminate",
+    "name": "Mocha Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/mocha-ash-y0664",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4c79ca76-d46a-43cb-8c8d-1cb9b0ae5790/Y0664_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020
+    },
+    "no_repeat": false,
+    "description": "Mocha Ash is a large scale pattern from the ash species. The wood design is a rich medium brown with black graining.",
+    "texture_scale": {
+      "width": 62.5,
+      "height": 49.2
+    }
   }
 ]
