@@ -5514,7 +5514,13 @@
     "performance_enhancements": [],
     "specialty_features": [
       "No Repeat"
-    ]
+    ],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0396",
@@ -5972,7 +5978,13 @@
       "Black"
     ],
     "performance_enhancements": [],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "4795",
@@ -6012,7 +6024,13 @@
     "performance_enhancements": [
       "Enhanced Wear Resistance"
     ],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "4794",
@@ -6055,7 +6073,13 @@
       "Chemical Resistant",
       "Enhanced Wear Resistance"
     ],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "4779",
@@ -6087,7 +6111,13 @@
       "Chemical Resistant",
       "Enhanced Wear Resistance"
     ],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "1787",
@@ -6121,7 +6151,13 @@
       "Orange"
     ],
     "performance_enhancements": [],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "4762",
@@ -17842,7 +17878,13 @@
       "Enhanced Wear Resistance",
       "Peel & Stick (RE-COVER)"
     ],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "Y0431",
@@ -27162,7 +27204,13 @@
       "Fire-Rated",
       "Peel & Stick (RE-COVER)"
     ],
-    "specialty_features": []
+    "specialty_features": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "banner_cropped": true
   },
   {
     "code": "8227",
@@ -49061,7 +49109,19 @@
     ],
     "design_collections": [
       "Optical Solids"
-    ]
+    ],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "Burnished Copper is a deep red brown metal color made by a soft crossweave pattern.",
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   },
   {
     "code": "BURNISHED BRONZE",
@@ -49087,6 +49147,18 @@
     ],
     "design_collections": [
       "Optical Solids"
-    ]
+    ],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926
+    },
+    "no_repeat": true,
+    "description": "This Burnished Bronze metal color is a rich brown created with a crossweave pattern.",
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   }
 ]

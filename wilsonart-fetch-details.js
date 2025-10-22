@@ -2,18 +2,18 @@
 // 
 //      node wilsonart-fetch-details.js 
 //
-// ---missing 
+// --missing 
 //   Scrape only products missing the specified field (default: texture_image_url).
 //   Example: --missing texture_image_url
 //
-// ---remaining
+// --remaining
 //   Scrape only products missing from wilsonart-laminate-details.json
 //   Example: --remaining
 //
-// ---update
+// --update
 //   Update wilsonart-laminate-details.json in place with any data found in wilsonart-laminate-index.json but missing from wilsonart-laminate-details.json
 //
-// ---report
+// --report
 //   Generate a report of all products missing the specified field (default: texture_image_url).
 //   Example: --report texture_image_url
 //
@@ -49,11 +49,11 @@ const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
 
-// ----------------------------- Paths -----------------------------
+// -------------------- Paths --------------------
 const INDEX_JSON = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
 const OUT_JSON   = path.resolve(process.cwd(), "wilsonart-laminate-details.json");
 
-// --- CLI helpers (accept both "--name value" and "--name=value") ---
+// -- CLI helpers (accept both "--name value" and "--name=value") --
 function getArgPair(name) {
   const eq = process.argv.find(a => a.startsWith(`--${name}=`));
   if (eq) return { present: true, value: eq.split("=")[1] };
@@ -89,10 +89,19 @@ const BATCH_SIZE = parseInt(
 );
 const HEADLESS = (process.env.HEADLESS ?? "true") !== "false";
 
+// How many times to retry scraping a product before giving up
+const MAX_FETCH_ATTEMPTS = parseInt(
+  process.env.MAX_FETCH_ATTEMPTS ??
+  (process.argv.find(a => a.startsWith("--max-attempts=")) || "").split("=")[1] ??
+  "3",
+  10
+);
+
+
 const MISSING_FIELD = FLAG_MISSING ? (MISSING_VALUE || "texture_image_url") : undefined;
 const REPORT_FIELD  = FLAG_REPORT  ? (REPORT_VALUE  || "texture_image_url") : undefined;
 
-// ----------------------------- Logging / Utils -----------------------------
+// -------------------- Logging / Utils --------------------
 function logStep(msg, extra) {
   const ts = new Date().toISOString();
   if (extra !== undefined) console.log(`[${ts}] ${msg}`, extra);
@@ -130,7 +139,7 @@ function parseUrlFeetSize(url) {
   return orientMaxAsWidth({ width: Math.max(a, b) * 12, height: Math.min(a, b) * 12 });
 }
 
-// ----------------------------- URL helpers -----------------------------
+// -------------------- URL helpers --------------------
 const hasFullSheet     = (u) => !!u && /FullSheet/i.test(u);
 const hasCarouselMain  = (u) => !!u && /Carousel_Main/i.test(u);
 const looksBanner      = (u) => !!u && /banner/i.test(u);
@@ -189,7 +198,7 @@ function pickBestFullSizeUrl(urls) {
   return scored[0].u;
 }
 
-// ----------------------------- Selectors -----------------------------
+// -------------------- Selectors --------------------
 const XPATH_ARROW =
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[4]";
 
@@ -200,7 +209,7 @@ const SEL_REPEAT_BOLD =
 const SEL_DESC_P2 =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div.wa_product_title > div.qkView_description > p:nth-child(2)";
 
-// ----------------------------- Wait helpers -----------------------------
+// -------------------- Wait helpers --------------------
 async function waitForMain(page) {
   logStep("  • waitForSettled: waiting for document ready");
   try { await page.waitForFunction(() => document.readyState === "complete", { timeout: 30000 }); } catch {}
@@ -219,7 +228,7 @@ async function waitForXPathPresence(page, xpath, timeout = 8000, poll = 150) {
     .catch(() => false);
 }
 
-// ----------------------------- After-step banner hook -----------------------------
+// -------------------- After-step banner hook --------------------
 /**
  * Stores the last banner URL (if any) in page.__bannerOverrideUrl
  * We run this after every “step”: goto, waits, clicks, etc.
@@ -309,7 +318,7 @@ async function robustClickXPath(page, xpath, label) {
   return false;
 }
 
-// ----------------------------- Metadata extractors -----------------------------
+// -------------------- Metadata extractors --------------------
 async function detectNoRepeat(page) {
   logStep("  • Checking 'No Repeat'…");
   const exact = await page.$eval(SEL_NO_REPEAT_B, el => (el.textContent || "").trim().toLowerCase()).catch(() => null);
@@ -326,7 +335,7 @@ async function extractDescription(page) {
   return (list[1] || list[0] || undefined);
 }
 
-// -------------------------- Image pixels & banner crop --------------------------
+// ------------------ Image pixels & banner crop ------------------
 async function getImagePixels(page, url, timeoutMs = 15000) {
   if (!url) return undefined;
   try {
@@ -356,7 +365,7 @@ function applyBannerCrop(url, pixels) {
   return { width: Math.round(pixels.width), height: croppedHeight };
 }
 
-// ----------------------------- Scale decision -----------------------------
+// -------------------- Scale decision --------------------
 function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat }) {
   const urlFeet = parseUrlFeetSize(imageUrl || "");
   const urlFeetOriented = orientMaxAsWidth(urlFeet || {});
@@ -414,7 +423,7 @@ async function computeParsedScale(page, isNoRepeat, imageUrl) {
   return undefined;
 }
 
-// ----------------------------- IO helpers -----------------------------
+// -------------------- IO helpers --------------------
 function readJsonSafe(p) {
   try { return JSON.parse(fs.readFileSync(p, "utf8")); }
   catch { return []; }
@@ -423,7 +432,7 @@ function writeJsonPretty(p, data) {
   fs.writeFileSync(p, JSON.stringify(data, null, 2), "utf8");
 }
 
-// ----------------------------- Merge/update -----------------------------
+// -------------------- Merge/update --------------------
 function byCodeMap(arr) {
   const map = new Map();
   for (const row of (arr || [])) if (row && row.code) map.set(String(row.code), row);
@@ -453,7 +462,7 @@ function updateDetailsInPlaceFromIndex(indexArr, detailsArr) {
   return out;
 }
 
-// ----------------------------- Filters for scraping -----------------------------
+// -------------------- Filters for scraping --------------------
 function filterCodesForMissingField(detailsArr, field) {
   const dmap = byCodeMap(detailsArr);
   const missing = [];
@@ -469,7 +478,7 @@ function codesMissingFromDetails(indexArr, detailsArr) {
   return { missing, present: [...detCodes] };
 }
 
-// ----------------------------- Scrape one product -----------------------------
+// -------------------- Scrape one product --------------------
 async function scrapeOne(page, code, productLink, existingRow = {}) {
   logStep(`[${code}] → ${productLink}`);
   await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
@@ -527,7 +536,7 @@ async function scrapeOne(page, code, productLink, existingRow = {}) {
   return out;
 }
 
-// ----------------------------- Main -----------------------------
+// -------------------- Main --------------------
 async function main() {
   const indexArr   = readJsonSafe(INDEX_JSON);
   const detailsArr = readJsonSafe(OUT_JSON);

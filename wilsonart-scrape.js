@@ -3,6 +3,45 @@
 //   node wilsonart-scrape.js
 //   node wilsonart-scrape.js FILTER_LIMIT=1 
 //
+// --missing 
+//   Scrape only products missing the specified field (default: texture_image_url).
+//   Example: --missing texture_image_url
+//   user can add multiple --missing arguments to check for multiple fields
+//   Example: --missing texture_image_url --missing texture_scale
+//
+// --report
+//   Print a report of all products missing the specified field (default: texture_image_url).
+//   Example: --report texture_image_url
+//   user can add multiple --report arguments to check for multiple fields
+//  Example: --report texture_image_url --report texture_scale
+//
+// List of possible headers or data contained in wilsonart-laminate-index.json that can be used with --missing or --report:
+//    code                 
+//    surface-group        
+//    name                 
+//    product-link         
+//    design_groups       
+//    species              
+//    cut                  
+//    match                
+//    shade                
+//    color     
+//    finish               
+//      code             
+//      name             
+//    performace_enchancments        
+//    specality_features             
+//    design_collections             
+//    texture_image_url              
+//    texture_image_pixels    
+//      width                 
+//      height                
+//    no_repeat               
+//    description             
+//    texture_scale           
+//      width                 
+//      height                
+
 
 "use strict";
 
@@ -10,9 +49,9 @@ const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
 
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 // Config
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 const START_URL =
   "https://www.wilsonart.com/laminate/design-library?product_list_mode=list";
 
@@ -45,9 +84,9 @@ const ATTR_TO_OUTPUT = {
 
 const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
 
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 // Helpers
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const cleanText = (t) =>
   (t || "").replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim();
@@ -242,9 +281,9 @@ async function goNextPage(page, curIndex) {
   return true;
 }
 
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 // Main
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------
 (async () => {
   logStep("Launching Puppeteer…");
   const browser = await puppeteer.launch({
@@ -481,9 +520,9 @@ async function goNextPage(page, curIndex) {
     writeOutput(products);
   }
 
-  // ---------------------------------------------------------------------------
+  // --------------------------------------------------
   // Run filters one-by-one with full pagination per filter
-  // ---------------------------------------------------------------------------
+  // --------------------------------------------------
   logStep("Starting filter iteration with full pagination…");
   for (let i = 0; i < filters.length; i++) {
     const f = filters[i];
