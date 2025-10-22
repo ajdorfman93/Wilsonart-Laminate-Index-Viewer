@@ -1891,5 +1891,227 @@
       "width": 144,
       "height": 60
     }
+  },
+  {
+    "code": "5036",
+    "surface-group": "Laminate",
+    "name": "Handspun Chestnut",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/handspun-chestnut-5036",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performace_enchancments": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6fb250c6-0fd5-493e-9d60-81996ca743f9/5036-Handspun-Chestnut_150dpi",
+    "texture_image_pixels": {
+      "width": 1888,
+      "height": 1180
+    },
+    "no_repeat": false,
+    "description": "Handspun Chestnut brown is a small-scale abstract design suggestive of handwoven plain weave textiles in deep range of brown with a smooth textured finish.",
+    "texture_scale": {
+      "width": 51.2,
+      "height": 28.7
+    }
+  },
+  {
+    "code": "5035",
+    "surface-group": "Laminate",
+    "name": "Handspun Slate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/handspun-slate-5035",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/5b3da1f2-3bcc-4df1-94d1-2387e8966339/5035-Handspun-Slate_150dpi",
+    "texture_image_pixels": {
+      "width": 1888,
+      "height": 1180
+    },
+    "no_repeat": false,
+    "description": "Handspun Slate is a refined small-scale dark cool grey abstract design with a handwoven, plain weave textile look in a smooth textured finish.",
+    "texture_scale": {
+      "width": 51.2,
+      "height": 28.7
+    }
+  },
+  {
+    "code": "5034",
+    "surface-group": "Laminate",
+    "name": "Handspun Dove",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/handspun-dove-5034",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performace_enchancments": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specality_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/37e8c3ad-4f3f-4d23-88d7-b449c4488a38/5034-Handspun-Dove_150dpi",
+    "texture_image_pixels": {
+      "width": 1888,
+      "height": 1180
+    },
+    "no_repeat": false,
+    "description": "Handspun Dove has a handwoven, plain weave textile look in a small-scale abstract design with a familiar range of light to dark cool grey colors and a fine velvet texture.",
+    "texture_scale": {
+      "width": 51.2,
+      "height": 28.7
+    }
+  },
+  {
+    "code": "Y0691",
+    "surface-group": "Laminate",
+    "name": "Indigo Shibori",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/iced-mint-y0686-4",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#21",
+        "name": "Soft Silk"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e4b8cee8-dff9-49ab-8c38-4788fdc629a6/Y0691-Indigo-shibori-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Indigo Shibori is a large-scale dark blue pattern inspired by hand died silk in indigo and white.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0651",
+    "surface-group": "Laminate",
+    "name": "Woven Reeds",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/woven-reeds-y0651",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/be2e6af8-1977-42e6-a132-cd1f33ca9b72/Y0651-Woven-Reeds-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Woven Reeds is a textile inspired design in earthy green. This is a medium-scale fractured geometric pattern.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   }
 ]
