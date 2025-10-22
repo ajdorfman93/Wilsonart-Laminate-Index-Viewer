@@ -20007,5 +20007,140 @@
       "width": 144,
       "height": 60
     }
+  },
+  {
+    "code": "Y0321",
+    "surface-group": "Laminate",
+    "name": "Flamingo Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flamingo-wood-y0321",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/be41addd-cedf-4a91-9058-2e34fad3193d/Y0321-Flamingo-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 848
+    },
+    "no_repeat": false,
+    "description": "Flamingo Wood has a white graphic woodgrain pattern on a deep rose background.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0311",
+    "surface-group": "Laminate",
+    "name": "Flamingo Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flamingo-grain-y0311",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/74da84d2-8927-491d-88f3-56e29582c963/Y0311-Flamingo-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Flamingo Grain is a bright, fun abstracted woodgrain that has fuschia graining and a white background.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0322",
+    "surface-group": "Laminate",
+    "name": "Eggplant Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eggplant-wood-y0322",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d89895a3-b7d2-4d18-be5b-63a3cd1fb37a/Y0322-Eggplant-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Eggplant Wood has a faux woodgrain on a dark purple background.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0312",
+    "surface-group": "Laminate",
+    "name": "Eggplant Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eggplant-grain-y0312",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/189a4f7d-158c-404c-ac9d-9b3c63460673/Y0312-Eggplant-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Eggplant Grain is inspired by faux woodgrain with a purple grain on a white background.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0324",
+    "surface-group": "Laminate",
+    "name": "Island Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/island-wood-y0324",
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0d8c308b-1509-4ecf-8079-f10902d0d288/Y0324-Island-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": false,
+    "description": "Island Wood has an intense lime green background with a white abstract woodgrain.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   }
 ]
