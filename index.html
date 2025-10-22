@@ -120,6 +120,63 @@
     .facet-row input { accent-color: var(--accent-2); }
     .facet-val { color: #e8ebf3; }
     .facet-count { color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; }
+    .facet-body-color {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .color-swatch {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(16, 19, 26, .6);
+      cursor: pointer;
+      transition: border .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .color-swatch:hover {
+      border-color: rgba(125, 211, 252, .35);
+      background: rgba(16, 19, 26, .75);
+    }
+    .color-swatch.is-active {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(125, 211, 252, .25);
+    }
+    .color-swatch input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .color-swatch .swatch {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--swatch-color, #94a3b8);
+      box-shadow: 0 0 0 1px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.12);
+    }
+    .color-swatch input:checked + .swatch {
+      box-shadow: 0 0 0 2px var(--accent), 0 0 0 4px rgba(125, 211, 252, .25), inset 0 0 0 1px rgba(255,255,255,.18);
+    }
+    .color-swatch .color-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .color-swatch .color-name {
+      font-weight: 600;
+      color: #f4f4f5;
+    }
+    .color-swatch input:checked ~ .color-meta .color-name {
+      color: var(--accent);
+    }
+    .color-swatch input:checked ~ .color-meta .facet-count {
+      color: rgba(125, 211, 252, .85);
+    }
 
     /* Table */
     .grid-wrap { overflow: auto; }

@@ -23,6 +23,28 @@
     'no_repeat',
   ];
 
+  const COLOR_SWATCH_MAP = {
+    black: '#111827',
+    blue: '#3b82f6',
+    brown: '#8b5e3c',
+    gray: '#6b7280',
+    green: '#22c55e',
+    multicolor: 'linear-gradient(135deg, #f472b6 0%, #f97316 32%, #22d3ee 64%, #a855f7 100%)',
+    neutral: '#d1d5db',
+    orange: '#f97316',
+    purple: '#a855f7',
+    red: '#ef4444',
+    taupe: '#b0916e',
+    white: '#f9fafb',
+    yellow: '#facc15',
+  };
+
+  function resolveColorSwatch(value) {
+    if (!value) return '#94a3b8';
+    const key = String(value).trim().toLowerCase();
+    return COLOR_SWATCH_MAP[key] || '#94a3b8';
+  }
+
   function createDefaultState() {
     const facets = Object.create(null);
     for (let i = 0; i < FACET_KEYS.length; i += 1) {
@@ -176,24 +198,68 @@
 
       const list = document.createElement('div');
       list.className = 'facet-body';
+      if (facetKey === 'color') list.classList.add('facet-body-color');
       for (const [val, count] of meta.values.entries()) {
-        const id = `facet_${facetKey}_${String(val).replace(/[^a-z0-9]+/gi, '_')}_${count}`;
+        const valueStr = String(val);
+        const id = `facet_${facetKey}_${valueStr.replace(/[^a-z0-9]+/gi, '_')}_${count}`;
         const row = document.createElement('label');
-        row.className = 'facet-row';
-        row.innerHTML = `
-          <input type="checkbox" id="${id}" data-facet="${facetKey}" data-value="${String(val)}">
-          <span class="facet-val">${String(val)}</span>
-          <span class="facet-count">(${count})</span>
-        `;
-        const input = row.querySelector('input');
+        let input = null;
+
+        if (facetKey === 'color') {
+          row.className = 'color-swatch';
+          row.setAttribute('title', `${valueStr} (${count})`);
+
+          input = document.createElement('input');
+          input.type = 'checkbox';
+          input.id = id;
+          input.setAttribute('data-facet', facetKey);
+          input.setAttribute('data-value', valueStr);
+          row.appendChild(input);
+
+          const swatch = document.createElement('span');
+          swatch.className = 'swatch';
+          swatch.style.setProperty('--swatch-color', resolveColorSwatch(valueStr));
+          row.appendChild(swatch);
+
+          const metaWrap = document.createElement('span');
+          metaWrap.className = 'color-meta';
+
+          const nameEl = document.createElement('span');
+          nameEl.className = 'color-name';
+          nameEl.textContent = valueStr;
+          metaWrap.appendChild(nameEl);
+
+          const countEl = document.createElement('span');
+          countEl.className = 'facet-count';
+          countEl.textContent = `(${count})`;
+          metaWrap.appendChild(countEl);
+
+          row.appendChild(metaWrap);
+        } else {
+          row.className = 'facet-row';
+          row.innerHTML = `
+            <input type="checkbox" id="${id}" data-facet="${facetKey}" data-value="${valueStr}">
+            <span class="facet-val">${valueStr}</span>
+            <span class="facet-count">(${count})</span>
+          `;
+          input = row.querySelector('input');
+        }
+
+        if (!input) continue;
         const selectable = state.facets[facetKey];
-        input.checked = !!(selectable && selectable.has(String(val)));
+        input.checked = !!(selectable && selectable.has(valueStr));
+        if (facetKey === 'color') {
+          row.classList.toggle('is-active', input.checked);
+        }
         input.addEventListener('change', (e) => {
           const fk = e.target.getAttribute('data-facet');
           const vv = e.target.getAttribute('data-value');
           const set = state.facets[fk] || (state.facets[fk] = new Set());
           if (e.target.checked) set.add(vv);
           else set.delete(vv);
+          if (facetKey === 'color') {
+            row.classList.toggle('is-active', e.target.checked);
+          }
           triggerChange();
         });
         list.appendChild(row);
