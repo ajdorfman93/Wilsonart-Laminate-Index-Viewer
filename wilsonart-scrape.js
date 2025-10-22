@@ -421,25 +421,68 @@ function finalizeRecord(rec) {
     await page.goto(url, { waitUntil: "networkidle2" });
     await waitForSettled(page, { needFilters: false });
 
-    // Lazy load by scrolling until count plateaus
-    logStep("Scrolling to load all grid tiles…");
-    let prev = -1;
-    for (let i = 0; i < 20; i++) {
-      const count =
-        (await withRetry(
-          () => page.$$eval("#product-grid-view > ol > li", (els) => els.length),
-          4,
-          500,
-          "scroll-count"
-        ).catch(() => 0)) || 0;
-      logStep(`scroll pass ${i + 1}: count=${count}, prev=${prev}`);
-      if (count === prev) break;
-      prev = count;
-      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
-      await sleep(900);
+    const aggregatedItems = [];
+    const seenCodes = new Set();
+
+    for (let pageNo = 1; pageNo <= MAX_PAGINATION_PAGES; pageNo++) {
+      logStep("Pagination: processing page " + pageNo);
+      logStep("Scrolling to load all grid tiles (page " + pageNo + ").");
+      let prev = -1;
+      for (let i = 0; i < 20; i++) {
+        const count =
+          (await withRetry(
+            () => page.$$eval("#product-grid-view > ol > li", (els) => els.length),
+            4,
+            500,
+            "scroll-count"
+          ).catch(() => 0)) || 0;
+        logStep(
+          "scroll pass " + (i + 1) + " (page " + pageNo + "): count=" + count + ", prev=" + prev
+        );
+        if (count === prev) break;
+        prev = count;
+        await page
+          .evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+          .catch(() => {});
+        await sleep(900);
+      }
+
+      const pageItems = await extractGridItems();
+      logStep(
+        "Pagination: page " + pageNo + " collected " + pageItems.length + " items."
+      );
+      for (const item of pageItems) {
+        if (!seenCodes.has(item.code)) {
+          seenCodes.add(item.code);
+          aggregatedItems.push(item);
+        }
+      }
+
+      const nextButton = await page.$(NEXT_PAGE_SELECTOR);
+      if (!nextButton) {
+        logStep(
+          "Pagination: next page button not found after page " + pageNo + "; stopping."
+        );
+        break;
+      }
+
+      await nextButton.evaluate((el) => el.scrollIntoView({ block: "center" }));
+      const beforeUrl = page.url();
+      const nextHref = await nextButton.evaluate((el) => el.getAttribute("href") || "");
+      logStep("Pagination: moving to page " + (pageNo + 1) + " via " + nextHref);
+      await Promise.all([
+        page.waitForNavigation({ waitUntil: "networkidle2" }).catch(() => {}),
+        nextButton.click(),
+      ]);
+      await waitForSettled(page, { needFilters: false });
+      const afterUrl = page.url();
+      if (afterUrl === beforeUrl) {
+        logStep("Pagination: URL unchanged after clicking next; stopping to avoid loop.");
+        break;
+      }
     }
 
-    const items = await extractGridItems();
+    const items = aggregatedItems;
     logStep(`Items extracted under this filter: ${items.length}`);
 
     const bucket = ATTR_TO_OUTPUT[filter.attr];

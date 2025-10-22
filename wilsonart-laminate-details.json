@@ -14611,5 +14611,352 @@
       "width": 62.5,
       "height": 49.2
     }
+  },
+  {
+    "code": "8217",
+    "surface-group": "Laminate",
+    "name": "Italian Silver Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/italian-silver-ash-8217",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      }
+    ],
+    "performace_enchancments": [
+      "AEON 3X Durability"
+    ],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b8451aef-3fa7-486b-bef6-53ce2d38b03c/8217-Italian-Silver-Ash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 61.75,
+      "height": 49.75
+    }
+  },
+  {
+    "code": "Y0595",
+    "surface-group": "Laminate",
+    "name": "Ebony Modern Chevron",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6932/s/ebony-modern-chevron-y0595/category/53/",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": "Dark",
+    "color": [
+      "Black"
+    ],
+    "finish": [
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/77b2515f-5921-471f-919b-d1db050345a9/Y0595-Ebony-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Ebony Modern Cheveron is a large scale pieced chevron in a black ash and bleached ash.  The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0594",
+    "surface-group": "Laminate",
+    "name": "Coffee Modern Chevron",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/coffee-modern-chevron-y0594",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b6d6f183-906c-4703-8e9e-ea30753a732b/Y0594-Coffee-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Coffee Modern Chevron is a large scale pieced chevron in a dark brown ash and bleached ash. The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0593",
+    "surface-group": "Laminate",
+    "name": "Natural Modern Chevron",
+    "product-link": "https://www.wilsonart.com/high-pressure-laminate/design-library/natural-modern-chevron-y0593",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Neutral"
+    ],
+    "finish": [
+      {
+        "code": "#12",
+        "name": "Soft Grain"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ee9adbca-1dad-455e-bcc2-43e2046c65f6/Y0593-Natural-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200
+    },
+    "no_repeat": true,
+    "description": "Natural Modern Chevron is a large-scale pieced chevron in bleached ash and maple.  The pattern is a pieced modern interpretation of a chevron.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0524",
+    "surface-group": "Laminate",
+    "name": "Cottage Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cottage-ash-y0524",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/df4e6fd3-682c-4baa-a220-a9c52d2c3bda/Y0524-Cottage-Ash-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853
+    },
+    "no_repeat": false,
+    "description": "Cottage Ash is a dramatic ash with full and partial cathedrals. The woodgrain is a mid-tone brown with warm lighter brown color play throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0522",
+    "surface-group": "Laminate",
+    "name": "Chocolate Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/chocolate-ash-y0522",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cb3a11ec-383a-416e-88c8-42db496dbd58/y0522-Chocolate-ash-full-rep",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1097
+    },
+    "no_repeat": false,
+    "description": "Chocolate Ash is an ash that is a rich deep brown. The graining looks like it was charred with midtone browns highlighted  through the wood grain, creates a dramatic deep woodgrain.",
+    "texture_scale": {
+      "width": 62.205,
+      "height": 49.21
+    }
+  },
+  {
+    "code": "Y0521",
+    "surface-group": "Laminate",
+    "name": "Bright Ash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bright-ash-y0521",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/32b5a945-c209-45a3-9e46-ff3a98a70ef7/Y0521-Bright-ash-full-rep",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1097
+    },
+    "no_repeat": false,
+    "texture_scale": {
+      "width": 62.205,
+      "height": 49.21
+    }
+  },
+  {
+    "code": "Y0494",
+    "surface-group": "Laminate",
+    "name": "Sky Arabesque",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sky-arabesque-y0494",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/61fe7b79-0084-4685-acdf-9ffb306b82c5/Y0494-Sky-Arabesque-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 847
+    },
+    "no_repeat": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0493",
+    "surface-group": "Laminate",
+    "name": "Olive Arabesque",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ash-arabesque-y0493",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/686770ec-e39c-41c7-8363-1e80793af7f0/Y0493-Olive-Arabesque-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 847
+    },
+    "no_repeat": true,
+    "description": "Olive Arabesque is a muted green aged woodgrain. Traditional arabesque patterns inspired the design, overlapping hexagons are inlaid throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0492",
+    "surface-group": "Laminate",
+    "name": "Sun Bleached Arabesque",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sun-bleached-arabesque-y0492",
+    "design_groups": [],
+    "species": [
+      "Ash"
+    ],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "color": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#16",
+        "name": "Casual Rustic"
+      }
+    ],
+    "performace_enchancments": [],
+    "specality_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e3e31b04-e521-4bc1-8a48-475123783493/Y0492-Sun-Bleached-Arabesque-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 847
+    },
+    "no_repeat": true,
+    "description": "Sun Bleach Arabesque is a warm neutral aged woodgrain. Inspired by traditional arabesque designs, overlapping hexagons are inlaid throughout.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   }
 ]
