@@ -110,6 +110,29 @@ function logStep(msg, extra) {
 }
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
+const SHEET_SIZE_ALLOWED_RE = /^\d+' x \d+'$/;
+
+function collectValidSheetSizes(values) {
+  const seenValid = new Set();
+  const invalid = [];
+  const valid = [];
+  if (!Array.isArray(values)) return { valid, invalid };
+  for (let i = 0; i < values.length; i += 1) {
+    const raw = values[i];
+    if (typeof raw !== "string") continue;
+    const normalized = raw.replace(/\s+/g, " ").trim();
+    if (!normalized) continue;
+    if (!SHEET_SIZE_ALLOWED_RE.test(normalized)) {
+      if (!invalid.includes(normalized)) invalid.push(normalized);
+      continue;
+    }
+    if (seenValid.has(normalized)) continue;
+    seenValid.add(normalized);
+    valid.push(normalized);
+  }
+  return { valid, invalid };
+}
+
 function validSize(obj) { return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0; }
 function ratioOf(obj)   { return validSize(obj) ? (obj.width / obj.height) : undefined; }
 function scaleRatio(obj) {
@@ -260,7 +283,7 @@ async function ensureFeaturesExpanded(page) {
 }
 
 async function fetchSheetSizesFromApi(page, code, surfaceGroup) {
-  if (!code) return [];
+  if (!code) return { valid: [], invalid: [] };
   const base = "https://www.wilsonart.com/ProductPatterns/productpatterns/padata/";
   const params = new URLSearchParams();
   const normalizedGroup = typeof surfaceGroup === "string" ? surfaceGroup.trim() : "";
@@ -280,7 +303,7 @@ async function fetchSheetSizesFromApi(page, code, surfaceGroup) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     const markup = data && typeof data.output === "string" ? data.output : "";
-    if (!markup) return [];
+    if (!markup) return { valid: [], invalid: [] };
 
     const parsed = await page.evaluate((html) => {
       const temp = document.createElement("div");
@@ -294,10 +317,11 @@ async function fetchSheetSizesFromApi(page, code, surfaceGroup) {
       return values;
     }, markup);
 
-    return Array.isArray(parsed) ? parsed : [];
+    const collected = collectValidSheetSizes(Array.isArray(parsed) ? parsed : []);
+    return collected;
   } catch (err) {
     logStep(`  • Sheet sizes fetch error: ${err && err.message ? err.message : err}`);
-    return [];
+    return { valid: [], invalid: [] };
   }
 }
 
@@ -321,17 +345,14 @@ async function extractSheetSizes(page, code, surfaceGroup) {
       }
       return out;
     });
-    const seen = new Set();
-    const deduped = [];
-    for (let i = 0; i < sizes.length; i += 1) {
-      const value = sizes[i];
-      if (!seen.has(value)) {
-        seen.add(value);
-        deduped.push(value);
-      }
+    const { valid: pageValid, invalid: pageInvalid } = collectValidSheetSizes(sizes);
+
+    if (pageValid.length) {
+      logStep(`  • Sheet sizes found: ${pageValid.join(", ")}`);
+      return pageValid;
     }
-    if (deduped.length) logStep(`  • Sheet sizes found: ${deduped.join(", ")}`);
-    else {
+
+    if (Array.isArray(sizes) && sizes.length === 0) {
       logStep("  • Sheet sizes found: none");
       const preview = await page.evaluate(() => {
         const section = document.querySelector("#pa_features");
@@ -340,24 +361,21 @@ async function extractSheetSizes(page, code, surfaceGroup) {
         return text.replace(/\s+/g, " ").trim().slice(0, 160);
       }).catch(() => null);
       if (preview) logStep(`  • #pa_features preview: ${preview}`);
+    } else if (pageInvalid.length) {
+      logStep(`  • Sheet sizes discarded (invalid format): ${pageInvalid.join(", ")}`);
+    } else {
+      logStep("  • Sheet sizes found: none");
     }
-    if (deduped.length) return deduped;
 
-    const apiSizes = await fetchSheetSizesFromApi(page, code, surfaceGroup);
-    const seenApi = new Set();
-    const dedupedApi = [];
-    for (let i = 0; i < apiSizes.length; i += 1) {
-      const value = apiSizes[i];
-      if (!value) continue;
-      if (!seenApi.has(value)) {
-        seenApi.add(value);
-        dedupedApi.push(value);
-      }
+    const { valid: apiValid = [], invalid: apiInvalid = [] } = await fetchSheetSizesFromApi(page, code, surfaceGroup);
+    if (apiValid.length) {
+      logStep(`  • Sheet sizes fetched via API: ${apiValid.join(", ")}`);
+      return apiValid;
     }
-    if (dedupedApi.length) {
-      logStep(`  • Sheet sizes fetched via API: ${dedupedApi.join(", ")}`);
+    if (apiInvalid.length) {
+      logStep(`  • API sheet sizes discarded (invalid format): ${apiInvalid.join(", ")}`);
     }
-    return dedupedApi;
+    return [];
   } catch {
     return [];
   }
