@@ -10376,5 +10376,1076 @@
       "width": 144,
       "height": 61.13
     }
+  },
+  {
+    "code": "5048",
+    "surface-group": "Laminate",
+    "name": "Bianco Tessere",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bianco-tessere-5048",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/30bc5989-1cf1-4b6c-be9e-8285891a378c/5048-Bianco-Tessere_PRINT-Approved_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Bianco Tessere is a sophisticated soft weave design with a white background and cream and grey tones that offers broad coordination to other colors and materials.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "5016",
+    "surface-group": "Laminate",
+    "name": "French Linen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/french-linen-5016",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fa177396-b1cc-4ecc-9fb4-056641d4925c/5016-French-Linen",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0607",
+    "surface-group": "Laminate",
+    "name": "Midnight Tweedish",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/midnight-tweedish-y0607",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c93d6d7e-8995-496f-9824-2732244b210b/Y0607-Midnight-Tweedish",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
+    },
+    "no_repeat": false,
+    "description": "Midnight Tweedish is a small scale cheveron inspired by tweed fabric, in a tonal dark charcoal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 57.6
+    }
+  },
+  {
+    "code": "Y0502",
+    "surface-group": "Laminate",
+    "name": "Chilly Aqua",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/chilly-aqua-y0502",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/56f18bbe-e712-4b4d-9dc5-87381bb9c8d9/Y0502-Chilly-Aqua",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Chilly Aqua is a midtone dusky blue abstract design. The pattern is made up of small organic grids that look like a solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0514",
+    "surface-group": "Laminate",
+    "name": "Tweedish Indigo",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tweedish-indigo-y0514",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cf209561-11b4-4073-9bc1-dc46626e17ba/Y0514-Tweedish-Indigo",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Tweedish Indigo is a deep blue indigo on indigo tweed pattern that has been abstracted.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0512",
+    "surface-group": "Laminate",
+    "name": "Tweedish Pewter",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tweedish-pewter-y0512",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/24681b6d-0176-4115-bdb2-82e55498f747/Y0512-Tweedish-Pewter",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Tweedish Pewter a grey on grey abstracted tweed textile pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0506",
+    "surface-group": "Laminate",
+    "name": "Silvermist",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silvermist-y0506",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f21b0762-2f48-40b4-aebb-b5cc7a3ee73e/Y0506-Silvermist",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Silvermist is a beautiful warm white abstract pattern that looks like a solid, in an abstracted grid pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0505",
+    "surface-group": "Laminate",
+    "name": "Hematite",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hematite-y0505",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d292ef59-e32e-4d73-a99b-ad09fcbfb8b4/Y0505-Hematite",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Hematite is a grey color that is similar to its stone namesake. This is an abstract pattern that gives the illusion of a solid in an organic grid pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0504",
+    "surface-group": "Laminate",
+    "name": "Night",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/night-y0504",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/92e14e52-749f-4f87-818b-93971c45b15d/Y0504-Night",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Night is an abstracted organic grid pattern in a charcoal grey optical solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0503",
+    "surface-group": "Laminate",
+    "name": "Twilight",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/twilight-y0503",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/946d72fb-47fe-4ce4-bd85-89c6ef59ebb4/Y0503-Twilight",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Twilight is a light dusky blue optical solid pattern. The pattern is made up of a small organic grid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0565",
+    "surface-group": "Laminate",
+    "name": "Indigo Kilim",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/indigo-kilim-y0565",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8e4501eb-d2b6-4fa6-8dcc-7cddf1f543c4/Y0565-Indigo-Kilim",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Indigo Kilim is a beautiful medium scale design inspired by Kilim rugs. This pattern is given a modern feel with monochromatic indigo blues and a time worn look.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0564",
+    "surface-group": "Laminate",
+    "name": "Baltic Blue Ikat",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/baltic-blue-ikat-y0564",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ced1dbf6-dd93-4bac-820f-2553d5f5f34f/Y0564-Baltic-Blue-Ikat",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Baltic Blue Ikat is a stunning cobalt blue large scale cheveron pattern. This design was inspired by the Ikat weaveing tradition.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0563",
+    "surface-group": "Laminate",
+    "name": "Fog Ikat",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/fog-ikat-y0563",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#28",
+        "name": "Gloss Line"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e832f7c2-bd25-4bf3-85d9-806b37cb2323/Y0563-Fog-Ikat",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Fog Ikat is a large scale warm mid-tone grey pattern. This chevron pattern is  inspired by Ikats from Central Asia.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4880",
+    "surface-group": "Laminate",
+    "name": "Carbon Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carbon-mesh-4880",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/72811eb0-e13f-419c-9a60-f286a96a0e60/4880-Carbon-Mesh_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale grid style laminate design pattern created by a weave of charcoal and carbon grey.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4879",
+    "surface-group": "Laminate",
+    "name": "Steel Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/steel-mesh-4879",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/abde6e93-960c-4090-937b-1218b145f9ff/4879-Steel-mesh",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale grid laminate design style pattern created by a weave of light and blue-grey.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4878",
+    "surface-group": "Laminate",
+    "name": "Pewter Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pewter-mesh-4878",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/06272dc8-51b6-44e3-bdaa-bc677366f0d4/4878-Pewter-Mesh_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale laminate design grid style pattern created by a weave of light and medium grey.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4877",
+    "surface-group": "Laminate",
+    "name": "Grey Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/grey-mesh-4877",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ec05618e-6cb2-4471-9043-09a0e45b43a5/4877-Grey-Mesh",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale grid style laminate design pattern created by a weave of soft light greys.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4876",
+    "surface-group": "Laminate",
+    "name": "Sheer Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sheer-mesh-4876",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#19",
+        "name": "Leno Weave"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/99cbb9e1-3765-4519-beb1-fa8c4b67efc7/4876-Sheer-Mesh_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale grid laminate design style pattern created by a weave of warm white and grey.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4820",
+    "surface-group": "Laminate",
+    "name": "Carbon EV",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carbon-ev-4820",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/10b1982f-2682-47ff-ab25-ece7d6a3cd56/4820-Carbon-EV_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale fiber design. This laminate design has a dark grey background with hints of charcoal and blue, covered with a layer of small light grey fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4814",
+    "surface-group": "Laminate",
+    "name": "Tungsten EV",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tungsten-ev-4814",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/5af471d1-2610-4857-9d18-00c6080492c2/4814-Tungsten-EV",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale fiber design. This laminate design has a bronze background with hints of grey, covered with a layer of small gold fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
   }
 ]
