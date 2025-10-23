@@ -40,6 +40,8 @@ const COLUMNS = [
 
   { key: 'design_groups', label: 'Design Groups', render: renderPills },
   { key: 'colors', label: 'Colors', render: renderPills },
+  { key: 'sheet_sizes', label: 'Sheet Sizes', render: renderPills },
+  { key: 'texture_scale', label: 'Texture Scale (WA-H in)', render: renderScale },
   { key: 'species', label: 'Species', render: renderPills },
   { key: 'cut', label: 'Cut', render: renderPills },
   { key: 'match', label: 'Match', render: renderPills },
@@ -50,7 +52,7 @@ const COLUMNS = [
   { key: 'design_collections', label: 'Design Collections', render: renderPills },
 
   { key: 'no_repeat', label: 'No Repeat', render: (r) => r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '') },
-  { key: 'texture_scale', label: 'Texture Scale (W×H in)', render: renderScale },
+  { key: 'no_repeat_texture_scale', label: 'No Repeat Texture Scale (WA-H in)', render: renderScale },
   { key: 'description', label: 'Description', render: (r) => safe(r.description) },
 ];
 
@@ -72,6 +74,22 @@ const COLUMN_ALIASES = {
   performance_enhancements: ['performace_enchancments'],
   specialty_features: ['specality_features'],
 };
+
+function dedupeColumns(cols) {
+  const seen = new Set();
+  const out = [];
+  for (let i = 0; i < cols.length; i += 1) {
+    const c = cols[i];
+    const k = c && c.key;
+    if (k && !seen.has(k)) {
+      seen.add(k);
+      out.push(c);
+    } else if (!k) {
+      out.push(c);
+    }
+  }
+  return out;
+}
 
 function renderPills(v, row) {
   const column = this || {};
@@ -119,13 +137,17 @@ function renderFinish(row) {
   }).join('');
 }
 
-function renderScale(row) {
-  const s = row.texture_scale;
-  if (!s || (typeof s.width !== 'number' && typeof s.height !== 'number')) return '';
-  const w = s.width != null ? Number(s.width).toFixed(3).replace(/\.?0+$/,'') : '';
-  const h = s.height != null ? Number(s.height).toFixed(3).replace(/\.?0+$/,'') : '';
+function renderScale(value, row) {
+  const column = this || {};
+  let source = (value && typeof value === 'object') ? value : undefined;
+  if (!source && column && column.key === 'texture_scale' && row && typeof row === 'object') {
+    source = row.texture_scale;
+  }
+  if (!source || (typeof source.width !== 'number' && typeof source.height !== 'number')) return '';
+  const w = source.width != null ? Number(source.width).toFixed(3).replace(/\.?0+$/,'') : '';
+  const h = source.height != null ? Number(source.height).toFixed(3).replace(/\.?0+$/,'') : '';
   if (!w && !h) return '';
-  return `${w}${w ? '"' : ''} × ${h}${h ? '"' : ''}`;
+  return `${w}${w ? '"' : ''} x ${h}${h ? '"' : ''}`;
 }
 
 /**
@@ -192,9 +214,10 @@ async function loadDefault() {
 function renderTable() {
   // header once
   if (!headRow.dataset.built) {
+    const renderCols = dedupeColumns(COLUMNS);
     const headerCells = [
       '<th scope="col" class="col-index">#</th>',
-      ...COLUMNS.map(c => `<th scope="col">${c.label}</th>`),
+      ...renderCols.map(c => `<th scope="col">${c.label}</th>`),
     ];
     headRow.innerHTML = headerCells.join('');
     headRow.dataset.built = '1';
@@ -202,7 +225,8 @@ function renderTable() {
   const rows = visible || [];
   const html = rows.map((r, index) => {
     const numberCell = `<td class="col-index">${index + 1}.</td>`;
-    const tds = COLUMNS.map(col => {
+    const renderCols = dedupeColumns(COLUMNS);
+    const tds = renderCols.map(col => {
       const rendered = (col.render.length === 1 ? col.render(r) : col.render.call(col, r[col.key], r));
       return `<td>${rendered}</td>`;
     }).join('');

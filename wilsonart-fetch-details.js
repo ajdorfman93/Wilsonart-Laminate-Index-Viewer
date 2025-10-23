@@ -163,6 +163,206 @@ function isEmptyField(val) {
   return false;
 }
 
+async function ensureFeaturesExpanded(page) {
+  if (!page) return;
+  const selectors = [
+    'a.custom_btn[href="#pa_features"]',
+    'a[href="#pa_features"]',
+    'button[href="#pa_features"]',
+    '[data-target="#pa_features"]'
+  ];
+
+  for (let s = 0; s < selectors.length; s += 1) {
+    const selector = selectors[s];
+    let handle = null;
+    try {
+      handle = await page.$(selector);
+    } catch {
+      handle = null;
+    }
+    if (!handle) continue;
+
+    try {
+      await page.evaluate((el) => {
+        if (el && typeof el.scrollIntoView === "function") {
+          el.scrollIntoView({ block: "center", behavior: "instant" });
+        }
+      }, handle);
+    } catch {
+      // ignore scroll failures
+    }
+
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      let expanded = false;
+      try {
+        expanded = await page.evaluate((el) => {
+          if (!el) return false;
+          const href = el.getAttribute("href") || el.getAttribute("data-target") || "";
+          const target = href && href.startsWith("#") ? document.querySelector(href) : null;
+          const ariaExpanded = el.getAttribute("aria-expanded");
+          if (ariaExpanded === "true") return true;
+          if (target) {
+            const hidden = target.getAttribute("aria-hidden") === "true";
+            const collapsed = target.classList.contains("collapsed");
+            if (!hidden && !collapsed && target.offsetHeight > 0) return true;
+          }
+          return false;
+        }, handle);
+      } catch {
+        expanded = false;
+      }
+
+      if (expanded) {
+        let hasSizes = false;
+        try {
+          hasSizes = await page.evaluate(
+            () => document.querySelectorAll(".size_group span").length > 0
+          );
+        } catch {
+          hasSizes = false;
+        }
+        if (hasSizes) {
+          return;
+        }
+      }
+
+      try {
+        await handle.click({ delay: 20 });
+      } catch {
+        try {
+          await page.evaluate((el) => {
+            if (!el) return;
+            if (typeof el.click === "function") el.click();
+            else el.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
+          }, handle);
+        } catch {
+          // ignore click failure, try next selector
+        }
+      }
+
+      if (typeof page.waitForTimeout === "function") {
+        await page.waitForTimeout(500);
+      } else {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+
+      let hasSizesAfterClick = false;
+      try {
+        hasSizesAfterClick = await page.evaluate(
+          () => document.querySelectorAll(".size_group span").length > 0
+        );
+      } catch {
+        hasSizesAfterClick = false;
+      }
+      if (hasSizesAfterClick) return;
+    }
+  }
+}
+
+async function fetchSheetSizesFromApi(page, code, surfaceGroup) {
+  if (!code) return [];
+  const base = "https://www.wilsonart.com/ProductPatterns/productpatterns/padata/";
+  const params = new URLSearchParams();
+  const normalizedGroup = typeof surfaceGroup === "string" ? surfaceGroup.trim() : "";
+  let attrSetTitle = "Wilsonart Laminate";
+  if (normalizedGroup) {
+    if (/wilsonart/i.test(normalizedGroup)) attrSetTitle = normalizedGroup;
+    else attrSetTitle = `Wilsonart ${normalizedGroup}`.trim();
+  }
+  params.set("attrSetTitle", attrSetTitle);
+  params.set("product_sku", code);
+  params.set("current_category", "Design Library");
+
+  try {
+    const res = await fetch(`${base}?${params.toString()}`, {
+      headers: { accept: "application/json" },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const markup = data && typeof data.output === "string" ? data.output : "";
+    if (!markup) return [];
+
+    const parsed = await page.evaluate((html) => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+      const spans = temp.querySelectorAll(".size_group span");
+      const values = [];
+      spans.forEach((node) => {
+        const text = (node.textContent || "").replace(/\s+/g, " ").trim();
+        if (text) values.push(text);
+      });
+      return values;
+    }, markup);
+
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    logStep(`  • Sheet sizes fetch error: ${err && err.message ? err.message : err}`);
+    return [];
+  }
+}
+
+async function extractSheetSizes(page, code, surfaceGroup) {
+  try {
+    await ensureFeaturesExpanded(page);
+    await page.waitForSelector(".size_group", { timeout: 2000 }).catch(() => {});
+    await page
+      .waitForFunction(
+        () => document.querySelectorAll(".size_group span").length > 0,
+        { timeout: 3500 }
+      )
+      .catch(() => {});
+    const sizes = await page.$$eval(".size_group span", (nodes) => {
+      const out = [];
+      for (let i = 0; i < nodes.length; i += 1) {
+        const node = nodes[i];
+        if (!node) continue;
+        const text = (node.textContent || "").replace(/\s+/g, " ").trim();
+        if (text) out.push(text);
+      }
+      return out;
+    });
+    const seen = new Set();
+    const deduped = [];
+    for (let i = 0; i < sizes.length; i += 1) {
+      const value = sizes[i];
+      if (!seen.has(value)) {
+        seen.add(value);
+        deduped.push(value);
+      }
+    }
+    if (deduped.length) logStep(`  • Sheet sizes found: ${deduped.join(", ")}`);
+    else {
+      logStep("  • Sheet sizes found: none");
+      const preview = await page.evaluate(() => {
+        const section = document.querySelector("#pa_features");
+        if (!section) return null;
+        const text = section.textContent || "";
+        return text.replace(/\s+/g, " ").trim().slice(0, 160);
+      }).catch(() => null);
+      if (preview) logStep(`  • #pa_features preview: ${preview}`);
+    }
+    if (deduped.length) return deduped;
+
+    const apiSizes = await fetchSheetSizesFromApi(page, code, surfaceGroup);
+    const seenApi = new Set();
+    const dedupedApi = [];
+    for (let i = 0; i < apiSizes.length; i += 1) {
+      const value = apiSizes[i];
+      if (!value) continue;
+      if (!seenApi.has(value)) {
+        seenApi.add(value);
+        dedupedApi.push(value);
+      }
+    }
+    if (dedupedApi.length) {
+      logStep(`  • Sheet sizes fetched via API: ${dedupedApi.join(", ")}`);
+    }
+    return dedupedApi;
+  } catch {
+    return [];
+  }
+}
+
 const FEET_SIZE_TOKEN_RE = /(^|[^A-Za-z0-9])(\d+(?:\.\d+)?)\s*[xX\u00D7]\s*(\d+(?:\.\d+)?)(?![A-Za-z0-9])/;
 
 // Prefer width token "5x12" → inches (width = max*12)
@@ -660,7 +860,7 @@ function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepea
   } else {
     logStep("  Scale choice: undefined (no valid scale information)");
   }
-  return chosen;
+  return { scale: chosen, reason, noRepeatScale };
 }
 
 async function computeParsedScale(page, isNoRepeat, imageUrl) {
@@ -738,7 +938,7 @@ function codesMissingFromDetails(indexArr, detailsArr) {
 }
 
 // -------------------- Scrape one product --------------------
-async function scrapeOne(page, code, productLink, existingRow = {}) {
+async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {}) {
   logStep(`[${code}] → ${productLink}`);
   const productTokens = normalizeProductTokens(code, productLink);
   page.__bannerOverrideUrl = null;
@@ -794,10 +994,15 @@ async function scrapeOne(page, code, productLink, existingRow = {}) {
   const no_repeat   = await detectNoRepeat(page);
   const parsedScale = await computeParsedScale(page, no_repeat, chosenUrl || "");
   const currentScale = orientMaxAsWidth(existingRow?.texture_scale || parsedScale || { width: 144, height: 60 });
-  const finalScale = chooseFinalScale({
+  const { scale: chosenScale, noRepeatScale } = chooseFinalScale({
     imageUrl: chosenUrl, pixels: texture_image_pixels,
     currentScale, parsedScale, noRepeat: no_repeat
-  }) || currentScale;
+  }) || {};
+  const finalScale = chosenScale || currentScale;
+  const surfaceGroup = hasString(existingRow?.["surface-group"])
+    ? existingRow["surface-group"]
+    : (hasString(indexRow?.["surface-group"]) ? indexRow["surface-group"] : undefined);
+  const sheetSizes = await extractSheetSizes(page, code, surfaceGroup);
 
   const description = hasString(existingRow?.description) ? existingRow.description : (await extractDescription(page));
 
@@ -807,6 +1012,9 @@ async function scrapeOne(page, code, productLink, existingRow = {}) {
   if (validSize(texture_image_pixels)) out.texture_image_pixels = texture_image_pixels;
   if (no_repeat !== undefined) out.no_repeat = !!no_repeat;
   if (hasString(description)) out.description = description;
+  if (Array.isArray(sheetSizes)) out.sheet_sizes = sheetSizes;
+  if (noRepeatScale) out.no_repeat_texture_scale = noRepeatScale;
+  else if ("no_repeat_texture_scale" in out) delete out.no_repeat_texture_scale;
   if (banner_cropped) out.banner_cropped = true;
   out.texture_scale = finalScale; // per your rules: always overwrite
 
@@ -886,7 +1094,7 @@ async function main() {
         while (attempts < MAX_FETCH_ATTEMPTS && !scraped) {
           attempts++;
           try {
-            scraped = await scrapeOne(page, code, link, outMap.get(code));
+            scraped = await scrapeOne(page, code, link, outMap.get(code), idxRow);
           } catch (e) {
             logStep(`[${code}] attempt ${attempts} failed: ${e.message || e}`);
             await sleep(1000);
