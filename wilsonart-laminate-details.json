@@ -11447,5 +11447,1836 @@
       "width": 96,
       "height": 60
     }
+  },
+  {
+    "code": "4811",
+    "surface-group": "Laminate",
+    "name": "Silicon EV",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silicon-ev-4811",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/489c0626-ae46-4fb0-98f0-db05a79280e4/4811-Silicon-EV",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale fiber design. This laminate design has a light taupe background with hints of grey, covered with a layer of small light beige fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4810",
+    "surface-group": "Laminate",
+    "name": "Titanium EV",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/titanium-ev-4810",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/39b2686c-a537-4ce6-8de4-64b11d2fc09a/4810-Titaniumev_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A small scale fiber design. This laminate design has a light grey background with hints of taupe, covered with a layer of small, off-white fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4783",
+    "surface-group": "Laminate",
+    "name": "White Tigris",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/white-tigris-4783",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "description": "A medium scale fiber laminate design. The light grey background has an overlay of large white fibers and smaller grey fibers",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 18,
+      "height": 14
+    }
+  },
+  {
+    "code": "4674",
+    "surface-group": "Laminate",
+    "name": "Evening Tigris",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/evening-tigris-4674",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/111663f8-a627-41f1-956d-df3c4e856753/4674-Evening-Tigris",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A medium scale fiber laminate design. The warm grey background has an overlay of large white fibers and smaller charcoal grey fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4669",
+    "surface-group": "Laminate",
+    "name": "Natural Tigris",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/natural-tigris-4669",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/33841273-943c-4471-83bf-05dab0bc48f8/4669-Natural-tigris",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A medium scale fiber laminate design. The light brown background has an overlay of large white fibers and smaller medium brown fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4667",
+    "surface-group": "Laminate",
+    "name": "Green Tigris",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/green-tigris-4667",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ca418363-9224-43f8-9451-3a748e965f53/4667-Green-Tigris",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A medium scale fiber laminate design. The green background has an overlay of large white fibers and smaller blue-green fibers.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4656",
+    "surface-group": "Laminate",
+    "name": "Bronze Legacy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bronze-legacy-4656",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/0970f572-d37b-4ffc-88ea-dbf6389ea8ed/4656-Bronze-Legacy",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "This small scale fiber laminate design has a light bronze background with subtle orange/brown highlights, and a fine dark grey stipple.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "4651",
+    "surface-group": "Laminate",
+    "name": "Navy Legacy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/navy-legacy-4651",
+    "design_groups": [
+      "Fibers & Textiles"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6d4b55b2-ef2b-4e78-814a-71ff7fd75dde/4651-Navy-Legacy",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Navy Legacy 4651 is a medium blue small scale laminate with random red/brown highlights. Available in a variety of finishes. Ideal for any countertop.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0825",
+    "surface-group": "Laminate",
+    "name": "Oolong Tea",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oolong-tea-y0825",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d862d841-b3ed-47b3-9ef2-2d05a3d8ac7f/Y0825-Oolong-Tea-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oolong Tea is a large-scale organic leaf print. This subtle blue pattern works for both horizontal and vertical use.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0826",
+    "surface-group": "Laminate",
+    "name": "Earl Grey Tea",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/earl-grey-tea-y0826",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/03a086db-cca5-494b-a299-ac7236ddd0dc/Y0826-Earl-Grey-Tea-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Earl Grey Tea is a large-scale organic leaf print. This subtle green-grey pattern works for both horizontal and vertical use.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0828",
+    "surface-group": "Laminate",
+    "name": "Green Tea",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/green-tea-y0828",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Green"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/48fa4081-8b7a-402e-adbe-033fda2e4159/Y0828-Green-Tea-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Green Tea is a large-scale organic leaf print. This subtle moss green pattern works for both horizontal and vertical use.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0827",
+    "surface-group": "Laminate",
+    "name": "Black Tea",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/black-tea-y0827",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/50b1f962-4af7-494c-94fb-ec3a98c6b571/Y0827-Black-Tea-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Black Tea is a large-scale organic leaf print. This subtle bronze pattern works for both horizontal and vertical use.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0722",
+    "surface-group": "Laminate",
+    "name": "Purple Construct",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/purple-construct-y0722",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Purple"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/450a1cfb-9791-414d-9152-93e3cc8d387c/Y0722-Purple-Construct-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Purple Construct is a large scale design with a concrete grey ground with a distressed geometric overlaid design.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0721",
+    "surface-group": "Laminate",
+    "name": "Blue Construct",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/blue-construct-y0721",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/25cad52f-aa3e-4cdf-945a-49e0c3b812d2/Y0721-Blue-Construct-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Blue Construct is a large scale design with a concrete grey ground with a distressed geometric overlaid design.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0717",
+    "surface-group": "Laminate",
+    "name": "Constellation Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/constellation-grey-y0717",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/07adfed5-cf89-4719-9587-c494bc3de89f/Y0717-Constellation-grey-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Constellation Grey is a tonal monochromatic design with a large scale pattern of interconnected lines like a constellation.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0716",
+    "surface-group": "Laminate",
+    "name": "Constellation Night",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/constellation-night-y0716",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a708dc90-12fe-42d4-a5e1-758bcd6e911d/Y0716-Constellation-Night-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Constellation Night is a large scale graphic pattern with navy and white crisscrosses like stars in the night sky.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0671",
+    "surface-group": "Laminate",
+    "name": "Vintage Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/vintage-houndstooth-y0671",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/dd73cb92-1d81-4dd3-bcea-0fb99216e6f8/Y0671-Vintage-Houndstooth-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Vintage Houndstooth is a large scale design made up of warm whites and greys that play beautifully together. The grey houndstooth design is overlaid on top of a wood look and both have been worn through time.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0615",
+    "surface-group": "Laminate",
+    "name": "Sage Crosstex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sage-crosstex-y0615",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/38fa2fb1-5d98-430a-a3a1-a3114bc54374/Y0615-Sage-Crosstex-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Sage Crosstex is a distressed pattern with a visual cross texture pattern in light and medium dusty greens. This medium-scale pattern has a soft graphic look.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "Y0614",
+    "surface-group": "Laminate",
+    "name": "Ghost Crosstex",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ghost-crosstex-y0614",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b8de2b5b-6fe1-4bc5-856a-d2331d0eeeec/Y0614-Ghost-Crosstex-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020,
+      "ratio": 1.9608
+    },
+    "no_repeat": false,
+    "description": "Ghost Crosstex is a medium-scale pattern with a distressed visual cross texture in light and medium greys.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 48.96
+    }
+  },
+  {
+    "code": "Y0307",
+    "surface-group": "Laminate",
+    "name": "Ebon Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ebon-grain-y0307",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/952bec0f-e128-4555-872a-e2e7f05a9653/Y0307-Ebon-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Ebon Grain has a black faux bois woodgrain pattern on a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0321",
+    "surface-group": "Laminate",
+    "name": "Flamingo Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flamingo-wood-y0321",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/be41addd-cedf-4a91-9058-2e34fad3193d/Y0321-Flamingo-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 848,
+      "ratio": 2.3585
+    },
+    "no_repeat": false,
+    "description": "Flamingo Wood has a white graphic woodgrain pattern on a deep rose background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.06
+    }
+  },
+  {
+    "code": "Y0311",
+    "surface-group": "Laminate",
+    "name": "Flamingo Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flamingo-grain-y0311",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/74da84d2-8927-491d-88f3-56e29582c963/Y0311-Flamingo-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Flamingo Grain is a bright, fun abstracted woodgrain that has fuschia graining and a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0322",
+    "surface-group": "Laminate",
+    "name": "Eggplant Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eggplant-wood-y0322",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Purple"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d89895a3-b7d2-4d18-be5b-63a3cd1fb37a/Y0322-Eggplant-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Eggplant Wood has a faux woodgrain on a dark purple background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0312",
+    "surface-group": "Laminate",
+    "name": "Eggplant Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/eggplant-grain-y0312",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Purple"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/189a4f7d-158c-404c-ac9d-9b3c63460673/Y0312-Eggplant-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Eggplant Grain is inspired by faux woodgrain with a purple grain on a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0324",
+    "surface-group": "Laminate",
+    "name": "Island Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/island-wood-y0324",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0d8c308b-1509-4ecf-8079-f10902d0d288/Y0324-Island-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Island Wood has an intense lime green background with a white abstract woodgrain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0314",
+    "surface-group": "Laminate",
+    "name": "Island Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/island-grain-y0314",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3529c547-7be3-41f2-826b-b568825c34e6/Y0314-Island-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Island Grain is a minimal faux bois woodgrain in lime green on a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0318",
+    "surface-group": "Laminate",
+    "name": "Coffee Bean Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/coffee-bean-wood-y0318",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b0205577-5f8b-45eb-8780-789b0d514874/Y0318-Coffee-Been-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Coffee Bean Wood is a white on brown graphic woodgrain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0308",
+    "surface-group": "Laminate",
+    "name": "Coffee Bean Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/coffee-bean-grain-y0308",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/17495f53-ffe6-4b04-a1f0-7ef35a8ab8ed/Y0308-Coffee-Been-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Coffee Bean Grain is a simple, two-color, abstract woodgrain pattern of brown on white.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0323",
+    "surface-group": "Laminate",
+    "name": "Ocean Wood",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4293/s/ocean-wood-y0323/category/53/",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Ocean Wood is a clean white faux bois woodgrain on a turquoise ground.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 8,
+      "height": 4
+    }
+  },
+  {
+    "code": "Y0319",
+    "surface-group": "Laminate",
+    "name": "Lapis Blue Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lapis-blue-wood-y0319",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a18d3bdf-b3d6-44c9-8138-899d8a1c5cd1/Y0319-Lapis-Blue-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Lapis Blue Wood is deep blue with a white abstract woodgrain pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0313",
+    "surface-group": "Laminate",
+    "name": "Ocean Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ocean-grain-y0313",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cffa3930-ddd8-4c12-83c8-bb703e8550ea/Y0313-Ocean-grain-full_1",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": false,
+    "description": "Ocean Grain is a fun, faux bois in teal woodgrain on a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0309",
+    "surface-group": "Laminate",
+    "name": "Lapis Blue Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/lapis-blue-grain-y0309",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8aa9a416-b2d2-4880-81bd-8564770201bb/Y0309-Lapis-Blue-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Lapis Blue Grain is a lighthearted faux woodgrain pattern with deep blue grain on a white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0325",
+    "surface-group": "Laminate",
+    "name": "North Sea Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/north-sea-wood-y0325",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/fcd57c8e-ee74-43f1-a10e-e0f5c0d01265/Y0325-North-sea-wood-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": false,
+    "description": "North Sea Wood is a two-colored abstract with a dark warm background and a minimal white woodgrain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0315",
+    "surface-group": "Laminate",
+    "name": "North Sea Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/north-sea-grain-y0315",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3f8c7c77-9091-47a1-91e9-b842229f5f1e/Y0315-North-sea-grain-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": false,
+    "description": "North Sea Grain is a stormy grey simple woodgrain on a white ground.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0326",
+    "surface-group": "Laminate",
+    "name": "Orange Grove Wood",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/orange-grove-wood-y0326",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cacd9a9c-307b-4bb1-8ad9-ccc1b5b2ab5a/Y0326-Orange-Grove-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Orange Grove Wood has a sunny orange ground with a simple graphic white woodgrain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0316",
+    "surface-group": "Laminate",
+    "name": "Orange Grove Grain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/orange-grove-grain-y0316",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/50c55eb1-99c8-4bc0-a901-d218a97dddc1/Y0316-Orange-Grove-Grain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Orange Grove Grain is a cheerful orange faux graphic woodgrain on white.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0119",
+    "surface-group": "Laminate",
+    "name": "Papaya Chevron",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/papaya-chevron-y0119",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/935209d0-9090-43ff-bd2a-914f1b8a1f01/Y0119-Papaya-Chevron-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "The classic chevron pattern has recently exploded in popularity Papaya has a large-scale V-shaped pattern in alternating colors of coral and alabaster white able to make a strong impression in any space.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0248",
+    "surface-group": "Laminate",
+    "name": "Checkered Maize",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/checkered-maize-y0248",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cb1c6e62-2646-48f1-af17-45b38d9d17f5/Y0248-Checkered-Maise-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Checkered Maize is a large-scale checkered pattern of squares alternating in yellow and white for a dramatic effect.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0247",
+    "surface-group": "Laminate",
+    "name": "Checkered Sky",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/checkered-sky-y0247",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/78577525-a18b-4580-b84a-44e3286247d0/Y0247-Checkered-Sky-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Checkered Sky is a large-scale checkered pattern of squares alternating in blue and white for a dramatic effect.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0246",
+    "surface-group": "Laminate",
+    "name": "Checkered Slacks",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/checkered-slacks-y0246",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/52224dfe-0fea-424e-b34a-d991a85ebe25/Y0246-Checkered-Slacks-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Checkered Slacks is a large-scale checkered pattern of squares alternating in grey and white for a dramatic effect.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
   }
 ]
