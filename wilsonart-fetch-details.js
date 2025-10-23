@@ -1,10 +1,11 @@
 // wilsonart-fetch-details.js
 // 
 //      node wilsonart-fetch-details.js 
+//   node wilsonart-fetch-details.js  --offset=22 --limit=1 --batch=1 --headless=true --max-attempts=5
 //
 // --missing 
 //   Scrape only products missing the specified field (default: texture_image_url).
-//   Example: --missing texture_image_url
+//   Example: node wilsonart-fetch-details.js --missing texture_image_url
 //
 // --remaining
 //   Scrape only products missing from wilsonart-laminate-details.json
@@ -139,11 +140,16 @@ function parseUrlFeetSize(url) {
   return orientMaxAsWidth({ width: Math.max(a, b) * 12, height: Math.min(a, b) * 12 });
 }
 
+const ASSET_LIBRARY_BASE = "https://assetlibrary.wilsonart.com";
+const FORBIDDEN_TEXTURE_SUBSTRINGS = [
+  "webfullsheet",
+  "mightalsolike",
+  "hero",
+  "images.wilsonart.com"
+];
+
 // -------------------- URL helpers --------------------
-const hasFullSheet     = (u) => !!u && /FullSheet/i.test(u);
-const hasCarouselMain  = (u) => !!u && /Carousel_Main/i.test(u);
 const looksBanner      = (u) => !!u && /banner/i.test(u);
-const includesFullSize = (u) => !!u && /full_size/i.test(u);
 
 // HTML scanners
 async function findUrlsMatching(page, re) {
@@ -163,6 +169,49 @@ async function findFullSizeUrlsInHTML(page) {
 }
 async function findBannerUrlsInHTML(page) {
   return await findUrlsMatching(page, /https?:\/\/[^\s"'<>\)]*banner[^\s"'<>\)]*/g);
+}
+async function findAssetLibraryUrlsInHTML(page) {
+  return await findUrlsMatching(page, /https?:\/\/assetlibrary\.wilsonart\.com[^\s"'<>\)]*/g);
+}
+
+function hasSizeToken(url) {
+  return /\b\d+(?:\.\d+)?x\d+(?:\.\d+)?\b/i.test(url || "");
+}
+
+function isForbiddenTextureUrl(url) {
+  if (!url) return true;
+  const lower = url.toLowerCase();
+  return FORBIDDEN_TEXTURE_SUBSTRINGS.some(token => lower.includes(token));
+}
+
+const hasFullSizeViewToken = (url) => /fullsizeview|full_size_view/i.test(url || "");
+
+function isValidTextureUrl(url, tokens = []) {
+  if (!url) return false;
+  const lower = url.toLowerCase();
+  if (!lower.startsWith(ASSET_LIBRARY_BASE)) return false;
+  if (isForbiddenTextureUrl(url)) return false;
+
+  const hasBannerKeyword = /banner/i.test(url);
+  const hasFullSizeView = hasFullSizeViewToken(url);
+  const hasProductToken = tokens.some(token => token && lower.includes(token));
+  return hasBannerKeyword || hasFullSizeView || hasSizeToken(url) || hasProductToken;
+}
+
+function computeTextureUrlScore(url, tokens = []) {
+  let score = 1;
+  const lower = url.toLowerCase();
+
+  if (/banner/i.test(url)) score += 10;
+  if (hasFullSizeViewToken(url)) score += 8;
+  if (hasSizeToken(url)) score += 6;
+  tokens.forEach((token, idx) => {
+    if (!token || !lower.includes(token)) return;
+    score += Math.max(4 - idx, 1);
+  });
+  if (/150dpi/i.test(url)) score += 1;
+  if (/fullsheet/i.test(lower)) score += 1;
+  return score;
 }
 
 function normalizeProductTokens(code, productLink) {
@@ -204,76 +253,39 @@ function listBannerCandidates(page) {
   return out;
 }
 
-function pickBannerCandidate(page, code, productLink) {
-  const tokens = normalizeProductTokens(code, productLink);
-  if (!tokens.length) return null;
-  const candidates = listBannerCandidates(page);
-  if (!candidates.length) return null;
-
-  const scored = candidates.map(url => {
-    const lower = url.toLowerCase();
-    let score = 0;
-    tokens.forEach((token, idx) => {
-      if (!token) return;
-      if (lower.includes(token)) {
-        const base = token.length >= 6 ? 6 : 3;
-        score += base + Math.max(0, 3 - idx);
+async function resolveTextureImageUrl(page, code, productLink, tokens) {
+  const searchTokens = Array.isArray(tokens) && tokens.length ? tokens : normalizeProductTokens(code, productLink);
+  const combined = new Set();
+  const addAll = (arr = []) => {
+    for (const item of arr) {
+      if (typeof item === "string" && item.trim()) {
+        combined.add(item.trim());
       }
-    });
-    if (/150dpi/i.test(url)) score += 1;
-    if (/fullsheet/i.test(lower) || /full_sheet/i.test(lower)) score += 1;
-    if (/full_size/i.test(lower)) score += 1;
-    return { url, score };
-  }).filter(item => item.score > 0);
+    }
+  };
 
-  if (!scored.length) return null;
+  addAll(listBannerCandidates(page));
+  addAll(await findFullSheetUrlsInHTML(page));
+  addAll(await findFullSizeUrlsInHTML(page));
+  addAll(await findAssetLibraryUrlsInHTML(page));
+
+  const allCandidates = [...combined];
+  const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens));
+  if (!validCandidates.length) {
+    if (allCandidates.length) {
+      const forbiddenSample = allCandidates.find(url => isForbiddenTextureUrl(url));
+      const sample = forbiddenSample || allCandidates[0];
+      logStep(`[${code}] Skipping texture image candidate`, sample);
+    }
+    return null;
+  }
+
+  const scored = validCandidates.map(url => ({
+    url,
+    score: computeTextureUrlScore(url, searchTokens)
+  }));
   scored.sort((A, B) => (B.score - A.score) || (B.url.length - A.url.length));
   return scored[0].url;
-}
-
-function pickBestFullSheetUrl(urls) {
-  if (!urls.length) return null;
-  const cands = urls.filter(u => hasFullSheet(u) && !hasCarouselMain(u));
-  if (!cands.length) return null;
-  const scored = cands.map(u => {
-    const m = u.match(/(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)/);
-    const a = m ? parseFloat(m[1]) : 0;
-    const b = m ? parseFloat(m[2]) : 0;
-    const areaFeet = (isFinite(a) && isFinite(b)) ? (a * b) : 0;
-    const has150dpi = /150dpi/i.test(u) ? 1 : 0;
-    return { u, areaFeet, has150dpi, len: u.length };
-  });
-  scored.sort((A, B) => ((B.areaFeet - A.areaFeet) || (B.has150dpi - A.has150dpi) || (B.len - A.len)));
-  return scored[0].u;
-}
-function pickBestFullSizeUrl(urls) {
-  if (!urls.length) return null;
-  const nonBanner = urls.filter(u => includesFullSize(u) && !looksBanner(u));
-  const banner    = urls.filter(u => includesFullSize(u) && looksBanner(u));
-  const pickFrom = nonBanner.length ? nonBanner : banner;
-  if (!pickFrom.length) return null;
-  const scored = pickFrom.map(u => {
-    const m = u.match(/(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)/);
-    const a = m ? parseFloat(m[1]) : 0;
-    const b = m ? parseFloat(m[2]) : 0;
-    const areaFeet = (isFinite(a) && isFinite(b)) ? (a * b) : 0;
-    const has150dpi = /150dpi/i.test(u) ? 1 : 0;
-    return { u, areaFeet, has150dpi, len: u.length };
-  });
-  scored.sort((A, B) => ((B.areaFeet - A.areaFeet) || (B.has150dpi - A.has150dpi) || (B.len - A.len)));
-  return scored[0].u;
-}
-async function resolveTextureImageUrl(page, code, productLink) {
-  let chosenUrl = pickBannerCandidate(page, code, productLink);
-  if (!chosenUrl) {
-    const fullSheets = await findFullSheetUrlsInHTML(page);
-    chosenUrl = pickBestFullSheetUrl(fullSheets) || null;
-  }
-  if (!chosenUrl) {
-    const fullSize = await findFullSizeUrlsInHTML(page);
-    chosenUrl = pickBestFullSizeUrl(fullSize) || null;
-  }
-  return chosenUrl;
 }
 
 // -------------------- Selectors --------------------
@@ -283,6 +295,8 @@ const SECOND_IMAGE_XPATHS = [
   '//*[@id="maincontent"]/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]',
   '//*[@id="maincontent"]//div[contains(@class,"fotorama__nav__frame")][2]'
 ];
+const LAST_RESORT_XPATH =
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div";
 
 const SEL_NO_REPEAT_B =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div > div.qkView_description > div:nth-child(7) > ul > li > p > b";
@@ -439,6 +453,10 @@ async function clickSecondCarouselImage(page, attemptLabel = "") {
 
   logStep(`  • Second carousel image click attempts failed${suffix}`);
   return false;
+}
+
+async function clickLastResortTextureTrigger(page) {
+  return robustClickXPath(page, LAST_RESORT_XPATH, "Last-resort texture trigger", { waitTimeout: 6000, waitPolling: 200 });
 }
 
 // -------------------- Metadata extractors --------------------
@@ -604,6 +622,7 @@ function codesMissingFromDetails(indexArr, detailsArr) {
 // -------------------- Scrape one product --------------------
 async function scrapeOne(page, code, productLink, existingRow = {}) {
   logStep(`[${code}] → ${productLink}`);
+  const productTokens = normalizeProductTokens(code, productLink);
   page.__bannerOverrideUrl = null;
   page.__bannerCandidates = new Set();
   await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
@@ -618,13 +637,30 @@ async function scrapeOne(page, code, productLink, existingRow = {}) {
   await afterStepCheckForBanner(page);
 
   // Resolve texture image URL with banner preference, then fallbacks
-  let chosenUrl = await resolveTextureImageUrl(page, code, productLink);
+  let chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
   if (!chosenUrl) {
     const retryClick = await clickSecondCarouselImage(page, "retry");
     if (retryClick) {
       await afterStepCheckForBanner(page);
-      chosenUrl = await resolveTextureImageUrl(page, code, productLink);
+      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
     }
+  }
+
+  if (!chosenUrl) {
+    const lastResortClick = await clickLastResortTextureTrigger(page);
+    if (lastResortClick) {
+      await afterStepCheckForBanner(page);
+      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+    }
+  }
+
+  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens)) {
+    logStep(`[${code}] Rejected candidate texture image URL`, chosenUrl);
+    chosenUrl = null;
+  }
+
+  if (!chosenUrl) {
+    logStep(`[${code}] ERROR: No valid texture_image_url found`);
   }
 
   let banner_cropped = false;

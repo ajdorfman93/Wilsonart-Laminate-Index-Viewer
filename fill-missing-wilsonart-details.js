@@ -22,30 +22,6 @@ const fs = require('fs');
 const path = require('path');
 const OpenAI = require('openai');
 
-// Load local .env files (if present) so OPENAI_API_KEY can be read without exporting manually.
-function loadEnvIfMissing() {
-  const envFiles = ['.env.local', '.env'];
-  for (const filename of envFiles) {
-    const fullPath = path.resolve(__dirname, filename);
-    if (!fs.existsSync(fullPath)) continue;
-
-    const lines = fs.readFileSync(fullPath, 'utf-8').split(/\r?\n/);
-    for (const rawLine of lines) {
-      const line = rawLine.trim();
-      if (!line || line.startsWith('#')) continue;
-      const eq = line.indexOf('=');
-      if (eq === -1) continue;
-      const key = line.slice(0, eq).trim();
-      if (!key) continue;
-      if (process.env[key]) continue;
-      const value = line.slice(eq + 1).trim();
-      if (value) process.env[key] = value;
-    }
-  }
-}
-
-loadEnvIfMissing();
-
 // ---------- CLI ----------
 const ARGV = process.argv.slice(2);
 function flag(name, def) {
