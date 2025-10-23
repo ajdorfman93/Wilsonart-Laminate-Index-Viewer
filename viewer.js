@@ -75,6 +75,8 @@ const COLUMN_ALIASES = {
   specialty_features: ['specality_features'],
 };
 
+const ORIGINAL_INDEX_KEY = '__sourceRowIndex';
+
 function dedupeColumns(cols) {
   const seen = new Set();
   const out = [];
@@ -89,6 +91,29 @@ function dedupeColumns(cols) {
     }
   }
   return out;
+}
+
+function annotateData(data) {
+  if (!Array.isArray(data)) return [];
+  for (let i = 0; i < data.length; i += 1) {
+    const row = data[i];
+    if (!row || typeof row !== 'object') continue;
+    try {
+      if (Object.prototype.hasOwnProperty.call(row, ORIGINAL_INDEX_KEY)) {
+        row[ORIGINAL_INDEX_KEY] = i;
+      } else {
+        Object.defineProperty(row, ORIGINAL_INDEX_KEY, {
+          value: i,
+          writable: true,
+          configurable: true,
+          enumerable: false,
+        });
+      }
+    } catch (err) {
+      row[ORIGINAL_INDEX_KEY] = i;
+    }
+  }
+  return data;
 }
 
 function renderPills(v, row) {
@@ -193,7 +218,7 @@ async function loadDefault() {
     const res = await fetch(DEFAULT_URL, { cache: 'no-store' });
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const json = await res.json();
-    rawData = Array.isArray(json) ? json : [];
+    rawData = annotateData(Array.isArray(json) ? json : []);
     // init filters UI
     Filters.init({
       data: rawData,
@@ -224,7 +249,8 @@ function renderTable() {
   }
   const rows = visible || [];
   const html = rows.map((r, index) => {
-    const numberCell = `<td class="col-index">${index + 1}.</td>`;
+    const baseIndex = (r && typeof r[ORIGINAL_INDEX_KEY] === 'number') ? r[ORIGINAL_INDEX_KEY] + 1 : index + 1;
+    const numberCell = `<td class="col-index">${baseIndex}.</td>`;
     const renderCols = dedupeColumns(COLUMNS);
     const tds = renderCols.map(col => {
       const rendered = (col.render.length === 1 ? col.render(r) : col.render.call(col, r[col.key], r));
@@ -351,7 +377,7 @@ if (fileEl) {
     try {
       const text = await file.text();
       const json = JSON.parse(text);
-      rawData = Array.isArray(json) ? json : [];
+      rawData = annotateData(Array.isArray(json) ? json : []);
       Filters.init({
         data: rawData,
         containerId: 'filters',

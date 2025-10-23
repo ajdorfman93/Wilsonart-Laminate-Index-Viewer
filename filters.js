@@ -58,13 +58,18 @@
     return {
       query: '',
       withImageOnly: false,
+      withoutImageOnly: false,
       facets,
     };
   }
 
   function applyState(nextState) {
     state.query = nextState.query;
-    state.withImageOnly = nextState.withImageOnly;
+    state.withImageOnly = !!nextState.withImageOnly;
+    state.withoutImageOnly = !!nextState.withoutImageOnly;
+    if (state.withImageOnly && state.withoutImageOnly) {
+      state.withoutImageOnly = false;
+    }
     const freshFacets = Object.create(null);
     for (let i = 0; i < FACET_KEYS.length; i += 1) {
       const key = FACET_KEYS[i];
@@ -214,12 +219,37 @@
       <span>Only with image</span>
     `;
     bar.appendChild(imgOnly);
+
+    const noImg = document.createElement('label');
+    noImg.className = 'filters-toggle';
+    noImg.innerHTML = `
+      <input type="checkbox" id="filter-no-image">
+      <span>Only without image</span>
+    `;
+    bar.appendChild(noImg);
+
     root.appendChild(bar);
 
     const imgOnlyInput = imgOnly.querySelector('input');
-    imgOnlyInput.checked = state.withImageOnly;
+    const noImgInput = noImg.querySelector('input');
+    imgOnlyInput.checked = !!state.withImageOnly;
+    noImgInput.checked = !!state.withoutImageOnly;
     imgOnlyInput.addEventListener('change', () => {
-      state.withImageOnly = imgOnlyInput.checked;
+      const checked = !!imgOnlyInput.checked;
+      state.withImageOnly = checked;
+      if (checked) {
+        state.withoutImageOnly = false;
+        noImgInput.checked = false;
+      }
+      triggerChange();
+    });
+    noImgInput.addEventListener('change', () => {
+      const checked = !!noImgInput.checked;
+      state.withoutImageOnly = checked;
+      if (checked) {
+        state.withImageOnly = false;
+        imgOnlyInput.checked = false;
+      }
       triggerChange();
     });
 
@@ -366,12 +396,15 @@
     const matchesPerf    = mustMatch('performance_enhancements', r => collectFacetValues(r, ['performance_enhancements', 'performace_enchancments']));
     const matchesNR      = mustMatch('no_repeat', r => [r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '')].filter(Boolean));
 
-    const hasImage = !state.withImageOnly || !!row.texture_image_url;
+    const hasImage = !!row.texture_image_url;
+    let imageToggleOk = true;
+    if (state.withImageOnly) imageToggleOk = hasImage;
+    else if (state.withoutImageOnly) imageToggleOk = !hasImage;
 
     return matchesSurface && matchesDG && matchesColor && matchesSpecies &&
            matchesCut && matchesMatch && matchesShade &&
            matchesFinish && matchesFCode && matchesColl &&
-           matchesSpecFeat && matchesPerf && matchesNR && hasImage;
+           matchesSpecFeat && matchesPerf && matchesNR && imageToggleOk;
   }
 
   // Search across common text fields

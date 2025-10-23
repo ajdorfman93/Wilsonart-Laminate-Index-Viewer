@@ -1,6 +1,6 @@
 // wilsonart-fetch-details.js
 // 
-//      node wilsonart-fetch-details.js 
+//      node wilsonart-fetch-details.js --offset=26 --limit=1
 //   node wilsonart-fetch-details.js  --offset=22 --limit=1 --batch=1 --headless=true --max-attempts=5
 //
 // --missing 
@@ -88,7 +88,7 @@ const BATCH_SIZE = parseInt(
   (process.argv.find(a => a.startsWith("--batch=")) || "").split("=")[1] ??
   "5", 10
 );
-const HEADLESS = (process.env.HEADLESS ?? "false") !== "false";
+const HEADLESS = (process.env.HEADLESS ?? "true") !== "false";
 
 // How many times to retry scraping a product before giving up
 const MAX_FETCH_ATTEMPTS = parseInt(
@@ -131,6 +131,44 @@ function collectValidSheetSizes(values) {
     valid.push(normalized);
   }
   return { valid, invalid };
+}
+
+const SHEET_SIZE_PARSE_RE = /^(\d+)' x (\d+)'$/;
+
+function parseSheetSizeLabel(label) {
+  if (typeof label !== "string") return undefined;
+  const match = SHEET_SIZE_PARSE_RE.exec(label.trim());
+  if (!match) return undefined;
+  const a = Number(match[1]);
+  const b = Number(match[2]);
+  if (!Number.isFinite(a) || !Number.isFinite(b) || a <= 0 || b <= 0) return undefined;
+  const longFeet = Math.max(a, b);
+  const shortFeet = Math.min(a, b);
+  const inchesScale = orientMaxAsWidth({ width: longFeet * 12, height: shortFeet * 12 });
+  const ratio = ratioOf(inchesScale);
+  if (!Number.isFinite(ratio) || ratio <= 0) return undefined;
+  const round2 = (n) => Math.round(n * 100) / 100;
+  return {
+    width: round2(inchesScale.width),
+    height: round2(inchesScale.height),
+    ratio: +ratio.toFixed(4),
+    label
+  };
+}
+
+function parseSheetSizes(values) {
+  if (!Array.isArray(values)) return [];
+  const seen = new Set();
+  const parsed = [];
+  for (let i = 0; i < values.length; i += 1) {
+    const parsedScale = parseSheetSizeLabel(values[i]);
+    if (!parsedScale) continue;
+    const key = `${parsedScale.width}x${parsedScale.height}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    parsed.push(parsedScale);
+  }
+  return parsed;
 }
 
 function validSize(obj) { return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0; }
@@ -799,7 +837,7 @@ function applyBannerCrop(url, pixels) {
 }
 
 // -------------------- Scale decision --------------------
-function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat, existingNoRepeatScale }) {
+function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat, existingNoRepeatScale, sheetSizeScales }) {
   const urlToken = extractUrlFeetToken(imageUrl || "");
   const urlScale = orientMaxAsWidth(parseUrlFeetSize(imageUrl || "") || {});
   const normalizedCurrent = orientMaxAsWidth(currentScale || {});
@@ -812,6 +850,11 @@ function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepea
   const hasUrlSize = validSize(urlScale);
   const hasCurrent = validSize(normalizedCurrent);
   const hasParsed = validSize(normalizedParsed);
+
+  const sheetOptions = Array.isArray(sheetSizeScales)
+    ? sheetSizeScales.filter((opt) => validSize(opt))
+    : [];
+  const hasSheetOptions = sheetOptions.length > 0;
 
   const pixelRatio = ratioOf(pixels);
   const pixelRatioValid = isFinite(pixelRatio) && pixelRatio > 0;
@@ -832,10 +875,28 @@ function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepea
   let chosen = undefined;
   const reasons = [];
 
-  if (ratioMatches(FOUR_BY_EIGHT_RATIO)) {
+  if (hasSheetOptions && pixelRatioValid) {
+    let best = null;
+    for (let i = 0; i < sheetOptions.length; i += 1) {
+      const option = sheetOptions[i];
+      const optionRatio = scaleRatio(option);
+      if (!isFinite(optionRatio) || optionRatio <= 0) continue;
+      const diff = Math.abs(optionRatio - pixelRatio);
+      if (!best || diff < best.diff) {
+        best = { scale: option, diff };
+      }
+    }
+    if (best) {
+      chosen = { width: round2(best.scale.width), height: round2(best.scale.height) };
+      const label = best.scale.label || `${chosen.width}"x${chosen.height}"`;
+      reasons.push(`Pixels ratio ~${label}`);
+    }
+  }
+
+  if (!chosen && !hasSheetOptions && ratioMatches(FOUR_BY_EIGHT_RATIO)) {
     chosen = { width: 96, height: 48 };
     reasons.push('Pixels ratio ~4x8');
-  } else if (ratioMatches(FIVE_BY_TWELVE_RATIO)) {
+  } else if (!chosen && !hasSheetOptions && ratioMatches(FIVE_BY_TWELVE_RATIO)) {
     chosen = { width: 144, height: 60 };
     reasons.push('Pixels ratio ~5x12');
   }
@@ -1035,19 +1096,22 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     texture_image_pixels = normalizedPixels;
   }
 
+  const surfaceGroup = hasString(existingRow?.["surface-group"])
+    ? existingRow["surface-group"]
+    : (hasString(indexRow?.["surface-group"]) ? indexRow["surface-group"] : undefined);
+  const sheetSizes = await extractSheetSizes(page, code, surfaceGroup);
+  const sheetSizeScales = parseSheetSizes(sheetSizes);
+
   const no_repeat   = await detectNoRepeat(page);
   const parsedScale = await computeParsedScale(page, no_repeat, chosenUrl || "");
   const currentScale = orientMaxAsWidth(existingRow?.texture_scale || parsedScale || { width: 144, height: 60 });
   const { scale: chosenScale, noRepeatScale } = chooseFinalScale({
     imageUrl: chosenUrl, pixels: texture_image_pixels,
     currentScale, parsedScale, noRepeat: no_repeat,
-    existingNoRepeatScale: existingRow?.no_repeat_texture_scale
+    existingNoRepeatScale: existingRow?.no_repeat_texture_scale,
+    sheetSizeScales
   }) || {};
   const finalScale = chosenScale || currentScale;
-  const surfaceGroup = hasString(existingRow?.["surface-group"])
-    ? existingRow["surface-group"]
-    : (hasString(indexRow?.["surface-group"]) ? indexRow["surface-group"] : undefined);
-  const sheetSizes = await extractSheetSizes(page, code, surfaceGroup);
 
   const description = hasString(existingRow?.description) ? existingRow.description : (await extractDescription(page));
 
