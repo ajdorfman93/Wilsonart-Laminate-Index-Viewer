@@ -380,5 +380,1084 @@
       "width": 144,
       "height": 61.13
     }
+  },
+  {
+    "code": "Y0777",
+    "surface-group": "Laminate",
+    "name": "Winter Glaze",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/winter-glaze-y0777",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/63116257-ab5e-414f-9610-50ce11710ed4/Y0777-Winter-Glaze-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Winter Glaze is a linear abstract of light gold on a field of white.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0776",
+    "surface-group": "Laminate",
+    "name": "Stormy Glaze",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/stormy-glaze-y0776",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0fa9ec97-e6e9-4d80-b954-92a0b476edba/Y0776-Stormy-Glaze-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Stormy Glaze is a two-toned linear abstract of blue on blue.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0775",
+    "surface-group": "Laminate",
+    "name": "Pressed Pewter",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-pewter-y0775",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/85a5cd78-0407-4582-ad75-39dabf5da58a/Y0775-Pressed-Pewter-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853,
+      "ratio": 2.3447
+    },
+    "no_repeat": false,
+    "description": "Pressed Pewter is a large-scale abstract that has the appearance of an embossed tin ceiling tile in grey tones.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.42
+    }
+  },
+  {
+    "code": "Y0774",
+    "surface-group": "Laminate",
+    "name": "Pressed Gold",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pressed-gold-y0774",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d5e7877a-fcba-4cbb-83fd-79f05b7cf3a2/Y0774-Pressed-Gold-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853,
+      "ratio": 2.3447
+    },
+    "no_repeat": false,
+    "description": "Pressed Gold is a large-scale abstract that has the appearance of an embossed tin ceiling tile in gold tones.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.42
+    }
+  },
+  {
+    "code": "Y0767",
+    "surface-group": "Laminate",
+    "name": "Green Sew and Sew",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/green-sew-and-sew-y0767",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Green"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a5face62-6c42-4637-ae95-e3c9058bb4a1/Y0767_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Green Sew and Sew is a large-scale abstract that has the appearance of cross stitching.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0768",
+    "surface-group": "Laminate",
+    "name": "Blue Sew and Sew",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/blue-sew-and-sew-y0768",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ce70bb7f-9d29-4676-9023-ef119a7ec6d0/Y0768-Blue-Sew-and-Sew-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Blue Sew and Sew is a large-scale abstract that has the appearance of cross stitching.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0757",
+    "surface-group": "Laminate",
+    "name": "South Devon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/south-devon-y0757",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8c7ef85d-1b88-43a2-aba0-f845522fc3d6/Y0757-South-Devon-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "South Devon is a large-scale distressed pattern inspired by worn leather.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0755",
+    "surface-group": "Laminate",
+    "name": "Backyard Patio",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/backyard-patio-y0755",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/17855d9f-3aa3-4a14-b715-9fd570269807/Y0755-Backyard-Patio-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Backyard Patio is a medium scale design that has the look of smooth cement.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0754",
+    "surface-group": "Laminate",
+    "name": "Wire Mesh",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/wire-mesh-y0754",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e85e3b94-bc37-4d1c-9b4d-7d73bbfb9926/Y0754-Wire-Mesh-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Wire Mesh is a medium-scale design of linear greys and black inspired by textured wire.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0751",
+    "surface-group": "Laminate",
+    "name": "Graffiti Park",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/grafitti-park-y0751",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Multicolor"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/904e3aeb-5562-4868-b3be-160dc9d6a16a/Y0751-Graffiti-Park-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Graffiti Park is a large-scale graffiti design of multicolored spray paints on a painted brick background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0749",
+    "surface-group": "Laminate",
+    "name": "Grateful Dyed",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/grateful-dyed-y0749",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Multicolor"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f48fdaf4-2778-4f42-ae38-200d8ff343a7/Y0749-Grateful-Dyed-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Grateful Dyed is a large traditional tie-dye design with multiple spirals.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0748",
+    "surface-group": "Laminate",
+    "name": "Stapled Notice",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/stapled-notice-y0748",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c8efa45c-9cd4-4cd6-87b7-52fdb099339b/Y0748-Stapled-Notice-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Stapled Notice is a medium scale abstract pattern inspired by the unique look of staples on a telephone pole.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "Y0747",
+    "surface-group": "Laminate",
+    "name": "City Metal",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/city-metal-y0747",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Black"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/y/0/y0747_city_metal_full_size_view.jpg",
+    "texture_image_pixels": {
+      "width": 1920,
+      "height": 815,
+      "ratio": 2.3558
+    },
+    "no_repeat": true,
+    "description": "City Metal is a large-scale dark abstract that gives the appearance of forged metal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.12
+    }
+  },
+  {
+    "code": "Y0746",
+    "surface-group": "Laminate",
+    "name": "Artisan Find",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/artisan-find-y0746",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4af67423-4c1b-44e5-8922-ba4162c3decf/Y0746-Artisan-Find_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Artisan Find is a large-scale ombre design that transitions from off white to a deep rich blue.  It has the feel of thrown pottery.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0745",
+    "surface-group": "Laminate",
+    "name": "Ceramic Blue",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/ceramic-blue-y0745",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/485a7a76-beb9-4d1e-9c48-c62ae09221ce/Y0745-Ceramic-Blue-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Ceramic Blue is a large-scale abstract in a deep rich blue that has the feel of thrown pottery",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "13089",
+    "surface-group": "Laminate",
+    "name": "Sunny Side Up",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sunny-side-up-13089",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a4b6c9f2-05b5-4950-a58b-dc6949df4f3d/13089-Sunny-Side-Up_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Beautiful bright Sunny Side Up inspired this spectrum color, which is made up of a soft crossweave.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "13088",
+    "surface-group": "Laminate",
+    "name": "Dragon Fire",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/dragon-fire-13088",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/75163a7d-8a11-4b7e-bbbd-5a9c9cab1217/13088-Dragon-Fire_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Dragon Fire is a rich orange color made up of a tone-on-tone crossweave.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "13091",
+    "surface-group": "Laminate",
+    "name": "Nori",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/nori-13091",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6c9dfa3b-5531-428f-a1a8-269ab7fa9be4/13091-Nori_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Beautiful bright Sunny Side Up inspired this spectrum color, which is made up of a soft crossweave.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "13092",
+    "surface-group": "Laminate",
+    "name": "Catalina",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/catalina-13092",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/710e0a87-ae01-4570-b8fc-f6f41ac0b97e/13092-Catalina-PRINT-_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 747,
+      "ratio": 1.5797
+    },
+    "no_repeat": false,
+    "description": "Catalina is a tropical blue, bursting with fun. This color is created by a soft crossweave pattern.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.98
+    }
+  },
+  {
+    "code": "13096",
+    "surface-group": "Laminate",
+    "name": "Candy Apple",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/candy-apple-13096",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ee59a890-d758-4106-aae4-3958160e6823/13096-Candy-Apple-PRINT-_150dpi",
+    "texture_image_pixels": {
+      "width": 1180,
+      "height": 747,
+      "ratio": 1.5797
+    },
+    "no_repeat": false,
+    "description": "Candy Apple is a bright red medium scale crossweave design.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.98
+    }
+  },
+  {
+    "code": "ICED-MINT-Y0686-3",
+    "surface-group": "Laminate",
+    "name": "Gris Deco",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/iced-mint-y0686-3",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/24a9f348-0b81-4332-bfcf-12ca654c2505/Y0689-Gris-Deco-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Gris Deco is a medium-scale graphic art deco pattern in medium and dark grey colors.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "DECO",
+    "surface-group": "Laminate",
+    "name": "Nuvo Deco",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/y0688-nuvo-deco",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/14a5d09f-fe78-459e-a98c-d3fe4fe57138/Y0688-Nuvo-Deco-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Nuvo Deco is a medium-scale graphic art deco pattern in tonal light grey colors.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "Y0681",
+    "surface-group": "Laminate",
+    "name": "Whitewashed Brick",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/whitewashed-brick-y0681",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b3fbd736-83f3-45e3-962b-4c36fb9ebb72/Y0681-Whitewashed-Brick_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Whitewashed Brick is a large scale brick wall design with bits of red brick showing through.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0683",
+    "surface-group": "Laminate",
+    "name": "Deco Blanco",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/deco-blanco-y0683",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0d60e150-1768-4b82-998c-db20b6ea419b/Y0683-Deco-Blanco-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Deco Blanco is a taupe colored large scale design. The art deco inspired design has a bronze metallic looking pattern over the design.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0682",
+    "surface-group": "Laminate",
+    "name": "Deco Charcoal",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/deco-charcoal-y0682",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0c7ace26-60be-4039-9aac-ff2d88e98a9f/Y0682-Deco-Charcoal-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Deco Charcoal is an art deco inspired pattern with a metal look in the classic black and gold color combination.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
   }
 ]
