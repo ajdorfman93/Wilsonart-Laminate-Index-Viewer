@@ -16,10 +16,15 @@
     'surface-group',
     'design_groups',
     'color',
+    'species',
+    'cut',
+    'match',
     'shade',
     'finish',
     'finish_code',
     'design_collections',
+    'specialty_features',
+    'performance_enhancements',
     'no_repeat',
   ];
 
@@ -107,16 +112,48 @@
   // --------- Helpers ----------
   const arrify = (v) => v == null ? [] : (Array.isArray(v) ? v : [v]);
 
+  function collectFacetValues(record, keys) {
+    const out = [];
+    const seen = new Set();
+    for (let i = 0; i < keys.length; i += 1) {
+      const raw = record ? record[keys[i]] : undefined;
+      const values = arrify(raw);
+      for (let j = 0; j < values.length; j += 1) {
+        const candidate = values[j];
+        if (candidate == null) continue;
+        if (typeof candidate === 'string') {
+          const trimmed = candidate.trim();
+          if (!trimmed) continue;
+          const dedupeKey = trimmed.toLowerCase();
+          if (seen.has(dedupeKey)) continue;
+          seen.add(dedupeKey);
+          out.push(trimmed);
+        } else {
+          const dedupeKey = JSON.stringify(candidate);
+          if (seen.has(dedupeKey)) continue;
+          seen.add(dedupeKey);
+          out.push(candidate);
+        }
+      }
+    }
+    return out;
+  }
+
   // Build facet value maps (value -> count) from data
   function buildFacets(data) {
     const m = {
       'surface-group': { label: 'Surface', values: new Map() },
       design_groups: { label: 'Design Groups', values: new Map() },
       color: { label: 'Color', values: new Map() },
+      species: { label: 'Species', values: new Map() },
+      cut: { label: 'Cut', values: new Map() },
+      match: { label: 'Match', values: new Map() },
       shade: { label: 'Shade', values: new Map() },
       finish: { label: 'Finish', values: new Map() },        // finish[].name
       finish_code: { label: 'Finish Code', values: new Map() }, // finish[].code
       design_collections: { label: 'Collections', values: new Map() },
+      specialty_features: { label: 'Specialty Features', values: new Map() },
+      performance_enhancements: { label: 'Performance Enhancements', values: new Map() },
       no_repeat: { label: 'No Repeat', values: new Map() },  // "Yes"/"No"
     };
 
@@ -128,10 +165,15 @@
     for (const r of data) {
       bump(m['surface-group'].values, r['surface-group']);
 
-      for (const v of arrify(r.design_groups)) bump(m.design_groups.values, v);
-      for (const v of arrify(r.color)) bump(m.color.values, v);
-      for (const v of arrify(r.shade)) bump(m.shade.values, v);
-      for (const v of arrify(r.design_collections)) bump(m.design_collections.values, v);
+      for (const v of collectFacetValues(r, ['design_groups'])) bump(m.design_groups.values, v);
+      for (const v of collectFacetValues(r, ['colors', 'color'])) bump(m.color.values, v);
+      for (const v of collectFacetValues(r, ['species'])) bump(m.species.values, v);
+      for (const v of collectFacetValues(r, ['cut'])) bump(m.cut.values, v);
+      for (const v of collectFacetValues(r, ['match'])) bump(m.match.values, v);
+      for (const v of collectFacetValues(r, ['shade'])) bump(m.shade.values, v);
+      for (const v of collectFacetValues(r, ['design_collections'])) bump(m.design_collections.values, v);
+      for (const v of collectFacetValues(r, ['specialty_features', 'specality_features'])) bump(m.specialty_features.values, v);
+      for (const v of collectFacetValues(r, ['performance_enhancements', 'performace_enchancments'])) bump(m.performance_enhancements.values, v);
 
       if (Array.isArray(r.finish)) {
         for (let i = 0; i < r.finish.length; i += 1) {
@@ -295,8 +337,11 @@
 
     const matchesSurface = mustMatch('surface-group', r => arrify(r['surface-group']));
     const matchesDG      = mustMatch('design_groups', r => arrify(r.design_groups));
-    const matchesColor   = mustMatch('color', r => arrify(r.color));
-    const matchesShade   = mustMatch('shade', r => arrify(r.shade));
+    const matchesColor   = mustMatch('color', r => collectFacetValues(r, ['colors', 'color']));
+    const matchesSpecies = mustMatch('species', r => collectFacetValues(r, ['species']));
+    const matchesCut     = mustMatch('cut', r => collectFacetValues(r, ['cut']));
+    const matchesMatch   = mustMatch('match', r => collectFacetValues(r, ['match']));
+    const matchesShade   = mustMatch('shade', r => collectFacetValues(r, ['shade']));
     const matchesFinish = mustMatch('finish', (record) => {
       if (!Array.isArray(record.finish)) return [];
       const values = [];
@@ -316,13 +361,17 @@
       }
       return values;
     });
-    const matchesColl    = mustMatch('design_collections', r => arrify(r.design_collections));
+    const matchesColl    = mustMatch('design_collections', r => collectFacetValues(r, ['design_collections']));
+    const matchesSpecFeat = mustMatch('specialty_features', r => collectFacetValues(r, ['specialty_features', 'specality_features']));
+    const matchesPerf    = mustMatch('performance_enhancements', r => collectFacetValues(r, ['performance_enhancements', 'performace_enchancments']));
     const matchesNR      = mustMatch('no_repeat', r => [r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '')].filter(Boolean));
 
     const hasImage = !state.withImageOnly || !!row.texture_image_url;
 
-    return matchesSurface && matchesDG && matchesColor && matchesShade &&
-           matchesFinish && matchesFCode && matchesColl && matchesNR && hasImage;
+    return matchesSurface && matchesDG && matchesColor && matchesSpecies &&
+           matchesCut && matchesMatch && matchesShade &&
+           matchesFinish && matchesFCode && matchesColl &&
+           matchesSpecFeat && matchesPerf && matchesNR && hasImage;
   }
 
   // Search across common text fields
@@ -345,14 +394,15 @@
     }
 
     const arrayFields = [
-      arrify(row.design_groups),
-      arrify(row.color),
-      arrify(row.shade),
-      arrify(row.design_collections),
-      arrify(row.performace_enchancments),
-      arrify(row.species),
-      arrify(row.cut),
-      arrify(row.match),
+      collectFacetValues(row, ['design_groups']),
+      collectFacetValues(row, ['colors', 'color']),
+      collectFacetValues(row, ['shade']),
+      collectFacetValues(row, ['design_collections']),
+      collectFacetValues(row, ['performance_enhancements', 'performace_enchancments']),
+      collectFacetValues(row, ['specialty_features', 'specality_features']),
+      collectFacetValues(row, ['species']),
+      collectFacetValues(row, ['cut']),
+      collectFacetValues(row, ['match']),
     ];
 
     for (let i = 0; i < arrayFields.length; i += 1) {

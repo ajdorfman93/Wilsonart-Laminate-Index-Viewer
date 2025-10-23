@@ -7,7 +7,7 @@
 // command line arg
 // --missing 
 //   Scrape only filters the specified field (default: finish).
-//   Example: --missing color
+//   Example: node wilsonart-scrape.js --missing color
 //   user can add multiple --missing arguments to check for multiple fields
 //   Example: --missing finish --missing color
 //
@@ -273,13 +273,18 @@ function writeOutput(productsMap) {
     if (r && r.code) existing.set(String(r.code).toUpperCase(), r);
   }
 
+  const limitFields = hasMissingFlag ? new Set(missingFields) : null;
+
   // 3) Merge per code (never erase). Keep records that weren't touched.
   const allCodes = new Set([...existing.keys(), ...current.keys()]);
 
   const mergedOut = [];
   for (const code of allCodes) {
     const oldRec = existing.get(code) || { code };
-    const newRec = current.get(code) || { code };
+    let newRec = current.get(code) || { code };
+    if (limitFields && newRec) {
+      newRec = limitRecordToFields(newRec, limitFields, existing.has(code));
+    }
     const merged = mergeRecordsNoErase(oldRec, newRec);
     mergedOut.push(merged);
   }
@@ -317,15 +322,80 @@ function finalizeRecord(rec) {
   return out;
 }
 
+function limitRecordToFields(rec, allowedFields, hasExisting) {
+  if (!allowedFields || !allowedFields.size) return rec;
+  const out = { code: rec.code };
+  if (!out.code) return out;
+
+  if (!hasExisting) {
+    for (const baseKey of ["surface-group", "name", "product-link"]) {
+      if (rec[baseKey] !== undefined) out[baseKey] = rec[baseKey];
+    }
+  }
+
+  for (const field of allowedFields) {
+    if (!field || field === "code") continue;
+    const variants = getFieldVariants(field);
+    let assigned = false;
+    for (const variant of variants) {
+      const value = rec[variant];
+      if (variant === "finish") {
+        if (Array.isArray(value) && value.length) {
+          out.finish = value;
+          assigned = true;
+        }
+      } else if (Array.isArray(value)) {
+        if (value.length) {
+          out[field] = value;
+          assigned = true;
+        }
+      } else if (value !== undefined) {
+        out[field] = value;
+        assigned = true;
+      }
+      if (assigned) break;
+    }
+  }
+
+  return out;
+}
+
 // Extract code from href slug tail: "...-y0385"
+function extractCodeCandidate(input) {
+  const str = String(input || "").replace(/\s+/g, " ").trim();
+  if (!str) return null;
+  const matches = str.match(/[A-Za-z0-9]{3,}(?:-[A-Za-z0-9]+)*/g);
+  if (!matches || !matches.length) return null;
+  return matches[matches.length - 1].toUpperCase();
+}
+
 function codeFromHref(href) {
   try {
     const url = new URL(href, START_URL);
+
+    // Query parameters occasionally carry the SKU; prefer them if present.
+    for (const key of ["sku", "product_sku", "productSku", "skuId"]) {
+      const val = url.searchParams.get(key);
+      const candidate = extractCodeCandidate(val);
+      if (candidate) return candidate;
+    }
+
     const parts = url.pathname.split("/").filter(Boolean);
-    let slug = parts[parts.length - 1] || "";
-    if (slug === "category" && parts.length >= 2) slug = parts[parts.length - 3] || slug;
-    const m = slug.match(/-([a-z0-9]+)$/i);
-    if (m) return m[1].toUpperCase();
+    for (let i = parts.length - 1; i >= 0; i--) {
+      let segment = parts[i] || "";
+      if (!segment) continue;
+      segment = segment.replace(/\.[a-z0-9]+$/i, ""); // drop extensions such as .html
+      if (segment === "category" && i >= 2) {
+        segment = parts[i - 2] || segment;
+      }
+      const hyphenIdx = segment.lastIndexOf("-");
+      if (hyphenIdx !== -1 && hyphenIdx < segment.length - 1) {
+        const candidate = extractCodeCandidate(segment.slice(hyphenIdx + 1));
+        if (candidate) return candidate;
+      }
+      const plainCandidate = extractCodeCandidate(segment);
+      if (plainCandidate) return plainCandidate;
+    }
   } catch {}
   return null;
 }
@@ -359,6 +429,12 @@ async function collectGridItemsOnPage(page) {
           if (!a) continue;
           const href = a.href || a.getAttribute("href") || "";
 
+          const skuAttr =
+            li.getAttribute("data-product-sku") ||
+            li.getAttribute("data-sku") ||
+            a.getAttribute("data-product-sku") ||
+            "";
+
           // Sometimes the code is the anchor text; sometimes only in slug/img
           const codeText =
             (a.textContent || "").replace(/\s+/g, " ").trim() ||
@@ -369,7 +445,12 @@ async function collectGridItemsOnPage(page) {
           const img = a.querySelector("img") || li.querySelector("img");
           const nameAlt = img ? (img.getAttribute("alt") || "").trim() : "";
 
-          out.push({ href, codeText: (codeText || "").trim(), nameAlt });
+          out.push({
+            href,
+            codeText: (codeText || "").trim(),
+            nameAlt,
+            sku: (skuAttr || "").trim(),
+          });
         }
         return out;
       })
@@ -377,29 +458,21 @@ async function collectGridItemsOnPage(page) {
   return items;
 }
 
-// Click "Next" and verify URL changed; fallback to bumping p=
-async function goNextPage(page, curIndex) {
-  const nextSel = "#product-grid-view .category-pager .pages .pages-item-next a";
-  const a = await page.$(nextSel);
-  if (!a) return false;
-  const prevURL = page.url();
-  await Promise.all([
-    page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 30000 }).catch(() => {}),
-    a.click().catch(() => {}),
-  ]);
-  const newURL = page.url();
-  if (newURL === prevURL) {
-    try {
-      const url = new URL(prevURL);
-      const p = Number(url.searchParams.get("p") || "1");
-      const next = Number.isFinite(p) ? p + 1 : curIndex + 1;
-      url.searchParams.set("p", String(next));
-      await page.goto(url.toString(), { waitUntil: "domcontentloaded" });
-      return page.url() !== prevURL;
-    } catch {}
-    return false;
-  }
-  return true;
+// Check if another pagination step is available
+async function hasNextPage(page) {
+  return page
+    .evaluate(() => {
+      const next = document.querySelector(
+        "#product-grid-view .category-pager .pages .pages-item-next a"
+      );
+      if (!next) return false;
+      const disabled =
+        next.classList.contains("disabled") ||
+        next.hasAttribute("disabled") ||
+        next.getAttribute("aria-disabled") === "true";
+      return !disabled;
+    })
+    .catch(() => false);
 }
 
 // ----------------------------------------------------
@@ -781,11 +854,22 @@ function mergeRecordsNoErase(oldRec, newRec) {
     let newCodes = 0;
     let updatedCodes = 0;
 
+    let skippedMissingCode = 0;
+    const missingSamples = [];
+
     for (const it of items) {
       const href = it.href;
       let code = codeFromHref(href);
-      if (!code && it.codeText) code = String(it.codeText).trim().toUpperCase();
-      if (!code) continue;
+      if (!code && it.sku) code = extractCodeCandidate(it.sku);
+      if (!code && it.codeText) code = extractCodeCandidate(it.codeText);
+      if (!code) {
+        skippedMissingCode++;
+        if (missingSamples.length < 5) {
+          const hint = it.codeText || it.sku || href;
+          missingSamples.push(typeof hint === "string" ? hint : String(hint || "?"));
+        }
+        continue;
+      }
 
       const existed = products.has(code);
       const rec = ensureRec(code, { nameAlt: it.nameAlt, link: href });
@@ -802,7 +886,21 @@ function mergeRecordsNoErase(oldRec, newRec) {
       else newCodes++;
     }
 
-    return { newCodes, updatedCodes, count: items.length };
+    if (skippedMissingCode) {
+      const sampleText = missingSamples.length
+        ? ` (examples: ${missingSamples.join(", ")})`
+        : "";
+      logStep(
+        `Warning: skipped ${skippedMissingCode} tiles that lacked detectable codes while processing "${label}"${sampleText}.`
+      );
+    }
+
+    const signature = items
+      .slice(0, 8)
+      .map((it) => it.href || it.sku || it.codeText || "")
+      .join("||");
+
+    return { newCodes, updatedCodes, count: items.length, signature };
   }
 
   async function applyFilterAndCollect(filter, index, total) {
@@ -813,8 +911,12 @@ function mergeRecordsNoErase(oldRec, newRec) {
       `\n[${index + 1}/${total}] Applying filter → attr="${filter.attr}" label="${filter.label}"`
     );
     logStep(`Navigate to: ${url}`);
-    await page.goto(url, { waitUntil: "domcontentloaded" });
+    const baseUrl = new URL(url, START_URL);
+    baseUrl.searchParams.delete("p");
+    baseUrl.searchParams.set("product_list_mode", "list");
+    await page.goto(baseUrl.toString(), { waitUntil: "domcontentloaded" });
     await page.waitForSelector("#product-grid-view", { timeout: 60000 }).catch(() => {});
+    await waitForSettled(page, { needFilters: false });
 
     if (!bucket) {
       logStep(`Attribute "${filter.attr}" not mapped → skipping assignment bucket.`);
@@ -826,10 +928,30 @@ function mergeRecordsNoErase(oldRec, newRec) {
     let grandNew = 0;
     let grandUpd = 0;
     let grandSeen = 0;
+    const seenSignatures = new Set();
 
     while (true) {
       logStep(`Filter "${label}" — Page ${pageNo}: collecting…`);
-      const { newCodes, updatedCodes, count } = await extractGridAndAssign(bucket, label);
+      const { newCodes, updatedCodes, count, signature } = await extractGridAndAssign(
+        bucket,
+        label
+      );
+
+      if (signature) {
+        if (seenSignatures.has(signature)) {
+          logStep(
+            `Pagination warning: page signature repeated on page ${pageNo}; assuming end of results.`
+          );
+          break;
+        }
+        seenSignatures.add(signature);
+      }
+
+      if (!count) {
+        logStep(`Filter "${label}" — Page ${pageNo}: no tiles detected; stopping pagination.`);
+        break;
+      }
+
       logStep(
         `Filter "${label}" — Page ${pageNo}: tiles=${count}, new=${newCodes}, updated=${updatedCodes}`
       );
@@ -837,15 +959,20 @@ function mergeRecordsNoErase(oldRec, newRec) {
       grandUpd += updatedCodes;
       grandSeen += count;
 
-      const hasNext = await goNextPage(page, pageNo);
-      if (!hasNext) {
+      const nextExists = await hasNextPage(page);
+      if (!nextExists) {
         logStep(
           `Filter "${label}" — Pagination: no next after page ${pageNo}; done with this filter.`
         );
         break;
       }
       pageNo++;
+      const nextUrl = new URL(baseUrl.toString());
+      nextUrl.searchParams.set("p", String(pageNo));
+      logStep(`Filter "${label}" — Navigate to page ${pageNo}: ${nextUrl.toString()}`);
+      await page.goto(nextUrl.toString(), { waitUntil: "domcontentloaded" });
       await page.waitForSelector("#product-grid-view", { timeout: 60000 }).catch(() => {});
+      await waitForSettled(page, { needFilters: false });
     }
 
     logStep(

@@ -39,10 +39,14 @@ const COLUMNS = [
   { key: 'surface-group', label: 'Surface Group', render: (r) => safe(r['surface-group']) },
 
   { key: 'design_groups', label: 'Design Groups', render: renderPills },
-  { key: 'color', label: 'Color', render: renderPills },
-  { key: 'shade', label: 'Shade', render: (r) => renderPills(normalizeArray(r.shade)) },
+  { key: 'colors', label: 'Colors', render: renderPills },
+  { key: 'species', label: 'Species', render: renderPills },
+  { key: 'cut', label: 'Cut', render: renderPills },
+  { key: 'match', label: 'Match', render: renderPills },
+  { key: 'shade', label: 'Shade', render: renderPills },
   { key: 'finish', label: 'Finish', render: renderFinish },
-  { key: 'performace_enchancments', label: 'Performance Enhancements', render: renderPills },
+  { key: 'performance_enhancements', label: 'Performance Enhancements', render: renderPills },
+  { key: 'specialty_features', label: 'Specialty Features', render: renderPills },
   { key: 'design_collections', label: 'Design Collections', render: renderPills },
 
   { key: 'no_repeat', label: 'No Repeat', render: (r) => r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '') },
@@ -63,16 +67,46 @@ function safe(v) { return v == null ? '' : String(v); }
 function escapeAttr(v) { return String(v).replace(/"/g, '&quot;'); }
 function normalizeArray(v) { return v == null ? [] : (Array.isArray(v) ? v : [v]); }
 
+const COLUMN_ALIASES = {
+  colors: ['color'],
+  performance_enhancements: ['performace_enchancments'],
+  specialty_features: ['specality_features'],
+};
+
 function renderPills(v, row) {
+  const column = this || {};
+  const key = column && typeof column.key === 'string' ? column.key : null;
   let arr = Array.isArray(v) ? v : null;
-  if (!arr) {
-    const column = this || {};
-    const key = column && typeof column.key === 'string' ? column.key : null;
-    const fallback = key && row ? row[key] : undefined;
+  if (!arr || !arr.length) {
+    let fallback = key && row ? row[key] : undefined;
+    if ((!fallback || !normalizeArray(fallback).length) && key && COLUMN_ALIASES[key]) {
+      const aliases = COLUMN_ALIASES[key];
+      for (let i = 0; i < aliases.length; i += 1) {
+        const alt = normalizeArray(row ? row[aliases[i]] : undefined);
+        if (alt.length) {
+          fallback = alt;
+          break;
+        }
+      }
+    }
     arr = normalizeArray(fallback);
+  } else {
+    arr = normalizeArray(arr);
   }
-  if (!arr || !arr.length) return '';
-  return arr.map(x => `<span class="pill">${safe(x)}</span>`).join('');
+  const cleaned = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value == null) continue;
+    if (typeof value === 'string') {
+      const trimmed = value.trim();
+      if (!trimmed) continue;
+      cleaned.push(trimmed);
+    } else {
+      cleaned.push(value);
+    }
+  }
+  if (!cleaned.length) return '';
+  return cleaned.map(x => `<span class="pill">${safe(x)}</span>`).join('');
 }
 
 function renderFinish(row) {
