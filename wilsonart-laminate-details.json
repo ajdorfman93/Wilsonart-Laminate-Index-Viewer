@@ -1837,8 +1837,13 @@
     "no_repeat": true,
     "description": "Bone Birch is a  midtone warm grey small scale pattern. The pattern come from hand troweled plaster.",
     "texture_scale": {
-      "width": 96,
-      "height": 48
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/62d5621f-0a52-4b35-b277-4b2c96c6c8d5/Y0425-Bone-Birch-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
     }
   },
   {
@@ -2976,6 +2981,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6562b933-91ef-47d5-a949-9f3b0cb696e7/Y0006X-Big-City-Traffic-Landscape-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
     }
   },
   {
@@ -3160,6 +3170,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1089abfc-66d6-4c5b-a1fe-0160af9ab869/Y0003-Blooming-Grove-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
     }
   },
   {
@@ -3718,6 +3733,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/810be354-2a5e-43d5-b8d9-1523dd46dcd6/4745-Maroochy-Brush_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
     }
   },
   {
@@ -47761,7 +47781,18 @@
       "Peel & Stick (RE-COVER)"
     ],
     "specialty_features": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6bed8c22-3ebb-430e-a436-aa79b9f10063/5037-Anzio-Marble_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250
+    },
+    "no_repeat": false,
+    "description": "Anzio Marble is a medium scaled, directional design with subdued warm grey to taupe veining.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0848",
@@ -47786,7 +47817,18 @@
     "specialty_features": [
       "No Repeat"
     ],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/48b4fdf6-7424-40d0-adb8-2c7925bac732/Y0848-Rugby-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Rugby is a brown pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6448",
@@ -47804,7 +47846,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A crisp light grey with a matte sheen featured in an irregular corrugated texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6447",
@@ -47824,7 +47872,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Gold in color with a warm brown undertone in a satin sheen with a long-line brush featured in an irregular corrugated texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6446",
@@ -47844,7 +47898,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Copper in color with a hint of bronze in a satin sheen with a long-line brush featured in an irregular corrugated texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6445",
@@ -47862,7 +47922,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A warm grey silver color with a satin sheen in a long-line brush featured in an irregular corrugated texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6444",
@@ -47880,7 +47946,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush featured in an irregular corrugated texture.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6443",
@@ -47900,7 +47972,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Copper in color with a hint of bronze in a satin sheen with a long-line brush.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6442",
@@ -47918,7 +47996,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A warm grey silver color with a satin sheen in a long-line brush.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "L6441",
@@ -47936,7 +48020,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6202",
@@ -47954,7 +48044,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a light warm grey undertone.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6201",
@@ -47972,7 +48068,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a hint of gold undertone.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6200",
@@ -47992,7 +48094,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, dark or oiled bronze color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6102",
@@ -48010,7 +48118,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A dark warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6101",
@@ -48028,7 +48142,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A medium warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6100",
@@ -48046,7 +48166,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A light warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "S6501",
@@ -48064,7 +48190,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Steel with a galvanized look in a cool silver color with slight color variation within the sheet and from sheet to sheet. This metal sheet has magnetic properties.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6296",
@@ -48082,7 +48214,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, black in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6284",
@@ -48102,7 +48240,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, copper in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6281",
@@ -48120,7 +48264,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium blue-grey in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6277",
@@ -48138,7 +48288,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in long-line brush, satin sheen, silver in color with slight grey undertone.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6262",
@@ -48158,7 +48314,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium bronze color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6261",
@@ -48178,7 +48340,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, light bronze color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6258",
@@ -48198,7 +48366,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, gold in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6257",
@@ -48216,7 +48390,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in subtle short-line brush, satin sheen, cool silver in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6256",
@@ -48234,7 +48414,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, bright sheen, cool silver in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6255",
@@ -48254,7 +48440,13 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Polished aluminum, gold in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6252",
@@ -48272,7 +48464,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in subtle short-line brush, matte sheen, cool silver in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "6251",
@@ -48290,7 +48488,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Polished aluminum, silver in color.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0857",
@@ -48310,7 +48514,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5725ecb9-c9dd-4571-90f2-889bf98e0aa0/Y0857-Santiam",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Santiam is a brown pattern with a grey cast that uses using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   },
   {
     "code": "Y0858",
@@ -48330,7 +48545,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6461a00f-95d8-419b-912a-8f7c4fc651ff/Y0858-Carnival",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Carnival is a light pink pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   },
   {
     "code": "Y0856",
@@ -48350,7 +48576,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/bf817c0b-0663-4510-81d7-1c07e6c4313b/Y0856-EVERGREEN-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Evergreen is a medium desaturated green pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0854",
@@ -48370,7 +48607,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/bbafa43e-42e1-44ee-a310-704c392c5d07/Y0854-Bakelite-Gold-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Bakelite Gold is a yellow pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0853",
@@ -48390,7 +48638,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7865af31-9805-487e-8c58-dd46abd52216/Y0853-Persimmon-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Persimmon is a terra cotta pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0849",
@@ -48410,7 +48669,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/826a4b1f-e4bd-404c-94c6-5d82f21d6a33/Y0849-Jean-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Jean is a dark denim blue pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0847",
@@ -48430,7 +48700,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8b3f7d88-8ae4-4753-a60a-306a6cbe80e6/Y0847-Tewkesbury-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Tewkesbury is a mustard yellow pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0846",
@@ -48450,7 +48731,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3733d1f4-22af-4fe2-ad9d-1dfca7c1705e/Y0846-Southern-Cross-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Southern Cross is a light grey pattern with a greenish cast that uses using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0845",
@@ -48470,7 +48762,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1a9b3330-fb7f-44e5-9752-60fb281ba049/Y0845-Spritz-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Spritz is a light blue pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0844",
@@ -48490,7 +48793,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b3d3f728-979d-49a0-9338-fb4215c50260/Y0844-Rose-Dust-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Rose Dust is a medium pink pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0842",
@@ -48510,7 +48824,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9f51672c-524b-4580-b241-76acd722884b/Y0842-Aegean-Sea-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Aegean Teal is a medium teal blue pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0839",
@@ -48528,7 +48853,13 @@
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "no_repeat": true,
+    "description": "Admiral is a dark blue pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   },
   {
     "code": "Y0838",
@@ -48548,7 +48879,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e461071f-f35c-447e-8cca-a5d0af1f483f/Y0838-Palace-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Palace is a purple pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0837",
@@ -48568,7 +48910,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c990d4c0-9061-490b-83ec-d19c4f4264da/Y0837-Razzle-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Razzle is a bright blue pattern using subtle stippling to create a near solid",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0835",
@@ -48588,7 +48941,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/eb12e1cd-f1f1-4811-87db-76683c97b452/Y0835-Rendezvous-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Rendezvous is a teal blue pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0834",
@@ -48608,7 +48972,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e5e110b6-79c9-4312-a805-7b91b6c6626c/Y0834-Savina-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Savina is a red pattern using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0833",
@@ -48628,7 +49003,18 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/88211335-5069-4a50-be73-5137923fc7c7/Y0833-Sea-Side-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Sea Side is a light grey pattern with a green cast that uses using subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   },
   {
     "code": "Y0831",
@@ -48648,6 +49034,17 @@
     ],
     "finish": [],
     "performance_enhancements": [],
-    "design_collections": []
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f404add6-b2ea-480e-9d11-15c710c77866/Y0831-Let-It-Rain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849
+    },
+    "no_repeat": true,
+    "description": "Let It Rain is a light grey pattern with a purple cast that uses subtle stippling to create a near solid.",
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
   }
 ]

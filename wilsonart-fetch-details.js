@@ -87,7 +87,7 @@ const BATCH_SIZE = parseInt(
   (process.argv.find(a => a.startsWith("--batch=")) || "").split("=")[1] ??
   "5", 10
 );
-const HEADLESS = (process.env.HEADLESS ?? "true") !== "false";
+const HEADLESS = (process.env.HEADLESS ?? "false") !== "false";
 
 // How many times to retry scraping a product before giving up
 const MAX_FETCH_ATTEMPTS = parseInt(
