@@ -112,6 +112,39 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 function validSize(obj) { return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0; }
 function ratioOf(obj)   { return validSize(obj) ? (obj.width / obj.height) : undefined; }
+function scaleRatio(obj) {
+  if (!obj) return undefined;
+  if (Number.isFinite(obj.ratio) && obj.ratio > 0) return Number(obj.ratio);
+  return ratioOf(obj);
+}
+function enforceScaleMatchesPixels(scale, pixels) {
+  if (!validSize(scale) || !validSize(pixels)) return scale;
+  const Rimg = ratioOf(pixels);
+  const Rscale = ratioOf(scale);
+  if (!isFinite(Rimg) || Rimg <= 0) return scale;
+  if (isFinite(Rscale) && approxEq(Rscale, Rimg, 1e-3)) return scale;
+  const round2 = (n) => Math.round(n * 100) / 100;
+  const primary = Math.max(scale.width, scale.height);
+  if (!isFinite(primary) || primary <= 0) return scale;
+  let adjusted;
+  if (Rimg >= 1) {
+    adjusted = { width: round2(primary), height: round2(primary / Rimg) };
+  } else {
+    adjusted = { width: round2(primary * Rimg), height: round2(primary) };
+  }
+  if (!validSize(adjusted) || !approxEq(ratioOf(adjusted), Rimg, 1e-3)) {
+    const width = scale.width;
+    const height = scale.height;
+    if (isFinite(width) && width > 0) {
+      adjusted = { width: round2(width), height: round2(width / Rimg) };
+    } else if (isFinite(height) && height > 0) {
+      adjusted = { width: round2(height * Rimg), height: round2(height) };
+    }
+  }
+  if (!validSize(adjusted) || !approxEq(ratioOf(adjusted), Rimg, 1e-3)) return scale;
+  logStep(`  Ratio align: adjusted to ${adjusted.width}"x${adjusted.height}" for pixels ${pixels.width}x${pixels.height}`);
+  return adjusted;
+}
 function approxEq(a, b, tol = 0.02) {
   if (!isFinite(a) || !isFinite(b) || a <= 0 || b <= 0) return false;
   return Math.abs(a - b) <= tol;
@@ -130,14 +163,27 @@ function isEmptyField(val) {
   return false;
 }
 
+const FEET_SIZE_TOKEN_RE = /(^|[^A-Za-z0-9])(\d+(?:\.\d+)?)\s*[xX\u00D7]\s*(\d+(?:\.\d+)?)(?![A-Za-z0-9])/;
+
 // Prefer width token "5x12" → inches (width = max*12)
 function parseUrlFeetSize(url) {
   if (!url) return undefined;
-  const m = url.match(/(^|[^A-Za-z0-9])(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)(?![A-Za-z0-9])/);
+  const m = url.match(FEET_SIZE_TOKEN_RE);
   if (!m) return undefined;
   const a = parseFloat(m[2]); const b = parseFloat(m[3]);
   if (!isFinite(a) || !isFinite(b)) return undefined;
   return orientMaxAsWidth({ width: Math.max(a, b) * 12, height: Math.min(a, b) * 12 });
+}
+
+function extractUrlFeetToken(url) {
+  if (!url) return undefined;
+  const m = url.match(FEET_SIZE_TOKEN_RE);
+  if (!m) return undefined;
+  const a = parseFloat(m[2]); const b = parseFloat(m[3]);
+  if (!isFinite(a) || !isFinite(b)) return undefined;
+  const short = Math.min(a, b);
+  const long = Math.max(a, b);
+  return `${short}x${long}`;
 }
 
 const ALLOWED_TEXTURE_HOSTS = [
@@ -147,7 +193,10 @@ const ALLOWED_TEXTURE_HOSTS = [
 const FORBIDDEN_TEXTURE_SUBSTRINGS = [
   "webfullsheet",
   "mightalsolike",
-  "hero"
+  "hero",
+  "carousel",
+  "thumbnail",
+  "io=transform"
 ];
 
 function getHostname(url) {
@@ -191,7 +240,8 @@ async function findAssetLibraryUrlsInHTML(page) {
 }
 
 function hasSizeToken(url) {
-  return /\b\d+(?:\.\d+)?x\d+(?:\.\d+)?\b/i.test(url || "");
+  if (!url) return false;
+  return FEET_SIZE_TOKEN_RE.test(url);
 }
 
 function isForbiddenTextureUrl(url) {
@@ -211,6 +261,7 @@ function isValidTextureUrl(url, tokens = []) {
 
   const hasBannerKeyword = /banner/i.test(url);
   const hasFullSizeView = hasFullSizeViewToken(url);
+  const hasFullSheetToken = /FullSheet/.test(url);
   const hasSizeTokenMatch = hasSizeToken(url);
   const hasProductToken = tokens.some(token => token && lower.includes(token));
 
@@ -218,7 +269,7 @@ function isValidTextureUrl(url, tokens = []) {
     if (!(hasFullSizeView && hasProductToken)) return false;
   }
 
-  return hasBannerKeyword || hasFullSizeView || hasSizeTokenMatch || hasProductToken;
+  return hasBannerKeyword || hasFullSizeView || hasSizeTokenMatch || hasProductToken || hasFullSheetToken;
 }
 
 function computeTextureUrlScore(url, tokens = []) {
@@ -531,55 +582,99 @@ function applyBannerCrop(url, pixels) {
 
 // -------------------- Scale decision --------------------
 function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat }) {
-  const urlFeet = parseUrlFeetSize(imageUrl || "");
-  const urlFeetOriented = orientMaxAsWidth(urlFeet || {});
-  const Rimg    = ratioOf(pixels);
-  const Rcur    = ratioOf(currentScale);
-  const Rparsed = ratioOf(parsedScale);
+  const urlToken = extractUrlFeetToken(imageUrl || "");
+  const urlScale = orientMaxAsWidth(parseUrlFeetSize(imageUrl || "") || {});
+  const normalizedCurrent = orientMaxAsWidth(currentScale || {});
+  const normalizedParsed = orientMaxAsWidth(parsedScale || {});
 
-  const useUrlInches = () => (validSize(urlFeetOriented) ? urlFeetOriented : undefined);
+  const hasUrlSize = validSize(urlScale);
+  const hasCurrent = validSize(normalizedCurrent);
+  const hasParsed = validSize(normalizedParsed);
 
-  // 1) URL token present + R(img) ≈ R(cur) → use URL inches
-  if (validSize(urlFeetOriented) && approxEq(Rimg, Rcur)) {
-    const s = useUrlInches(); if (s) { logStep(`  • Rule#1: URL feet & R(img)≈R(cur) → ${s.width}×${s.height}`); return s; }
+  const Rimg = ratioOf(pixels);
+  const pixelRatioValid = isFinite(Rimg) && Rimg > 0;
+  const urlMatchesPixels = hasUrlSize && pixelRatioValid && approxEq(ratioOf(urlScale), Rimg);
+
+  const currentRatio = scaleRatio(normalizedCurrent);
+  const parsedRatio = scaleRatio(normalizedParsed);
+  const currentMatchesPixels = pixelRatioValid && hasCurrent && approxEq(currentRatio, Rimg);
+  const parsedMatchesPixels = pixelRatioValid && hasParsed && approxEq(parsedRatio, Rimg);
+
+  const noRepeatScale = (noRepeat && pixelRatioValid)
+    ? orientMaxAsWidth({ width: 60, height: +(60 / Rimg).toFixed(2) })
+    : undefined;
+  const noRepeatRatio = scaleRatio(noRepeatScale);
+  const currentMatchesNoRepeat = noRepeatScale && hasCurrent && approxEq(currentRatio, noRepeatRatio);
+
+  let chosen = undefined;
+  let reason = "";
+
+  if (urlMatchesPixels) {
+    chosen = urlScale;
+    reason = urlToken ? `URL token ${urlToken}` : "URL size";
+  } else if (hasUrlSize && noRepeatScale && hasCurrent && !currentMatchesPixels && currentMatchesNoRepeat) {
+    chosen = noRepeatScale;
+    reason = urlToken ? `No-Repeat fallback for ${urlToken}` : "No-Repeat fallback via URL size";
+  } else if (!hasUrlSize && hasParsed && hasCurrent && approxEq(currentRatio, parsedRatio)) {
+    chosen = normalizedParsed;
+    reason = "Parsed size ratio match";
+  } else if (hasParsed && parsedMatchesPixels) {
+    chosen = normalizedParsed;
+    reason = "Parsed size matches pixels";
+  } else if (noRepeatScale) {
+    chosen = noRepeatScale;
+    reason = "No-Repeat default";
+  } else if (currentMatchesPixels) {
+    chosen = normalizedCurrent;
+    reason = "Existing scale matches pixels";
+  } else if (hasUrlSize) {
+    chosen = urlScale;
+    reason = urlToken ? `URL token ${urlToken}` : "URL size fallback";
+  } else if (hasParsed) {
+    chosen = normalizedParsed;
+    reason = "Parsed fallback";
+  } else if (hasCurrent) {
+    chosen = normalizedCurrent;
+    reason = "Existing fallback";
   }
-  // 2) URL token present + R(img) !≈ R(cur) but R(cur) ≈ R(parsed) → parsed
-  if (validSize(urlFeetOriented) && !approxEq(Rimg, Rcur) && approxEq(Rcur, Rparsed)) {
-    if (validSize(parsedScale)) { logStep(`  • Rule#2: R(cur)≈R(parsed) → ${parsedScale.width}×${parsedScale.height}`); return parsedScale; }
+
+  if (!chosen && pixelRatioValid) {
+    chosen = orientMaxAsWidth({ width: 60, height: +(60 / Rimg).toFixed(2) });
+    reason = reason || "Pixel ratio fallback";
   }
-  // 3) No URL feet + R(img) ≈ R(cur) → keep current
-  if (!validSize(urlFeetOriented) && approxEq(Rimg, Rcur) && validSize(currentScale)) {
-    logStep("  • Rule#3: keep current scale");
-    return currentScale;
+
+  if (pixelRatioValid) {
+    const adjusted = enforceScaleMatchesPixels(chosen, pixels);
+    if (adjusted && adjusted !== chosen) {
+      reason = reason ? `${reason}; ratio aligned` : "Ratio aligned to pixels";
+    }
+    chosen = adjusted;
   }
-  // 4) No URL feet + R(cur) ≈ R(parsed) → parsed
-  if (!validSize(urlFeetOriented) && approxEq(Rcur, Rparsed) && validSize(parsedScale)) {
-    logStep("  • Rule#4: use parsed scale");
-    return parsedScale;
+
+  if (chosen && pixelRatioValid) {
+    chosen = orientMaxAsWidth(chosen);
   }
-  // 5) No-Repeat fallback based on image ratio
-  if (noRepeat && isFinite(Rimg) && Rimg > 0) {
-    const width = 60; const height = +(60 / Rimg).toFixed(2);
-    logStep(`  • Rule#5 (No-Repeat): ${width}×${height}`);
-    return { width, height };
+
+  if (chosen) {
+    logStep(`  Scale choice: ${chosen.width}"x${chosen.height}"${reason ? ` [${reason}]` : ""}`);
+  } else {
+    logStep("  Scale choice: undefined (no valid scale information)");
   }
-  // Last resort: parsed if valid, else current
-  if (validSize(parsedScale)) return parsedScale;
-  return currentScale && validSize(currentScale) ? currentScale : undefined;
+  return chosen;
 }
 
 async function computeParsedScale(page, isNoRepeat, imageUrl) {
   const urlFeet = parseUrlFeetSize(imageUrl || "");
-  if (validSize(urlFeet)) { logStep(`  • Parsed (URL feet→in): ${urlFeet.width}×${urlFeet.height}`); return orientMaxAsWidth(urlFeet); }
-  if (isNoRepeat)         { logStep("  • Parsed (No Repeat default): 96×48"); return { width: 96, height: 48 }; }
+  if (validSize(urlFeet)) { logStep(`  Parsed scale (URL feet->inches): ${urlFeet.width}"x${urlFeet.height}"`); return orientMaxAsWidth(urlFeet); }
+  if (isNoRepeat)         { logStep('  Parsed scale (No Repeat default): 96"x48"'); return { width: 96, height: 48 }; }
   const bold = await page?.$eval?.(SEL_REPEAT_BOLD, el => (el.textContent || "").trim()).catch(() => null);
   if (bold) {
-    const m = bold.match(/(\d+(?:\.\d+)?)\s*\"?\s*[x×]\s*(\d+(?:\.\d+)?)/);
+    const m = bold.match(/(\d+(?:\.\d+)?)\s*"?\s*[xX\u00D7-]\s*(\d+(?:\.\d+)?)/);
     if (m) {
       const a = parseFloat(m[1]), b = parseFloat(m[2]);
       if (isFinite(a) && isFinite(b)) {
         const s = orientMaxAsWidth({ width: a, height: b });
-        logStep(`  • Parsed (bold inches): ${s.width}×${s.height}`);
+        logStep(`  Parsed scale (bold inches): ${s.width}"x${s.height}"`);
         return s;
       }
     }
@@ -823,3 +918,4 @@ main().catch(err => {
   console.error("Fatal error:", err);
   process.exitCode = 1;
 });
+

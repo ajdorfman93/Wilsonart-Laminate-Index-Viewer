@@ -192,16 +192,21 @@ async function loadDefault() {
 function renderTable() {
   // header once
   if (!headRow.dataset.built) {
-    headRow.innerHTML = COLUMNS.map(c => `<th scope="col">${c.label}</th>`).join('');
+    const headerCells = [
+      '<th scope="col" class="col-index">#</th>',
+      ...COLUMNS.map(c => `<th scope="col">${c.label}</th>`),
+    ];
+    headRow.innerHTML = headerCells.join('');
     headRow.dataset.built = '1';
   }
   const rows = visible || [];
-  const html = rows.map(r => {
+  const html = rows.map((r, index) => {
+    const numberCell = `<td class="col-index">${index + 1}.</td>`;
     const tds = COLUMNS.map(col => {
       const rendered = (col.render.length === 1 ? col.render(r) : col.render.call(col, r[col.key], r));
       return `<td>${rendered}</td>`;
     }).join('');
-    return `<tr>${tds}</tr>`;
+    return `<tr>${numberCell}${tds}</tr>`;
   }).join('');
   bodyRows.innerHTML = html;
 
@@ -421,6 +426,9 @@ function injectViewerStyles() {
   const css = `
   /* Pills */
   .pill { display:inline-block; padding:2px 6px; border-radius:999px; background:rgba(0,0,0,.06); margin:2px; font-size:12px; }
+
+  /* Row numbering */
+  .col-index { width:48px; min-width:48px; text-align:right; font-weight:600; color:#444; font-variant-numeric:tabular-nums; }
 
   /* Table thumbnail wrapper */
   .thumb { background:transparent; border:0; padding:0; cursor:pointer; }
