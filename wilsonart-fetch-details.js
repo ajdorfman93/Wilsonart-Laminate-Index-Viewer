@@ -140,13 +140,29 @@ function parseUrlFeetSize(url) {
   return orientMaxAsWidth({ width: Math.max(a, b) * 12, height: Math.min(a, b) * 12 });
 }
 
-const ASSET_LIBRARY_BASE = "https://assetlibrary.wilsonart.com";
+const ALLOWED_TEXTURE_HOSTS = [
+  "assetlibrary.wilsonart.com",
+  "images.wilsonart.com"
+];
 const FORBIDDEN_TEXTURE_SUBSTRINGS = [
   "webfullsheet",
   "mightalsolike",
-  "hero",
-  "images.wilsonart.com"
+  "hero"
 ];
+
+function getHostname(url) {
+  if (!url) return "";
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function isAllowedTextureHost(url) {
+  const host = getHostname(url);
+  return host && ALLOWED_TEXTURE_HOSTS.includes(host);
+}
 
 // -------------------- URL helpers --------------------
 const looksBanner      = (u) => !!u && /banner/i.test(u);
@@ -189,13 +205,20 @@ const hasFullSizeViewToken = (url) => /fullsizeview|full_size_view/i.test(url ||
 function isValidTextureUrl(url, tokens = []) {
   if (!url) return false;
   const lower = url.toLowerCase();
-  if (!lower.startsWith(ASSET_LIBRARY_BASE)) return false;
+  const host = getHostname(url);
+  if (!isAllowedTextureHost(url)) return false;
   if (isForbiddenTextureUrl(url)) return false;
 
   const hasBannerKeyword = /banner/i.test(url);
   const hasFullSizeView = hasFullSizeViewToken(url);
+  const hasSizeTokenMatch = hasSizeToken(url);
   const hasProductToken = tokens.some(token => token && lower.includes(token));
-  return hasBannerKeyword || hasFullSizeView || hasSizeToken(url) || hasProductToken;
+
+  if (host === "images.wilsonart.com") {
+    if (!(hasFullSizeView && hasProductToken)) return false;
+  }
+
+  return hasBannerKeyword || hasFullSizeView || hasSizeTokenMatch || hasProductToken;
 }
 
 function computeTextureUrlScore(url, tokens = []) {
