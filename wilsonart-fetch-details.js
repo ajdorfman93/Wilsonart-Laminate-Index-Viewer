@@ -781,86 +781,99 @@ function applyBannerCrop(url, pixels) {
 }
 
 // -------------------- Scale decision --------------------
-function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat }) {
+function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat, existingNoRepeatScale }) {
   const urlToken = extractUrlFeetToken(imageUrl || "");
   const urlScale = orientMaxAsWidth(parseUrlFeetSize(imageUrl || "") || {});
   const normalizedCurrent = orientMaxAsWidth(currentScale || {});
   const normalizedParsed = orientMaxAsWidth(parsedScale || {});
 
+  const incomingNoRepeat = (existingNoRepeatScale && validSize(existingNoRepeatScale))
+    ? { width: +existingNoRepeatScale.width, height: +existingNoRepeatScale.height }
+    : undefined;
+
   const hasUrlSize = validSize(urlScale);
   const hasCurrent = validSize(normalizedCurrent);
   const hasParsed = validSize(normalizedParsed);
 
-  const Rimg = ratioOf(pixels);
-  const pixelRatioValid = isFinite(Rimg) && Rimg > 0;
-  const urlMatchesPixels = hasUrlSize && pixelRatioValid && approxEq(ratioOf(urlScale), Rimg);
+  const pixelRatio = ratioOf(pixels);
+  const pixelRatioValid = isFinite(pixelRatio) && pixelRatio > 0;
+  const ratioMatches = (target, tol = 0.05) => pixelRatioValid && approxEq(pixelRatio, target, tol);
+  const round2 = (n) => Math.round(n * 100) / 100;
 
-  const currentRatio = scaleRatio(normalizedCurrent);
-  const parsedRatio = scaleRatio(normalizedParsed);
-  const currentMatchesPixels = pixelRatioValid && hasCurrent && approxEq(currentRatio, Rimg);
-  const parsedMatchesPixels = pixelRatioValid && hasParsed && approxEq(parsedRatio, Rimg);
+  let noRepeatScale = undefined;
+  if (incomingNoRepeat) {
+    noRepeatScale = { width: round2(incomingNoRepeat.width), height: round2(incomingNoRepeat.height) };
+  } else if (noRepeat && pixelRatioValid) {
+    noRepeatScale = { width: 60, height: round2(60 / pixelRatio) };
+  }
 
-  const noRepeatScale = (noRepeat && pixelRatioValid)
-    ? orientMaxAsWidth({ width: 60, height: +(60 / Rimg).toFixed(2) })
-    : undefined;
   const noRepeatRatio = scaleRatio(noRepeatScale);
-  const currentMatchesNoRepeat = noRepeatScale && hasCurrent && approxEq(currentRatio, noRepeatRatio);
+  const FOUR_BY_EIGHT_RATIO = 96 / 48;
+  const FIVE_BY_TWELVE_RATIO = 144 / 60;
 
   let chosen = undefined;
-  let reason = "";
+  const reasons = [];
 
-  if (urlMatchesPixels) {
-    chosen = urlScale;
-    reason = urlToken ? `URL token ${urlToken}` : "URL size";
-  } else if (hasUrlSize && noRepeatScale && hasCurrent && !currentMatchesPixels && currentMatchesNoRepeat) {
-    chosen = noRepeatScale;
-    reason = urlToken ? `No-Repeat fallback for ${urlToken}` : "No-Repeat fallback via URL size";
-  } else if (!hasUrlSize && hasParsed && hasCurrent && approxEq(currentRatio, parsedRatio)) {
-    chosen = normalizedParsed;
-    reason = "Parsed size ratio match";
-  } else if (hasParsed && parsedMatchesPixels) {
-    chosen = normalizedParsed;
-    reason = "Parsed size matches pixels";
-  } else if (noRepeatScale) {
-    chosen = noRepeatScale;
-    reason = "No-Repeat default";
-  } else if (currentMatchesPixels) {
-    chosen = normalizedCurrent;
-    reason = "Existing scale matches pixels";
-  } else if (hasUrlSize) {
-    chosen = urlScale;
-    reason = urlToken ? `URL token ${urlToken}` : "URL size fallback";
-  } else if (hasParsed) {
-    chosen = normalizedParsed;
-    reason = "Parsed fallback";
-  } else if (hasCurrent) {
-    chosen = normalizedCurrent;
-    reason = "Existing fallback";
+  if (ratioMatches(FOUR_BY_EIGHT_RATIO)) {
+    chosen = { width: 96, height: 48 };
+    reasons.push('Pixels ratio ~4x8');
+  } else if (ratioMatches(FIVE_BY_TWELVE_RATIO)) {
+    chosen = { width: 144, height: 60 };
+    reasons.push('Pixels ratio ~5x12');
   }
 
-  if (!chosen && pixelRatioValid) {
-    chosen = orientMaxAsWidth({ width: 60, height: +(60 / Rimg).toFixed(2) });
-    reason = reason || "Pixel ratio fallback";
+  if (!chosen && noRepeatScale && pixelRatioValid && approxEq(noRepeatRatio, pixelRatio, 0.02)) {
+    chosen = { ...noRepeatScale };
+    reasons.push('No-repeat scale aligns with pixels');
   }
 
-  if (pixelRatioValid) {
-    const adjusted = enforceScaleMatchesPixels(chosen, pixels);
-    if (adjusted && adjusted !== chosen) {
-      reason = reason ? `${reason}; ratio aligned` : "Ratio aligned to pixels";
-    }
-    chosen = adjusted;
+  if (!chosen && !noRepeatScale && !hasUrlSize && pixelRatioValid) {
+    chosen = { width: 60, height: round2(60 / pixelRatio) };
+    reasons.push('Pixels fallback width=60');
+  }
+
+  if (!chosen && hasUrlSize) {
+    chosen = { ...urlScale };
+    reasons.push(urlToken ? `URL token ${urlToken}` : 'URL scale fallback');
+  }
+
+  if (!chosen && hasParsed) {
+    chosen = { ...normalizedParsed };
+    reasons.push('Parsed fallback');
+  }
+
+  if (!chosen && hasCurrent) {
+    chosen = { ...normalizedCurrent };
+    reasons.push('Existing fallback');
   }
 
   if (chosen && pixelRatioValid) {
+    const adjusted = enforceScaleMatchesPixels(chosen, pixels);
+    if (adjusted && validSize(adjusted)) {
+      if (!approxEq(ratioOf(adjusted), ratioOf(chosen), 1e-3)) {
+        reasons.push('Ratio aligned');
+      }
+      chosen = adjusted;
+    }
+    chosen = pixelRatio >= 1
+      ? orientMaxAsWidth(chosen)
+      : { width: round2(chosen.width), height: round2(chosen.height) };
+  } else if (chosen) {
     chosen = orientMaxAsWidth(chosen);
   }
 
   if (chosen) {
-    logStep(`  Scale choice: ${chosen.width}"x${chosen.height}"${reason ? ` [${reason}]` : ""}`);
+    chosen = { width: round2(chosen.width), height: round2(chosen.height) };
+    logStep(`  Scale choice: ${chosen.width}"x${chosen.height}"${reasons.length ? ` [${reasons.join('; ')}]` : ""}`);
   } else {
     logStep("  Scale choice: undefined (no valid scale information)");
   }
-  return { scale: chosen, reason, noRepeatScale };
+
+  const finalNoRepeat = noRepeatScale
+    ? { width: round2(noRepeatScale.width), height: round2(noRepeatScale.height) }
+    : undefined;
+
+  return { scale: chosen, reason: reasons.join("; "), noRepeatScale: finalNoRepeat };
 }
 
 async function computeParsedScale(page, isNoRepeat, imageUrl) {
@@ -991,12 +1004,26 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     }
   }
 
+  if (texture_image_pixels) {
+    const width = Number(texture_image_pixels.width);
+    const height = Number(texture_image_pixels.height);
+    const normalizedPixels = {
+      width: Number.isFinite(width) ? width : 0,
+      height: Number.isFinite(height) ? height : 0
+    };
+    if (normalizedPixels.width > 0 && normalizedPixels.height > 0) {
+      normalizedPixels.ratio = +(normalizedPixels.width / normalizedPixels.height).toFixed(4);
+    }
+    texture_image_pixels = normalizedPixels;
+  }
+
   const no_repeat   = await detectNoRepeat(page);
   const parsedScale = await computeParsedScale(page, no_repeat, chosenUrl || "");
   const currentScale = orientMaxAsWidth(existingRow?.texture_scale || parsedScale || { width: 144, height: 60 });
   const { scale: chosenScale, noRepeatScale } = chooseFinalScale({
     imageUrl: chosenUrl, pixels: texture_image_pixels,
-    currentScale, parsedScale, noRepeat: no_repeat
+    currentScale, parsedScale, noRepeat: no_repeat,
+    existingNoRepeatScale: existingRow?.no_repeat_texture_scale
   }) || {};
   const finalScale = chosenScale || currentScale;
   const surfaceGroup = hasString(existingRow?.["surface-group"])
@@ -1009,7 +1036,7 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   // Preserve existing fields; only fill missing ones; always update texture_scale to final decision
   const out = { ...(existingRow || {}), code };
   if (chosenUrl) out.texture_image_url = chosenUrl;
-  if (validSize(texture_image_pixels)) out.texture_image_pixels = texture_image_pixels;
+  if (texture_image_pixels) out.texture_image_pixels = texture_image_pixels;
   if (no_repeat !== undefined) out.no_repeat = !!no_repeat;
   if (hasString(description)) out.description = description;
   if (Array.isArray(sheetSizes)) out.sheet_sizes = sheetSizes;
