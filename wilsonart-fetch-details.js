@@ -165,6 +165,72 @@ async function findBannerUrlsInHTML(page) {
   return await findUrlsMatching(page, /https?:\/\/[^\s"'<>\)]*banner[^\s"'<>\)]*/g);
 }
 
+function normalizeProductTokens(code, productLink) {
+  const tokens = [];
+  const push = (value) => {
+    if (!value) return;
+    const lower = value.toLowerCase();
+    if (lower && !tokens.includes(lower)) tokens.push(lower);
+  };
+  if (code) {
+    const raw = String(code).trim();
+    if (raw) {
+      push(raw);
+      const compact = raw.replace(/[^A-Za-z0-9]/g, "");
+      if (compact && compact !== raw) push(compact);
+    }
+  }
+  if (productLink) {
+    const slug = String(productLink).split("/").filter(Boolean).pop() || "";
+    if (slug) {
+      push(slug);
+      const compact = slug.replace(/[^A-Za-z0-9]/g, "");
+      if (compact && compact !== slug) push(compact);
+    }
+  }
+  return tokens;
+}
+
+function listBannerCandidates(page) {
+  const seen = new Set();
+  const out = [];
+  const candidates = page.__bannerCandidates instanceof Set ? Array.from(page.__bannerCandidates) : [];
+  for (const url of candidates) {
+    if (!seen.has(url)) { out.push(url); seen.add(url); }
+  }
+  if (page.__bannerOverrideUrl && !seen.has(page.__bannerOverrideUrl)) {
+    out.unshift(page.__bannerOverrideUrl);
+  }
+  return out;
+}
+
+function pickBannerCandidate(page, code, productLink) {
+  const tokens = normalizeProductTokens(code, productLink);
+  if (!tokens.length) return null;
+  const candidates = listBannerCandidates(page);
+  if (!candidates.length) return null;
+
+  const scored = candidates.map(url => {
+    const lower = url.toLowerCase();
+    let score = 0;
+    tokens.forEach((token, idx) => {
+      if (!token) return;
+      if (lower.includes(token)) {
+        const base = token.length >= 6 ? 6 : 3;
+        score += base + Math.max(0, 3 - idx);
+      }
+    });
+    if (/150dpi/i.test(url)) score += 1;
+    if (/fullsheet/i.test(lower) || /full_sheet/i.test(lower)) score += 1;
+    if (/full_size/i.test(lower)) score += 1;
+    return { url, score };
+  }).filter(item => item.score > 0);
+
+  if (!scored.length) return null;
+  scored.sort((A, B) => (B.score - A.score) || (B.url.length - A.url.length));
+  return scored[0].url;
+}
+
 function pickBestFullSheetUrl(urls) {
   if (!urls.length) return null;
   const cands = urls.filter(u => hasFullSheet(u) && !hasCarouselMain(u));
@@ -197,10 +263,26 @@ function pickBestFullSizeUrl(urls) {
   scored.sort((A, B) => ((B.areaFeet - A.areaFeet) || (B.has150dpi - A.has150dpi) || (B.len - A.len)));
   return scored[0].u;
 }
+async function resolveTextureImageUrl(page, code, productLink) {
+  let chosenUrl = pickBannerCandidate(page, code, productLink);
+  if (!chosenUrl) {
+    const fullSheets = await findFullSheetUrlsInHTML(page);
+    chosenUrl = pickBestFullSheetUrl(fullSheets) || null;
+  }
+  if (!chosenUrl) {
+    const fullSize = await findFullSizeUrlsInHTML(page);
+    chosenUrl = pickBestFullSizeUrl(fullSize) || null;
+  }
+  return chosenUrl;
+}
 
 // -------------------- Selectors --------------------
 const XPATH_ARROW =
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[4]";
+const SECOND_IMAGE_XPATHS = [
+  '//*[@id="maincontent"]/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]',
+  '//*[@id="maincontent"]//div[contains(@class,"fotorama__nav__frame")][2]'
+];
 
 const SEL_NO_REPEAT_B =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div > div.qkView_description > div:nth-child(7) > ul > li > p > b";
@@ -237,18 +319,33 @@ async function afterStepCheckForBanner(page) {
   try {
     const banners = await findBannerUrlsInHTML(page);
     if (banners && banners.length) {
-      if (!page.__bannerOverrideUrl) {
+      if (!(page.__bannerCandidates instanceof Set)) {
+        page.__bannerCandidates = new Set();
+      }
+      let newCount = 0;
+      for (const url of banners) {
+        if (!page.__bannerCandidates.has(url)) {
+          page.__bannerCandidates.add(url);
+          newCount++;
+        }
+      }
+      if (!page.__bannerOverrideUrl && banners[0]) {
         page.__bannerOverrideUrl = banners[0];
-        logStep(`  • Banner URL discovered: ${page.__bannerOverrideUrl}`);
+      }
+      if (newCount) {
+        const sample = banners[0];
+        logStep(`  [banner] captured ${newCount} candidate${newCount > 1 ? "s" : ""}${sample ? ` (e.g. ${sample})` : ""}`);
       }
     }
   } catch {}
 }
 
 // Robust click using element center coords; tries inner .fotorama__arr__arr too
-async function robustClickXPath(page, xpath, label) {
+async function robustClickXPath(page, xpath, label, options = {}) {
   logStep(`  • Waiting for ${label}…`);
-  const present = await waitForXPathPresence(page, xpath, 10000, 150);
+  const waitTimeout = ("waitTimeout" in options) ? options.waitTimeout : 10000;
+  const waitPolling = ("waitPolling" in options) ? options.waitPolling : 150;
+  const present = await waitForXPathPresence(page, xpath, waitTimeout, waitPolling);
   if (!present) { logStep(`  • ${label}: not found`); return false; }
 
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -315,6 +412,32 @@ async function robustClickXPath(page, xpath, label) {
   }
 
   logStep(`  • ${label}: all click attempts failed`);
+  return false;
+}
+
+async function clickSecondCarouselImage(page, attemptLabel = "") {
+  let frameCount = 0;
+  try {
+    frameCount = await page.evaluate(() => {
+      const frames = document.querySelectorAll("#maincontent .fotorama__nav__frame");
+      return frames ? frames.length : 0;
+    });
+  } catch {}
+
+  if (frameCount < 2) {
+    logStep(`  • Second carousel image unavailable (${frameCount} frame${frameCount === 1 ? "" : "s"})`);
+    return false;
+  }
+
+  const suffix = attemptLabel ? ` (${attemptLabel})` : "";
+  for (let idx = 0; idx < SECOND_IMAGE_XPATHS.length; idx++) {
+    const xpath = SECOND_IMAGE_XPATHS[idx];
+    const label = `Carousel Thumb #2${suffix} [${idx + 1}]`;
+    const clicked = await robustClickXPath(page, xpath, label, { waitTimeout: 6000, waitPolling: 200 });
+    if (clicked) return true;
+  }
+
+  logStep(`  • Second carousel image click attempts failed${suffix}`);
   return false;
 }
 
@@ -481,6 +604,8 @@ function codesMissingFromDetails(indexArr, detailsArr) {
 // -------------------- Scrape one product --------------------
 async function scrapeOne(page, code, productLink, existingRow = {}) {
   logStep(`[${code}] → ${productLink}`);
+  page.__bannerOverrideUrl = null;
+  page.__bannerCandidates = new Set();
   await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
   await waitForMain(page);
 
@@ -488,20 +613,18 @@ async function scrapeOne(page, code, productLink, existingRow = {}) {
   for (let k = 0; k < 2; k++) {
     await robustClickXPath(page, XPATH_ARROW, "Carousel → Next");
   }
+  await clickSecondCarouselImage(page, "initial");
   // Always check again after interactions
   await afterStepCheckForBanner(page);
 
-  // 1) If banner URL was ever seen during steps, prefer it
-  let chosenUrl = page.__bannerOverrideUrl || null;
-
-  // 2) Otherwise fall back to FullSheet / full_size discovery
+  // Resolve texture image URL with banner preference, then fallbacks
+  let chosenUrl = await resolveTextureImageUrl(page, code, productLink);
   if (!chosenUrl) {
-    const fullSheets = await findFullSheetUrlsInHTML(page);
-    chosenUrl = pickBestFullSheetUrl(fullSheets) || null;
-  }
-  if (!chosenUrl) {
-    const fullSize = await findFullSizeUrlsInHTML(page);
-    chosenUrl = pickBestFullSizeUrl(fullSize) || null;
+    const retryClick = await clickSecondCarouselImage(page, "retry");
+    if (retryClick) {
+      await afterStepCheckForBanner(page);
+      chosenUrl = await resolveTextureImageUrl(page, code, productLink);
+    }
   }
 
   let banner_cropped = false;
