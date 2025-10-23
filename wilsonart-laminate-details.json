@@ -15423,5 +15423,1629 @@
       "width": 144,
       "height": 61.13
     }
+  },
+  {
+    "code": "Y0097",
+    "surface-group": "Laminate",
+    "name": "Socialite Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/socialite-houndstooth-y0097",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/77342975-7fc6-4bd8-96c7-5cf77cb30133/Y0097-Socialite-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Socialite Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in raspberry and crisp white can provide a dramatic graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0094",
+    "surface-group": "Laminate",
+    "name": "Jet Set Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/jet-set-houndstooth-y0094",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/afa977b7-4098-451a-8d06-6956cdc414bc/Y0094-Jet-Set-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Jet Set Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in orange coral and crisp white can provide a dramatic graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0093",
+    "surface-group": "Laminate",
+    "name": "Chic Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/chic-houndstooth-y0093",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0af34715-2d21-41d6-8dc9-f6bcd7717c72/Y0093-Chic-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Chic Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in sunshine yellow and crisp white can provide a dramatic graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0091",
+    "surface-group": "Laminate",
+    "name": "Hamptons Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hamptons-houndstooth-y0091",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/407f872f-854f-404f-b9ce-a6d3fa1bdbc8/Y0091-Hamptons-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0088",
+    "surface-group": "Laminate",
+    "name": "Country Club Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/country-club-houndstooth-y0088",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6bb76455-f205-493a-90c1-fdbe4f3a9d82/Y0088-Country-Club-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Country Club Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in dark teal and crisp white can provide a dramatic graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0082",
+    "surface-group": "Laminate",
+    "name": "Society Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/society-houndstooth-y0082",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/809c5739-f0cf-4ff7-96da-c2ccc07c80c7/Y0082_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": false,
+    "description": "Society Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in cool grey and crisp white can provide a subtle graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0081",
+    "surface-group": "Laminate",
+    "name": "Haut Monde Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/haut-monde-houndstooth-y0081",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/debdc736-a398-4e6b-901d-68d8707d548b/Y0081-Haut-Monde-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0079",
+    "surface-group": "Laminate",
+    "name": "Champagne Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/champagne-houndstooth-y0079",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/419b4ca9-09a4-49cc-b315-ddc87d3a79ae/Y0079-Champagne-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Champagne Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in beige and white can provide a subtle graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0078",
+    "surface-group": "Laminate",
+    "name": "Tuxedo Houndstooth",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tuxedo-houndstooth-y0078",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f89f13c3-dc6e-4414-b298-a619efb12560/Y0078-Tuxedo-Houndstooth-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Tuxedo Houndstooth is a small-scale duotone textile pattern and is a great example of a tessellation. Four-pointed shapes in black and white can provide a dramatic graphic punch.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0065",
+    "surface-group": "Laminate",
+    "name": "Summer Leaves",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/summer-leaves-y0065",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4ae9bd61-42ea-4c73-a61d-417f12c9600f/Y0065-Summer-Leaves-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Summer Leaves is a highly stylized pattern of scattered leaves in shades of evergreen and deep green on a white background. This design is contemporary, yet offers organic shapes and visual movement as the leaves fall down the sheet.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0064",
+    "surface-group": "Laminate",
+    "name": "Spring Leaves",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/spring-leaves-y0064",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7c90de1c-8335-40d0-bfdc-1b99ca310388/Y0064-Spring-Leaves-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0047",
+    "surface-group": "Laminate",
+    "name": "Morphscape Sky Blue",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/morphscape-sky-blue-y0047",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e723dd2c-2629-42a4-96d8-37997d3979df/Y0047-Morphscape-sky-blue-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0046",
+    "surface-group": "Laminate",
+    "name": "Morphscape Black",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/morphscape-black-y0046",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7b0abfa8-3dd5-49c7-9408-86ae36bb4bd5/Y0046-Morphscape-black-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Morphscape Black is a white grid that starkly contrasts with the black background of this large-scale design.  The rhythm of circular shapes fades in and out of this graphic pattern to create 3D movements across the sheet.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0033",
+    "surface-group": "Laminate",
+    "name": "Licorice Zest",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/licorice-zest-y0033",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1bc0f17d-aa16-46d9-a746-33d703895d06/Y0033-licorice-zest-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Licorice Zest is a large-scale design that looks like it was created by stamping with cut citrus fruit. Graphic black citrus shapes dance across a crisp white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0032",
+    "surface-group": "Laminate",
+    "name": "Frozen Zest",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/frozen-zest-y0032",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/972e0afa-6ea3-41c9-bf65-1ee524afb247/Y0032-frozen-zest-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Frozen Zest is a large-scale design that looks like it was created by stamping with cut citrus fruit. Graphic cerulean blue citrus shapes dance across a crisp white background.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0031",
+    "surface-group": "Laminate",
+    "name": "Sweet Treats",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sweet-treats-y0031",
+    "design_groups": [
+      "Graphic"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/4911f02b-8d04-4d84-addc-c6b639ed7876/Y0031-sweet-treats-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Sweet Treats is stylized in bold colors on a white background. A variety of flavors & decorations are shown in this medium-scale design. The random pattern and directions of the cupcakes make them appear to be celebrating.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "5058",
+    "surface-group": "Laminate",
+    "name": "Titanium Alloy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/titanium-alloy-5058",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Taupe"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "AEON 3X Durability",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "description": "Titanium Alloy is a brushed pearl laminate design in a warm champagne color with a slight taupe undertone.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'"
+    ],
+    "texture_scale": {
+      "width": 62.5,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "5057",
+    "surface-group": "Laminate",
+    "name": "Pearl Alloy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/pearl-alloy-5057",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "AEON 3X Durability",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "description": "Pearl Alloy is a brushed pearl laminate design in a silver color with a slight grey undertone.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'"
+    ],
+    "texture_scale": {
+      "width": 62.5,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "Y0542",
+    "surface-group": "Laminate",
+    "name": "Oxidized Diamond Plate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oxidized-diamond-plate-y0542",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0542_Oxidized_Diamond_Plate_5x12_full_size_view_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": false,
+    "description": "Oxidized Diamond Plate  is a charcoal design with a diamond plate pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0541",
+    "surface-group": "Laminate",
+    "name": "Zinc Diamond Plate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/zinc-diamond-plate-y0541",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0541_Zinc_Diamond_Plate_5x12_full_size_view_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": false,
+    "description": "Zinc Diamond Plate is a medium grey design with a diamond plate pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0539",
+    "surface-group": "Laminate",
+    "name": "Silver Diamond Plate",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/silver-diamond-plate-y0539",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0539_Silver_Diamond_Plate_5x12_full_size_view_Banner.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": false,
+    "description": "Silver Diamond Plate is a pale silver design with a diamond plate pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0486",
+    "surface-group": "Laminate",
+    "name": "Timeworn Copper",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/timeworn-copper-y0486",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0486_Timeworn_Copper_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Timeworn Copper is an all over distressed metal pattern. The ground is a deep copper red with patinad green creating a dramatic pattern running throughout, with accents of light copper.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0398",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Oxide",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-oxide-y0398",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0398_Milwaukee_Junction_Oxide_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Oxide is a  deep grey oxidized steel with an allover distressed look. The large scale design is stunning with varying shades of grey.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0397",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Rust",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-rust-y0397",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0397_Milwaukee_Juntion_Rust_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Rust is a large scale steel design changed by the elements. Rust and grey intermingle with bits of white throughout creating a bold look.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0396",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Zinc",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-zinc-y0396",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0396_Milwaukee_Junction_Zinc_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Zinc is a cool grey steel changed by the elements .This  large scale design has varied shades of cool grey with specs of rust throughout.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0395",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Copper",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-copper-y0395",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0395_Milwaukee_Junction_Copper_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Copper is a large scale rusty steel.  A beautiful movement of tonal copper colors are seen throughout the pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0394",
+    "surface-group": "Laminate",
+    "name": "Milwaukee Jct. Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/milwaukee-jct-steel-y0394",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0394_Milwaukee_Junction_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Milwaukee Jct. Steel is a timeworn large scale distressed steel. Warm mid-tone greys with bits of rust and white are seen throughout the pattern.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0426",
+    "surface-group": "Laminate",
+    "name": "Gold Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/gold-oscar-y0426",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0426_Gold_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Gold Oscar is a beautiful gold color large scale pattern. The pattern was created by pouring molten metal over linen.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0433",
+    "surface-group": "Laminate",
+    "name": "Hammered Light Bronze",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hammered-light-bronze-y0433",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/y/0/y0433_hammered_light_bronze_full_size_view.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1019,
+      "ratio": 2.3553
+    },
+    "no_repeat": true,
+    "description": "Hammered Light Bronze is a small scale pattern in a warm light bronze color. A small scale non directional pattern with movement, created by hammering metal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.48
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.14
+    }
+  },
+  {
+    "code": "Y0432",
+    "surface-group": "Laminate",
+    "name": "Hammered Shadow",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hammered-shadow-y0432",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Light"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0432_Hammered_Shadow_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Hammered Light Bronze is a small scale pattern in a warm light bronze color. A small scale non directional pattern with movement, created by hammering metal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0428",
+    "surface-group": "Laminate",
+    "name": "Cobalt Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/cobalt-oscar-y0428",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0428_Cobalt_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Cobalt Oscar is a bold deep blue pattern. This large scale pattern was created by pouring molten metal over linen.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0427",
+    "surface-group": "Laminate",
+    "name": "Bronze Oscar",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bronze-oscar-y0427",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0427_Bronze_Oscar_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Bronze Oscar is a large scale abstracted pattern. This dramatic bronze tone pattern was created by pouring molten metal over linen.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0418",
+    "surface-group": "Laminate",
+    "name": "Smoked Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/smoked-steel-y0418",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0418_Smoked_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Smoked Steel is a large scale pattern with rich charcoal, black and browns throughout. This abstracted wood or distressed metal look is made by acid etching metal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "Y0419",
+    "surface-group": "Laminate",
+    "name": "Hot Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/hot-steel-y0419",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/Y/0/Y0419_Hot_Steel_full_size_view_Banner_1.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 926,
+      "ratio": 2.5918
+    },
+    "no_repeat": true,
+    "description": "Hot Steel is a large scale design in a bold fire red color. This design is made of acid etched steel and has the look of distressed wood or metal.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 23.15
+    },
+    "banner_cropped": true,
+    "texture_scale": {
+      "width": 144,
+      "height": 55.56
+    }
+  },
+  {
+    "code": "4995",
+    "surface-group": "Laminate",
+    "name": "Forged Steel",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/forged-steel-4995",
+    "design_groups": [
+      "Metal Looks"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "finish": [
+      {
+        "code": "#22",
+        "name": "Antique"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 59.06,
+      "height": 51.18
+    }
   }
 ]
