@@ -57526,5 +57526,4009 @@
       "width": 96,
       "height": 60
     }
+  },
+  {
+    "code": "10745",
+    "surface-group": "Laminate",
+    "name": "Fonthill Pear",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/fonthill-pear-10745",
+    "design_groups": [
+      "Woodgrains"
+    ],
+    "species": [
+      "Pear"
+    ],
+    "cut": [
+      "Plain",
+      "Quarter"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#18",
+        "name": "Linearity"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/1eaf9db8-1dd3-4c90-ba85-468f8900414f/10745-Fonthill-Pear_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A pear wood in a caramel coloration. Inconspicuous planking, slight anigre movement, and small-scale, soft cathedrals run throughout this design.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 8'",
+      "4' x 12'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "10734",
+    "surface-group": "Laminate",
+    "name": "Limber Maple",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/limber-maple-10734",
+    "design_groups": [
+      "Woodgrains"
+    ],
+    "species": [
+      "Maple"
+    ],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      },
+      {
+        "code": "#78",
+        "name": "Fine Grain"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/3c2eb1cf-03f7-4d36-9432-f1227728a530/10734-Limber-Maple-4C-150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A birdseye maple in a natural, blond color with peach undertones and brown graining. Movement in the grain from cathedrals and undulations.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 10'",
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 8'",
+      "4' x 12'",
+      "5' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "8234",
+    "surface-group": "Laminate",
+    "name": "Belair",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/belair-8234",
+    "species": [
+      "Cherry"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [
+      {
+        "code": "#05",
+        "name": "Timbergrain"
+      }
+    ],
+    "performance_enhancements": [
+      "AEON 3X Durability",
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [
+      "Commercial Designs"
+    ],
+    "no_repeat": false,
+    "description": "Belair is an off-white cherry wood design with straight grain, partial cathedrals, and a delicately planked structure.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'",
+      "4' x 10'",
+      "5' x 8'",
+      "5' x 10'",
+      "4' x 12'",
+      "4' x 9'",
+      "5' x 6'",
+      "5' x 9'"
+    ],
+    "texture_scale": {
+      "width": 62.4,
+      "height": 51.42
+    }
+  },
+  {
+    "code": "YS015",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Early American",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-early-american-ys015",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7ba97d02-214f-45d2-9d26-8c528b0de84c/YS015-Straight-Cut-Oak-Early-Amer-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Early American is a grain that is straight and close, with flaking throughout. It has a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS014",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Jacobean",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-jacobean-ys014",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e3b81d7f-ba6b-4dde-a64c-14c415485632/YS014-Straight-Cut-Oak-Jacobean-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Jacobean is a grain that is straight and close, with flaking throughout. It has a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS013",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-grey-ys013",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/dfb43c1a-e026-4516-b91d-da66a279d7f3/YS013-Straight-Cut-Oak-Grey-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Grey is a grain that is straight and close, with flaking throughout. It has a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS012",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Navy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-navy-ys012",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ad8cc45a-bef8-4a00-b73c-266b151c46af/YS012-Straight-Cut-Oak-Navy-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Navy is a grain that is straight and close, with flaking throughout. It has a blue stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS011",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Raw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-raw-ys011",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/aebe2a5f-c016-4290-a8ef-bd170528537e/YS011-Straight-Cut-Oak-Raw-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Raw is a grain that is straight and close, with flaking throughout. It has a neutral stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS008",
+    "surface-group": "Laminate",
+    "name": "Straight Cut Oak Wash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/straight-cut-oak-wash-ys008",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b08a13c7-b9ca-4be3-9ea9-b54b3469642a/YS008-Straight-Cut-Oak-Wash-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Straight Cut Oak Wash is a grain that is straight and close, with flaking throughout. It has a whitewash stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS007",
+    "surface-group": "Laminate",
+    "name": "Oak Early American",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-early-american-ys007",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3378de30-b7ed-4c85-bde7-d2faf72815bf/YS007-Oak-Early-American-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Early American has strong cathedrals over a plain sliced open grain oak look with a medium brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS006",
+    "surface-group": "Laminate",
+    "name": "Oak Jacobean",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-jacobean-ys006",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6f598eff-5ece-4be1-b83f-b3c386161a52/YS006-Oak-Jacobean-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Jacobean has strong cathedrals over a plain sliced open grain oak look with a light brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS005",
+    "surface-group": "Laminate",
+    "name": "Oak Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-grey-ys005",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/76fd5598-49ce-42ed-ba4d-2b2c697c8d78/YS005-Detail-Oak-Grey-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Grey has strong cathedrals over a plain sliced open grain oak look with a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS004",
+    "surface-group": "Laminate",
+    "name": "Oak Navy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-navy-ys004",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e06bebac-f6a9-4c49-8371-fc7f62439f78/YS004-Oak-Navy-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Navy has strong cathedrals over a plain sliced open grain oak look with a blue stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS003",
+    "surface-group": "Laminate",
+    "name": "Oak Raw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-raw-ys003",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0da4d409-0c02-474f-9c07-6cb2ba7eaf7d/YS003-Oak-Raw-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Raw has strong cathedrals over a plain sliced open grain oak look with a neutral stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS001",
+    "surface-group": "Laminate",
+    "name": "Oak Wash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/oak-wash-ys001",
+    "species": [
+      "Oak"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Plain"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e5afab9b-ac45-46cb-9577-d4cb2beebd0d/YS001-Oak-Wash-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Oak Wash has strong cathedrals over a plain sliced open grain oak look with a whitewash stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "YS031",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Early American",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-early-american-ys031",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7e2ebbaa-147e-41ff-9bbb-3c9a0357ddbe/YS031-Rift-Walnut-Early-American-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Early American is an overall linear grain with a medium brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS029",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Jacobean",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-jacobean-ys029",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a376caf8-e9ad-48b4-98bc-fb8d34c0dd76/YS029-Rift-Walnut-Jacobean-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Jacobean is an overall linear grain with a traditional light brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS028",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-grey-ys028",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d0d180f3-9a05-4ac3-b082-3090494a1e64/YS028-Rift-Walnut-Grey-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Grey is an overall linear grain with a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS027",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Navy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-navy-ys027",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/cf411b9c-e6d3-46f0-bcd9-79da4a74d453/YS027-Rift-Walnut-Navy_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Navy YS027 is a linear wood grain with a blue satin finish. This surface is available in our Timbergrain finish with GREENGUARD Gold Certificate.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS026",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Raw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-raw-ys026",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5c44eb32-c03b-44bc-a015-b223563bc4ee/YS026-Rift-Walnut-Raw-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Raw is an overall linear grain with a neutral stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS024",
+    "surface-group": "Laminate",
+    "name": "Rift Walnut Wash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rift-walnut-wash-ys024",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Slipmatch"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/761f6cdd-4474-4e1f-98d7-24269526b5b3/YS024-Rift-Walnut-Wash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Rift Walnut Wash is an overall linear grain with a whitewash stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS023",
+    "surface-group": "Laminate",
+    "name": "Walnut Early American",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-early-american-ys023",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0e15361f-3889-4e5a-9fd5-bc201e2c9d74/YS023-Walnut-Early-American-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Early American is a fine straight grain with linear waves throughout.  It has a medium brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS022",
+    "surface-group": "Laminate",
+    "name": "Walnut Jacobean",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-jacobean-ys022",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0fd45a2e-3b58-4348-a030-0f1aa35dbfb7/YS022-Walnut-Jacobean-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Jacobean is a fine straight grain with linear waves throughout.  It has a light brown stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS021",
+    "surface-group": "Laminate",
+    "name": "Walnut Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-grey-ys021",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Medium"
+    ],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/832076d5-2273-41fd-b0d4-b0525b2bf9c9/YS021-Walnut-Grey-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Grey is a fine straight grain with linear waves throughout.  It has a neutral grey stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS019",
+    "surface-group": "Laminate",
+    "name": "Walnut Navy",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-navy-ys019",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Dark"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/ec403d6a-d6df-464d-b93e-fbebaaef5224/YS019-Walnut-Navy-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Navy is a fine straight grain with linear waves throughout.  It has a blue stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS018",
+    "surface-group": "Laminate",
+    "name": "Walnut Raw",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-raw-ys018",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "Neutral"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7399f5b3-e284-48ce-9912-6d2da39893e5/YS018-Walnut-Raw-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Raw is a fine straight grain with linear waves throughout.  It has a neutral stain.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "YS016",
+    "surface-group": "Laminate",
+    "name": "Walnut Wash",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/walnut-wash-ys016",
+    "species": [
+      "Walnut"
+    ],
+    "design_groups": [],
+    "cut": [
+      "Quarter",
+      "Rift"
+    ],
+    "match": [
+      "Random"
+    ],
+    "shade": [
+      "Light"
+    ],
+    "colors": [
+      "White"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e0c6cc14-8ef7-4c0f-b5f1-d95d3b107a34/YS016-Walnut-Wash-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 855,
+      "ratio": 2.3392
+    },
+    "no_repeat": false,
+    "description": "Walnut Wash YS016 Laminate offers a directional-specific fine straight wood grain with GREENGUARD Gold Certificate. Request a custom color sample today!",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.56
+    }
+  },
+  {
+    "code": "5037",
+    "surface-group": "Laminate",
+    "name": "Anzio Marble",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/anzio-marble-5037",
+    "finish": [
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      }
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6bed8c22-3ebb-430e-a436-aa79b9f10063/5037-Anzio-Marble_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Anzio Marble is a medium scaled, directional design with subdued warm grey to taupe veining.",
+    "sheet_sizes": [
+      "3' x 8'",
+      "4' x 8'",
+      "4' x 10'",
+      "4' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0848",
+    "surface-group": "Laminate",
+    "name": "Rugby",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rugby-y0848",
+    "finish": [
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "performance_enhancements": [],
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/48b4fdf6-7424-40d0-adb8-2c7925bac732/Y0848-Rugby-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Rugby is a brown pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "L6448",
+    "surface-group": "Laminate",
+    "name": "Ribboned Matte Silver",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2707/s/ribboned-matte-silver-l6448/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A crisp light grey with a matte sheen featured in an irregular corrugated texture.",
+    "sheet_sizes": [
+      "4' x 8'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6447",
+    "surface-group": "Laminate",
+    "name": "Ribboned Satin Brushed Aged Gold",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2706/s/ribboned-satin-brushed-aged-gold-l6447/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Gold in color with a warm brown undertone in a satin sheen with a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6446",
+    "surface-group": "Laminate",
+    "name": "Ribboned Satin Brushed Penny",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2705/s/ribboned-satin-brushed-penny-l6446/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Copper in color with a hint of bronze in a satin sheen with a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6445",
+    "surface-group": "Laminate",
+    "name": "Ribboned Satin Brushed Palladium",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2704/s/ribboned-satin-brushed-palladium-l6445/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A warm grey silver color with a satin sheen in a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6444",
+    "surface-group": "Laminate",
+    "name": "Ribboned Brite Brushed Sterling",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2703/s/ribboned-brite-brushed-sterling-l6444/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6443",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Penny",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2702/s/satin-brushed-penny-l6443/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Copper in color with a hint of bronze in a satin sheen with a long-line brush.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6442",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Palladium",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2701/s/satin-brushed-palladium-l6442/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A warm grey silver color with a satin sheen in a long-line brush.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "L6441",
+    "surface-group": "Laminate",
+    "name": "Brite Brushed Sterling",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2700/s/brite-brushed-sterling-l6441/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6202",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Nickel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2529/s/satin-brushed-nickel-6202/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a light warm grey undertone.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6201",
+    "surface-group": "Laminate",
+    "name": "Satin White Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2528/s/satin-white-bronze-6201/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a hint of gold undertone.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6200",
+    "surface-group": "Laminate",
+    "name": "Oiled Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2527/s/oiled-bronze-6200/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, dark or oiled bronze color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6102",
+    "surface-group": "Laminate",
+    "name": "Matte Gunmetal Grey",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2526/s/matte-gunmetal-grey-6102/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A dark warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [
+      "4' x 10'",
+      "4' x 8'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6101",
+    "surface-group": "Laminate",
+    "name": "Matte Grey Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2525/s/matte-grey-bronze-6101/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A medium warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [
+      "4' x 10'",
+      "4' x 8'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6100",
+    "surface-group": "Laminate",
+    "name": "Matte Pewter",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2524/s/matte-pewter-6100/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "A light warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [
+      "4' x 10'",
+      "4' x 8'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "S6501",
+    "surface-group": "Laminate",
+    "name": "Crystal Steel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2523/s/crystal-steel-s6501/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Steel with a galvanized look in a cool silver color with slight color variation within the sheet and from sheet to sheet. This metal sheet has magnetic properties.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6296",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Black Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2517/s/satin-brushed-black-aluminum-6296/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, black in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6284",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Copper Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2516/s/brushed-copper-6284/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Orange"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, copper in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6281",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Smoke Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2515/s/satin-brushed-smoke-aluminum-6281/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium blue-grey in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6277",
+    "surface-group": "Laminate",
+    "name": "Alumasteel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2514/s/alumasteel-6277/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in long-line brush, satin sheen, silver in color with slight grey undertone.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6262",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Medium Bronze Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2513/s/satin-brushed-medium-bronze-aluminum-6262/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium bronze color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6261",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Lite Bronze Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2512/s/satin-brushed-lite-bronze-aluminum-6261/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, light bronze color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6258",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Gold Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2511/s/satin-brushed-gold-aluminum-6258/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, gold in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6257",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2510/s/satin-brushed-natural-aluminum-6257/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in subtle short-line brush, satin sheen, cool silver in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6256",
+    "surface-group": "Laminate",
+    "name": "Brite Brushed Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2509/s/brite-brushed-natural-aluminum-6256/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, bright sheen, cool silver in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6255",
+    "surface-group": "Laminate",
+    "name": "Polished Gold Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2508/s/polished-gold-aluminum-6255/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Polished aluminum, gold in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6252",
+    "surface-group": "Laminate",
+    "name": "Matte Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2507/s/matte-natural-aluminum-6252/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Aluminum in subtle short-line brush, matte sheen, cool silver in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "6251",
+    "surface-group": "Laminate",
+    "name": "Polished Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2506/s/polished-natural-aluminum-6251/category/53/",
+    "specialty_features": [
+      "Decorative Metals"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": false,
+    "description": "Polished aluminum, silver in color.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 10'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "Y0857",
+    "surface-group": "Laminate",
+    "name": "Santiam",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/santiam-y0857",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Brown"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5725ecb9-c9dd-4571-90f2-889bf98e0aa0/Y0857-Santiam",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Santiam is a brown pattern with a grey cast that uses using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0858",
+    "surface-group": "Laminate",
+    "name": "Carnival",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/carnival-y0858",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Red"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6461a00f-95d8-419b-912a-8f7c4fc651ff/Y0858-Carnival",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Carnival is a light pink pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0856",
+    "surface-group": "Laminate",
+    "name": "Evergreen",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/evergreen-y0856",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Green"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/bf817c0b-0663-4510-81d7-1c07e6c4313b/Y0856-EVERGREEN-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Evergreen is a medium desaturated green pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0854",
+    "surface-group": "Laminate",
+    "name": "Bakelite Gold",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/bakelite-gold-y0854",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/bbafa43e-42e1-44ee-a310-704c392c5d07/Y0854-Bakelite-Gold-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Bakelite Gold is a yellow pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0853",
+    "surface-group": "Laminate",
+    "name": "Persimmon",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/persimmon-y0853",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Red"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/7865af31-9805-487e-8c58-dd46abd52216/Y0853-Persimmon-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Persimmon is a terra cotta pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0849",
+    "surface-group": "Laminate",
+    "name": "Jean",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/jean-y0849",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/826a4b1f-e4bd-404c-94c6-5d82f21d6a33/Y0849-Jean-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Jean is a dark denim blue pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0847",
+    "surface-group": "Laminate",
+    "name": "Tewkesbury",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/tewkesbury-y0847",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/8b3f7d88-8ae4-4753-a60a-306a6cbe80e6/Y0847-Tewkesbury-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Tewkesbury is a mustard yellow pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0846",
+    "surface-group": "Laminate",
+    "name": "Southern Cross",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/southern-cross-y0846",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3733d1f4-22af-4fe2-ad9d-1dfca7c1705e/Y0846-Southern-Cross-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Southern Cross is a light grey pattern with a greenish cast that uses using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0845",
+    "surface-group": "Laminate",
+    "name": "Spritz",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/spritz-y0845",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/1a9b3330-fb7f-44e5-9752-60fb281ba049/Y0845-Spritz-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Spritz is a light blue pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0844",
+    "surface-group": "Laminate",
+    "name": "Rose Dust",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rose-dust-y0844",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Red"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/b3d3f728-979d-49a0-9338-fb4215c50260/Y0844-Rose-Dust-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Rose Dust is a medium pink pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0842",
+    "surface-group": "Laminate",
+    "name": "Aegean Sea",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/aegean-sea-y0842",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9f51672c-524b-4580-b241-76acd722884b/Y0842-Aegean-Sea-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Aegean Teal is a medium teal blue pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0839",
+    "surface-group": "Laminate",
+    "name": "Admiral",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/admiral-y0839",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "no_repeat": true,
+    "description": "Admiral is a dark blue pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "Y0838",
+    "surface-group": "Laminate",
+    "name": "Palace",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/palace-y0838",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Purple"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e461071f-f35c-447e-8cca-a5d0af1f483f/Y0838-Palace-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Palace is a purple pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0837",
+    "surface-group": "Laminate",
+    "name": "Razzle",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/razzle-y0837",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/c990d4c0-9061-490b-83ec-d19c4f4264da/Y0837-Razzle-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Razzle is a bright blue pattern using subtle stippling to create a near solid",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0835",
+    "surface-group": "Laminate",
+    "name": "Rendezvous",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/rendezvous-y0835",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Blue"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/eb12e1cd-f1f1-4811-87db-76683c97b452/Y0835-Rendezvous-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Rendezvous is a teal blue pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0834",
+    "surface-group": "Laminate",
+    "name": "Savina",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/savina-y0834",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Red"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e5e110b6-79c9-4312-a805-7b91b6c6626c/Y0834-Savina-5X12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Savina is a red pattern using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0833",
+    "surface-group": "Laminate",
+    "name": "Sea Side",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/sea-side-y0833",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/88211335-5069-4a50-be73-5137923fc7c7/Y0833-Sea-Side-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Sea Side is a light grey pattern with a green cast that uses using subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "Y0831",
+    "surface-group": "Laminate",
+    "name": "Let It Rain",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/let-it-rain-y0831",
+    "specialty_features": [
+      "No Repeat"
+    ],
+    "design_groups": [],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Gray"
+    ],
+    "finish": [],
+    "performance_enhancements": [],
+    "design_collections": [],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f404add6-b2ea-480e-9d11-15c710c77866/Y0831-Let-It-Rain-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Let It Rain is a light grey pattern with a purple cast that uses subtle stippling to create a near solid.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "AVORIO GRANITE",
+    "surface-group": "Laminate",
+    "name": "Avorio Granite",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/10776/s/avorio-granite-13119/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6045390a-2149-48c6-8bfd-dfb1d37c056a/13119-Avorio-Granite_150dpi-tif",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Avorio Granite is a light grey granite structure with delicate accents of light blue and warm taupe.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "NORTH BRIDGE",
+    "surface-group": "Laminate",
+    "name": "North Bridge",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/10775/s/north-bridge-5073/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/f98b7832-e1a1-4763-86ac-bf122fcbf90f/5073-North-Bridge_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 843,
+      "ratio": 2.3725
+    },
+    "no_repeat": true,
+    "description": "North Bridge is a white based quartz structure with a delicate network of thin veins, alternating between warm and cool tones.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.29
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60.7
+    }
+  },
+  {
+    "code": "FANTASY BROWN",
+    "surface-group": "Laminate",
+    "name": "Fantasy Brown",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/10774/s/fantasy-brown-5072/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/1bb76b73-bc57-46a7-b8df-61fd673fbe2d/5072-Fantasy-Brown_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1264,
+      "ratio": 1.5823
+    },
+    "no_repeat": false,
+    "description": "Fantasy Brown is a linear quartzite structure with a harmonious blend of taupe, soft grey, and crisp white colors.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.92
+    }
+  },
+  {
+    "code": "CHARRED MAPLE",
+    "surface-group": "Laminate",
+    "name": "Charred Maple",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/9357/s/charred-maple-y0761/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/bb55a8db-12b6-4ce1-ab1e-0089157ba99f/Y0761-Charred-Maple-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 852,
+      "ratio": 2.3474
+    },
+    "no_repeat": false,
+    "description": "Charred Maple is a large-scale blackened maple with beige undertones and distinct knots and cathedrals.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.34
+    }
+  },
+  {
+    "code": "EB104",
+    "surface-group": "Laminate",
+    "name": "Flint",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/flint-eb104",
+    "no_repeat": false,
+    "description": "warm dark-tone grey",
+    "sheet_sizes": [
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "EB103",
+    "surface-group": "Laminate",
+    "name": "White",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/white-eb103",
+    "no_repeat": false,
+    "description": "Solid white color",
+    "sheet_sizes": [
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "EB102",
+    "surface-group": "Laminate",
+    "name": "Grey",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/grey-eb102",
+    "no_repeat": false,
+    "description": "Solid light grey",
+    "sheet_sizes": [
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "EB101",
+    "surface-group": "Laminate",
+    "name": "Black",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/black-eb101",
+    "no_repeat": false,
+    "description": "Solid black Color",
+    "sheet_sizes": [
+      "5' x 8'",
+      "5' x 10'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "D514",
+    "surface-group": "Laminate",
+    "name": "Markerboard White",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/markerboard-white-d514",
+    "no_repeat": false,
+    "description": "Solid white color",
+    "sheet_sizes": [
+      "4' x 8'",
+      "4' x 12'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MIDNIGHT CARNIVAL",
+    "surface-group": "Laminate",
+    "name": "Midnight Carnival",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/10417/s/midnight-carnival-5061/category/53/",
+    "no_repeat": false,
+    "description": "Midnight Carnival is a dense dark taupe granite structure featuring large scale black, cream and grey colored accents.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'",
+      "5' x 8'",
+      "5' x 10'",
+      "4' x 10'",
+      "4' x 12'"
+    ],
+    "texture_scale": {
+      "width": 62.5,
+      "height": 55
+    }
+  },
+  {
+    "code": "ATRIUM TEAK",
+    "surface-group": "Laminate",
+    "name": "Atrium Teak",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/9507/s/atrium-teak-y0802/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a6623890-2188-4a89-a06d-637626224874/Y0802-Atrium-Teak-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Atrium Teak is a stylish linear wood look in pale shades of brown and light grey.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "SUMNER OAK",
+    "surface-group": "Laminate",
+    "name": "Sumner Oak",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/9411/s/sumner-oak-17014/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d7d24bfc-6dc8-4847-9906-af27f5495245/17014-57-Sumner-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Sumner Oak delivers the timelessness of classic white with the casualness and comfort of an embossed and plain sliced aligned oak finish.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "EDGE GRAIN",
+    "surface-group": "Laminate",
+    "name": "Edge Grain",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/9328/s/edge-grain-y0759/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d47e9df7-425e-4609-b651-521d3ae08fd5/Y0759-Edge-Grain-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 852,
+      "ratio": 2.3474
+    },
+    "no_repeat": false,
+    "description": "Edge Grain is a micro planked woodgrain in multiple shades of gray with colored accents throughout.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.34
+    }
+  },
+  {
+    "code": "SMOKED WALNUT",
+    "surface-group": "Laminate",
+    "name": "Smoked Walnut",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/8979/s/smoked-walnut-y0639/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/e07151e4-6d9f-4088-ae58-d772ba3ddb76/Y0639-Smoked-Walnut-2-6-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "4",
+    "surface-group": "Laminate",
+    "name": "Indigo Shibori",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/iced-mint-y0686-4",
+    "no_repeat": false,
+    "description": "Indigo Shibori is a large-scale dark blue pattern inspired by hand died silk in indigo and white.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 29.8,
+      "height": 21.83
+    }
+  },
+  {
+    "code": "3",
+    "surface-group": "Laminate",
+    "name": "Gris Deco",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/iced-mint-y0686-3",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/24a9f348-0b81-4332-bfcf-12ca654c2505/Y0689-Gris-Deco-5x12_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 856,
+      "ratio": 2.3364
+    },
+    "no_repeat": false,
+    "description": "Gris Deco is a medium-scale graphic art deco pattern in medium and dark grey colors.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.63
+    }
+  },
+  {
+    "code": "YAKI OAK",
+    "surface-group": "Laminate",
+    "name": "Yaki Oak",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/7135/s/yaki-oak-y0621/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/0ddc783c-8398-4803-b930-2f6555244713/Y0621-Yaki-Oak-4x8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1020,
+      "ratio": 1.9608
+    },
+    "no_repeat": false,
+    "description": "Yaki Oak is a large scale charred wood design in deep charcoal and black.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 96,
+      "height": 48.96
+    }
+  },
+  {
+    "code": "NORDIC LINEN",
+    "surface-group": "Laminate",
+    "name": "Nordic Linen",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6946/s/nordic-linen-5016/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d533b60d-ff06-453b-a36c-d031e8c43a32/5015-Nordic-Linen",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "EBONY MODERN CH...",
+    "surface-group": "Laminate",
+    "name": "Ebony Modern Chevron",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6932/s/ebony-modern-chevron-y0595/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/77b2515f-5921-471f-919b-d1db050345a9/Y0595-Ebony-Modern-Chevron",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
+    },
+    "no_repeat": true,
+    "description": "Ebony Modern Cheveron is a large scale pieced chevron in a black ash and bleached ash.  The pattern is a pieced modern interpretation of a chevron.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 36
+    },
+    "texture_scale": {
+      "width": 60,
+      "height": 36
+    }
+  },
+  {
+    "code": "BIG ISLAND KOA",
+    "surface-group": "Laminate",
+    "name": "Big Island Koa",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6926/s/big-island-koa-y0587/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/111b38bc-252d-47e2-96c0-a3de960008d4/Y0587-Big-Island-Koa-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Big Island Koa is a large scale warm gold and red pattern full of a wavy grain characteristic of Koa",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "MAUI FALLS",
+    "surface-group": "Laminate",
+    "name": "Maui Falls",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6853/s/maui-falls-y0583/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/58c3f0d4-b0f4-4788-a0dd-f48f57e4d31e/Y0583-Maui-Falls",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Maui Falls is a linear abstract pattern. The small scale overlapping transparent rectangles has a wash of bright blue allover with white and grey intermixed.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "LINEAR GRAPHITE",
+    "surface-group": "Laminate",
+    "name": "Linear Graphite",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6616/s/linear-graphite-y0496/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a3e26231-3197-4cf1-9804-944ef231c54c/Y0496-Linear-Graphite-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 853,
+      "ratio": 2.3447
+    },
+    "no_repeat": false,
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 25.59
+    }
+  },
+  {
+    "code": "1",
+    "surface-group": "Laminate",
+    "name": "Rancho Red Pine",
+    "product-link": "https://www.wilsonart.com/laminate/design-library/salem-chestnut-y0472-1",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/f98c08df-8f01-4de3-8eaf-293337a3b19e/Y0484-Rancho-Red-Pine_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 850,
+      "ratio": 2.3529
+    },
+    "no_repeat": true,
+    "description": "Rancho Red is a deep red planked woodgrain. The deep charcoals of the woodgrain show throught like time worn barnwood.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.5
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.2
+    }
+  },
+  {
+    "code": "BONE BIRCH",
+    "surface-group": "Laminate",
+    "name": "Bone Birch",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6161/s/bone-birch-y0425/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/62d5621f-0a52-4b35-b277-4b2c96c6c8d5/Y0425-Bone-Birch-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Bone Birch is a  midtone warm grey small scale pattern. The pattern come from hand troweled plaster.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "REPURPOSED OAK ...",
+    "surface-group": "Laminate",
+    "name": "Repurposed Oak Planked",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6233/s/repurposed-oak-planked-y0364/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/6fcd779f-4938-46c6-b1e6-9dbdec7b4545/Y0364-Repurposed-Oak-Plank_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "An oak barnwood that is planked with light and dark naturally occurring color variations..",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "BURNISHED  COPPER",
+    "surface-group": "Laminate",
+    "name": "Burnished Copper",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6032/s/burnished-copper-y0389/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/9dca6a1b-74a3-4b6a-a3cd-2b60fe3d243e/Y0389-Burnished-Copper-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Burnished Copper is a deep red brown metal color made by a soft crossweave pattern.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "FOUNTAIN PENNY",
+    "surface-group": "Laminate",
+    "name": "Fountain Penny",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6029/s/fountain-penny-y0386/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3f479991-3d63-4440-861c-d16a49d8eeb5/Y0386-Fountain-Penny-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Fountain Penny is made by a crossweave pattern in a beautiful deep red copper metal color, like a penny found in a fountain.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "WEATHERED BRONZE",
+    "surface-group": "Laminate",
+    "name": "Weathered Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6027/s/weathered-bronze-y0384/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/dd0df71f-83b0-4215-8131-d3cd394138c9/Y0384-Weathered-Bronze-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Weathered Bronze is a metal color in dark charcoal made by a subtle crossweave pattern.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "BURNISHED  BRONZE",
+    "surface-group": "Laminate",
+    "name": "Burnished Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6026/s/burnished-bronze-y0383/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3b37f847-e950-43a6-92d4-7596ca75d715/Y0383-Burnished-Bronze-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "This Burnished Bronze metal color is a rich brown created with a crossweave pattern.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "RADIANT BRASS",
+    "surface-group": "Laminate",
+    "name": "Radiant Brass",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/6022/s/radiant-brass-y0377/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/a8673d72-78b0-4e31-9a46-e498b36d2138/Y0377_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": true,
+    "description": "Radiant Brass is a rich aged gold metal color made by a subtle crossweave pattern.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.47
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "REDISCOVERED OA...",
+    "surface-group": "Laminate",
+    "name": "Rediscovered Oak Planked",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4325/s/rediscovered-oak-planked-y0303/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/775bc9a0-9918-4336-abd2-d022a28bae56/Y0303K-Rediscovered-Oak-Planked_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Rediscovered Oak Planked has weathered, planked features in pale to medium oak tones.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "REDISCOVERED OAK",
+    "surface-group": "Laminate",
+    "name": "Rediscovered Oak",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4324/s/rediscovered-oak-y0299/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/d3131e5a-d5f5-4f94-a138-24036380f326/Y0299-Rediscovered-oak-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": false,
+    "description": "Rediscovered Oak is an aged pale oak with large barnwood features.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "TIMBERWOLF ALONA",
+    "surface-group": "Laminate",
+    "name": "Timberwolf Alona",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4315/s/timberwolf-alona-y0288/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/5ba0c6f9-d82b-410f-8f58-7789382cdddd/Y0288-Timberwolf-alona-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 835,
+      "ratio": 2.3952
+    },
+    "no_repeat": false,
+    "description": "Timberwolf Alona has strong cathedrals in a plain sliced open grain oak look in a balanced combination of brown and grey.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60.12
+    }
+  },
+  {
+    "code": "NOIR TIMBER",
+    "surface-group": "Laminate",
+    "name": "Noir Timber",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4313/s/noir-timber-y0327/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3192a0cf-df95-412e-b50d-73829642a315/Y0327-Noir-timber-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": true,
+    "description": "Noir Timber is a bold planked wood pattern with highly contrasted tones of light to dark grey.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 24.99
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "ANTIQUE COGNAC ...",
+    "surface-group": "Laminate",
+    "name": "Antique Cognac Pine",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4306/s/antique-cognac-pine-y0306/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/40699830-7874-49d8-b978-037df66eadae/Y0306-Antique-cognac-pine-full",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": true,
+    "description": "Antique Cognac Pine is a distinctive planked pine look in aged amber and deep sepia tones.",
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 24.99
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "OCEAN WOOD",
+    "surface-group": "Laminate",
+    "name": "Ocean Wood",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4293/s/ocean-wood-y0323/category/53/",
+    "no_repeat": false,
+    "description": "Ocean Wood is a clean white faux bois woodgrain on a turquoise ground.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 12'"
+    ],
+    "texture_scale": {
+      "width": 8,
+      "height": 4
+    }
+  },
+  {
+    "code": "EBON WOOD",
+    "surface-group": "Laminate",
+    "name": "Ebon Wood",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/4288/s/ebon-wood-y0317/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3ba7feb4-7bc2-4c49-8ba3-da9ea4a2190e/Y0317-Ebon-Wood-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "description": "Ebon Wood is an inverse faux woodgrain in white on black.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  },
+  {
+    "code": "RIBBONED BRITE ...",
+    "surface-group": "Laminate",
+    "name": "Ribboned Brite Brushed Sterling",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2703/s/ribboned-brite-brushed-sterling-l6444/category/53/",
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "RIBBONED SATIN ...",
+    "surface-group": "Laminate",
+    "name": "Ribboned Satin Brushed Aged Gold",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2706/s/ribboned-satin-brushed-aged-gold-l6447/category/53/",
+    "no_repeat": false,
+    "description": "Gold in color with a warm brown undertone in a satin sheen with a long-line brush featured in an irregular corrugated texture.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED P...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Penny",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2702/s/satin-brushed-penny-l6443/category/53/",
+    "no_repeat": false,
+    "description": "Copper in color with a hint of bronze in a satin sheen with a long-line brush.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "RIBBONED MATTE ...",
+    "surface-group": "Laminate",
+    "name": "Ribboned Matte Silver",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2707/s/ribboned-matte-silver-l6448/category/53/",
+    "no_repeat": false,
+    "description": "A crisp light grey with a matte sheen featured in an irregular corrugated texture.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "BRITE BRUSHED S...",
+    "surface-group": "Laminate",
+    "name": "Brite Brushed Sterling",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2700/s/brite-brushed-sterling-l6441/category/53/",
+    "no_repeat": false,
+    "description": "A cool sterling silver with a bright sheen in a long-line brush.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MATTE GUNMETAL ...",
+    "surface-group": "Laminate",
+    "name": "Matte Gunmetal Grey",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2526/s/matte-gunmetal-grey-6102/category/53/",
+    "no_repeat": false,
+    "description": "A dark warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED N...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Nickel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2529/s/satin-brushed-nickel-6202/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a light warm grey undertone.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN WHITE BRONZE",
+    "surface-group": "Laminate",
+    "name": "Satin White Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2528/s/satin-white-bronze-6201/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, silver in color with a hint of gold undertone.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "OILED BRONZE",
+    "surface-group": "Laminate",
+    "name": "Oiled Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2527/s/oiled-bronze-6200/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, dark or oiled bronze color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MATTE GREY BRONZE",
+    "surface-group": "Laminate",
+    "name": "Matte Grey Bronze",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2525/s/matte-grey-bronze-6101/category/53/",
+    "no_repeat": false,
+    "description": "A medium warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MATTE PEWTER",
+    "surface-group": "Laminate",
+    "name": "Matte Pewter",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2524/s/matte-pewter-6100/category/53/",
+    "no_repeat": false,
+    "description": "A light warm grey with moderate tonal and color variation in a linear formation within the sheet and from sheet to sheet.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "CRYSTAL STEEL",
+    "surface-group": "Laminate",
+    "name": "Crystal Steel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2523/s/crystal-steel-s6501/category/53/",
+    "no_repeat": false,
+    "description": "Steel with a galvanized look in a cool silver color with slight color variation within the sheet and from sheet to sheet. This metal sheet has magnetic properties.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED C...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Copper Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2516/s/brushed-copper-6284/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, copper in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED S...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Smoke Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2515/s/satin-brushed-smoke-aluminum-6281/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium blue-grey in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "ALUMASTEEL",
+    "surface-group": "Laminate",
+    "name": "Alumasteel",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2514/s/alumasteel-6277/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in long-line brush, satin sheen, silver in color with slight grey undertone.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED B...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Black Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2517/s/satin-brushed-black-aluminum-6296/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, black in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED M...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Medium Bronze Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2513/s/satin-brushed-medium-bronze-aluminum-6262/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, medium bronze color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED L...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Lite Bronze Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2512/s/satin-brushed-lite-bronze-aluminum-6261/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, light bronze color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "SATIN BRUSHED G...",
+    "surface-group": "Laminate",
+    "name": "Satin Brushed Gold Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2511/s/satin-brushed-gold-aluminum-6258/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, satin sheen, gold in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "POLISHED GOLD A...",
+    "surface-group": "Laminate",
+    "name": "Polished Gold Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2508/s/polished-gold-aluminum-6255/category/53/",
+    "no_repeat": false,
+    "description": "Polished aluminum, gold in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MATTE NATURAL A...",
+    "surface-group": "Laminate",
+    "name": "Matte Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2507/s/matte-natural-aluminum-6252/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in subtle short-line brush, matte sheen, cool silver in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "POLISHED NATURA...",
+    "surface-group": "Laminate",
+    "name": "Polished Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2506/s/polished-natural-aluminum-6251/category/53/",
+    "no_repeat": false,
+    "description": "Polished aluminum, silver in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "BRITE BRUSHED N...",
+    "surface-group": "Laminate",
+    "name": "Brite Brushed Natural Aluminum",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2509/s/brite-brushed-natural-aluminum-6256/category/53/",
+    "no_repeat": false,
+    "description": "Aluminum in short-line brush, bright sheen, cool silver in color.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "MAGNATA",
+    "surface-group": "Laminate",
+    "name": "Magnata",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2432/s/magnata-1880/category/53/",
+    "no_repeat": false,
+    "description": "This dramatic special stone pattern has a black background with striking streaks of gold and white crystals.",
+    "sheet_sizes": [
+      "4' x 8'",
+      "5' x 10'",
+      "5' x 12'",
+      "5' x 8'"
+    ],
+    "texture_scale": {
+      "width": 61.42,
+      "height": 51.18
+    }
+  },
+  {
+    "code": "MASON MILK PAINT",
+    "surface-group": "Laminate",
+    "name": "Mason Milk Paint",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/2304/s/mason-milk-paint-y0055/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/08f44fdf-1587-4da5-aa64-94d89896e2ac/Y0055_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 833,
+      "ratio": 2.401
+    },
+    "no_repeat": true,
+    "sheet_sizes": [],
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 24.99
+    },
+    "texture_scale": {
+      "width": 144,
+      "height": 60
+    }
+  },
+  {
+    "code": "LUNA NIGHT",
+    "surface-group": "Laminate",
+    "name": "Luna Night",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/978/s/luna-night-1854/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/12ca72aa-ebe6-4576-a964-31c021a15f23/1854_9",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "A medium scale abstract. Black and dark grey laminate design come together to create this low contrast monochromatic design.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "SILVER TRAVERTINE",
+    "surface-group": "Laminate",
+    "name": "Silver Travertine",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/982/s/silver-travertine-1858/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/0c362e9e-6f5d-4232-b791-23e7da80636c/1858-Silver-Travertine",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
+    },
+    "no_repeat": false,
+    "description": "Off-white, taupe and grey laminate design are blended to create this medium scale travertine with contrast and irregular movement.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 37.5
+    }
+  },
+  {
+    "code": "MYSTIQUE NIGHT",
+    "surface-group": "Laminate",
+    "name": "Mystique Night",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/83/s/mystique-night-4760/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/30bc16f2-7d97-42ff-8598-cd6836d542a4/4760-Mystique-Night_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1514,
+      "ratio": 1.321
+    },
+    "no_repeat": false,
+    "description": "This design is part of the Non-Promoted Home Collection.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 45.42
+    }
+  },
+  {
+    "code": "MYSTIQUE MOONLIGHT",
+    "surface-group": "Laminate",
+    "name": "Mystique Moonlight",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/81/s/mystique-moonlight-4757/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/45409f6b-85f2-42e4-bc2c-25abf60e0d33/4757-Mystique-Moonlight_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1527,
+      "ratio": 1.3098
+    },
+    "no_repeat": false,
+    "description": "A small scale particulate laminate design. The off-white background has subtle hints of tan, under layers of grey particulates.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 60,
+      "height": 45.81
+    }
+  },
+  {
+    "code": "BLACKSTAR GRANITE",
+    "surface-group": "Laminate",
+    "name": "Blackstar Granite",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/47/s/blackstar-granite-4551/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/7db54eb9-cbfc-40c7-823e-86e902cb8542/4551-Blackstar-Granite_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000,
+      "ratio": 2
+    },
+    "no_repeat": false,
+    "description": "A small scale Granite laminate design with a blend of dark grey, black, and light grey with accents of soft coral.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "EBONY STAR",
+    "surface-group": "Laminate",
+    "name": "Ebony Star",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/48/s/ebony-star-4552/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/676e81cd-ad04-461c-8c4b-503cdd11ee33/4552-Ebony-Star_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000,
+      "ratio": 2
+    },
+    "no_repeat": false,
+    "description": "A small scale Granite laminate design particulate with various values of black, accented with white.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
+  },
+  {
+    "code": "GRANITE",
+    "surface-group": "Laminate",
+    "name": "Granite",
+    "product-link": "https://www.wilsonart.com/catalog/product/view/id/46/s/granite-4550/category/53/",
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/11d40584-572a-472b-bd52-99f1be71b33f/4550-Granite_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000,
+      "ratio": 2
+    },
+    "no_repeat": false,
+    "description": "A small scale Granite laminate design with a blend of taupe, black, white and accents of coral.",
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 96,
+      "height": 48
+    }
   }
 ]
