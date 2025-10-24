@@ -189,7 +189,7 @@ table.grid tbody td {
 }
 .pill {
   display: inline-block; padding: 3px 8px; margin: 2px 4px 2px 0;
-  font-size: 12px; border-radius: 999px;
+  font-size: 12px; border-radius: 8px;
   background: var(--pill-bg); color: #d9e0ee;
   border: 1px solid #222638;
 }
@@ -269,7 +269,7 @@ img { image-rendering: -webkit-optimize-contrast; }
   background: rgba(0,0,0,.4);
   border: 1px solid rgba(255,255,255,.12);
   color: var(--text);
-  border-radius: 999px;
+  border-radius: 16px;
   width: 32px;
   height: 32px;
   font-size: 20px;

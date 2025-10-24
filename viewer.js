@@ -475,7 +475,7 @@ function injectViewerStyles() {
   if (document.getElementById('viewer-inline-styles')) return;
   const css = `
   /* Pills */
-  .pill { display:inline-block; padding:2px 6px; border-radius:999px; background:rgba(0,0,0,.06); margin:2px; font-size:12px; }
+  .pill { display:inline-block; padding:2px 6px; border-radius:8px; background:rgba(0,0,0,.06); margin:2px; font-size:12px; }
 
   /* Row numbering */
   .col-index { width:48px; min-width:48px; text-align:right; font-weight:600; color:#444; font-variant-numeric:tabular-nums; }

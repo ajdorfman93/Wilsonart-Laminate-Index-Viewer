@@ -41848,8 +41848,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.5,
-      "height": 51.2
+      "width": 96,
+      "height": 58.61
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/319b3ebb-5ca2-4152-83da-a1ac6ac749dd/8229-Friston-Ash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1221,
+      "ratio": 1.638
     }
   },
   {
@@ -41957,8 +41963,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 43.3,
-      "height": 30.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/f671273e-2b93-45f5-99c5-6868b9b856ab/8227-White-River-Forest_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -42015,8 +42027,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 43.3,
-      "height": 30.5
+      "width": 96,
+      "height": 60.19
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e45b67fd-ffb5-4777-832a-4cea5836ca26/8226-Dering-Forest_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1254,
+      "ratio": 1.5949
     }
   },
   {
@@ -42074,8 +42092,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 43.3,
-      "height": 30.5
+      "width": 96,
+      "height": 60.19
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8c1ad448-3403-433b-bd1e-669bd349fa6a/8225-Randolph-Forest-approved",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1254,
+      "ratio": 1.5949
     }
   },
   {
@@ -42561,8 +42585,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 39.2
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b8a0a6c0-a668-465a-a4f2-b69575fe7e6e/17012-Mercer-Oak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -44080,8 +44110,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 61.75,
-      "height": 49.75
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/b8451aef-3fa7-486b-bef6-53ce2d38b03c/8217-Italian-Silver-Ash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -45958,8 +45994,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 39.2
+      "width": 96,
+      "height": 57.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6ebbb2b5-95df-4cce-8083-78406c0b279f/17004K-Carter-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1198,
+      "ratio": 1.6694
     }
   },
   {
@@ -46006,8 +46048,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 39.2
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a280d0c0-bd4e-4a12-8b53-3c77a7ab8f60/17003-Stickley-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -46108,8 +46156,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 39.2
+      "width": 96,
+      "height": 58.46
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/3ff853fe-452d-4110-abd7-01faf23c7b3a/17001-Ruskin_Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1218,
+      "ratio": 1.642
     }
   },
   {
