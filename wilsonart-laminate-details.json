@@ -16300,8 +16300,14 @@
       "5' x 8'"
     ],
     "texture_scale": {
-      "width": 62.5,
-      "height": 51.18
+      "width": 96,
+      "height": 58.34
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/5/0/5058k-18_titanium_alloy_webfullsheet.jpg",
+    "texture_image_pixels": {
+      "width": 1578,
+      "height": 959,
+      "ratio": 1.6455
     }
   },
   {
@@ -16357,8 +16363,14 @@
       "5' x 8'"
     ],
     "texture_scale": {
-      "width": 62.5,
-      "height": 51.18
+      "width": 96,
+      "height": 58.34
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/5/0/5057k-18_pearl_alloy_webfullsheet.jpg",
+    "texture_image_pixels": {
+      "width": 1578,
+      "height": 959,
+      "ratio": 1.6455
     }
   },
   {
@@ -17173,8 +17185,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 59.06,
-      "height": 51.18
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/4/9/4995-60-forged-steel-full-sheet.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1500,
+      "ratio": 1.6
     }
   },
   {
@@ -17237,8 +17255,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 31,
-      "height": 11.33
+      "width": 96,
+      "height": 48
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/4/8/4830-Full_Sheet_2400.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1200,
+      "ratio": 2
     }
   },
   {
@@ -17295,8 +17319,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 21.65,
-      "height": 20.47
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://images.wilsonart.com/media/catalog/product/4/7/4795_windsweptpewter.jpg",
+    "texture_image_pixels": {
+      "width": 2400,
+      "height": 1500,
+      "ratio": 1.6
     }
   },
   {
