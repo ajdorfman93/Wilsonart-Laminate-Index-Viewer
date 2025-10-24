@@ -1,5 +1,5 @@
 /* viewer.js
-   Renders wilsonart-laminate-details.json with thumbnails and filters.
+   Renders Wilsonart laminate detail datasets (HPL + TFL) with thumbnails and filters.
    Requires Filters (filters.js) to be loaded before this file.
 
    UPDATE: If a row has `banner_cropped: true`, we crop exactly 93 source pixels
@@ -7,7 +7,10 @@
    intrinsic pixels, independent of display scale. Applies to thumbnails and lightbox.
 */
 
-const DEFAULT_URL = './wilsonart-laminate-details.json';
+const DEFAULT_DATASETS = [
+  { url: './wilsonart-laminate-details.json', type: 'HPL' },
+  { url: './wilsonart-tfl-laminate-details.json', type: 'TFL' },
+];
 
 // Inject minimal CSS
 injectViewerStyles();
@@ -37,6 +40,7 @@ const COLUMNS = [
   { key: 'name', label: 'Name', render: (r) => safe(r.name) },
   { key: 'product-link', label: 'Link', render: (r) => r['product-link'] ? `<a class="link" href="${escapeAttr(r['product-link'])}" target="_blank" rel="noopener">Open</a>` : '' },
   { key: 'surface-group', label: 'Surface', render: (r) => safe(r['surface-group']) },
+  { key: 'type', label: 'Type', render: (r) => safe(r.type) },
 
   { key: 'design_groups', label: 'Design', render: renderPills },
   { key: 'colors', label: 'Colors', render: renderPills },
@@ -68,6 +72,33 @@ function mk(sel, tag = 'div') {
 function safe(v) { return v == null ? '' : String(v); }
 function escapeAttr(v) { return String(v).replace(/"/g, '&quot;'); }
 function normalizeArray(v) { return v == null ? [] : (Array.isArray(v) ? v : [v]); }
+
+function ensureType(records, fallbackType) {
+  if (!Array.isArray(records)) return [];
+  const fallback = typeof fallbackType === 'string' ? fallbackType.trim() : '';
+  for (let i = 0; i < records.length; i += 1) {
+    const row = records[i];
+    if (!row || typeof row !== 'object') continue;
+    const raw = row.type;
+    if (typeof raw === 'string') {
+      const trimmed = raw.trim();
+      if (trimmed) row.type = trimmed;
+      else if (fallback) row.type = fallback;
+      else row.type = undefined;
+    } else if ((raw == null || raw === '') && fallback) {
+      row.type = fallback;
+    }
+  }
+  return records;
+}
+
+function inferTypeFromFileName(name) {
+  if (!name) return '';
+  const lower = String(name).toLowerCase();
+  if (lower.includes('tfl')) return 'TFL';
+  if (lower.includes('laminate')) return 'HPL';
+  return '';
+}
 
 const COLUMN_ALIASES = {
   colors: ['color'],
@@ -213,12 +244,35 @@ function setStatus(msg) {
 }
 
 async function loadDefault() {
-  setStatus('Loading default JSON...');
+  setStatus('Loading default JSON files...');
   try {
-    const res = await fetch(DEFAULT_URL, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const json = await res.json();
-    rawData = annotateData(Array.isArray(json) ? json : []);
+    const datasetPromises = DEFAULT_DATASETS.map(async ({ url, type }) => {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error(`Failed to fetch ${url}: ${res.status} ${res.statusText}`);
+      }
+      let json;
+      try {
+        json = await res.json();
+      } catch (parseErr) {
+        throw new Error(`Invalid JSON from ${url}: ${parseErr.message}`);
+      }
+      const records = Array.isArray(json) ? json : [];
+      return ensureType(records, type);
+    });
+
+    const datasets = await Promise.all(datasetPromises);
+    const merged = [];
+    for (let i = 0; i < datasets.length; i += 1) {
+      const chunk = datasets[i];
+      if (!Array.isArray(chunk)) continue;
+      for (let j = 0; j < chunk.length; j += 1) {
+        merged.push(chunk[j]);
+      }
+    }
+
+    rawData = annotateData(merged);
+
     // init filters UI
     Filters.init({
       data: rawData,
@@ -231,7 +285,7 @@ async function loadDefault() {
       }
     });
   } catch (err) {
-    setStatus(`Failed to load default JSON (${err.message})`);
+    setStatus(`Failed to load default JSON files (${err.message})`);
     console.error(err);
   }
 }
@@ -381,7 +435,9 @@ if (fileEl) {
     try {
       const text = await file.text();
       const json = JSON.parse(text);
-      rawData = annotateData(Array.isArray(json) ? json : []);
+      const parsed = Array.isArray(json) ? json : [];
+      const fallbackType = inferTypeFromFileName(file.name);
+      rawData = annotateData(ensureType(parsed, fallbackType));
       Filters.init({
         data: rawData,
         containerId: 'filters',

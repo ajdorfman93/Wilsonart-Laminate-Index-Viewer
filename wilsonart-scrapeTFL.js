@@ -199,11 +199,34 @@ function sanitizeFilterUrl(href) {
 
 // Parse finish label like "# 38 Fine Velvet" -> { code:"#38", name:"Fine Velvet" }
 function parseFinish(label) {
-  const m = label.match(/#\s*(\d+)\s*(.*)$/);
-  if (m) return { code: `#${m[1]}`, name: cleanText(m[2]) || undefined };
-  const m2 = label.match(/^#\s*([A-Za-z].*)$/);
-  if (m2) return { code: undefined, name: cleanText(m2[1]) };
-  return { code: undefined, name: cleanText(label) };
+  const text = cleanText(label);
+  if (!text) return { code: undefined, name: undefined };
+
+  const digits = text.match(/^#?\s*(\d+)(?:\s*[-–—:\/]?\s*)?(.*)$/);
+  if (digits) {
+    const remainder = cleanText(digits[2]);
+    return {
+      code: `#${digits[1]}`,
+      name: remainder || undefined,
+    };
+  }
+
+  const alpha = text.match(/^#\s*([A-Za-z][A-Za-z0-9]*)\s*(.*)$/);
+  if (alpha) {
+    const remainder = cleanText(alpha[2]);
+    return {
+      code: `#${alpha[1].toUpperCase()}`,
+      name: remainder || undefined,
+    };
+  }
+
+  const hashOnly = text.match(/^#\s*(.*)$/);
+  if (hashOnly) {
+    const remainder = cleanText(hashOnly[1]);
+    return { code: undefined, name: remainder || undefined };
+  }
+
+  return { code: undefined, name: text };
 }
 
 // Retry wrapper for evaluate/$$eval that handles SPA context resets

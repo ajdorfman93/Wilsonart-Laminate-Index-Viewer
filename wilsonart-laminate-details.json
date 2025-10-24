@@ -10,7 +10,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Purple"
     ],
@@ -38,7 +40,10 @@
       "width": 2000,
       "height": 853,
       "ratio": 2.3447
-    }
+    },
+    "color": [
+      "Purple"
+    ]
   },
   {
     "code": "Y0871",
@@ -51,7 +56,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -79,7 +86,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0868",
@@ -92,7 +102,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Yellow"
     ],
@@ -120,7 +132,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0867",
@@ -133,7 +148,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Orange"
     ],
@@ -161,7 +178,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "Y0861",
@@ -174,7 +194,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -202,7 +224,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0811",
@@ -215,7 +240,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Red"
     ],
@@ -235,7 +262,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0823",
@@ -248,7 +278,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -271,7 +303,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0822",
@@ -284,7 +319,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -307,7 +344,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0821",
@@ -320,7 +360,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -343,7 +385,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0824",
@@ -356,7 +402,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -379,7 +427,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0777",
@@ -392,7 +444,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -415,7 +469,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "Y0776",
@@ -428,7 +486,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -451,7 +511,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0775",
@@ -464,7 +528,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -485,7 +551,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0774",
@@ -498,7 +567,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "White"
     ],
@@ -521,7 +592,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Gold",
+      "Brown"
+    ]
   },
   {
     "code": "Y0767",
@@ -534,7 +609,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -557,7 +634,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0768",
@@ -570,7 +650,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -593,7 +675,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0757",
@@ -606,7 +691,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -635,7 +722,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0755",
@@ -648,7 +738,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -669,7 +761,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0754",
@@ -682,7 +777,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -703,7 +800,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0751",
@@ -716,7 +816,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Multicolor"
     ],
@@ -745,7 +847,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0749",
@@ -758,7 +866,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Multicolor"
     ],
@@ -787,7 +897,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Green",
+      "Yellow",
+      "Red"
+    ]
   },
   {
     "code": "Y0748",
@@ -800,7 +916,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Blue"
     ],
@@ -823,7 +941,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0747",
@@ -836,7 +958,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Black"
     ],
@@ -865,7 +989,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.12
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0746",
@@ -920,7 +1048,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Blue"
     ],
@@ -943,7 +1073,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "13089",
@@ -956,7 +1089,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Yellow"
     ],
@@ -1011,7 +1146,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "13088",
@@ -1024,7 +1162,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Orange"
     ],
@@ -1079,7 +1219,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "13091",
@@ -1092,7 +1235,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -1146,7 +1291,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "13092",
@@ -1159,7 +1307,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -1210,7 +1360,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.77
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "13096",
@@ -1223,7 +1376,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Red"
     ],
@@ -1278,7 +1433,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.77
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "ICED-MINT-Y0686-3",
@@ -1311,7 +1469,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "DECO",
@@ -1344,7 +1505,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0681",
@@ -1382,7 +1547,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0683",
@@ -1420,7 +1589,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0682",
@@ -1458,7 +1631,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray",
+      "Gold"
+    ]
   },
   {
     "code": "Y0679",
@@ -1494,7 +1672,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0678",
@@ -1530,7 +1712,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0673",
@@ -1566,7 +1753,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0672",
@@ -1602,7 +1794,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0648",
@@ -1638,7 +1833,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0647",
@@ -1674,7 +1872,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0646",
@@ -1710,7 +1911,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0645",
@@ -1747,7 +1951,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "White"
+    ],
+    "description": "A light, abstract pattern featuring varying shades of green with white accents, creating a fresh, organic feel."
   },
   {
     "code": "5042",
@@ -1760,7 +1969,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -1796,7 +2007,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.58
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "5013",
@@ -1857,7 +2072,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5012",
@@ -1919,7 +2137,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0561",
@@ -1964,7 +2186,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0501",
@@ -2009,7 +2234,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0511",
@@ -2053,7 +2281,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ],
+    "description": "A vibrant pattern of various green leaves with a lively, tropical feel."
   },
   {
     "code": "Y0498",
@@ -2098,7 +2330,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0496",
@@ -2140,7 +2376,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ],
+    "description": "A dark, linear pattern with subtle variations in texture and color, creating a sophisticated look."
   },
   {
     "code": "Y0495",
@@ -2185,7 +2426,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0425",
@@ -2232,7 +2478,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0403",
@@ -2281,7 +2531,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0402",
@@ -2330,7 +2584,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0399",
@@ -2377,7 +2635,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0401",
@@ -2424,7 +2687,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0415",
@@ -2471,7 +2737,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0449",
@@ -2520,7 +2789,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0416",
@@ -2558,7 +2830,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0414",
@@ -2605,7 +2881,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0413",
@@ -2654,7 +2934,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Gray"
+    ]
   },
   {
     "code": "Y0412",
@@ -2703,7 +2987,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "4996",
@@ -2773,7 +3060,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0393",
@@ -2820,7 +3111,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0277",
@@ -2862,7 +3157,12 @@
     "texture_scale": {
       "width": 144,
       "height": 49.75
-    }
+    },
+    "color": [
+      "Beige",
+      "Red",
+      "Black"
+    ]
   },
   {
     "code": "Y0276",
@@ -2904,7 +3204,12 @@
     "texture_scale": {
       "width": 144,
       "height": 47.66
-    }
+    },
+    "color": [
+      "White",
+      "Black",
+      "Red"
+    ]
   },
   {
     "code": "Y0275",
@@ -2942,7 +3247,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Red",
+      "Pink"
+    ]
   },
   {
     "code": "Y0057",
@@ -2991,7 +3301,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0027",
@@ -3039,7 +3352,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Blue",
+      "Green"
+    ],
+    "description": "A collage of vintage maps with intricate details and a mix of muted colors."
   },
   {
     "code": "Y0026",
@@ -3088,7 +3407,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Green",
+      "Blue"
+    ]
   },
   {
     "code": "Y0049",
@@ -3137,7 +3461,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0048",
@@ -3185,7 +3512,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A light blue abstract pattern with a textured appearance, featuring subtle variations in tone."
   },
   {
     "code": "Y0016",
@@ -3228,7 +3559,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Pink",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0017",
@@ -3277,7 +3613,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Beige",
+      "Green"
+    ]
   },
   {
     "code": "Y0014",
@@ -3320,7 +3661,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0009X",
@@ -3361,7 +3707,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0009",
@@ -3402,7 +3751,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0008X",
@@ -3448,7 +3801,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Teal"
+    ],
+    "description": "A medium-scale abstract pattern featuring geometric shapes in gray and teal tones."
   },
   {
     "code": "Y0008",
@@ -3488,7 +3846,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ],
+    "description": "A medium-scale abstract pattern featuring geometric shapes in varying shades of blue and gray."
   },
   {
     "code": "Y0007X",
@@ -3531,7 +3894,12 @@
       "width": 2000,
       "height": 849,
       "ratio": 2.3557
-    }
+    },
+    "color": [
+      "Yellow",
+      "Orange",
+      "Gray"
+    ]
   },
   {
     "code": "Y0007",
@@ -3573,7 +3941,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Orange",
+      "Gray"
+    ],
+    "description": "A vibrant, abstract pattern with geometric shapes in yellow, orange, and gray tones."
   },
   {
     "code": "Y0006X",
@@ -3616,7 +3990,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Red",
+      "Gray"
+    ]
   },
   {
     "code": "Y0006",
@@ -3658,7 +4037,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange",
+      "Yellow",
+      "Gray"
+    ],
+    "description": "A vibrant, abstract pattern with a mix of geometric shapes in orange, yellow, and gray."
   },
   {
     "code": "Y0005X",
@@ -3701,7 +4086,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0005",
@@ -3744,7 +4134,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Blue",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0004",
@@ -3787,7 +4182,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Orange",
+      "White"
+    ]
   },
   {
     "code": "Y0003",
@@ -3830,7 +4230,12 @@
       "width": 2000,
       "height": 849,
       "ratio": 2.3557
-    }
+    },
+    "color": [
+      "White",
+      "Blue",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0002",
@@ -3872,7 +4277,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Orange",
+      "White"
+    ],
+    "description": "A playful pattern featuring green circles and orange floral elements on a light background."
   },
   {
     "code": "1854",
@@ -3923,7 +4334,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "1850",
@@ -3973,7 +4387,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "1849",
@@ -4023,7 +4441,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "4846",
@@ -4081,7 +4503,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "4845",
@@ -4137,7 +4562,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4844",
@@ -4195,7 +4623,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "4843",
@@ -4251,7 +4683,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4842",
@@ -4309,7 +4744,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "4841",
@@ -4367,7 +4806,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "4796",
@@ -4433,7 +4875,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "4746",
@@ -4499,7 +4944,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "4745",
@@ -4559,7 +5007,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Yellow",
+      "Beige"
+    ]
   },
   {
     "code": "4170",
@@ -4625,7 +5077,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "4168",
@@ -4689,7 +5144,10 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "2932",
@@ -4754,7 +5212,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ],
+    "description": "Soft, textured surface in light beige with subtle variations, creating a warm and inviting feel."
   },
   {
     "code": "5051",
@@ -4767,7 +5229,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -4802,7 +5266,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "5053",
@@ -4815,7 +5282,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -4850,7 +5319,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "5054",
@@ -4863,7 +5336,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -4898,7 +5373,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "5055",
@@ -4911,7 +5389,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -4946,7 +5426,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "5052",
@@ -4959,7 +5443,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -4994,7 +5480,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5049",
@@ -5007,7 +5497,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -5042,7 +5534,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0773",
@@ -5055,7 +5551,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -5078,7 +5576,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0772",
@@ -5091,7 +5592,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Orange"
     ],
@@ -5114,7 +5617,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Orange"
+    ]
   },
   {
     "code": "Y0771",
@@ -5127,7 +5634,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -5148,7 +5657,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0769",
@@ -5161,7 +5673,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -5184,7 +5698,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "5036",
@@ -5197,7 +5714,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -5248,7 +5767,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "5035",
@@ -5261,7 +5784,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [
       {
@@ -5306,7 +5831,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5034",
@@ -5319,7 +5847,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [
       {
@@ -5369,7 +5899,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "ICED-MINT-Y0686-4",
@@ -5409,7 +5942,12 @@
       "width": 2000,
       "height": 849,
       "ratio": 2.3557
-    }
+    },
+    "color": [
+      "Blue",
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0651",
@@ -5447,7 +5985,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0562",
@@ -5492,7 +6033,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0543",
@@ -5533,7 +6078,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "Y0513",
@@ -5577,7 +6125,11 @@
     "texture_scale": {
       "width": 96,
       "height": 52.46
-    }
+    },
+    "color": [
+      "Pink"
+    ],
+    "description": "A medium pink textile pattern with subtle horizontal lines, creating a soft and textured appearance."
   },
   {
     "code": "Y0499",
@@ -5622,7 +6174,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0437",
@@ -5665,7 +6220,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0436",
@@ -5706,7 +6264,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0435",
@@ -5749,7 +6310,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0434",
@@ -5791,7 +6355,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange"
+    ],
+    "description": "A medium orange fabric-like texture with a subtle boucle pattern."
   },
   {
     "code": "4992",
@@ -5857,7 +6425,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4991",
@@ -5921,7 +6492,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4990",
@@ -5987,7 +6561,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "5033",
@@ -6000,7 +6577,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [
       {
@@ -6037,7 +6616,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ],
+    "description": "A light gray fabric-like texture with subtle patterning, creating a soft and calming appearance."
   },
   {
     "code": "4944",
@@ -6109,7 +6693,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "4943",
@@ -6181,7 +6768,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Neutral",
+      "Beige"
+    ]
   },
   {
     "code": "4942",
@@ -6253,7 +6844,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "5068",
@@ -6266,7 +6861,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -6302,7 +6899,11 @@
       "width": 1180,
       "height": 738,
       "ratio": 1.5989
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "5061",
@@ -6315,7 +6916,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Brown"
     ],
@@ -6351,7 +6954,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "5044",
@@ -6364,7 +6971,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -6397,7 +7006,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5041",
@@ -6410,7 +7023,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -6446,7 +7061,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5039",
@@ -6459,7 +7078,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -6495,7 +7116,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.58
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "Y0796",
@@ -6508,7 +7133,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -6529,7 +7156,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.49
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0795",
@@ -6542,7 +7172,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -6563,7 +7195,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.49
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0793",
@@ -6576,7 +7211,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -6597,7 +7234,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Gold"
+    ]
   },
   {
     "code": "Y0792X",
@@ -6610,7 +7251,10 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light",
+      "Medium"
+    ],
     "colors": [
       "Gray"
     ],
@@ -6639,7 +7283,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0792",
@@ -6652,7 +7299,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Gray"
     ],
@@ -6681,7 +7330,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0791",
@@ -6694,7 +7346,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Multicolor"
     ],
@@ -6723,7 +7377,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0789",
@@ -6736,7 +7394,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -6759,7 +7419,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0788",
@@ -6772,7 +7436,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Blue"
     ],
@@ -6795,7 +7461,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Blue"
+    ]
   },
   {
     "code": "Y0787",
@@ -6808,7 +7478,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -6831,7 +7503,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0786",
@@ -6844,7 +7520,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -6867,7 +7545,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Gold",
+      "Neutral"
+    ]
   },
   {
     "code": "13102",
@@ -6880,7 +7563,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Purple"
     ],
@@ -6933,7 +7618,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ],
+    "description": "A medium purple laminate with a subtle texture, offering a vibrant and playful appearance."
   },
   {
     "code": "Y0741",
@@ -6971,7 +7660,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Purple",
+      "Gray"
+    ]
   },
   {
     "code": "Y0739",
@@ -7009,7 +7702,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Gray",
+      "Teal"
+    ]
   },
   {
     "code": "Y0738",
@@ -7047,7 +7744,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0726",
@@ -7085,7 +7786,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0725",
@@ -7123,7 +7828,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Green",
+      "Gray"
+    ]
   },
   {
     "code": "Y0718",
@@ -7161,7 +7870,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0715",
@@ -7199,7 +7911,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0703",
@@ -7237,7 +7953,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0702",
@@ -7275,7 +7995,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "5024",
@@ -7329,7 +8052,11 @@
       "width": 2000,
       "height": 1292,
       "ratio": 1.548
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "5023",
@@ -7390,7 +8117,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.02
-    }
+    },
+    "color": [
+      "Blue",
+      "Green"
+    ]
   },
   {
     "code": "5018",
@@ -7455,7 +8186,11 @@
       "width": 2000,
       "height": 1254,
       "ratio": 1.5949
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A dark gray surface with a subtle texture, providing a modern and sophisticated look."
   },
   {
     "code": "5017",
@@ -7520,7 +8255,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60.19
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ],
+    "description": "A light blue-gray surface with a subtle, textured pattern, creating a soft and calming appearance."
   },
   {
     "code": "Y0692",
@@ -7558,7 +8298,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0538",
@@ -7596,7 +8340,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0537",
@@ -7670,7 +8417,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0613",
@@ -7713,7 +8463,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0612",
@@ -7756,7 +8510,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Brown",
+      "Green",
+      "Gray"
+    ]
   },
   {
     "code": "Y0611",
@@ -7797,7 +8556,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown",
+      "Black"
+    ]
   },
   {
     "code": "Y0606",
@@ -7840,7 +8604,11 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Green",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0605",
@@ -7883,7 +8651,11 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0586",
@@ -7926,7 +8698,11 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0585",
@@ -7969,7 +8745,11 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Blue",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0583",
@@ -8012,7 +8792,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0582",
@@ -8053,7 +8836,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0581",
@@ -8100,7 +8887,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Green",
+      "Blue",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0576",
@@ -8145,7 +8937,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "5014",
@@ -8204,7 +9000,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0448",
@@ -8253,7 +9053,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0447",
@@ -8294,7 +9097,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0446",
@@ -8335,7 +9141,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0445",
@@ -8378,7 +9188,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "Pink"
+    ]
   },
   {
     "code": "Y0444",
@@ -8421,7 +9235,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "Y0443",
@@ -8459,7 +9276,10 @@
       "width": 2000,
       "height": 849,
       "ratio": 2.3557
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0442",
@@ -8497,7 +9317,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0441",
@@ -8538,7 +9361,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0439",
@@ -8579,7 +9406,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0438",
@@ -8620,7 +9451,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0424",
@@ -8667,7 +9501,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0423",
@@ -8716,7 +9553,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0422",
@@ -8759,7 +9600,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ]
   },
   {
     "code": "Y0421",
@@ -8802,7 +9646,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0417",
@@ -8840,7 +9688,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0015",
@@ -8883,7 +9735,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Green",
+      "Beige"
+    ]
   },
   {
     "code": "Y0012",
@@ -8926,7 +9783,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Blue",
+      "Beige"
+    ]
   },
   {
     "code": "Y0011",
@@ -8969,7 +9831,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Blue",
+      "Beige"
+    ]
   },
   {
     "code": "Y0023",
@@ -9018,7 +9885,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Multicolor"
+    ]
   },
   {
     "code": "Y0061",
@@ -9067,7 +9938,12 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "Y0059",
@@ -9115,7 +9991,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A light blue abstract pattern resembling water with fluid, reflective qualities."
   },
   {
     "code": "Y0058",
@@ -9164,7 +10044,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60.98
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0029",
@@ -9212,7 +10096,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Red",
+      "Green",
+      "Yellow"
+    ],
+    "description": "A vibrant, busy pattern featuring various peppers in red, green, and yellow tones."
   },
   {
     "code": "Y0028",
@@ -9261,7 +10151,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0025",
@@ -9304,7 +10197,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0024",
@@ -9353,7 +10250,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Pastel"
+    ]
   },
   {
     "code": "Y0022",
@@ -9401,7 +10302,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Multicolor"
+    ],
+    "description": "A playful pattern of colorful handprints scattered on a white background."
   },
   {
     "code": "Y0021",
@@ -9450,7 +10356,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0019",
@@ -9498,7 +10408,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange",
+      "Brown"
+    ],
+    "description": "A medium-scale pattern of overlapping basketballs in warm orange and brown tones."
   },
   {
     "code": "Y0018",
@@ -9547,7 +10462,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "Brown",
+      "White"
+    ]
   },
   {
     "code": "Y0001X",
@@ -9590,7 +10509,14 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Pink",
+      "Yellow",
+      "Orange",
+      "Red"
+    ]
   },
   {
     "code": "Y0013",
@@ -9633,7 +10559,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0001",
@@ -9676,7 +10607,14 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Pink",
+      "Yellow",
+      "Orange",
+      "Red"
+    ]
   },
   {
     "code": "Y0278",
@@ -9719,7 +10657,15 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "color": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green",
+      "Pink",
+      "White"
+    ]
   },
   {
     "code": "Y0062",
@@ -9766,7 +10712,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "4947",
@@ -9836,7 +10786,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "4946",
@@ -9906,7 +10860,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4945",
@@ -9976,7 +10934,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "4941",
@@ -10049,7 +11011,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4940",
@@ -10122,7 +11087,11 @@
       "width": 2000,
       "height": 1231,
       "ratio": 1.6247
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "4939",
@@ -10197,7 +11166,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "4937",
@@ -10261,7 +11234,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Neutral",
+      "Gray"
+    ]
   },
   {
     "code": "4860",
@@ -10337,7 +11314,11 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "4857",
@@ -10392,7 +11373,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A soft, light gray surface with a subtle texture, creating a calm and neutral appearance."
   },
   {
     "code": "4856",
@@ -10450,7 +11435,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0649",
@@ -10486,7 +11474,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5048",
@@ -10499,7 +11490,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -10534,7 +11527,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "5016",
@@ -10590,7 +11587,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A medium gray laminate with a smooth, uniform surface and subtle texture."
   },
   {
     "code": "Y0607",
@@ -10631,7 +11632,10 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "Y0502",
@@ -10674,7 +11678,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0514",
@@ -10717,7 +11724,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0512",
@@ -10758,7 +11768,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0506",
@@ -10801,7 +11815,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0505",
@@ -10842,7 +11860,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "Y0504",
@@ -10883,7 +11905,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0503",
@@ -10928,7 +11954,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0565",
@@ -10975,7 +12005,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0564",
@@ -11022,7 +12056,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0563",
@@ -11067,7 +12104,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4880",
@@ -11135,7 +12175,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "4879",
@@ -11207,7 +12251,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4878",
@@ -11279,7 +12326,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4877",
@@ -11353,7 +12403,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4876",
@@ -11427,7 +12480,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4820",
@@ -11491,7 +12548,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4814",
@@ -11557,7 +12617,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4811",
@@ -11623,7 +12687,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4810",
@@ -11687,7 +12755,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "4783",
@@ -11751,7 +12823,11 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "4674",
@@ -11815,7 +12891,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Neutral"
+    ]
   },
   {
     "code": "4669",
@@ -11881,7 +12961,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "4667",
@@ -11947,7 +13031,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Green",
+      "Neutral"
+    ]
   },
   {
     "code": "4656",
@@ -12013,7 +13101,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gold",
+      "Neutral"
+    ]
   },
   {
     "code": "4651",
@@ -12079,7 +13172,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0825",
@@ -12092,7 +13189,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Blue"
     ],
@@ -12115,7 +13214,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0826",
@@ -12128,7 +13230,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -12151,7 +13255,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Green"
+    ]
   },
   {
     "code": "Y0828",
@@ -12164,7 +13272,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Green"
     ],
@@ -12187,7 +13297,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0827",
@@ -12200,7 +13313,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Brown"
     ],
@@ -12223,7 +13338,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0722",
@@ -12261,7 +13379,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple",
+      "Gray"
+    ]
   },
   {
     "code": "Y0721",
@@ -12299,7 +13421,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0717",
@@ -12341,7 +13467,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0716",
@@ -12385,7 +13514,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0671",
@@ -12429,7 +13562,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0615",
@@ -12467,7 +13604,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray",
+      "Green"
+    ]
   },
   {
     "code": "Y0614",
@@ -12503,7 +13644,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0307",
@@ -12546,7 +13690,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0321",
@@ -12589,7 +13737,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.06
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0311",
@@ -12632,7 +13783,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0322",
@@ -12675,7 +13829,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ]
   },
   {
     "code": "Y0312",
@@ -12718,7 +13875,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0324",
@@ -12761,7 +13922,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0314",
@@ -12804,7 +13968,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0318",
@@ -12847,7 +14014,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0308",
@@ -12890,7 +14060,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0323",
@@ -12933,7 +14107,10 @@
       "width": 2000,
       "height": 833,
       "ratio": 2.401
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0319",
@@ -12976,7 +14153,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0313",
@@ -13019,7 +14199,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Blue"
+    ]
   },
   {
     "code": "Y0309",
@@ -13062,7 +14246,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0325",
@@ -13103,7 +14290,10 @@
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0315",
@@ -13144,7 +14334,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0326",
@@ -13187,7 +14381,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "Y0316",
@@ -13230,7 +14427,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0119",
@@ -13273,7 +14473,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "White"
+    ]
   },
   {
     "code": "Y0248",
@@ -13316,7 +14520,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "White"
+    ]
   },
   {
     "code": "Y0247",
@@ -13359,7 +14567,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0246",
@@ -13400,7 +14612,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0273",
@@ -13441,7 +14657,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0245",
@@ -13484,7 +14704,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Orange",
+      "Teal"
+    ]
   },
   {
     "code": "Y0244",
@@ -13525,7 +14750,11 @@
       "width": 2000,
       "height": 849,
       "ratio": 2.3557
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0243",
@@ -13566,7 +14795,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gold",
+      "Gray"
+    ]
   },
   {
     "code": "Y0077",
@@ -13615,7 +14849,15 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "White",
+      "Red",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Brown"
+    ]
   },
   {
     "code": "Y0272",
@@ -13658,7 +14900,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.2
-    }
+    },
+    "color": [
+      "Teal",
+      "White"
+    ]
   },
   {
     "code": "Y0253",
@@ -13701,7 +14947,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple",
+      "White"
+    ]
   },
   {
     "code": "Y0252",
@@ -13744,7 +14994,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0251",
@@ -13787,7 +15040,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0249",
@@ -13828,7 +15085,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0141",
@@ -13871,7 +15132,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0126",
@@ -13914,7 +15179,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Yellow",
+      "Gray"
+    ]
   },
   {
     "code": "Y0239",
@@ -13957,7 +15227,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "White"
+    ]
   },
   {
     "code": "Y0237",
@@ -13998,7 +15272,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0066",
@@ -14047,7 +15325,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Orange",
+      "Red"
+    ]
   },
   {
     "code": "Y0063",
@@ -14096,7 +15379,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0034",
@@ -14138,7 +15426,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Red",
+      "Green"
+    ],
+    "description": "A playful pattern featuring red and green citrus slices on a white background."
   },
   {
     "code": "Y0242",
@@ -14181,7 +15475,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0231",
@@ -14224,7 +15522,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "White"
+    ]
   },
   {
     "code": "Y0228",
@@ -14265,7 +15567,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0227",
@@ -14308,7 +15614,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "White"
+    ]
   },
   {
     "code": "Y0226",
@@ -14351,7 +15661,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "White"
+    ]
   },
   {
     "code": "Y0225",
@@ -14394,7 +15708,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "White"
+    ]
   },
   {
     "code": "Y0221",
@@ -14435,7 +15753,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0216",
@@ -14478,7 +15800,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "White"
+    ]
   },
   {
     "code": "Y0207",
@@ -14521,7 +15847,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "White"
+    ]
   },
   {
     "code": "Y0198",
@@ -14564,7 +15894,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple",
+      "White"
+    ]
   },
   {
     "code": "Y0189",
@@ -14607,7 +15941,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "White"
+    ]
   },
   {
     "code": "Y0185",
@@ -14650,7 +15988,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "White"
+    ]
   },
   {
     "code": "Y0176",
@@ -14693,7 +16035,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Teal",
+      "White"
+    ]
   },
   {
     "code": "Y0167",
@@ -14736,7 +16082,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0163",
@@ -14779,7 +16129,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60.98
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0154",
@@ -14865,7 +16219,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0139",
@@ -14908,7 +16266,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Red"
+    ]
   },
   {
     "code": "Y0138",
@@ -14951,7 +16313,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Neutral",
+      "Gray"
+    ]
   },
   {
     "code": "Y0137",
@@ -14994,7 +16360,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0136",
@@ -15037,7 +16408,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0133",
@@ -15080,7 +16455,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Orange"
+    ]
   },
   {
     "code": "Y0131",
@@ -15123,7 +16502,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0127",
@@ -15166,7 +16549,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Yellow",
+      "Purple"
+    ]
   },
   {
     "code": "Y0125",
@@ -15209,7 +16597,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0123",
@@ -15252,7 +16644,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.06
-    }
+    },
+    "color": [
+      "Green",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0122",
@@ -15295,7 +16691,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Green"
+    ]
   },
   {
     "code": "Y0117",
@@ -15338,7 +16738,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "White"
+    ]
   },
   {
     "code": "Y0115",
@@ -15381,7 +16785,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "White"
+    ]
   },
   {
     "code": "Y0111",
@@ -15394,7 +16802,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -15422,7 +16832,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "White"
+    ]
   },
   {
     "code": "Y0108",
@@ -15465,7 +16879,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Teal",
+      "White"
+    ]
   },
   {
     "code": "Y0104",
@@ -15508,7 +16926,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0098",
@@ -15551,7 +16973,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "White"
+    ]
   },
   {
     "code": "Y0097",
@@ -15594,7 +17020,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "White"
+    ]
   },
   {
     "code": "Y0094",
@@ -15637,7 +17067,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange",
+      "White"
+    ]
   },
   {
     "code": "Y0093",
@@ -15680,7 +17114,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "White"
+    ]
   },
   {
     "code": "Y0091",
@@ -15722,7 +17160,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "White"
+    ],
+    "description": "A light green and white houndstooth pattern with a small scale and uniform directionality."
   },
   {
     "code": "Y0088",
@@ -15765,7 +17208,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0082",
@@ -15806,7 +17253,10 @@
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0081",
@@ -15848,7 +17298,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "White"
+    ],
+    "description": "A medium-scale houndstooth pattern with alternating brown and white colors, creating a classic and textured look."
   },
   {
     "code": "Y0079",
@@ -15891,7 +17346,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0078",
@@ -15932,7 +17391,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0065",
@@ -15981,7 +17444,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "White"
+    ]
   },
   {
     "code": "Y0064",
@@ -16029,7 +17496,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Yellow",
+      "White"
+    ],
+    "description": "A light, playful pattern of scattered green and yellow leaves on a white background."
   },
   {
     "code": "Y0047",
@@ -16071,7 +17544,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A light blue pattern with a subtle grid and circular design, creating a soft, airy feel."
   },
   {
     "code": "Y0046",
@@ -16114,7 +17591,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0033",
@@ -16155,7 +17636,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "Y0032",
@@ -16198,7 +17683,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "White"
+    ]
   },
   {
     "code": "Y0031",
@@ -16241,7 +17730,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Red",
+      "Green"
+    ]
   },
   {
     "code": "5058",
@@ -16254,7 +17748,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -16308,7 +17804,11 @@
       "width": 1578,
       "height": 959,
       "ratio": 1.6455
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5057",
@@ -16321,7 +17821,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Gray"
     ],
@@ -16371,7 +17873,10 @@
       "width": 1578,
       "height": 959,
       "ratio": 1.6455
-    }
+    },
+    "color": [
+      "Purple"
+    ]
   },
   {
     "code": "Y0542",
@@ -16413,7 +17918,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "Y0541",
@@ -16455,7 +17964,10 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0539",
@@ -16497,7 +18009,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0486",
@@ -16547,7 +18063,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Brown",
+      "Teal"
+    ]
   },
   {
     "code": "Y0398",
@@ -16595,7 +18115,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "Y0397",
@@ -16643,7 +18167,12 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray",
+      "Orange"
+    ]
   },
   {
     "code": "Y0396",
@@ -16691,7 +18220,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0395",
@@ -16741,7 +18274,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Brown",
+      "Copper"
+    ]
   },
   {
     "code": "Y0394",
@@ -16789,7 +18326,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "Y0426",
@@ -16839,7 +18380,10 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gold"
+    ]
   },
   {
     "code": "Y0433",
@@ -16888,7 +18432,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.14
-    }
+    },
+    "color": [
+      "Brown",
+      "Gold"
+    ]
   },
   {
     "code": "Y0432",
@@ -16936,7 +18484,10 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0428",
@@ -16986,7 +18537,10 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0427",
@@ -17036,7 +18590,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Brown",
+      "Gold"
+    ]
   },
   {
     "code": "Y0418",
@@ -17084,7 +18642,12 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Black",
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "Y0419",
@@ -17134,7 +18697,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Red",
+      "Brown"
+    ]
   },
   {
     "code": "4995",
@@ -17193,7 +18760,13 @@
       "width": 2400,
       "height": 1500,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Black",
+      "Brown"
+    ],
+    "description": "A dark, textured surface with subtle variations in gray and brown tones, resembling forged steel."
   },
   {
     "code": "4830",
@@ -17263,7 +18836,10 @@
       "width": 2400,
       "height": 1200,
       "ratio": 2
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4795",
@@ -17327,7 +18903,10 @@
       "width": 2400,
       "height": 1500,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4794",
@@ -17445,7 +19024,10 @@
       "width": 2400,
       "height": 1500,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "1787",
@@ -17505,7 +19087,12 @@
       "width": 2400,
       "height": 1500,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown",
+      "Red",
+      "Gray"
+    ]
   },
   {
     "code": "4762",
@@ -17571,7 +19158,11 @@
     "texture_scale": {
       "width": 72,
       "height": 52.31
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4760",
@@ -17584,7 +19175,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Black"
     ],
@@ -17630,7 +19223,11 @@
     "texture_scale": {
       "width": 72,
       "height": 54.5
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "4757",
@@ -17643,7 +19240,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -17689,7 +19288,11 @@
     "texture_scale": {
       "width": 72,
       "height": 54.97
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "4630",
@@ -17755,7 +19358,12 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue",
+      "Red"
+    ]
   },
   {
     "code": "4623",
@@ -17823,7 +19431,11 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "4622",
@@ -17887,7 +19499,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4621",
@@ -17951,7 +19566,11 @@
     "texture_scale": {
       "width": 96,
       "height": 59.38
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "4143",
@@ -18017,7 +19636,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.96
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4142",
@@ -18083,7 +19706,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.96
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0544",
@@ -18121,7 +19747,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0534",
@@ -18163,7 +19792,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0532",
@@ -18207,7 +19840,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Teal"
+    ]
   },
   {
     "code": "Y0531",
@@ -18251,7 +19888,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red",
+      "Black"
+    ]
   },
   {
     "code": "Y0529",
@@ -18293,7 +19934,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0528",
@@ -18337,7 +19982,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Yellow",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0527K",
@@ -18378,7 +20027,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0526",
@@ -18422,7 +20075,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Pink",
+      "Red"
+    ]
   },
   {
     "code": "Y0525",
@@ -18466,7 +20123,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0411",
@@ -18515,7 +20176,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0409",
@@ -18562,7 +20226,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0408",
@@ -18611,7 +20278,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0407",
@@ -18660,7 +20330,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Aqua",
+      "Blue",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0406",
@@ -18709,7 +20384,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0405",
@@ -18758,7 +20436,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0404",
@@ -18806,7 +20487,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink"
+    ],
+    "description": "A soft, light pink laminate with a smooth, uniform surface."
   },
   {
     "code": "Y0035",
@@ -18849,7 +20534,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0235",
@@ -18892,7 +20580,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Blue"
+    ]
   },
   {
     "code": "Y0234",
@@ -18935,7 +20627,10 @@
     "texture_scale": {
       "width": 144,
       "height": 60.98
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0076",
@@ -18984,7 +20679,12 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Blue",
+      "Green"
+    ]
   },
   {
     "code": "Y0045",
@@ -19032,7 +20732,13 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "Pink",
+      "Orange",
+      "Purple"
+    ],
+    "description": "A playful pattern of small flowers in pink, orange, and purple on a white background."
   },
   {
     "code": "Y0044",
@@ -19080,7 +20786,13 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Green",
+      "Gray"
+    ],
+    "description": "A light background with scattered small green and gray floral patterns, creating a fresh and airy feel."
   },
   {
     "code": "Y0043",
@@ -19129,7 +20841,12 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Orange",
+      "Brown"
+    ]
   },
   {
     "code": "Y0042",
@@ -19175,7 +20892,12 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "description": "A light background with scattered gray floral patterns, creating a delicate and airy feel."
   },
   {
     "code": "Y0041",
@@ -19224,7 +20946,12 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Teal",
+      "Gray"
+    ]
   },
   {
     "code": "Y0039",
@@ -19273,7 +21000,12 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 25.29
-    }
+    },
+    "color": [
+      "White",
+      "Orange",
+      "Yellow"
+    ]
   },
   {
     "code": "Y0038",
@@ -19316,7 +21048,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Yellow",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0037",
@@ -19359,7 +21095,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0036",
@@ -19402,7 +21141,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0072",
@@ -19451,7 +21194,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0075",
@@ -19500,7 +21247,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0074",
@@ -19549,7 +21300,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0134",
@@ -19598,7 +21353,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0135",
@@ -19647,7 +21405,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0073",
@@ -19696,7 +21457,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ]
   },
   {
     "code": "Y0069",
@@ -19743,7 +21508,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0068",
@@ -19791,7 +21559,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ],
+    "description": "A light gray-blue pattern with a subtle abstract design, featuring small, intricate shapes."
   },
   {
     "code": "Y0071",
@@ -19840,7 +21613,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0067",
@@ -19888,7 +21665,13 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue",
+      "Pink"
+    ],
+    "description": "A light gray background with abstract patterns in blue and pink, creating a playful and modern look."
   },
   {
     "code": "Y0236",
@@ -19937,7 +21720,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "D516",
@@ -20023,7 +21809,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "D515",
@@ -20115,7 +21904,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "D513",
@@ -20201,7 +21993,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "D512",
@@ -20287,7 +22082,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "D511",
@@ -20379,7 +22177,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "D509",
@@ -20465,7 +22266,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "D508",
@@ -20551,7 +22356,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "D507",
@@ -20637,7 +22446,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "D506",
@@ -20729,7 +22542,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "15514",
@@ -20742,7 +22559,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -20770,7 +22589,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "15519",
@@ -20783,7 +22605,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -20811,7 +22635,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "15518",
@@ -20824,7 +22651,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -20852,7 +22681,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Green",
+      "Blue"
+    ]
   },
   {
     "code": "15517",
@@ -20865,7 +22698,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -20893,7 +22728,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Green",
+      "Blue"
+    ]
   },
   {
     "code": "15516",
@@ -20906,7 +22745,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Blue"
     ],
@@ -20934,7 +22775,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "15512",
@@ -20947,7 +22792,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -20977,7 +22824,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "15509",
@@ -20990,7 +22840,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -21018,7 +22870,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "10657",
@@ -21031,7 +22887,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Gray"
     ],
@@ -21117,7 +22975,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "15515",
@@ -21130,7 +22992,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Blue"
     ],
@@ -21158,7 +23022,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "15513",
@@ -21171,7 +23038,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -21199,7 +23068,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "15511",
@@ -21212,7 +23084,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -21242,7 +23116,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "EB105",
@@ -21255,7 +23133,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [],
@@ -21277,7 +23157,10 @@
       "width": 1440,
       "height": 1440,
       "ratio": 1
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "13098",
@@ -21290,7 +23173,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Purple"
     ],
@@ -21319,7 +23204,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ],
+    "description": "A medium purple laminate with a smooth, uniform surface and subtle texture."
   },
   {
     "code": "15507",
@@ -21332,7 +23221,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [
@@ -21357,7 +23248,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "15508",
@@ -21370,7 +23265,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [
@@ -21397,7 +23294,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "15506",
@@ -21410,7 +23310,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Blue"
     ],
@@ -21437,7 +23339,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "D505",
@@ -21530,7 +23435,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "D504",
@@ -21578,7 +23487,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "1530",
@@ -21684,7 +23596,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "D503",
@@ -21777,7 +23692,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "15501",
@@ -21790,7 +23708,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -21819,7 +23739,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "15503",
@@ -21832,7 +23755,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [
@@ -21857,7 +23782,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "15504",
@@ -21870,7 +23799,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [
@@ -21897,7 +23828,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "15505",
@@ -21910,7 +23845,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Black"
     ],
@@ -21939,7 +23876,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "D502",
@@ -22046,7 +23986,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "D501",
@@ -22152,7 +24095,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "D498",
@@ -22259,7 +24205,10 @@
     "texture_scale": {
       "width": 72,
       "height": 54.32
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "D73",
@@ -22352,7 +24301,10 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D495",
@@ -22456,7 +24408,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ],
+    "description": "A deep, rich brown with a solid color appearance, offering a warm and inviting mood."
   },
   {
     "code": "D427",
@@ -22568,7 +24524,11 @@
       "width": 2000,
       "height": 1509,
       "ratio": 1.3254
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "D388",
@@ -22625,7 +24585,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Neutral",
+      "White"
+    ]
   },
   {
     "code": "D96",
@@ -22731,7 +24695,10 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "D92",
@@ -22839,7 +24806,10 @@
     "texture_scale": {
       "width": 96,
       "height": 50.5
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D91",
@@ -22944,7 +24914,10 @@
       "width": 1200,
       "height": 1200,
       "ratio": 1
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D90",
@@ -23050,7 +25023,10 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D50",
@@ -23156,7 +25132,11 @@
     "texture_scale": {
       "width": 108,
       "height": 62.8
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "D439",
@@ -23261,7 +25241,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ],
+    "description": "A light beige laminate with a smooth, uniform surface and subtle warmth."
   },
   {
     "code": "D431",
@@ -23367,7 +25351,11 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "D417",
@@ -23471,7 +25459,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A vibrant medium blue with a solid color appearance."
   },
   {
     "code": "D403",
@@ -23577,7 +25569,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "D381",
@@ -23683,7 +25679,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D379",
@@ -23787,7 +25786,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A deep, rich indigo color with a smooth, uniform appearance."
   },
   {
     "code": "D354",
@@ -23899,7 +25902,10 @@
       "width": 2000,
       "height": 1000,
       "ratio": 2
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "D327",
@@ -24005,7 +26011,10 @@
       "width": 2000,
       "height": 1000,
       "ratio": 2
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "D321",
@@ -24109,7 +26118,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A vibrant medium blue with a uniform, solid appearance."
   },
   {
     "code": "D315",
@@ -24215,7 +26228,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "D307",
@@ -24320,7 +26336,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "D30",
@@ -24426,7 +26445,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "D25",
@@ -24531,7 +26553,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "D14",
@@ -24636,7 +26661,10 @@
     "texture_scale": {
       "width": 72,
       "height": 72
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "D12",
@@ -24741,7 +26769,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "1595",
@@ -24850,7 +26881,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "1573",
@@ -24960,7 +26994,10 @@
       "width": 2000,
       "height": 1000,
       "ratio": 2
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "1572",
@@ -25070,7 +27107,10 @@
     "texture_scale": {
       "width": 144,
       "height": 30.02
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "1570",
@@ -25176,7 +27216,10 @@
     "texture_scale": {
       "width": 96,
       "height": 47.9
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "1500",
@@ -25285,7 +27328,11 @@
       "width": 2000,
       "height": 800,
       "ratio": 2.5
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A light gray laminate with a smooth, uniform surface and subtle texture."
   },
   {
     "code": "Y0859",
@@ -25298,7 +27345,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -25329,7 +27378,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0855",
@@ -25342,7 +27394,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -25373,7 +27427,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0852",
@@ -25386,7 +27443,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -25417,7 +27476,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0851",
@@ -25430,7 +27492,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Green"
     ],
@@ -25461,7 +27525,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y8043",
@@ -25474,7 +27541,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Green"
     ],
@@ -25502,7 +27571,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0841",
@@ -25515,7 +27587,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Green"
     ],
@@ -25546,7 +27620,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0836",
@@ -25559,7 +27636,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -25590,7 +27669,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0832",
@@ -25603,7 +27685,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -25634,7 +27718,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0731",
@@ -25647,7 +27734,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Purple"
     ],
@@ -25671,7 +27760,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ],
+    "description": "A medium purple laminate with a smooth, uniform texture and subtle depth."
   },
   {
     "code": "Y0733",
@@ -25684,7 +27777,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Orange"
     ],
@@ -25714,7 +27809,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange"
+    ],
+    "description": "A vibrant medium orange laminate with a smooth, uniform surface."
   },
   {
     "code": "Y0735",
@@ -25727,7 +27826,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Green"
     ],
@@ -25751,7 +27852,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ],
+    "description": "A light green laminate with a smooth, uniform surface and a fresh, vibrant feel."
   },
   {
     "code": "Y0712",
@@ -25797,7 +27902,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0737",
@@ -25842,7 +27951,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ],
+    "description": "A medium purple laminate with a smooth, uniform surface and no distinct pattern."
   },
   {
     "code": "Y0736",
@@ -25886,7 +27999,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green",
+      "Blue"
+    ]
   },
   {
     "code": "Y0734",
@@ -25926,7 +28043,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Purple"
+    ]
   },
   {
     "code": "Y0732",
@@ -25972,7 +28092,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0476",
@@ -26017,7 +28140,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Teal"
+    ],
+    "description": "A medium teal laminate with a smooth, uniform surface and subtle texture."
   },
   {
     "code": "Y0475",
@@ -26057,7 +28184,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0724",
@@ -26094,7 +28224,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Pink",
+      "Neutral"
+    ],
+    "description": "Soft, muted pink with a smooth, uniform surface, creating a calming and modern aesthetic."
   },
   {
     "code": "Y0723",
@@ -26138,7 +28273,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "Y0698",
@@ -26178,7 +28316,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Blue"
+    ],
+    "description": "A medium blue laminate with a smooth, solid finish, creating a vibrant and fresh appearance."
   },
   {
     "code": "Y0686",
@@ -26228,7 +28370,12 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Green",
+      "Blue"
+    ],
+    "description": "A soft, light mint color with a smooth, uniform texture."
   },
   {
     "code": "HONEYCOMB",
@@ -26265,7 +28412,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0685",
@@ -26305,7 +28455,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "CROSSWEAVE",
@@ -26342,7 +28495,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0667",
@@ -26382,7 +28538,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0663",
@@ -26421,7 +28580,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ],
+    "description": "A dark, textured pattern with a subtle honeycomb design, creating a modern and sophisticated look."
   },
   {
     "code": "Y0662",
@@ -26461,7 +28625,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "Y0661",
@@ -26501,7 +28668,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0659",
@@ -26541,7 +28711,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Teal"
+    ]
   },
   {
     "code": "Y0658",
@@ -26581,7 +28754,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.27
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0392",
@@ -26630,7 +28807,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0391",
@@ -26679,7 +28860,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Silver"
+    ]
   },
   {
     "code": "Y0389",
@@ -26730,7 +28915,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Copper"
+    ]
   },
   {
     "code": "Y0388",
@@ -26779,7 +28968,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Orange"
+    ]
   },
   {
     "code": "Y0387",
@@ -26830,7 +29023,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Copper"
+    ]
   },
   {
     "code": "Y0386",
@@ -26875,7 +29072,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0385",
@@ -26926,7 +29126,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0384",
@@ -26977,7 +29180,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0383",
@@ -27079,7 +29285,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Gold"
+    ]
   },
   {
     "code": "Y0381",
@@ -27130,7 +29340,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0379",
@@ -27181,7 +29394,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gold",
+      "Brown"
+    ]
   },
   {
     "code": "Y0377",
@@ -27232,7 +29449,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gold"
+    ]
   },
   {
     "code": "Y0376",
@@ -27334,7 +29554,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue",
+      "Green"
+    ]
   },
   {
     "code": "Y0356",
@@ -27385,7 +29609,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0355",
@@ -27436,7 +29663,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0354",
@@ -27487,7 +29717,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0353",
@@ -27532,7 +29765,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0352",
@@ -27583,7 +29819,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Blue"
+    ]
   },
   {
     "code": "Y0351",
@@ -27628,7 +29867,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0358",
@@ -27679,7 +29921,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0359",
@@ -27730,7 +29975,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0349",
@@ -27781,7 +30029,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Green"
+    ]
   },
   {
     "code": "Y0348",
@@ -27832,7 +30083,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Green"
+    ]
   },
   {
     "code": "Y0347",
@@ -27883,7 +30138,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0346",
@@ -27928,7 +30186,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0345",
@@ -27979,7 +30240,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0344",
@@ -28030,7 +30294,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.84
-    }
+    },
+    "color": [
+      "Yellow"
+    ]
   },
   {
     "code": "Y0343",
@@ -28081,7 +30348,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0342",
@@ -28132,7 +30402,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0341",
@@ -28183,7 +30456,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0339",
@@ -28234,7 +30510,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.7
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0338",
@@ -28279,7 +30558,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.84
-    }
+    },
+    "color": [
+      "Orange"
+    ]
   },
   {
     "code": "Y0337",
@@ -28328,7 +30610,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Red"
+    ]
   },
   {
     "code": "Y0336",
@@ -28379,7 +30664,11 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Red",
+      "Orange"
+    ]
   },
   {
     "code": "Y0335",
@@ -28430,7 +30719,11 @@
     "texture_scale": {
       "width": 96,
       "height": 52.18
-    }
+    },
+    "color": [
+      "Pink",
+      "Orange"
+    ]
   },
   {
     "code": "Y0334",
@@ -28481,7 +30774,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.98
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "Y0333",
@@ -28530,7 +30826,10 @@
     "texture_scale": {
       "width": 96,
       "height": 51.84
-    }
+    },
+    "color": [
+      "Pink"
+    ]
   },
   {
     "code": "13124",
@@ -28543,7 +30842,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -28568,7 +30869,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.7
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "5074",
@@ -28581,7 +30886,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -28606,7 +30913,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.7
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "13119",
@@ -28619,7 +30930,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -28653,7 +30966,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "5073",
@@ -28666,7 +30983,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -28706,7 +31025,11 @@
     "texture_scale": {
       "width": 144,
       "height": 60.7
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "5072",
@@ -28766,7 +31089,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -28802,7 +31127,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "5064",
@@ -28815,7 +31144,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Gray"
     ],
@@ -28852,7 +31183,10 @@
       "width": 1180,
       "height": 738,
       "ratio": 1.5989
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5059",
@@ -28865,7 +31199,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Gray"
     ],
@@ -28901,7 +31237,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "5032",
@@ -28914,7 +31254,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Gray"
     ],
@@ -28950,7 +31292,11 @@
     "texture_scale": {
       "width": 96,
       "height": 59.96
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "5038",
@@ -28963,7 +31309,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -29001,7 +31349,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.32
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0719",
@@ -29037,7 +31389,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5025",
@@ -29050,7 +31405,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -29081,7 +31438,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5027",
@@ -29094,7 +31455,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -29128,7 +31491,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.58
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "5022",
@@ -29190,7 +31557,12 @@
       "width": 2000,
       "height": 1570,
       "ratio": 1.2739
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ],
+    "description": "A light beige concrete pattern with a subtle texture, offering a soft, neutral aesthetic."
   },
   {
     "code": "5026",
@@ -29203,7 +31575,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -29246,7 +31620,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0675",
@@ -29289,7 +31666,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gold"
+    ],
+    "description": "A dark marble-like pattern with gold veining, featuring a textured, layered appearance."
   },
   {
     "code": "Y0674",
@@ -29338,7 +31720,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0666",
@@ -29380,7 +31766,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "5063",
@@ -29393,7 +31783,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -29429,7 +31821,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5062",
@@ -29442,7 +31838,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -29478,7 +31876,12 @@
       "width": 1180,
       "height": 738,
       "ratio": 1.5989
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "description": "A light marble pattern with soft gray veining, featuring a flowing, elegant design."
   },
   {
     "code": "5045",
@@ -29491,7 +31894,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -29527,7 +31932,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.32
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "5043",
@@ -29540,7 +31949,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [],
     "finish": [
       {
@@ -29576,7 +31987,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "5029",
@@ -29589,7 +32003,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Neutral"
     ],
@@ -29620,7 +32036,11 @@
     "texture_scale": {
       "width": 96,
       "height": 61.18
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "5028",
@@ -29633,7 +32053,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [],
     "finish": [],
     "performance_enhancements": [
@@ -29665,7 +32087,11 @@
     "texture_scale": {
       "width": 72,
       "height": 54
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "5031",
@@ -29678,7 +32104,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "White"
     ],
@@ -29712,7 +32140,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.82
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "5046",
@@ -29725,7 +32157,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -29764,7 +32198,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "EXPEDITION",
@@ -29796,7 +32233,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A light gray marble pattern with subtle veining and a polished finish."
   },
   {
     "code": "Y0633",
@@ -29833,7 +32274,12 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "description": "A light gray and white marbled pattern with subtle variations and a smooth texture."
   },
   {
     "code": "Y0631",
@@ -29871,7 +32317,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0629",
@@ -29907,7 +32357,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0628",
@@ -29944,7 +32397,12 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Blue",
+      "Gray"
+    ],
+    "description": "A light blue and gray abstract pattern with a textured, stone-like appearance."
   },
   {
     "code": "Y0627",
@@ -29982,7 +32440,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0626",
@@ -30025,7 +32487,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0625",
@@ -30061,7 +32527,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Black",
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0624",
@@ -30099,7 +32570,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Blue",
+      "Black",
+      "White"
+    ]
   },
   {
     "code": "5010",
@@ -30200,7 +32676,12 @@
       "width": 1264,
       "height": 2000,
       "ratio": 0.632
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ],
+    "description": "A medium-scale, textured pattern with a mix of gray and brown tones, creating a natural stone appearance."
   },
   {
     "code": "Y0497",
@@ -30249,7 +32730,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "5011",
@@ -30309,7 +32793,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "5006",
@@ -30358,7 +32846,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ],
+    "description": "A dark marble pattern with fine white veining, creating a dramatic and elegant look."
   },
   {
     "code": "5001",
@@ -30411,7 +32904,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "description": "A light, textured pattern with subtle gray veining, resembling natural stone."
   },
   {
     "code": "5000",
@@ -30465,7 +32963,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ],
+    "description": "A medium-scale stone pattern with earthy brown and gray tones, featuring subtle texture."
   },
   {
     "code": "4998",
@@ -30517,7 +33020,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A medium gray stone pattern with subtle texture and directional veining."
   },
   {
     "code": "1891",
@@ -30565,7 +33072,13 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray",
+      "Blue"
+    ],
+    "description": "A medium-toned marble pattern with swirling brown and gray hues, accented by subtle blue veining."
   },
   {
     "code": "1890",
@@ -30615,7 +33128,12 @@
       "width": 2000,
       "height": 1125,
       "ratio": 1.7778
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ],
+    "description": "A light gray marble pattern with subtle veining, creating a soft and elegant appearance."
   },
   {
     "code": "1888",
@@ -30664,7 +33182,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "1887",
@@ -30712,7 +33234,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A medium gray stone pattern with subtle variations and a soft, natural feel."
   },
   {
     "code": "1886",
@@ -30762,7 +33288,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ],
+    "description": "Light gray marble pattern with subtle veining, creating an elegant and airy feel."
   },
   {
     "code": "1885",
@@ -30813,7 +33344,12 @@
       "width": 2000,
       "height": 1252,
       "ratio": 1.5974
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "description": "A light marble pattern with gray veining, featuring a smooth and elegant appearance."
   },
   {
     "code": "5009",
@@ -30863,7 +33399,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A light gray stone pattern with subtle texture and a soft, natural appearance."
   },
   {
     "code": "5005",
@@ -30926,7 +33466,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ],
+    "description": "A light gray textured pattern with subtle wave-like details, creating a soft, organic feel."
   },
   {
     "code": "5004",
@@ -31102,7 +33647,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "Y0461",
@@ -31143,7 +33693,10 @@
       "width": 2000,
       "height": 851,
       "ratio": 2.3502
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0375",
@@ -31190,7 +33743,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0374",
@@ -31237,7 +33793,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0373",
@@ -31284,7 +33843,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0372",
@@ -31331,7 +33893,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0371",
@@ -31380,7 +33946,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0369",
@@ -31474,7 +34044,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Blue"
+    ]
   },
   {
     "code": "Y0367",
@@ -31521,7 +34095,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Green",
+      "Brown"
+    ]
   },
   {
     "code": "Y0366",
@@ -31568,7 +34147,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0457",
@@ -31609,7 +34191,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0456",
@@ -31647,7 +34232,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White"
+    ]
   },
   {
     "code": "Y0454",
@@ -31683,7 +34271,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0455",
@@ -31721,7 +34312,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Pink",
+      "Beige"
+    ]
   },
   {
     "code": "Y0453",
@@ -31759,7 +34354,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "1882",
@@ -31810,7 +34409,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.96
-    }
+    },
+    "color": [
+      "Gray"
+    ],
+    "description": "A medium gray marble pattern with swirling textures and subtle variations in tone."
   },
   {
     "code": "1881",
@@ -31864,7 +34467,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4988",
@@ -31920,7 +34527,10 @@
     "texture_scale": {
       "width": 96,
       "height": 63.22
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4987",
@@ -31978,7 +34588,11 @@
     "texture_scale": {
       "width": 96,
       "height": 63.22
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "5065",
@@ -31991,7 +34605,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Gray"
     ],
@@ -32027,7 +34643,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4981",
@@ -32101,7 +34720,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.61
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4980",
@@ -32163,7 +34786,13 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Brown",
+      "Gold"
+    ],
+    "description": "A dark marble pattern with rich brown and gold veining, featuring a dramatic, swirling design."
   },
   {
     "code": "4979",
@@ -32225,7 +34854,11 @@
     "texture_scale": {
       "width": 96,
       "height": 63.22
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "1880",
@@ -32273,7 +34906,12 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black",
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "1879",
@@ -32372,7 +35010,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige",
+      "Gold"
+    ]
   },
   {
     "code": "4971",
@@ -32435,7 +35078,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "1877",
@@ -32490,7 +35137,12 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "1876",
@@ -32545,7 +35197,11 @@
       "width": 2000,
       "height": 1221,
       "ratio": 1.638
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4955",
@@ -32610,7 +35266,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.04
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "4954",
@@ -32673,7 +35333,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "4952",
@@ -32738,7 +35402,11 @@
       "width": 1180,
       "height": 738,
       "ratio": 1.5989
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4951",
@@ -32803,7 +35471,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.54
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "4932",
@@ -32882,7 +35554,11 @@
     "texture_scale": {
       "width": 72,
       "height": 55.58
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "4931",
@@ -32960,7 +35636,11 @@
     "texture_scale": {
       "width": 72,
       "height": 55.73
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "4929",
@@ -33038,7 +35718,12 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "4926",
@@ -33103,7 +35788,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "4925",
@@ -33171,7 +35860,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "4924",
@@ -33242,7 +35935,11 @@
       "width": 615,
       "height": 470,
       "ratio": 1.3085
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "4923",
@@ -33305,7 +36002,12 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "4922",
@@ -33370,7 +36072,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4907",
@@ -33446,7 +36152,12 @@
     "texture_scale": {
       "width": 96,
       "height": 62.02
-    }
+    },
+    "color": [
+      "Black",
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "4905",
@@ -33522,7 +36233,12 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown",
+      "Black"
+    ]
   },
   {
     "code": "4904",
@@ -33600,7 +36316,11 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4888",
@@ -33659,7 +36379,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown",
+      "Black"
+    ]
   },
   {
     "code": "4887",
@@ -33727,7 +36452,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.43
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "4886",
@@ -33800,7 +36528,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "4883",
@@ -33874,7 +36605,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "4882",
@@ -33949,7 +36684,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60.53
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "1875",
@@ -34004,7 +36743,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "1874",
@@ -34059,7 +36803,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "1872",
@@ -34109,7 +36858,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "1871",
@@ -34159,7 +36912,12 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige",
+      "Gold"
+    ]
   },
   {
     "code": "1867",
@@ -34209,7 +36967,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "1864",
@@ -34257,7 +37019,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "1863",
@@ -34307,7 +37073,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "1858",
@@ -34359,7 +37128,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "4835",
@@ -34437,7 +37210,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "4726",
@@ -34573,7 +37350,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60.1
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "4724",
@@ -34641,7 +37421,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "4595",
@@ -34706,7 +37489,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "4589",
@@ -34767,7 +37554,12 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ],
+    "description": "A dark gray surface with a subtle speckled texture, conveying a modern and industrial feel."
   },
   {
     "code": "4588",
@@ -34836,7 +37628,11 @@
     "texture_scale": {
       "width": 96,
       "height": 57.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "4552",
@@ -34849,7 +37645,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Black"
     ],
@@ -34898,7 +37696,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "color": [
+      "Black"
+    ]
   },
   {
     "code": "4551",
@@ -34911,7 +37712,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Black"
     ],
@@ -34962,7 +37765,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "4550",
@@ -34975,7 +37782,9 @@
     "species": [],
     "cut": [],
     "match": [],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Taupe"
     ],
@@ -35026,7 +37835,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "1818",
@@ -35078,7 +37891,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Black"
+    ]
   },
   {
     "code": "1799",
@@ -35142,7 +37959,11 @@
       "width": 2000,
       "height": 1200,
       "ratio": 1.6667
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "8274",
@@ -35161,7 +37982,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35235,7 +38058,11 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8286",
@@ -35254,7 +38081,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35328,7 +38157,10 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8285",
@@ -35347,7 +38179,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35421,7 +38255,11 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "8284",
@@ -35440,7 +38278,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Dark"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35514,7 +38354,10 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8283",
@@ -35533,7 +38376,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35607,7 +38452,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8282",
@@ -35626,7 +38474,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35700,7 +38550,11 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8281",
@@ -35719,7 +38573,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35793,7 +38649,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8279",
@@ -35812,7 +38671,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35886,7 +38747,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8278",
@@ -35905,7 +38769,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -35979,7 +38845,11 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "8277",
@@ -35998,7 +38868,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36072,7 +38944,10 @@
     "no_repeat_texture_scale": {
       "width": 60,
       "height": 30.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8276",
@@ -36091,7 +38966,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36165,7 +39042,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8275",
@@ -36184,7 +39064,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36258,7 +39140,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8273",
@@ -36277,7 +39162,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36351,7 +39238,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8272",
@@ -36370,7 +39260,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36444,7 +39336,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8271",
@@ -36463,7 +39358,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Medium"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36537,7 +39434,10 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8269",
@@ -36556,7 +39456,9 @@
     "match": [
       "Bookmatch"
     ],
-    "shade": [],
+    "shade": [
+      "Light"
+    ],
     "colors": [
       "Brown"
     ],
@@ -36630,7 +39532,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8266",
@@ -36688,7 +39594,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "8268",
@@ -36746,7 +39656,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "Y0816",
@@ -36791,7 +39705,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0812",
@@ -36840,7 +39758,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0829",
@@ -36884,7 +39805,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0806",
@@ -36929,7 +39854,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0763",
@@ -36974,7 +39903,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.49
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0803",
@@ -37062,7 +39994,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "Y0819",
@@ -37112,7 +40048,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0818",
@@ -37162,7 +40101,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0817",
@@ -37212,7 +40155,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0815",
@@ -37256,7 +40203,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "Y0814",
@@ -37300,7 +40251,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "Y0813",
@@ -37349,7 +40304,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0805",
@@ -37393,7 +40352,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0778",
@@ -37437,7 +40400,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0809",
@@ -37479,7 +40446,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "White",
+      "Gray"
+    ]
   },
   {
     "code": "Y0808",
@@ -37523,7 +40494,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0807",
@@ -37568,7 +40543,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "Y0759",
@@ -37617,7 +40596,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0766",
@@ -37667,7 +40650,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0764",
@@ -37709,7 +40696,12 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown",
+      "Green"
+    ]
   },
   {
     "code": "Y0765",
@@ -37753,7 +40745,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0762",
@@ -37798,7 +40794,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0761",
@@ -37843,7 +40842,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Brown",
+      "Black"
+    ]
   },
   {
     "code": "8243",
@@ -37902,7 +40905,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "8267",
@@ -37960,7 +40967,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown",
+      "Black"
+    ]
   },
   {
     "code": "8265",
@@ -38018,7 +41029,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8264",
@@ -38134,7 +41149,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8262",
@@ -38192,7 +41210,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "8261",
@@ -38250,7 +41272,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "8259",
@@ -38308,7 +41334,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8258",
@@ -38366,7 +41395,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8257",
@@ -38424,7 +41457,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "8256",
@@ -38482,7 +41519,11 @@
       "width": 2000,
       "height": 1300,
       "ratio": 1.5385
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "8255",
@@ -38540,7 +41581,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "8254",
@@ -38598,7 +41643,10 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8253",
@@ -38656,7 +41704,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8252",
@@ -38714,7 +41765,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8251",
@@ -38773,7 +41828,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8249",
@@ -38832,7 +41890,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "8248",
@@ -38891,7 +41953,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "8247",
@@ -38949,7 +42015,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Gray"
+    ]
   },
   {
     "code": "8246",
@@ -39008,7 +42078,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "8245",
@@ -39067,7 +42141,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8244",
@@ -39126,7 +42204,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8242",
@@ -39211,7 +42293,10 @@
     "texture_scale": {
       "width": 96,
       "height": 58.58
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8241",
@@ -39292,7 +42377,11 @@
     "texture_scale": {
       "width": 96,
       "height": 58.66
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8239",
@@ -39372,7 +42461,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.4
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "17018",
@@ -39426,7 +42519,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.16
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "17017",
@@ -39481,7 +42578,11 @@
     "texture_scale": {
       "width": 96,
       "height": 62.16
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "17016",
@@ -39534,7 +42635,11 @@
       "width": 1180,
       "height": 764,
       "ratio": 1.5445
-    }
+    },
+    "color": [
+      "Brown"
+    ],
+    "description": "Medium-scale woodgrain pattern with warm brown tones and subtle texture."
   },
   {
     "code": "17015",
@@ -39589,7 +42694,11 @@
       "width": 1180,
       "height": 764,
       "ratio": 1.5445
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "YS025",
@@ -39633,7 +42742,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.56
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "YS017",
@@ -39678,7 +42791,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.56
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "YS009",
@@ -39723,7 +42840,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.56
-    }
+    },
+    "color": [
+      "Black",
+      "Gray"
+    ]
   },
   {
     "code": "YS002",
@@ -39826,7 +42947,10 @@
       "width": 1180,
       "height": 765,
       "ratio": 1.5425
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0802",
@@ -39870,7 +42994,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0799",
@@ -39914,7 +43042,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0798",
@@ -39956,7 +43088,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "Y0797",
@@ -40000,7 +43136,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0785",
@@ -40045,7 +43184,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0784",
@@ -40090,7 +43232,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0783",
@@ -40135,7 +43281,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.34
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ]
   },
   {
     "code": "Y0782",
@@ -40177,7 +43327,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "White"
+    ]
   },
   {
     "code": "Y0781",
@@ -40219,7 +43373,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.14
-    }
+    },
+    "color": [
+      "Gray"
+    ]
   },
   {
     "code": "Y0779",
@@ -40261,7 +43418,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Beige"
+    ]
   },
   {
     "code": "17014",
@@ -40316,7 +43477,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "15604",
@@ -40364,7 +43529,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Black",
+      "Brown"
+    ]
   },
   {
     "code": "15603",
@@ -40414,7 +43583,11 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "15602",
@@ -40464,7 +43637,10 @@
     "texture_scale": {
       "width": 96,
       "height": 59.52
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "15601",
@@ -40514,7 +43690,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "8238",
@@ -40652,7 +43832,10 @@
     "texture_scale": {
       "width": 96,
       "height": 62.02
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8236",
@@ -40719,7 +43902,10 @@
     "texture_scale": {
       "width": 96,
       "height": 62.02
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8235",
@@ -40800,7 +43986,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "8233",
@@ -40873,7 +44063,10 @@
       "width": 2000,
       "height": 1249,
       "ratio": 1.6013
-    }
+    },
+    "color": [
+      "Beige"
+    ]
   },
   {
     "code": "Y0758",
@@ -40973,7 +44166,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0753",
@@ -41017,7 +44213,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0752",
@@ -41061,7 +44261,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.63
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "BIRCH",
@@ -41135,7 +44339,11 @@
       "width": 1180,
       "height": 738,
       "ratio": 1.5989
-    }
+    },
+    "color": [
+      "White",
+      "Beige"
+    ]
   },
   {
     "code": "Y0744",
@@ -41179,7 +44387,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0743",
@@ -41223,7 +44434,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.42
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0742",
@@ -41267,7 +44481,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0632",
@@ -41323,7 +44540,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.8
-    }
+    },
+    "color": [
+      "Brown"
+    ],
+    "description": "A medium brown woodgrain pattern with distressed white accents, featuring a horizontal directionality."
   },
   {
     "code": "Y0697",
@@ -41372,7 +44593,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0684",
@@ -41427,7 +44652,11 @@
     "texture_scale": {
       "width": 144,
       "height": 62.14
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ]
   },
   {
     "code": "Y0728",
@@ -41471,7 +44700,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0727",
@@ -41515,7 +44747,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Neutral"
+    ]
   },
   {
     "code": "Y0714",
@@ -41557,7 +44793,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "Y0638",
@@ -41600,7 +44840,12 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown",
+      "Gray"
+    ],
+    "description": "A medium brown-gray woodgrain pattern with subtle linear texture and directionality."
   },
   {
     "code": "Y0642",
@@ -41644,7 +44889,10 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0641",
@@ -41686,7 +44934,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Gray",
+      "Brown"
+    ]
   },
   {
     "code": "Y0639",
@@ -41727,7 +44979,11 @@
     "texture_scale": {
       "width": 144,
       "height": 61.13
-    }
+    },
+    "color": [
+      "Brown"
+    ],
+    "description": "A dark brown woodgrain pattern with subtle linear texture and a warm, rich appearance."
   },
   {
     "code": "Y0637",
@@ -41770,7 +45026,11 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Brown"
+    ],
+    "description": "A medium brown woodgrain pattern with subtle linear texture and warm undertones."
   },
   {
     "code": "Y0636",
@@ -41815,7 +45075,11 @@
     "texture_scale": {
       "width": 144,
       "height": 55.56
-    }
+    },
+    "color": [
+      "Brown",
+      "Beige"
+    ]
   },
   {
     "code": "Y0635",
@@ -41858,7 +45122,12 @@
     "texture_scale": {
       "width": 96,
       "height": 48.96
-    }
+    },
+    "color": [
+      "Beige",
+      "Brown"
+    ],
+    "description": "Light beige woodgrain with subtle linear texture, creating a soft and natural appearance."
   },
   {
     "code": "8231",
@@ -41923,7 +45192,10 @@
       "width": 2000,
       "height": 1292,
       "ratio": 1.548
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8229",
@@ -41988,7 +45260,10 @@
       "width": 2000,
       "height": 1221,
       "ratio": 1.638
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8228",
@@ -42046,7 +45321,10 @@
     "texture_scale": {
       "width": 96,
       "height": 60
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8227",
@@ -42103,7 +45381,11 @@
       "width": 2000,
       "height": 1250,
       "ratio": 1.6
-    }
+    },
+    "color": [
+      "Beige",
+      "Neutral"
+    ]
   },
   {
     "code": "8226",
@@ -42167,7 +45449,10 @@
       "width": 2000,
       "height": 1254,
       "ratio": 1.5949
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "8225",
@@ -42232,7 +45517,10 @@
       "width": 2000,
       "height": 1254,
       "ratio": 1.5949
-    }
+    },
+    "color": [
+      "Brown"
+    ]
   },
   {
     "code": "Y0711",
