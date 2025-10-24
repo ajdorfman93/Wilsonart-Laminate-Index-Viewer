@@ -18,6 +18,12 @@
 //   user can add multiple --report arguments to check for multiple fields
 //   Example: --report color --report finish
 //
+// command line arg
+// --check
+//   Validate codes in wilsonart-laminate-index.json and auto-correct values that do not
+//   satisfy the expected format (3-7 alphanumeric chars, at least two digits).
+//   Example: node wilsonart-scrape.js --check
+//
 // List of possible headers or data contained in wilsonart-laminate-index.json that can be used with --missing or --report:
 //    code                 
 //    surface-group        
@@ -49,6 +55,7 @@ const puppeteer = require("puppeteer");
 // CLI parsing
 // ----------------------------------------------------
 const argv = process.argv.slice(2);
+const hasCheckFlag = argv.includes("--check");
 
 function collectMulti(flag) {
   const out = [];
@@ -128,17 +135,22 @@ if (hasMissingFlag && missingFields.length === 0) missingFields = ["finish"]; //
 let reportFields = hasReportFlag ? reportRaw.map((v) => normField(v || "finish")) : [];
 if (hasReportFlag && reportFields.length === 0) reportFields = ["finish"]; // safety
 
-// If the user only asked for a report (and not scraping), do that quickly and exit.
 const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
-if (hasReportFlag && !hasMissingFlag) {
-  runReportAndExit();
-}
 
 // ----------------------------------------------------
 // Config
 // ----------------------------------------------------
 const START_URL =
   "https://www.wilsonart.com/laminate/design-library?product_list_mode=list";
+
+if (hasCheckFlag) {
+  runCodeCheckAndExit();
+}
+
+// If the user only asked for a report (and not scraping), do that quickly and exit.
+if (hasReportFlag && !hasMissingFlag) {
+  runReportAndExit();
+}
 
 const TEST_LIMIT = parseInt(
   process.env.FILTER_LIMIT ??
