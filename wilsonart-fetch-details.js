@@ -799,6 +799,47 @@ async function clickLastResortTextureTrigger(page, xpath, idx) {
   return robustClickXPath(page, xpath, `Last-resort texture trigger${suffix}`, { waitTimeout: 6000, waitPolling: 200 });
 }
 
+async function attemptLastResortClicks(page, code, productLink, productTokens, { reload = false, stage = "Last-resort" } = {}) {
+  try {
+    if (reload) {
+      page.__bannerOverrideUrl = null;
+      page.__bannerCandidates = new Set();
+      logStep(`[${code}] Reloading product page before last-resort clicks`);
+      await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+      await waitForMain(page);
+    } else {
+      logStep(`[${code}] ${stage} last-resort attempt (no reload)`);
+    }
+
+    await afterStepCheckForBanner(page);
+
+    let chosenUrl = null;
+    let attempted = false;
+    for (let idx = 0; idx < LAST_RESORT_XPATHS.length; idx += 1) {
+      const xpath = LAST_RESORT_XPATHS[idx];
+      attempted = true;
+      const lastResortClick = await clickLastResortTextureTrigger(page, xpath, idx);
+      if (!lastResortClick) continue;
+      await afterStepCheckForBanner(page);
+      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      if (chosenUrl) return { chosenUrl, attempted: true };
+    }
+
+    if (attempted) {
+      await afterStepCheckForBanner(page);
+      const sweepLabel = reload ? "(post-reload)" : "(initial pass)";
+      logStep(`[${code}] Last-resort HTML sweep ${sweepLabel}`);
+      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      if (chosenUrl) return { chosenUrl, attempted: true };
+    }
+
+    return { chosenUrl: null, attempted };
+  } catch (err) {
+    logStep(`[${code}] ${stage} last-resort error: ${err.message || err}`);
+    return { chosenUrl: null, attempted: false };
+  }
+}
+
 // -------------------- Metadata extractors --------------------
 async function detectNoRepeat(page) {
   logStep("  • Checking 'No Repeat'…");
@@ -1062,50 +1103,46 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
   await waitForMain(page);
 
-  // Try carousel next arrow a couple of times to surface more URLs
-  for (let k = 0; k < 2; k++) {
-    await robustClickXPath(page, XPATH_ARROW, "Carousel → Next");
-  }
-  await clickSecondCarouselImage(page, "initial");
-  // Always check again after interactions
-  await afterStepCheckForBanner(page);
-
-  // Resolve texture image URL with banner preference, then fallbacks
-  let chosenUrlOptions;
-  let chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
-  if (!chosenUrl) {
-    const retryClick = await clickSecondCarouselImage(page, "retry");
-    if (retryClick) {
-      await afterStepCheckForBanner(page);
-      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+  let chosenUrl = null;
+  const runLastResortFirst = Boolean(MISSING_FIELD);
+  if (runLastResortFirst) {
+    const earlyResult = await attemptLastResortClicks(page, code, productLink, productTokens, { reload: false, stage: "Early" });
+    if (earlyResult.chosenUrl) {
+      chosenUrl = earlyResult.chosenUrl;
+    } else if (earlyResult.attempted) {
+      page.__bannerOverrideUrl = null;
+      page.__bannerCandidates = new Set();
+      logStep(`[${code}] Reloading product page after early last-resort attempt`);
+      await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+      await waitForMain(page);
     }
   }
 
-  let lastResortAttempted = false;
   if (!chosenUrl) {
-    logStep(`[${code}] Reloading product page before last-resort clicks`);
-    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-    await waitForMain(page);
-    await afterStepCheckForBanner(page);
-
-    for (let idx = 0; idx < LAST_RESORT_XPATHS.length; idx += 1) {
-      const xpath = LAST_RESORT_XPATHS[idx];
-      lastResortAttempted = true;
-      const lastResortClick = await clickLastResortTextureTrigger(page, xpath, idx);
-      if (!lastResortClick) continue;
-      await afterStepCheckForBanner(page);
-      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
-      if (chosenUrl) break;
+    for (let k = 0; k < 2; k++) {
+      await robustClickXPath(page, XPATH_ARROW, "Carousel → Next");
     }
-  }
-
-  if (!chosenUrl && lastResortAttempted) {
+    await clickSecondCarouselImage(page, "initial");
     await afterStepCheckForBanner(page);
-    logStep(`[${code}] Last-resort HTML sweep (relaxed filters)`);
+
     chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+    if (!chosenUrl) {
+      const retryClick = await clickSecondCarouselImage(page, "retry");
+      if (retryClick) {
+        await afterStepCheckForBanner(page);
+        chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      }
+    }
   }
 
-  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens, chosenUrlOptions)) {
+  if (!chosenUrl) {
+    const finalResult = await attemptLastResortClicks(page, code, productLink, productTokens, { reload: true, stage: "Final" });
+    if (finalResult.chosenUrl) {
+      chosenUrl = finalResult.chosenUrl;
+    }
+  }
+
+  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens)) {
     logStep(`[${code}] Rejected candidate texture image URL`, chosenUrl);
     chosenUrl = null;
   }
