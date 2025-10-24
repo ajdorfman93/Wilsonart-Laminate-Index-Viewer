@@ -56,6 +56,7 @@ const puppeteer = require("puppeteer");
 // ----------------------------------------------------
 const argv = process.argv.slice(2);
 const hasCheckFlag = argv.includes("--check");
+const hasUnfilteredFlag = argv.includes("--unfiltered");
 
 function collectMulti(flag) {
   const out = [];
@@ -256,8 +257,22 @@ async function waitForSettled(page, { needFilters = true } = {}) {
 function writeOutput(productsMap) {
   // 1) Normalize current in-memory results to plain objects
   const current = new Map();
-  for (const [code, rec] of productsMap.entries()) {
-    current.set(code, finalizeRecord(rec));
+  const flaggedScrapeRecords = [];
+  const scrapedOrphans = [];
+  for (const [, rec] of productsMap.entries()) {
+    const finalized = finalizeRecord(rec);
+    if (!finalized) continue;
+    const normalizedCode = finalized.code;
+    if (normalizedCode && isValidCodeValue(normalizedCode)) {
+      current.set(normalizedCode, finalized);
+    } else {
+      flaggedScrapeRecords.push({
+        code: normalizedCode || "",
+        name: finalized.name || "",
+        link: finalized["product-link"] || "",
+      });
+      scrapedOrphans.push(finalized);
+    }
   }
 
   // 2) Read existing file (if any) and index by code
@@ -268,19 +283,26 @@ function writeOutput(productsMap) {
       if (!Array.isArray(existingArr)) existingArr = [];
     }
   } catch (e) {
-    console.warn("Warning: failed to read existing index; proceeding with fresh write:", e && e.message ? e.message : e);
+    console.warn(
+      "Warning: failed to read existing index; proceeding with fresh write:",
+      e && e.message ? e.message : e
+    );
     existingArr = [];
   }
   const existing = new Map();
+  const existingOrphans = [];
   for (const r of existingArr) {
-    if (r && r.code) existing.set(String(r.code).toUpperCase(), r);
+    if (!r || typeof r !== "object") continue;
+    const normalizedCode = normalizeCodeValue(r.code);
+    const clone = { ...r, code: normalizedCode };
+    if (normalizedCode) existing.set(normalizedCode, clone);
+    else existingOrphans.push(clone);
   }
 
   const limitFields = hasMissingFlag ? new Set(missingFields) : null;
 
   // 3) Merge per code (never erase). Keep records that weren't touched.
   const allCodes = new Set([...existing.keys(), ...current.keys()]);
-
   const mergedOut = [];
   for (const code of allCodes) {
     const oldRec = existing.get(code) || { code };
@@ -291,17 +313,61 @@ function writeOutput(productsMap) {
     const merged = mergeRecordsNoErase(oldRec, newRec);
     mergedOut.push(merged);
   }
+  if (existingOrphans.length) mergedOut.push(...existingOrphans);
+  if (scrapedOrphans.length) mergedOut.push(...scrapedOrphans);
 
-  // 4) Write merged output atomically
+  // 4) Validate codes before writing
+  const detailLookup = getDetailLookup();
+  const review = reviewAndNormalizeRecords(mergedOut, detailLookup, { dropInvalid: true });
+  const outputRecords = review.records;
+
+  // 5) Write merged output atomically
   const tmp = `${OUT_PATH}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(mergedOut, null, 2), "utf-8");
+  fs.writeFileSync(tmp, JSON.stringify(outputRecords, null, 2), "utf-8");
   fs.renameSync(tmp, OUT_PATH);
-  logStep(`writeOutput: merged ${mergedOut.length} products → ${OUT_PATH}`);
+  logStep(`writeOutput: merged ${outputRecords.length} products → ${OUT_PATH}`);
+
+  if (flaggedScrapeRecords.length) {
+    const sample = flaggedScrapeRecords
+      .slice(0, 3)
+      .map((r) => r.code || "(blank)")
+      .join(", ");
+    logStep(
+      `[validation] Flagged ${flaggedScrapeRecords.length} scraped entr${
+        flaggedScrapeRecords.length === 1 ? "y" : "ies"
+      } lacking valid codes${sample ? ` (examples: ${sample})` : ""}; attempting correction.`
+    );
+  }
+
+  if (
+    review.stats.normalizedCount ||
+    review.stats.correctedCount ||
+    review.stats.droppedCount ||
+    review.stats.duplicatesMerged
+  ) {
+    logStep(
+      `[validation] Codes normalized=${review.stats.normalizedCount}, corrected=${review.stats.correctedCount}, ` +
+        `duplicatesMerged=${review.stats.duplicatesMerged}, dropped=${review.stats.droppedCount}.`
+    );
+  }
+
+  if (review.unresolved.length) {
+    const sample = review.unresolved
+      .slice(0, 3)
+      .map((r) => `${r.name || "?"} (${r.code || "missing"})`)
+      .join("; ");
+    logStep(
+      `[validation] ${review.unresolved.length} record(s) still lack valid codes and were omitted${
+        sample ? `: ${sample}` : ""
+      }.`
+    );
+  }
 }
 
 function finalizeRecord(rec) {
+  const normalizedCode = normalizeCodeValue(rec.code);
   const out = {
-    code: rec.code,
+    code: normalizedCode,
     "surface-group": rec["surface-group"] || "Laminate",
   };
   if (rec.name) out.name = rec.name;
@@ -445,6 +511,53 @@ function collectTokensFromUrl(urlLike) {
     addTokens(urlLike);
   }
   return tokens;
+}
+
+function deriveValidCodeFromTile(tile) {
+  if (!tile) return null;
+
+  const seen = new Set();
+  const candidates = [];
+  const pushCandidate = (raw, source) => {
+    const normalized = normalizeCodeValue(raw);
+    if (!normalized) return;
+    if (seen.has(normalized)) return;
+    seen.add(normalized);
+    candidates.push({ code: normalized, source });
+  };
+
+  if (tile.href) {
+    pushCandidate(codeFromHref(tile.href), "href");
+  }
+  if (tile.codeText) {
+    pushCandidate(extractCodeCandidate(tile.codeText), "codeText");
+    pushCandidate(tile.codeText, "codeText");
+  }
+  if (tile.sku) {
+    pushCandidate(extractCodeCandidate(tile.sku), "sku");
+    pushCandidate(tile.sku, "sku");
+  }
+
+  if (tile.href) {
+    for (const token of collectTokensFromUrl(tile.href)) {
+      pushCandidate(token, "href-token");
+    }
+  }
+  if (tile.codeText) {
+    for (const token of collectTokensFromUrl(tile.codeText)) {
+      pushCandidate(token, "codeText-token");
+    }
+  }
+  if (tile.sku) {
+    for (const token of collectTokensFromUrl(tile.sku)) {
+      pushCandidate(token, "sku-token");
+    }
+  }
+
+  for (const candidate of candidates) {
+    if (isValidCodeValue(candidate.code)) return candidate;
+  }
+  return null;
 }
 
 function gatherCandidateCodes(product, detail) {
@@ -606,6 +719,190 @@ function doReport(records, fields) {
   console.log("\n");
 }
 
+const DETAIL_LOOKUP_PATH = path.resolve(process.cwd(), "wilsonart-laminate-details.json");
+let detailLookupCache = null;
+let detailLookupLoaded = false;
+
+function getDetailLookup() {
+  if (detailLookupLoaded) return detailLookupCache;
+  detailLookupLoaded = true;
+
+  const detailByLink = new Map();
+  const detailByName = new Map();
+
+  if (fs.existsSync(DETAIL_LOOKUP_PATH)) {
+    try {
+      const detailRaw = fs.readFileSync(DETAIL_LOOKUP_PATH, "utf-8");
+      const detailArr = JSON.parse(detailRaw);
+      if (Array.isArray(detailArr)) {
+        for (const entry of detailArr) {
+          if (!entry || typeof entry !== "object") continue;
+          const link = entry["product-link"];
+          const name = entry.name;
+          if (link && !detailByLink.has(link)) detailByLink.set(link, entry);
+          if (name && !detailByName.has(name)) detailByName.set(name, entry);
+        }
+      }
+    } catch (err) {
+      console.warn(
+        `[validation] Warning: unable to read ${DETAIL_LOOKUP_PATH}: ${
+          err && err.message ? err.message : err
+        }`
+      );
+    }
+  }
+
+  detailLookupCache = { detailByLink, detailByName };
+  return detailLookupCache;
+}
+
+function reviewAndNormalizeRecords(records, detailLookup, options = {}) {
+  const { dropInvalid = false } = options;
+  if (!Array.isArray(records)) {
+    return {
+      records: [],
+      stats: {
+        normalizedCount: 0,
+        correctedCount: 0,
+        duplicatesMerged: 0,
+        droppedCount: 0,
+        correctionSources: new Set(),
+        duplicateCounts: new Map(),
+      },
+      unresolved: [],
+    };
+  }
+
+  const detailByLink = detailLookup && detailLookup.detailByLink;
+  const detailByName = detailLookup && detailLookup.detailByName;
+
+  let normalizedCount = 0;
+  let correctedCount = 0;
+  let duplicatesMerged = 0;
+  let droppedCount = 0;
+  const correctionSources = new Set();
+  const duplicateCounts = new Map();
+  const unresolved = [];
+  const working = [];
+
+  for (const rec of records) {
+    if (!rec || typeof rec !== "object") continue;
+    const clone = { ...rec };
+    const originalRaw = clone.code;
+    const originalHasValue = originalRaw != null && String(originalRaw).trim() !== "";
+    const normalized = normalizeCodeValue(originalRaw);
+    if (originalHasValue) {
+      const baseline = String(originalRaw).trim().toUpperCase();
+      if (normalized !== baseline) normalizedCount++;
+      clone.code = normalized;
+    } else if (normalized) {
+      clone.code = normalized;
+    }
+
+    const detail =
+      (detailByLink && clone["product-link"] && detailByLink.get(clone["product-link"])) ||
+      (detailByName && clone.name && detailByName.get(clone.name)) ||
+      undefined;
+
+    if (!isValidCodeValue(clone.code)) {
+      const candidate = findPreferredCode(clone, detail);
+      if (candidate && candidate.code) {
+        if (candidate.code !== clone.code) {
+          correctedCount++;
+          if (candidate.source) correctionSources.add(candidate.source);
+        }
+        clone.code = candidate.code;
+      }
+    }
+
+    if (!isValidCodeValue(clone.code)) {
+      unresolved.push({
+        name: clone.name || "",
+        link: clone["product-link"] || "",
+        code: clone.code || "",
+      });
+      if (dropInvalid) {
+        droppedCount++;
+        continue;
+      }
+    }
+
+    working.push(clone);
+  }
+
+  const mergedRecords = [];
+  const indexByCode = new Map();
+
+  for (const rec of working) {
+    const code = rec.code;
+    if (!code || !isValidCodeValue(code)) {
+      if (!dropInvalid) mergedRecords.push(rec);
+      continue;
+    }
+
+    if (indexByCode.has(code)) {
+      const idx = indexByCode.get(code);
+      const merged = mergeRecordsNoErase(mergedRecords[idx], rec);
+      mergedRecords[idx] = merged;
+      duplicatesMerged++;
+      duplicateCounts.set(code, (duplicateCounts.get(code) || 1) + 1);
+    } else {
+      indexByCode.set(code, mergedRecords.length);
+      duplicateCounts.set(code, 1);
+      mergedRecords.push(rec);
+    }
+  }
+
+  return {
+    records: mergedRecords,
+    stats: {
+      normalizedCount,
+      correctedCount,
+      duplicatesMerged,
+      droppedCount,
+      correctionSources,
+      duplicateCounts,
+    },
+    unresolved,
+  };
+}
+
+function preflightValidateIndexFile() {
+  if (!fs.existsSync(OUT_PATH)) return;
+  try {
+    const raw = fs.readFileSync(OUT_PATH, "utf-8");
+    const data = JSON.parse(raw);
+    if (!Array.isArray(data)) return;
+
+    const detailLookup = getDetailLookup();
+    const review = reviewAndNormalizeRecords(data.map((rec) => ({ ...rec })), detailLookup, {
+      dropInvalid: false,
+    });
+
+    if (
+      review.stats.normalizedCount ||
+      review.stats.correctedCount ||
+      review.stats.duplicatesMerged ||
+      review.unresolved.length
+    ) {
+      const parts = [];
+      if (review.stats.normalizedCount) parts.push(`normalized=${review.stats.normalizedCount}`);
+      if (review.stats.correctedCount) parts.push(`corrected=${review.stats.correctedCount}`);
+      if (review.stats.duplicatesMerged) parts.push(`duplicatesMerged=${review.stats.duplicatesMerged}`);
+      if (review.unresolved.length) parts.push(`invalid=${review.unresolved.length}`);
+      console.warn(
+        `[validation] Preflight detected code issues in ${OUT_PATH} (${parts.join(
+          ", "
+        )}). They will be addressed during the next write.`
+      );
+    }
+  } catch (err) {
+    console.warn(
+      `[validation] Unable to preflight-validate ${OUT_PATH}: ${err && err.message ? err.message : err}`
+    );
+  }
+}
+
 function runCodeCheckAndExit() {
   try {
     if (!fs.existsSync(OUT_PATH)) {
@@ -629,104 +926,21 @@ function runCodeCheckAndExit() {
       process.exit(3);
     }
 
-    const detailPath = path.resolve(process.cwd(), "wilsonart-laminate-details.json");
-    const detailByLink = new Map();
-    const detailByName = new Map();
-    if (fs.existsSync(detailPath)) {
-      try {
-        const detailRaw = fs.readFileSync(detailPath, "utf-8");
-        const detailArr = JSON.parse(detailRaw);
-        if (Array.isArray(detailArr)) {
-          for (const entry of detailArr) {
-            if (!entry || typeof entry !== "object") continue;
-            const link = entry["product-link"];
-            const name = entry.name;
-            if (link && !detailByLink.has(link)) detailByLink.set(link, entry);
-            if (name && !detailByName.has(name)) detailByName.set(name, entry);
-          }
-        }
-      } catch (err) {
-        console.warn(
-          `[--check] Warning: unable to read ${detailPath}: ${err && err.message ? err.message : err}`
-        );
-      }
-    }
+    const detailLookup = getDetailLookup();
+    const review = reviewAndNormalizeRecords(records.map((rec) => ({ ...rec })), detailLookup, {
+      dropInvalid: false,
+    });
 
-    let normalizedCount = 0;
-    let correctedCount = 0;
-    const correctionSources = new Set();
-    const unresolved = [];
-
-    for (const rec of records) {
-      if (!rec || typeof rec !== "object") continue;
-      const originalRaw = rec.code;
-      const originalHasValue = originalRaw != null && String(originalRaw).trim() !== "";
-      const normalized = normalizeCodeValue(originalRaw);
-      if (originalHasValue) {
-        const baseline = String(originalRaw).trim().toUpperCase();
-        if (normalized !== baseline) normalizedCount++;
-        rec.code = normalized;
-      } else if (normalized) {
-        rec.code = normalized;
-      }
-
-      const detail =
-        detailByLink.get(rec["product-link"]) ||
-        (rec.name ? detailByName.get(rec.name) : undefined);
-
-      if (!isValidCodeValue(rec.code)) {
-        const candidate = findPreferredCode(rec, detail);
-        if (candidate && candidate.code !== rec.code) {
-          rec.code = candidate.code;
-          correctedCount++;
-          correctionSources.add(candidate.source);
-        }
-      }
-
-      if (!isValidCodeValue(rec.code)) {
-        unresolved.push({
-          name: rec.name || "",
-          link: rec["product-link"] || "",
-          code: rec.code || "",
-        });
-      }
-    }
-
-    const mergedRecords = [];
-    const indexByCode = new Map();
-    const duplicateCounts = new Map();
-    let duplicatesMerged = 0;
-
-    for (const rec of records) {
-      if (!rec || typeof rec !== "object") continue;
-      const code = rec.code;
-      if (!code) {
-        mergedRecords.push(rec);
-        continue;
-      }
-
-      if (indexByCode.has(code)) {
-        const idx = indexByCode.get(code);
-        const merged = mergeRecordsNoErase(mergedRecords[idx], rec);
-        mergedRecords[idx] = merged;
-        duplicatesMerged++;
-        duplicateCounts.set(code, (duplicateCounts.get(code) || 1) + 1);
-      } else {
-        indexByCode.set(code, mergedRecords.length);
-        duplicateCounts.set(code, 1);
-        mergedRecords.push(rec);
-      }
-    }
-
-    const outputJson = JSON.stringify(mergedRecords, null, 2);
+    const outputJson = JSON.stringify(review.records, null, 2);
 
     const normalizedRaw = raw.replace(/\r\n/g, "\n").trimEnd();
     const normalizedOut = outputJson.replace(/\r\n/g, "\n");
     const requiresWrite =
       normalizedOut !== normalizedRaw ||
-      normalizedCount > 0 ||
-      correctedCount > 0 ||
-      duplicatesMerged > 0;
+      review.stats.normalizedCount > 0 ||
+      review.stats.correctedCount > 0 ||
+      review.stats.duplicatesMerged > 0 ||
+      review.stats.droppedCount > 0;
 
     if (requiresWrite) {
       const newline = raw.endsWith("\n") ? "\n" : "";
@@ -734,46 +948,61 @@ function runCodeCheckAndExit() {
     }
 
     console.log(`[--check] Reviewed ${records.length} record(s).`);
-    if (normalizedCount) {
-      console.log(`[--check] Normalized ${normalizedCount} code(s) for casing and spacing.`);
+    if (review.stats.normalizedCount) {
+      console.log(
+        `[--check] Normalized ${review.stats.normalizedCount} code(s) for casing and spacing.`
+      );
     }
-    if (correctedCount) {
-      console.log(`[--check] Corrected ${correctedCount} code(s) using alternate data sources.`);
+    if (review.stats.correctedCount) {
+      console.log(
+        `[--check] Corrected ${review.stats.correctedCount} code(s) using alternate data sources.`
+      );
     }
-    if (duplicatesMerged) {
-      const dupList = [...duplicateCounts.entries()]
+    if (review.stats.duplicatesMerged) {
+      const dupList = [...review.stats.duplicateCounts.entries()]
         .filter(([, count]) => count > 1)
-        .map(([code, count]) => `${code}×${count}`);
+        .map(([code, count]) => `${code}A-${count}`);
       const preview = dupList.slice(0, 10).join(", ");
       console.log(
-        `[--check] Merged ${duplicatesMerged} duplicate record(s) by code${
+        `[--check] Merged ${review.stats.duplicatesMerged} duplicate record(s) by code${
           dupList.length ? ` (${preview}${dupList.length > 10 ? ", ..." : ""})` : ""
         }.`
       );
     }
-    if (!normalizedCount && !correctedCount && !duplicatesMerged) {
+    if (review.stats.droppedCount) {
+      console.log(`[--check] Dropped ${review.stats.droppedCount} record(s) lacking valid codes.`);
+    }
+    if (
+      !review.stats.normalizedCount &&
+      !review.stats.correctedCount &&
+      !review.stats.duplicatesMerged &&
+      !review.stats.droppedCount &&
+      !requiresWrite
+    ) {
       console.log("[--check] No changes required.");
     } else if (!requiresWrite) {
       console.log("[--check] Detected issues but no file rewrite was necessary.");
     }
-    if (correctionSources.size) {
+    if (review.stats.correctionSources && review.stats.correctionSources.size) {
       console.log(
-        `[--check] Correction sources consulted: ${Array.from(correctionSources).join(", ")}.`
+        `[--check] Correction sources consulted: ${Array.from(
+          review.stats.correctionSources
+        ).join(", ")}.`
       );
     }
 
-    if (unresolved.length) {
-      console.warn(`[--check] Unable to derive valid codes for ${unresolved.length} record(s).`);
-      for (const issue of unresolved.slice(0, 10)) {
+    if (review.unresolved.length) {
+      console.warn(`[--check] Unable to derive valid codes for ${review.unresolved.length} record(s).`);
+      for (const issue of review.unresolved.slice(0, 10)) {
         console.warn(`  - name="${issue.name}", code="${issue.code}", link=${issue.link}`);
       }
-      if (unresolved.length > 10) {
+      if (review.unresolved.length > 10) {
         console.warn("  - ...");
       }
       console.warn("[--check] Please review the entries above manually.");
     }
 
-    process.exit(unresolved.length ? 4 : 0);
+    process.exit(review.unresolved.length ? 4 : 0);
   } catch (err) {
     console.error("[--check] Failed:", err && err.message ? err.message : err);
     process.exit(3);
@@ -951,6 +1180,10 @@ function mergeRecordsNoErase(oldRec, newRec) {
 // ----------------------------------------------------
 // Main
 // ----------------------------------------------------
+if (!hasCheckFlag) {
+  preflightValidateIndexFile();
+}
+
 if (hasCheckFlag) {
   runCodeCheckAndExit();
 }
@@ -1135,21 +1368,19 @@ if (hasReportFlag && !hasMissingFlag) {
     const missingSamples = [];
 
     for (const it of items) {
-      const href = it.href;
-      let code = codeFromHref(href);
-      if (!code && it.sku) code = extractCodeCandidate(it.sku);
-      if (!code && it.codeText) code = extractCodeCandidate(it.codeText);
-      if (!code) {
+      const derived = deriveValidCodeFromTile(it);
+      if (!derived || !derived.code) {
         skippedMissingCode++;
         if (missingSamples.length < 5) {
-          const hint = it.codeText || it.sku || href;
+          const hint = it.codeText || it.sku || it.href;
           missingSamples.push(typeof hint === "string" ? hint : String(hint || "?"));
         }
         continue;
       }
 
+      const code = derived.code;
       const existed = products.has(code);
-      const rec = ensureRec(code, { nameAlt: it.nameAlt, link: href });
+      const rec = ensureRec(code, { nameAlt: it.nameAlt, link: it.href });
 
       if (bucket === "finish") {
         const parsed = parseFinish(label);
@@ -1311,3 +1542,4 @@ if (hasReportFlag && !hasMissingFlag) {
 // Usage:
 //   node wilsonart-scrape.js
 //   FILTER_LIMIT=6 node wilsonart-scrape.js
+

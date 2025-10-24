@@ -1257,9 +1257,29 @@ function writeJsonPretty(p, data) {
 }
 
 // -------------------- Merge/update --------------------
+function toKeyString(value) {
+  if (value === undefined || value === null) return null;
+  const str = String(value).trim();
+  return str ? str : null;
+}
 function byCodeMap(arr) {
   const map = new Map();
-  for (const row of (arr || [])) if (row && row.code) map.set(String(row.code), row);
+  for (const row of arr || []) {
+    if (!row || typeof row !== "object") continue;
+    const key = toKeyString(row.code);
+    if (!key) continue;
+    map.set(key, row);
+  }
+  return map;
+}
+function byKeyMap(arr, key) {
+  const map = new Map();
+  for (const row of arr || []) {
+    if (!row || typeof row !== "object") continue;
+    const keyValue = toKeyString(row[key]);
+    if (!keyValue) continue;
+    map.set(keyValue, row);
+  }
   return map;
 }
 function copyMissingFields(dst, src) {
@@ -1270,18 +1290,55 @@ function copyMissingFields(dst, src) {
   return dst;
 }
 function updateDetailsInPlaceFromIndex(indexArr, detailsArr) {
-  const idx = byCodeMap(indexArr);
+  const idxByLink = byKeyMap(indexArr, "product-link");
+  const idxByCode = byCodeMap(indexArr);
   const out = Array.isArray(detailsArr) ? [...detailsArr] : [];
-  const dmap = byCodeMap(out);
+  const seenLinks = new Set();
+  const seenCodes = new Set();
 
-  // Update existing rows
-  for (const [code, drow] of dmap.entries()) {
-    const s = idx.get(code);
-    if (s) copyMissingFields(drow, s);
+  // Update existing rows using product-link as the primary key
+  for (const row of out) {
+    if (!row || typeof row !== "object") continue;
+    const linkKey = toKeyString(row["product-link"]);
+    const codeKey = toKeyString(row.code);
+    if (linkKey) seenLinks.add(linkKey);
+    if (codeKey) seenCodes.add(codeKey);
+
+    let source = linkKey ? idxByLink.get(linkKey) : undefined;
+    if (!source && codeKey) source = idxByCode.get(codeKey);
+    if (!source) continue;
+
+    copyMissingFields(row, source);
+
+    const srcLinkKey = toKeyString(source["product-link"]);
+    if (srcLinkKey) {
+      if (!linkKey) row["product-link"] = source["product-link"];
+      seenLinks.add(srcLinkKey);
+    }
+    const srcCodeKey = toKeyString(source.code);
+    if (srcCodeKey) seenCodes.add(srcCodeKey);
   }
+
   // Add brand-new rows that were missing entirely
-  for (const [code, s] of idx.entries()) {
-    if (!dmap.has(code)) out.push({ code, ...s });
+  for (const source of indexArr || []) {
+    if (!source || typeof source !== "object") continue;
+    const linkKey = toKeyString(source["product-link"]);
+    const codeKey = toKeyString(source.code);
+
+    if (linkKey) {
+      if (seenLinks.has(linkKey)) continue;
+      seenLinks.add(linkKey);
+      if (codeKey) seenCodes.add(codeKey);
+    } else if (codeKey) {
+      if (seenCodes.has(codeKey)) continue;
+      seenCodes.add(codeKey);
+    } else {
+      continue;
+    }
+
+    const next = { ...source };
+    if (codeKey !== null) next.code = codeKey;
+    out.push(next);
   }
   return out;
 }
