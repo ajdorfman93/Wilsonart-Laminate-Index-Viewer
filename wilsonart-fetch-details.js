@@ -88,7 +88,7 @@ const BATCH_SIZE = parseInt(
   (process.argv.find(a => a.startsWith("--batch=")) || "").split("=")[1] ??
   "5", 10
 );
-const HEADLESS = (process.env.HEADLESS ?? "true") !== "false";
+const HEADLESS = (process.env.HEADLESS ?? "true") !== "true";
 
 // How many times to retry scraping a product before giving up
 const MAX_FETCH_ATTEMPTS = parseInt(
@@ -450,7 +450,6 @@ const FORBIDDEN_TEXTURE_SUBSTRINGS = [
   "webfullsheet",
   "mightalsolike",
   "hero",
-  "carousel",
   "thumbnail",
   "io=transform"
 ];
@@ -500,20 +499,28 @@ function hasSizeToken(url) {
   return FEET_SIZE_TOKEN_RE.test(url);
 }
 
-function isForbiddenTextureUrl(url) {
+function isForbiddenTextureUrl(url, options = {}) {
   if (!url) return true;
   const lower = url.toLowerCase();
+
+  if (lower.includes("carousel")) {
+    const isMain = /carousel_main/.test(lower);
+    const isThumbnail = /thumbnail/.test(lower);
+    const allowMain = options.allowCarouselMain && isMain && !isThumbnail;
+    if (!allowMain) return true;
+  }
+
   return FORBIDDEN_TEXTURE_SUBSTRINGS.some(token => lower.includes(token));
 }
 
 const hasFullSizeViewToken = (url) => /fullsizeview|full_size_view/i.test(url || "");
 
-function isValidTextureUrl(url, tokens = []) {
+function isValidTextureUrl(url, tokens = [], options = {}) {
   if (!url) return false;
   const lower = url.toLowerCase();
   const host = getHostname(url);
   if (!isAllowedTextureHost(url)) return false;
-  if (isForbiddenTextureUrl(url)) return false;
+  if (isForbiddenTextureUrl(url, options)) return false;
 
   const hasBannerKeyword = /banner/i.test(url);
   const hasFullSizeView = hasFullSizeViewToken(url);
@@ -583,7 +590,7 @@ function listBannerCandidates(page) {
   return out;
 }
 
-async function resolveTextureImageUrl(page, code, productLink, tokens) {
+async function resolveTextureImageUrl(page, code, productLink, tokens, options = {}) {
   const searchTokens = Array.isArray(tokens) && tokens.length ? tokens : normalizeProductTokens(code, productLink);
   const combined = new Set();
   const addAll = (arr = []) => {
@@ -600,10 +607,10 @@ async function resolveTextureImageUrl(page, code, productLink, tokens) {
   addAll(await findAssetLibraryUrlsInHTML(page));
 
   const allCandidates = [...combined];
-  const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens));
+  const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens, options));
   if (!validCandidates.length) {
     if (allCandidates.length) {
-      const forbiddenSample = allCandidates.find(url => isForbiddenTextureUrl(url));
+      const forbiddenSample = allCandidates.find(url => isForbiddenTextureUrl(url, options));
       const sample = forbiddenSample || allCandidates[0];
       logStep(`[${code}] Skipping texture image candidate`, sample);
     }
@@ -625,8 +632,10 @@ const SECOND_IMAGE_XPATHS = [
   '//*[@id="maincontent"]/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]',
   '//*[@id="maincontent"]//div[contains(@class,"fotorama__nav__frame")][2]'
 ];
-const LAST_RESORT_XPATH =
-  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div";
+const LAST_RESORT_XPATHS = [
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div",
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]"
+];
 
 const SEL_NO_REPEAT_B =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div > div.qkView_description > div:nth-child(7) > ul > li > p > b";
@@ -785,8 +794,9 @@ async function clickSecondCarouselImage(page, attemptLabel = "") {
   return false;
 }
 
-async function clickLastResortTextureTrigger(page) {
-  return robustClickXPath(page, LAST_RESORT_XPATH, "Last-resort texture trigger", { waitTimeout: 6000, waitPolling: 200 });
+async function clickLastResortTextureTrigger(page, xpath, idx) {
+  const suffix = LAST_RESORT_XPATHS.length > 1 ? ` [${idx + 1}]` : "";
+  return robustClickXPath(page, xpath, `Last-resort texture trigger${suffix}`, { waitTimeout: 6000, waitPolling: 200 });
 }
 
 // -------------------- Metadata extractors --------------------
@@ -1013,6 +1023,20 @@ function updateDetailsInPlaceFromIndex(indexArr, detailsArr) {
   return out;
 }
 
+function clearCarouselTextureUrls(detailsArr) {
+  const cleared = [];
+  if (!Array.isArray(detailsArr)) return cleared;
+  for (const row of detailsArr) {
+    if (!row || typeof row !== "object") continue;
+    const url = typeof row.texture_image_url === "string" ? row.texture_image_url : "";
+    if (!url || !/carousel/i.test(url)) continue;
+    if ("texture_image_url" in row) delete row.texture_image_url;
+    if ("texture_image_pixels" in row) delete row.texture_image_pixels;
+    if (row.code) cleared.push(String(row.code));
+  }
+  return cleared;
+}
+
 // -------------------- Filters for scraping --------------------
 function filterCodesForMissingField(detailsArr, field) {
   const dmap = byCodeMap(detailsArr);
@@ -1047,6 +1071,7 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   await afterStepCheckForBanner(page);
 
   // Resolve texture image URL with banner preference, then fallbacks
+  let chosenUrlOptions;
   let chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
   if (!chosenUrl) {
     const retryClick = await clickSecondCarouselImage(page, "retry");
@@ -1056,15 +1081,31 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     }
   }
 
+  let lastResortAttempted = false;
   if (!chosenUrl) {
-    const lastResortClick = await clickLastResortTextureTrigger(page);
-    if (lastResortClick) {
+    logStep(`[${code}] Reloading product page before last-resort clicks`);
+    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+    await waitForMain(page);
+    await afterStepCheckForBanner(page);
+
+    for (let idx = 0; idx < LAST_RESORT_XPATHS.length; idx += 1) {
+      const xpath = LAST_RESORT_XPATHS[idx];
+      lastResortAttempted = true;
+      const lastResortClick = await clickLastResortTextureTrigger(page, xpath, idx);
+      if (!lastResortClick) continue;
       await afterStepCheckForBanner(page);
       chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      if (chosenUrl) break;
     }
   }
 
-  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens)) {
+  if (!chosenUrl && lastResortAttempted) {
+    await afterStepCheckForBanner(page);
+    logStep(`[${code}] Last-resort HTML sweep (relaxed filters)`);
+    chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+  }
+
+  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens, chosenUrlOptions)) {
     logStep(`[${code}] Rejected candidate texture image URL`, chosenUrl);
     chosenUrl = null;
   }
@@ -1134,6 +1175,10 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
 async function main() {
   const indexArr   = readJsonSafe(INDEX_JSON);
   const detailsArr = readJsonSafe(OUT_JSON);
+  const clearedCarouselCodes = clearCarouselTextureUrls(detailsArr);
+  if (clearedCarouselCodes.length) {
+    logStep(`[precheck] Cleared carousel texture_image_url for ${clearedCarouselCodes.length} product(s)`, clearedCarouselCodes.slice(0, 5));
+  }
 
   // Handle --report early
   if (FLAG_REPORT) {
@@ -1168,13 +1213,20 @@ async function main() {
   // --missing=<field>: intersect with codes whose field is missing/empty
   if (MISSING_FIELD) {
     const { missing } = filterCodesForMissingField(detailsArr, MISSING_FIELD);
+    const { missing: missingEntries } = codesMissingFromDetails(indexArr, detailsArr);
     const set = new Set(missing);
+    for (const code of missingEntries) set.add(code);
     codesToProcess = codesToProcess.filter(c => set.has(c));
   }
 
   // Apply OFFSET/LIMIT
   if (OFFSET > 0) codesToProcess = codesToProcess.slice(OFFSET);
   if (LIMIT > 0) codesToProcess = codesToProcess.slice(0, LIMIT);
+
+  if (!codesToProcess.length && clearedCarouselCodes.length) {
+    writeJsonPretty(OUT_JSON, detailsArr);
+    logStep(`[precheck] Persisted carousel clears to ${OUT_JSON}`);
+  }
 
   console.log(`[plan] ${codesToProcess.length} code(s) to process.`);
 
