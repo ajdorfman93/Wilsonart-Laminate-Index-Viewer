@@ -51,7 +51,7 @@ const path = require("path");
 const puppeteer = require("puppeteer");
 
 // -------------------- Paths --------------------
-const INDEX_JSON = path.resolve(process.cwd(), "wilsonart-tfl-laminate-details.json");
+const INDEX_JSON = path.resolve(process.cwd(), "wilsonart-tfl-laminate-index.json");
 const OUT_JSON   = path.resolve(process.cwd(), "wilsonart-tfl-laminate-details.json");
 
 // -- CLI helpers (accept both "--name value" and "--name=value") --

@@ -1,0 +1,58 @@
+[
+  {
+    "code": "13089",
+    "name": "Sunny Side Up",
+    "product-link": "https://www.wilsonart.com/laminate/thermally-fused-laminate/sunny-side-up-13089",
+    "surface-group": "Laminate",
+    "design_groups": [
+      "Abstracts & Patterns"
+    ],
+    "species": [],
+    "cut": [],
+    "match": [],
+    "shade": [],
+    "colors": [
+      "Yellow"
+    ],
+    "finish": [
+      {
+        "code": "#01",
+        "name": "High Gloss"
+      },
+      {
+        "code": "#07",
+        "name": "Textured Gloss"
+      },
+      {
+        "code": "#38",
+        "name": "Fine Velvet"
+      },
+      {
+        "code": "#60",
+        "name": "Matte"
+      }
+    ],
+    "performance_enhancements": [
+      "Chemical Resistant",
+      "Enhanced Wear Resistance",
+      "Fire-Rated",
+      "Peel & Stick (RE-COVER)"
+    ],
+    "specialty_features": [],
+    "design_tfl_collection": [
+      "Edgeband"
+    ],
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a4b6c9f2-05b5-4950-a58b-dc6949df4f3d/13089-Sunny-Side-Up_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
+    },
+    "no_repeat": false,
+    "sheet_sizes": [],
+    "texture_scale": {
+      "width": 144,
+      "height": 61.13
+    }
+  }
+]

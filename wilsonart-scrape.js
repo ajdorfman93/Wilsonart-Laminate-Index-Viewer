@@ -143,15 +143,6 @@ const OUT_PATH = path.resolve(process.cwd(), "wilsonart-laminate-index.json");
 const START_URL =
   "https://www.wilsonart.com/laminate/design-library?product_list_mode=list";
 
-if (hasCheckFlag) {
-  runCodeCheckAndExit();
-}
-
-// If the user only asked for a report (and not scraping), do that quickly and exit.
-if (hasReportFlag && !hasMissingFlag) {
-  runReportAndExit();
-}
-
 const TEST_LIMIT = parseInt(
   process.env.FILTER_LIMIT ??
     (process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1] ??
@@ -412,6 +403,97 @@ function codeFromHref(href) {
   return null;
 }
 
+// ----------------------------------------------------
+// Code validation helpers
+// ----------------------------------------------------
+const CODE_ALLOWED_RE = /^[A-Z0-9]+$/;
+
+function normalizeCodeValue(value) {
+  if (value == null) return "";
+  return String(value)
+    .replace(/\u2026/g, "...")
+    .trim()
+    .replace(/\s+/g, "")
+    .toUpperCase();
+}
+
+function isValidCodeValue(code) {
+  if (!code) return false;
+  if (!CODE_ALLOWED_RE.test(code)) return false;
+  if (code.length < 3 || code.length > 7) return false;
+  const digitCount = (code.match(/[0-9]/g) || []).length;
+  return digitCount >= 2;
+}
+
+function collectTokensFromUrl(urlLike) {
+  if (!urlLike) return [];
+  const tokens = [];
+  const addTokens = (input) => {
+    if (!input) return;
+    const matches = String(input).match(/[A-Za-z0-9]+/g);
+    if (matches) tokens.push(...matches);
+  };
+  try {
+    const url = new URL(urlLike, START_URL);
+    url.pathname
+      .split("/")
+      .filter(Boolean)
+      .forEach((segment) => addTokens(segment));
+    url.searchParams.forEach((val) => addTokens(val));
+    if (url.hash) addTokens(url.hash);
+  } catch {
+    addTokens(urlLike);
+  }
+  return tokens;
+}
+
+function gatherCandidateCodes(product, detail) {
+  const candidates = [];
+  const seen = new Set();
+  const pushCandidate = (raw, source) => {
+    const normalized = normalizeCodeValue(raw);
+    if (!normalized) return;
+    if (seen.has(normalized)) return;
+    seen.add(normalized);
+    candidates.push({ code: normalized, source });
+  };
+
+  pushCandidate(product && product.code, "existing");
+
+  const productLink = product && product["product-link"];
+  if (productLink) {
+    for (const token of collectTokensFromUrl(productLink)) {
+      pushCandidate(token, "product-link");
+    }
+  }
+
+  if (detail) {
+    if (detail.code && detail.code !== product.code) {
+      pushCandidate(detail.code, "detail.code");
+    }
+    if (detail["product-link"] && detail["product-link"] !== productLink) {
+      for (const token of collectTokensFromUrl(detail["product-link"])) {
+        pushCandidate(token, "detail.product-link");
+      }
+    }
+    if (detail.texture_image_url) {
+      for (const token of collectTokensFromUrl(detail.texture_image_url)) {
+        pushCandidate(token, "texture_image_url");
+      }
+    }
+  }
+
+  return candidates;
+}
+
+function findPreferredCode(product, detail) {
+  const candidates = gatherCandidateCodes(product, detail);
+  for (const candidate of candidates) {
+    if (isValidCodeValue(candidate.code)) return candidate;
+  }
+  return null;
+}
+
 // Lazy scrolling to load all tiles on current page
 async function lazyScrollAll(page, maxPasses = 20) {
   let prev = -1;
@@ -522,6 +604,180 @@ function doReport(records, fields) {
     for (const c of miss) console.log(c);
   }
   console.log("\n");
+}
+
+function runCodeCheckAndExit() {
+  try {
+    if (!fs.existsSync(OUT_PATH)) {
+      console.error(`[--check] No ${OUT_PATH} found. Run the scraper first.`);
+      process.exit(2);
+    }
+
+    const raw = fs.readFileSync(OUT_PATH, "utf-8");
+    let records;
+    try {
+      records = JSON.parse(raw);
+    } catch (err) {
+      console.error(
+        `[--check] Failed to parse ${OUT_PATH}: ${err && err.message ? err.message : err}`
+      );
+      process.exit(3);
+    }
+
+    if (!Array.isArray(records)) {
+      console.error("[--check] Expected laminate index to be an array.");
+      process.exit(3);
+    }
+
+    const detailPath = path.resolve(process.cwd(), "wilsonart-laminate-details.json");
+    const detailByLink = new Map();
+    const detailByName = new Map();
+    if (fs.existsSync(detailPath)) {
+      try {
+        const detailRaw = fs.readFileSync(detailPath, "utf-8");
+        const detailArr = JSON.parse(detailRaw);
+        if (Array.isArray(detailArr)) {
+          for (const entry of detailArr) {
+            if (!entry || typeof entry !== "object") continue;
+            const link = entry["product-link"];
+            const name = entry.name;
+            if (link && !detailByLink.has(link)) detailByLink.set(link, entry);
+            if (name && !detailByName.has(name)) detailByName.set(name, entry);
+          }
+        }
+      } catch (err) {
+        console.warn(
+          `[--check] Warning: unable to read ${detailPath}: ${err && err.message ? err.message : err}`
+        );
+      }
+    }
+
+    let normalizedCount = 0;
+    let correctedCount = 0;
+    const correctionSources = new Set();
+    const unresolved = [];
+
+    for (const rec of records) {
+      if (!rec || typeof rec !== "object") continue;
+      const originalRaw = rec.code;
+      const originalHasValue = originalRaw != null && String(originalRaw).trim() !== "";
+      const normalized = normalizeCodeValue(originalRaw);
+      if (originalHasValue) {
+        const baseline = String(originalRaw).trim().toUpperCase();
+        if (normalized !== baseline) normalizedCount++;
+        rec.code = normalized;
+      } else if (normalized) {
+        rec.code = normalized;
+      }
+
+      const detail =
+        detailByLink.get(rec["product-link"]) ||
+        (rec.name ? detailByName.get(rec.name) : undefined);
+
+      if (!isValidCodeValue(rec.code)) {
+        const candidate = findPreferredCode(rec, detail);
+        if (candidate && candidate.code !== rec.code) {
+          rec.code = candidate.code;
+          correctedCount++;
+          correctionSources.add(candidate.source);
+        }
+      }
+
+      if (!isValidCodeValue(rec.code)) {
+        unresolved.push({
+          name: rec.name || "",
+          link: rec["product-link"] || "",
+          code: rec.code || "",
+        });
+      }
+    }
+
+    const mergedRecords = [];
+    const indexByCode = new Map();
+    const duplicateCounts = new Map();
+    let duplicatesMerged = 0;
+
+    for (const rec of records) {
+      if (!rec || typeof rec !== "object") continue;
+      const code = rec.code;
+      if (!code) {
+        mergedRecords.push(rec);
+        continue;
+      }
+
+      if (indexByCode.has(code)) {
+        const idx = indexByCode.get(code);
+        const merged = mergeRecordsNoErase(mergedRecords[idx], rec);
+        mergedRecords[idx] = merged;
+        duplicatesMerged++;
+        duplicateCounts.set(code, (duplicateCounts.get(code) || 1) + 1);
+      } else {
+        indexByCode.set(code, mergedRecords.length);
+        duplicateCounts.set(code, 1);
+        mergedRecords.push(rec);
+      }
+    }
+
+    const outputJson = JSON.stringify(mergedRecords, null, 2);
+
+    const normalizedRaw = raw.replace(/\r\n/g, "\n").trimEnd();
+    const normalizedOut = outputJson.replace(/\r\n/g, "\n");
+    const requiresWrite =
+      normalizedOut !== normalizedRaw ||
+      normalizedCount > 0 ||
+      correctedCount > 0 ||
+      duplicatesMerged > 0;
+
+    if (requiresWrite) {
+      const newline = raw.endsWith("\n") ? "\n" : "";
+      fs.writeFileSync(OUT_PATH, outputJson + newline, "utf-8");
+    }
+
+    console.log(`[--check] Reviewed ${records.length} record(s).`);
+    if (normalizedCount) {
+      console.log(`[--check] Normalized ${normalizedCount} code(s) for casing and spacing.`);
+    }
+    if (correctedCount) {
+      console.log(`[--check] Corrected ${correctedCount} code(s) using alternate data sources.`);
+    }
+    if (duplicatesMerged) {
+      const dupList = [...duplicateCounts.entries()]
+        .filter(([, count]) => count > 1)
+        .map(([code, count]) => `${code}×${count}`);
+      const preview = dupList.slice(0, 10).join(", ");
+      console.log(
+        `[--check] Merged ${duplicatesMerged} duplicate record(s) by code${
+          dupList.length ? ` (${preview}${dupList.length > 10 ? ", ..." : ""})` : ""
+        }.`
+      );
+    }
+    if (!normalizedCount && !correctedCount && !duplicatesMerged) {
+      console.log("[--check] No changes required.");
+    } else if (!requiresWrite) {
+      console.log("[--check] Detected issues but no file rewrite was necessary.");
+    }
+    if (correctionSources.size) {
+      console.log(
+        `[--check] Correction sources consulted: ${Array.from(correctionSources).join(", ")}.`
+      );
+    }
+
+    if (unresolved.length) {
+      console.warn(`[--check] Unable to derive valid codes for ${unresolved.length} record(s).`);
+      for (const issue of unresolved.slice(0, 10)) {
+        console.warn(`  - name="${issue.name}", code="${issue.code}", link=${issue.link}`);
+      }
+      if (unresolved.length > 10) {
+        console.warn("  - ...");
+      }
+      console.warn("[--check] Please review the entries above manually.");
+    }
+
+    process.exit(unresolved.length ? 4 : 0);
+  } catch (err) {
+    console.error("[--check] Failed:", err && err.message ? err.message : err);
+    process.exit(3);
+  }
 }
 
 function runReportAndExit() {
@@ -695,6 +951,15 @@ function mergeRecordsNoErase(oldRec, newRec) {
 // ----------------------------------------------------
 // Main
 // ----------------------------------------------------
+if (hasCheckFlag) {
+  runCodeCheckAndExit();
+}
+
+// If the user only asked for a report (and not scraping), do that quickly and exit.
+if (hasReportFlag && !hasMissingFlag) {
+  runReportAndExit();
+}
+
 (async () => {
   logStep("Launching Puppeteer…");
   const browser = await puppeteer.launch({
