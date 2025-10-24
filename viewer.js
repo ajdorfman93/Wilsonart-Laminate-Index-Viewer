@@ -35,13 +35,13 @@ const COLUMNS = [
   { key: 'texture_image_url', label: 'Image', render: renderImage },
   { key: 'code', label: 'Code', render: (r) => safe(r.code) },
   { key: 'name', label: 'Name', render: (r) => safe(r.name) },
-  { key: 'product-link', label: 'Product Link', render: (r) => r['product-link'] ? `<a class="link" href="${escapeAttr(r['product-link'])}" target="_blank" rel="noopener">Open</a>` : '' },
-  { key: 'surface-group', label: 'Surface Group', render: (r) => safe(r['surface-group']) },
+  { key: 'product-link', label: 'Link', render: (r) => r['product-link'] ? `<a class="link" href="${escapeAttr(r['product-link'])}" target="_blank" rel="noopener">Open</a>` : '' },
+  { key: 'surface-group', label: 'Surface', render: (r) => safe(r['surface-group']) },
 
-  { key: 'design_groups', label: 'Design Groups', render: renderPills },
+  { key: 'design_groups', label: 'Design', render: renderPills },
   { key: 'colors', label: 'Colors', render: renderPills },
-  { key: 'sheet_sizes', label: 'Sheet Sizes', render: renderPills },
-  { key: 'texture_scale', label: 'Texture Scale (WA-H in)', render: renderScale },
+  { key: 'sheet_sizes', label: 'Sheets', render: renderPills },
+  { key: 'texture_scale', label: 'Texture', render: renderScale },
   { key: 'species', label: 'Species', render: renderPills },
   { key: 'cut', label: 'Cut', render: renderPills },
   { key: 'match', label: 'Match', render: renderPills },
@@ -52,7 +52,7 @@ const COLUMNS = [
   { key: 'design_collections', label: 'Design Collections', render: renderPills },
 
   { key: 'no_repeat', label: 'No Repeat', render: (r) => r.no_repeat === true ? 'Yes' : (r.no_repeat === false ? 'No' : '') },
-  { key: 'no_repeat_texture_scale', label: 'No Repeat Texture Scale (WA-H in)', render: renderScale },
+  { key: 'no_repeat_texture_scale', label: 'No Repeat Texture', render: renderScale },
   { key: 'description', label: 'Description', render: (r) => safe(r.description) },
 ];
 
@@ -242,7 +242,10 @@ function renderTable() {
     const renderCols = dedupeColumns(COLUMNS);
     const headerCells = [
       '<th scope="col" class="col-index">#</th>',
-      ...renderCols.map(c => `<th scope="col">${c.label}</th>`),
+      ...renderCols.map(c => {
+        const colClass = c && c.key ? ` class="col-${c.key}"` : '';
+        return `<th scope="col"${colClass}>${c.label}</th>`;
+      }),
     ];
     headRow.innerHTML = headerCells.join('');
     headRow.dataset.built = '1';
@@ -254,7 +257,8 @@ function renderTable() {
     const renderCols = dedupeColumns(COLUMNS);
     const tds = renderCols.map(col => {
       const rendered = (col.render.length === 1 ? col.render(r) : col.render.call(col, r[col.key], r));
-      return `<td>${rendered}</td>`;
+      const colClass = col && col.key ? ` class="col-${col.key}"` : '';
+      return `<td${colClass}>${rendered}</td>`;
     }).join('');
     return `<tr>${numberCell}${tds}</tr>`;
   }).join('');
@@ -503,6 +507,8 @@ function injectViewerStyles() {
   .lightbox-img, .lightbox-canvas { max-width:90vw; max-height:85vh; display:block; border-radius:8px; background:#fff; }
   .lightbox-close { position:absolute; top:-40px; right:0; font-size:28px; width:36px; height:36px; line-height:32px; border-radius:6px; border:0; cursor:pointer; }
   .lightbox-caption { margin-top:8px; color:#fff; text-align:center; font-size:14px; }
+  th.col-texture_scale, td.col-texture_scale { min-width:20px; }
+  th.col-sheet_sizes, td.col-sheet_sizes { min-width:80px; }
   `;
   const style = document.createElement('style');
   style.id = 'viewer-inline-styles';
