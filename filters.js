@@ -102,6 +102,7 @@
 
   let _opts = {};
   let _debTimer = null;
+  let _hideImageToggles = false;
 
   function debounce(fn, ms = 160) {
     clearTimeout(_debTimer);
@@ -209,49 +210,51 @@
     root.innerHTML = '';
 
     // Header row - quick toggles
-    const bar = document.createElement('div');
-    bar.className = 'filters-bar';
+    if (!_hideImageToggles) {
+      const bar = document.createElement('div');
+      bar.className = 'filters-bar';
 
-    const imgOnly = document.createElement('label');
-    imgOnly.className = 'filters-toggle';
-    imgOnly.innerHTML = `
-      <input type="checkbox" id="filter-has-image">
-      <span>Only with image</span>
-    `;
-    bar.appendChild(imgOnly);
+      const imgOnly = document.createElement('label');
+      imgOnly.className = 'filters-toggle';
+      imgOnly.innerHTML = `
+        <input type="checkbox" id="filter-has-image">
+        <span>Only with image</span>
+      `;
+      bar.appendChild(imgOnly);
 
-    const noImg = document.createElement('label');
-    noImg.className = 'filters-toggle';
-    noImg.innerHTML = `
-      <input type="checkbox" id="filter-no-image">
-      <span>Only without image</span>
-    `;
-    bar.appendChild(noImg);
+      const noImg = document.createElement('label');
+      noImg.className = 'filters-toggle';
+      noImg.innerHTML = `
+        <input type="checkbox" id="filter-no-image">
+        <span>Only without image</span>
+      `;
+      bar.appendChild(noImg);
 
-    root.appendChild(bar);
+      root.appendChild(bar);
 
-    const imgOnlyInput = imgOnly.querySelector('input');
-    const noImgInput = noImg.querySelector('input');
-    imgOnlyInput.checked = !!state.withImageOnly;
-    noImgInput.checked = !!state.withoutImageOnly;
-    imgOnlyInput.addEventListener('change', () => {
-      const checked = !!imgOnlyInput.checked;
-      state.withImageOnly = checked;
-      if (checked) {
-        state.withoutImageOnly = false;
-        noImgInput.checked = false;
-      }
-      triggerChange();
-    });
-    noImgInput.addEventListener('change', () => {
-      const checked = !!noImgInput.checked;
-      state.withoutImageOnly = checked;
-      if (checked) {
-        state.withImageOnly = false;
-        imgOnlyInput.checked = false;
-      }
-      triggerChange();
-    });
+      const imgOnlyInput = imgOnly.querySelector('input');
+      const noImgInput = noImg.querySelector('input');
+      imgOnlyInput.checked = !!state.withImageOnly;
+      noImgInput.checked = !!state.withoutImageOnly;
+      imgOnlyInput.addEventListener('change', () => {
+        const checked = !!imgOnlyInput.checked;
+        state.withImageOnly = checked;
+        if (checked) {
+          state.withoutImageOnly = false;
+          noImgInput.checked = false;
+        }
+        triggerChange();
+      });
+      noImgInput.addEventListener('change', () => {
+        const checked = !!noImgInput.checked;
+        state.withoutImageOnly = checked;
+        if (checked) {
+          state.withImageOnly = false;
+          imgOnlyInput.checked = false;
+        }
+        triggerChange();
+      });
+    }
 
     // Facet groups
     const groupsWrap = document.createElement('div');
@@ -467,6 +470,11 @@
       _opts = opts || {};
       applyState(createDefaultState());
       const sourceData = Array.isArray(_opts.data) ? _opts.data : [];
+      _hideImageToggles = sourceData.length > 0 && sourceData.every((record) => !!(record && record.texture_image_url));
+      if (_hideImageToggles) {
+        state.withImageOnly = false;
+        state.withoutImageOnly = false;
+      }
       resetFacetMeta(buildFacets(sourceData));
       renderUI();
       triggerChange();

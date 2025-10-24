@@ -496,6 +496,9 @@ async function findBannerUrlsInHTML(page) {
 async function findAssetLibraryUrlsInHTML(page) {
   return await findUrlsMatching(page, /https?:\/\/assetlibrary\.wilsonart\.com[^\s"'<>\)]*/g);
 }
+async function findCatalogProductUrlsInHTML(page) {
+  return await findUrlsMatching(page, /https?:\/\/images\.wilsonart\.com\/media\/catalog\/product\/[^\s"'<>\)]*/gi);
+}
 
 function hasSizeToken(url) {
   if (!url) return false;
@@ -505,6 +508,7 @@ function hasSizeToken(url) {
 function isForbiddenTextureUrl(url, options = {}) {
   if (!url) return true;
   const lower = url.toLowerCase();
+  const host = getHostname(url);
 
   if (lower.includes("carousel")) {
     const isMain = /carousel_main/.test(lower);
@@ -513,9 +517,22 @@ function isForbiddenTextureUrl(url, options = {}) {
     if (!allowMain) return true;
   }
 
-  const forbiddenTokens = options.allowWilsonartWebFullSheet
-    ? FORBIDDEN_TEXTURE_SUBSTRINGS.filter(token => token !== "webfullsheet")
-    : FORBIDDEN_TEXTURE_SUBSTRINGS;
+  const codeLower = typeof options.codeLower === "string" ? options.codeLower : undefined;
+  const productTokens = Array.isArray(options.productTokens) ? options.productTokens : [];
+  const hasTokenMatch = productTokens.some(token => token && lower.includes(token));
+  const hasCodeMatch = codeLower ? lower.includes(codeLower) : false;
+  const allowWebFullSheetHost =
+    host === "assetlibrary.wilsonart.com" ||
+    host === "images.wilsonart.com" ||
+    (options.allowWilsonartWebFullSheet && host === "www.wilsonart.com");
+
+  let forbiddenTokens = FORBIDDEN_TEXTURE_SUBSTRINGS;
+  if (allowWebFullSheetHost && lower.includes("webfullsheet") && (hasCodeMatch || hasTokenMatch)) {
+    forbiddenTokens = forbiddenTokens.filter(token => token !== "webfullsheet");
+  } else if (options.allowWilsonartWebFullSheet) {
+    forbiddenTokens = forbiddenTokens.filter(token => token !== "webfullsheet");
+  }
+
   return forbiddenTokens.some(token => lower.includes(token));
 }
 
@@ -524,33 +541,85 @@ const hasFullSizeViewToken = (url) => /fullsizeview|full_size_view/i.test(url ||
 function isValidTextureUrl(url, tokens = [], options = {}) {
   if (!url) return false;
   const lower = url.toLowerCase();
+  let pathnameLower = "";
+  try {
+    pathnameLower = new URL(url).pathname.toLowerCase();
+  } catch {
+    pathnameLower = "";
+  }
   const host = getHostname(url);
-  if (!isAllowedTextureHost(url, options)) return false;
-  if (isForbiddenTextureUrl(url, options)) return false;
+  const normalizedTokens = Array.isArray(tokens) ? tokens.filter(Boolean).map(t => t.toLowerCase()) : [];
+  const effectiveOptions = { ...options };
+  if (!Array.isArray(effectiveOptions.productTokens) || !effectiveOptions.productTokens.length) {
+    effectiveOptions.productTokens = normalizedTokens;
+  }
+  if (typeof effectiveOptions.codeLower !== "string" || !effectiveOptions.codeLower.trim()) {
+    const numericToken = normalizedTokens.find(token => /^\d{3,}$/.test(token));
+    if (numericToken) effectiveOptions.codeLower = numericToken;
+  }
+  if (!isAllowedTextureHost(url, effectiveOptions)) return false;
+  if (isForbiddenTextureUrl(url, effectiveOptions)) return false;
 
   const hasBannerKeyword = /banner/i.test(url);
   const hasFullSizeView = hasFullSizeViewToken(url);
   const hasFullSheetToken = /FullSheet/.test(url);
   const hasSizeTokenMatch = hasSizeToken(url);
-  const hasProductToken = tokens.some(token => token && lower.includes(token));
-  const codeLower = typeof options.codeLower === "string" && options.codeLower
-    ? options.codeLower
+  const hasProductToken = normalizedTokens.some(token => token && lower.includes(token));
+  const codeLower = typeof effectiveOptions.codeLower === "string" && effectiveOptions.codeLower
+    ? effectiveOptions.codeLower.toLowerCase()
     : undefined;
-  const hasCodeToken = codeLower ? lower.includes(codeLower) : hasProductToken;
+  const hasCodeToken = codeLower
+    ? (pathnameLower ? pathnameLower.includes(codeLower) : lower.includes(codeLower))
+    : hasProductToken;
 
   if (host === "images.wilsonart.com") {
+    const isCatalogProductImage =
+      Boolean(effectiveOptions.allowCatalogProductImages) &&
+      pathnameLower.includes("/media/catalog/product/");
+    if (isCatalogProductImage) {
+      if (!hasCodeToken) return false;
+      if (/_([1-7])\.(?:jpe?g|png|webp)$/i.test(pathnameLower)) return false;
+      const endsWithEight = /_8\.(?:jpe?g|png|webp)$/i.test(pathnameLower);
+      const hasWebFullSheet = /webfullsheet/i.test(pathnameLower);
+      let hasNameToken = false;
+      if (!endsWithEight && !hasWebFullSheet) {
+        const tokenVariants = new Set(normalizedTokens);
+        normalizedTokens.forEach(token => {
+          if (typeof token !== "string") return;
+          if (/\s/.test(token)) {
+            tokenVariants.add(token.replace(/\s+/g, "-"));
+            tokenVariants.add(token.replace(/\s+/g, "_"));
+            tokenVariants.add(token.replace(/\s+/g, "%20"));
+            tokenVariants.add(token.replace(/\s+/g, "+"));
+          }
+        });
+        hasNameToken = Array.from(tokenVariants).some(token => token && pathnameLower.includes(token));
+      }
+      if (endsWithEight || hasWebFullSheet || hasNameToken) return true;
+      return false;
+    }
     if (!(hasFullSizeView && hasProductToken)) return false;
   }
 
   if (host === "www.wilsonart.com") {
-    if (!options.allowWilsonartSite) return false;
+    if (!effectiveOptions.allowWilsonartSite) return false;
     if (!hasCodeToken) return false;
-    const nameTokens = Array.isArray(options.productNameTokens) ? options.productNameTokens : [];
-    const hasNameToken = nameTokens.some(token => token && lower.includes(token));
+    const nameTokens = Array.isArray(effectiveOptions.productNameTokens) ? effectiveOptions.productNameTokens : [];
+    const hasNameToken = nameTokens.some(token => {
+      if (typeof token !== "string" || !token.trim()) return false;
+      return lower.includes(token.toLowerCase());
+    });
     if (hasNameToken) return true;
-    if (!options.allowWilsonartWebFullSheet) return false;
+    if (!effectiveOptions.allowWilsonartWebFullSheet) return false;
     const hasFullSheetWord = /(full[_-]?sheet|webfullsheet)/i.test(lower);
     return hasFullSheetWord && hasCodeToken;
+  }
+
+  if (host === "assetlibrary.wilsonart.com") {
+    if (effectiveOptions.allowAssetLibraryWebFullSheet) {
+      const hasFullSheetWord = /(full[_-]?sheet|webfullsheet)/i.test(lower);
+      if (hasFullSheetWord && hasCodeToken) return true;
+    }
   }
 
   return hasBannerKeyword || hasFullSizeView || hasSizeTokenMatch || hasProductToken || hasFullSheetToken;
@@ -563,12 +632,26 @@ function computeTextureUrlScore(url, tokens = []) {
   if (/banner/i.test(url)) score += 10;
   if (hasFullSizeViewToken(url)) score += 8;
   if (hasSizeToken(url)) score += 6;
+  if (/webfullsheet/i.test(url)) score += 5;
+  if (/fullsheet/i.test(lower)) score += 2;
+  if (/transform\/pdp_hpl_fullsheet/i.test(lower)) score += 2;
+  if (/media\/catalog\/product/i.test(lower)) score += 2;
+  if (/150dpi/i.test(url)) score += 2;
+  if (/_8\.(?:jpe?g|png|webp)$/i.test(lower)) score += 3;
   tokens.forEach((token, idx) => {
     if (!token || !lower.includes(token)) return;
     score += Math.max(4 - idx, 1);
   });
-  if (/150dpi/i.test(url)) score += 1;
-  if (/fullsheet/i.test(lower)) score += 1;
+  try {
+    const pathname = new URL(url).pathname.toLowerCase();
+    const numericMatch = pathname.match(/_(\d+)(?:-[a-z0-9]+)*\.[a-z0-9]+$/i);
+    if (numericMatch) {
+      const numericSuffix = parseInt(numericMatch[1], 10);
+      if (Number.isFinite(numericSuffix)) {
+        score += Math.min(Math.max(numericSuffix, 0), 60) / 4;
+      }
+    }
+  } catch {}
   return score;
 }
 
@@ -640,13 +723,19 @@ function listBannerCandidates(page) {
 async function resolveTextureImageUrl(page, code, productLink, tokens, options = {}) {
   const searchTokens = Array.isArray(tokens) && tokens.length ? tokens : normalizeProductTokens(code, productLink);
   const codeLower = hasString(code) ? String(code).trim().toLowerCase() : undefined;
-  const effectiveOptions = { ...options, codeLower };
+  const effectiveOptions = { ...options, codeLower, productTokens: searchTokens };
   const combined = new Set();
+  const normalizeCandidate = (value) => {
+    if (typeof value !== "string") return null;
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    const cleaned = trimmed.replace(/[;,]+$/, "");
+    return cleaned || null;
+  };
   const addAll = (arr = []) => {
     for (const item of arr) {
-      if (typeof item === "string" && item.trim()) {
-        combined.add(item.trim());
-      }
+      const normalized = normalizeCandidate(item);
+      if (normalized) combined.add(normalized);
     }
   };
 
@@ -654,6 +743,7 @@ async function resolveTextureImageUrl(page, code, productLink, tokens, options =
   addAll(await findFullSheetUrlsInHTML(page));
   addAll(await findFullSizeUrlsInHTML(page));
   addAll(await findAssetLibraryUrlsInHTML(page));
+  addAll(await findCatalogProductUrlsInHTML(page));
 
   const allCandidates = [...combined];
   const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens, effectiveOptions));
@@ -683,7 +773,8 @@ const SECOND_IMAGE_XPATHS = [
 ];
 const LAST_RESORT_XPATHS = [
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div",
-  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]"
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]",
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]"
 ];
 const WEBFULLSHEET_FALLBACK_XPATH =
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]";
@@ -922,6 +1013,46 @@ async function attemptWebFullSheetFallback(
     const chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens, {
       allowWilsonartSite: true,
       allowWilsonartWebFullSheet: true,
+      allowAssetLibraryWebFullSheet: true,
+      productNameTokens
+    });
+    return { chosenUrl, attempted: true };
+  } catch (err) {
+    logStep(`[${code}] ${stageLabel}: error ${err.message || err}`);
+    return { chosenUrl: null, attempted: false };
+  }
+}
+
+async function attemptCatalogProductFallback(
+  page,
+  code,
+  productLink,
+  productTokens,
+  productNameTokens = [],
+  { stage = "CatalogProduct" } = {}
+) {
+  const stageLabel = stage ? `${stage} catalog product fallback` : "Catalog product fallback";
+  try {
+    page.__bannerOverrideUrl = null;
+    page.__bannerCandidates = new Set();
+    logStep(`[${code}] ${stageLabel}: reloading product page`);
+    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+    await waitForMain(page);
+
+    const triggerLabel = `${stageLabel} trigger`;
+    const clicked = await robustClickXPath(
+      page,
+      WEBFULLSHEET_FALLBACK_XPATH,
+      triggerLabel,
+      { waitTimeout: 6000, waitPolling: 200 }
+    );
+    if (!clicked) {
+      logStep(`[${code}] ${stageLabel}: trigger click failed`);
+    }
+    await afterStepCheckForBanner(page);
+
+    const chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens, {
+      allowCatalogProductImages: true,
       productNameTokens
     });
     return { chosenUrl, attempted: true };
@@ -1256,9 +1387,29 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     }
   }
 
-  if (chosenUrl && !isValidTextureUrl(chosenUrl, productTokens)) {
-    logStep(`[${code}] Rejected candidate texture image URL`, chosenUrl);
-    chosenUrl = null;
+  if (!chosenUrl) {
+    const catalogFallback = await attemptCatalogProductFallback(
+      page,
+      code,
+      productLink,
+      productTokens,
+      productNameTokens,
+      { stage: "Catalog" }
+    );
+    if (catalogFallback.chosenUrl) {
+      chosenUrl = catalogFallback.chosenUrl;
+    }
+  }
+
+  if (chosenUrl) {
+    const needsCatalogAllowance =
+      getHostname(chosenUrl) === "images.wilsonart.com" &&
+      /\/media\/catalog\/product\//i.test(chosenUrl);
+    const validationOptions = needsCatalogAllowance ? { allowCatalogProductImages: true } : {};
+    if (!isValidTextureUrl(chosenUrl, productTokens, validationOptions)) {
+      logStep(`[${code}] Rejected candidate texture image URL`, chosenUrl);
+      chosenUrl = null;
+    }
   }
 
   if (!chosenUrl) {

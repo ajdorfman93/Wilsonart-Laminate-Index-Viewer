@@ -4681,8 +4681,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 30,
-      "height": 18
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/403e1d99-0c75-4d5b-b24e-63d7ae591547/4168-Grey-Pampas_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -11737,8 +11743,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 18,
-      "height": 14
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d0934034-11fb-425a-a3db-cd54d4067661/4783-WHITE-TIGRIS_Webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -23299,8 +23311,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 144,
-      "height": 60
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2e5544b0-bc38-41db-9f48-474799c66fad/D431-Alabaster_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -29502,8 +29520,14 @@
       "4' x 12'"
     ],
     "texture_scale": {
-      "width": 62.5,
-      "height": 51.2
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2a571a91-b100-4e2e-b8ed-e615e4ad49b5/5043-Lisola_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -30120,8 +30144,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62,
-      "height": 49
+      "width": 45.5,
+      "height": 72
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/aa2e350d-510d-4cd9-99a8-e8a06c2868d8/5008-Praline-Antico_webfullsheet",
+    "texture_image_pixels": {
+      "width": 1264,
+      "height": 2000,
+      "ratio": 0.632
     }
   },
   {
@@ -30529,8 +30559,14 @@
       "4' x 12'"
     ],
     "texture_scale": {
-      "width": 43.3,
-      "height": 26.8
+      "width": 96,
+      "height": 54
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8130d828-1ac9-4f1b-b60a-81abee5030b1/1890-Serrania_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1125,
+      "ratio": 1.7778
     }
   },
   {
@@ -30957,8 +30993,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 37.04,
-      "height": 37.04
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e903d4dd-4e2e-4c44-9df1-33a1636c4224/5003-White-Cascade_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -32940,8 +32982,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.46,
-      "height": 25.61
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c9c4f87f-d3ce-441d-b44c-a7ee8f2a7c1e/4929-Bordeaux-Juparana_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -32999,8 +33047,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.25,
-      "height": 49.25
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/97ec3825-fb27-4cef-a367-c1483682c766/4926-BlackAlicante_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -33132,8 +33186,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 36.16
+      "width": 72,
+      "height": 55.02
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/905eff0e-0d5c-4526-b8ba-a2342ff67a4e/4924-White-Carrara_webfullsheet",
+    "texture_image_pixels": {
+      "width": 615,
+      "height": 470,
+      "ratio": 1.3085
     }
   },
   {
@@ -33484,8 +33544,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 37.04,
-      "height": 36.64
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/4bba8e51-cefd-488b-bf66-cb2eb8274715/4904-Desert-Springs_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -34519,8 +34585,14 @@
       "4' x 12'"
     ],
     "texture_scale": {
-      "width": 49.01,
-      "height": 31.42
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/3ab03436-5c61-4b65-a943-67a1c5fb88b0/4724-Milano-Amber_webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -34639,8 +34711,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 36.63,
-      "height": 23.63
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/44971981-9902-4eee-a8b9-d16fe34aebe2/4589-Smoky-Topaz_Webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -35008,8 +35086,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 36.64,
-      "height": 31.12
+      "width": 96,
+      "height": 57.6
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/5c4dbe06-d5a8-4d76-8d14-68c755406f42/1799-EBONY-FUSION_Webfullsheet",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1200,
+      "ratio": 1.6667
     }
   },
   {
@@ -53836,8 +53920,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51,
-      "height": 31
+      "width": 96,
+      "height": 62.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/da0969a5-562f-44ea-a3a7-4aae1b298c3d/7972-TrussMaple_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302,
+      "ratio": 1.5361
     }
   },
   {
@@ -53920,8 +54010,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51,
-      "height": 25.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6de94daa-8317-4334-b5e9-eac797018917/7971-Uptown-Walnut_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54003,8 +54099,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.32,
-      "height": 51.18
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ff0e70c2-13e1-4a4c-8654-958ecd7b9dca/7970-High-Line_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54079,8 +54181,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.32,
-      "height": 51.18
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2dd848e0-5d63-4f0b-8778-df0ec8ef6937/7969",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54332,8 +54440,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 48.8,
-      "height": 29
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/4b5e04be-b17d-4fa8-b57e-2df13e0cc41e/7966-5th-Ave-Elm",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54416,8 +54530,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.22,
-      "height": 29.39
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/7b7e2486-9ca0-415e-a82a-ecf5594c3ba0/7965-Walnut-Heights_150dpi-Full-Scale",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54500,8 +54620,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.22,
-      "height": 31.13
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/add63501-f4d7-46e0-9184-26ac8a720a55/7964-Skyline-Walnut_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54583,8 +54709,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.14,
-      "height": 34.75
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/f691e5df-2f31-40fe-b844-198406a16f99/7960-Studio-Teak_150dpi_FULL-SCALE",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -54663,8 +54795,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 39,
-      "height": 37.03
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e55ca8bc-3865-43a7-9310-4f466157ea4a/7959-Hampton-Walnut",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55001,8 +55139,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 38.45,
-      "height": 37.03
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/bf5413ba-6d63-428b-9712-0bb03006982a/7952-Asian-Sand_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55164,8 +55308,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 38.45,
-      "height": 37.03
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8dcad1de-5a89-462d-a009-5e168ec30844/7949-Asian-Night-4C_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55417,8 +55567,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.7,
-      "height": 36
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/1c3df190-e05d-4710-9f57-da9a00b36845/7946-Brazilwood_5x8_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55495,8 +55651,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.22,
-      "height": 16.59
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a1659cc2-d00e-4d03-9265-f269a6b7068a/7945_Xanadu",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55574,8 +55736,14 @@
       "4' x 12'"
     ],
     "texture_scale": {
-      "width": 43.34,
-      "height": 25.61
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/86e4e266-9f9d-450a-9fe0-9b03ddea74c9/7944_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55742,8 +55910,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 48.85,
-      "height": 26.3
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/ecf70acc-c5ae-4dec-8c70-05fe1f968c8f/7942_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55825,8 +55999,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 36.6,
-      "height": 18.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/cf71678b-e942-4e12-a6f8-dd4922d12e6e/7941_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55908,8 +56088,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.2,
-      "height": 51.42
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d69dfff0-2379-495c-a588-dda1ec25f97f/7939_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -55988,8 +56174,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.25,
-      "height": 37.04
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/1ef017fd-930a-42d8-a212-c78af1aff513/7933_13",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -56121,8 +56313,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 48.8,
-      "height": 32.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/71cf4799-a19c-4676-b26c-a97c203a36c5/7938-New-Age_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -56623,8 +56821,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 20.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2dc72cf3-9756-458a-9526-18203c36d7c9/7925-Monticello-Maple-4C_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -57035,8 +57239,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 49,
-      "height": 22
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/a5af58d8-3b91-4bd7-bf8e-8f746e023618/7919-Amber-Cherry_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -57181,8 +57391,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 24
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fe14d384-cc95-46b1-91a8-6aa17ef3d375/7909-Fusion-Maple_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -58009,8 +58225,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 49.2,
-      "height": 21.3
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/7e3990da-331a-4c0a-a93e-c6a598a6ea2c/7054-Wild-Cherry-150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
