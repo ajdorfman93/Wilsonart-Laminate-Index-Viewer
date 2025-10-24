@@ -46985,8 +46985,18 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 96,
-      "height": 48
+      "width": 144,
+      "height": 60.98
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/61fe7b79-0084-4685-acdf-9ffb306b82c5/Y0494-Sky-Arabesque-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 847,
+      "ratio": 2.3613
+    },
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.41
     }
   },
   {
@@ -48241,8 +48251,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 51,
-      "height": 34
+      "width": 144,
+      "height": 61.13
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/814cc010-28c3-4803-a97e-e0ab25fa9643/Y0465-Planked-California-Walnut-full-size-view",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
     }
   },
   {
@@ -48791,8 +48807,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 60,
-      "height": 51.41
+      "width": 96,
+      "height": 48
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c3e4870e-ba7f-4f0d-98a7-06a783f921f0/8200-White-Driftwood_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000,
+      "ratio": 2
     }
   },
   {
@@ -48864,8 +48886,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 25.19
+      "width": 96,
+      "height": 62.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/fc8bb308-0162-4dd2-be5c-f3a405293dd0/8204-Weathered-Char_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302,
+      "ratio": 1.5361
     }
   },
   {
@@ -48938,8 +48966,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.14,
-      "height": 34.75
+      "width": 96,
+      "height": 58.7
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8a5317ff-449f-4624-916a-c63771eb6538/8209-Veranda-Teak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1223,
+      "ratio": 1.6353
     }
   },
   {
@@ -49006,8 +49040,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 660,
-      "height": 51.18
+      "width": 96,
+      "height": 62.3
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8c3951e3-d471-483d-b0a7-5d8b0d88baf7/8203-Silver-Oak-Ply",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1298,
+      "ratio": 1.5408
     }
   },
   {
@@ -49232,8 +49272,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.1,
-      "height": 28.07
+      "width": 96,
+      "height": 62.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2f011ce4-6865-481c-ba08-f467c8c9cd91/8211-Phantom-Pearl_5x8_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302,
+      "ratio": 1.5361
     }
   },
   {
@@ -49306,8 +49352,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.1,
-      "height": 28.07
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/584f8653-1804-4872-9e3f-3a5ce7dd994e/8212-Phantom-Ecru_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -49458,8 +49510,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.1,
-      "height": 28.07
+      "width": 96,
+      "height": 62.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/88705ad1-58d1-44cf-814a-8e73ffe76583/8214-Phantom-Charcoal_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302,
+      "ratio": 1.5361
     }
   },
   {
@@ -49533,8 +49591,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.2,
-      "height": 25.2
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e2dd0f71-82ce-4c3f-b436-110b3efbbd03/8208-Fawn-Cypress_PRINT_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -49608,8 +49672,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 25.19
+      "width": 96,
+      "height": 62.5
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/2fe54c29-2cb4-4cb5-8c48-d4236194c107/8205-Ebony-Char_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1302,
+      "ratio": 1.5361
     }
   },
   {
@@ -49683,8 +49753,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.2,
-      "height": 49.21
+      "width": 96,
+      "height": 63.22
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/27283f8c-75af-4dcd-835e-35e0db0a4501/8207-Branded-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1317,
+      "ratio": 1.5186
     }
   },
   {
@@ -49794,8 +49870,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.21,
-      "height": 49.21
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/d45bfa00-4777-4ec8-95c9-2ef57f857354/8201-Grey-Elm_5x8_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -50042,8 +50124,14 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 60,
-      "height": 48
+      "width": 144,
+      "height": 61.13
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/3ae867ba-bc02-4852-a7fe-bec2720085d2/Y0286-Anasazi-Crown-Match-5x12",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 849,
+      "ratio": 2.3557
     }
   },
   {
@@ -51566,8 +51654,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.2,
-      "height": 49.21
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/8ef44333-9871-44d0-8682-51b072023cea/7996-Natural-Recon_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -51642,8 +51736,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 62.2,
-      "height": 49.21
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/f99a9585-9cdf-46d8-9c3b-be1c776e8583/7995-Sterling-Ash_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -51803,8 +51903,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 49.21,
-      "height": 27.17
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/82b90da5-fa74-4c88-b682-c9e39a178eb7/7993-Florence-Walnut",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -52200,8 +52306,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 49.6
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/65f43da3-c755-492b-aa6a-85b2d84111aa/7986-Pasadena-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -52448,8 +52560,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 49.6
+      "width": 96,
+      "height": 48
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/e9857bf8-6293-444b-9e3e-c33c27ef8918/7983-Boardwalk-Oak_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1000,
+      "ratio": 2
     }
   },
   {
@@ -52530,8 +52648,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.18,
-      "height": 23.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6efb6033-312b-4645-b17c-7c22a7a8a015/7982_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -52575,8 +52699,18 @@
       "5' x 12'"
     ],
     "texture_scale": {
-      "width": 96,
-      "height": 48
+      "width": 144,
+      "height": 60.12
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_VDL_FullSheet/90ea4731-29e4-4c6b-b9e2-dd2ab97409fd/Y0258_8",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 835,
+      "ratio": 2.3952
+    },
+    "no_repeat_texture_scale": {
+      "width": 60,
+      "height": 25.05
     }
   },
   {
@@ -53223,8 +53357,14 @@
       "4' x 12'"
     ],
     "texture_scale": {
-      "width": 43.3,
-      "height": 30.5
+      "width": 96,
+      "height": 60
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/6ac49552-b17c-442e-b036-b32dfca49e20/7981-Landmark-Wood_5x8_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1250,
+      "ratio": 1.6
     }
   },
   {
@@ -53471,8 +53611,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51.2,
-      "height": 25.2
+      "width": 96,
+      "height": 59.23
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/c74361ac-ab42-4e41-8845-84260ef4ecc3/7976-White-Cypress_150dpi",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1234,
+      "ratio": 1.6207
     }
   },
   {
@@ -53623,8 +53769,14 @@
       "5' x 9'"
     ],
     "texture_scale": {
-      "width": 51,
-      "height": 31
+      "width": 72,
+      "height": 54.43
+    },
+    "texture_image_url": "https://assetlibrary.wilsonart.com/transform/PDP_HPL_FullSheet/dcdd41e8-518d-4077-b16c-d9858520d914/7973-Old-Mill-Oak",
+    "texture_image_pixels": {
+      "width": 2000,
+      "height": 1512,
+      "ratio": 1.3228
     }
   },
   {

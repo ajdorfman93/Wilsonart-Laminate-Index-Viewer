@@ -463,9 +463,12 @@ function getHostname(url) {
   }
 }
 
-function isAllowedTextureHost(url) {
+function isAllowedTextureHost(url, options = {}) {
   const host = getHostname(url);
-  return host && ALLOWED_TEXTURE_HOSTS.includes(host);
+  if (!host) return false;
+  if (ALLOWED_TEXTURE_HOSTS.includes(host)) return true;
+  if (options.allowWilsonartSite && host === "www.wilsonart.com") return true;
+  return false;
 }
 
 // -------------------- URL helpers --------------------
@@ -510,7 +513,10 @@ function isForbiddenTextureUrl(url, options = {}) {
     if (!allowMain) return true;
   }
 
-  return FORBIDDEN_TEXTURE_SUBSTRINGS.some(token => lower.includes(token));
+  const forbiddenTokens = options.allowWilsonartWebFullSheet
+    ? FORBIDDEN_TEXTURE_SUBSTRINGS.filter(token => token !== "webfullsheet")
+    : FORBIDDEN_TEXTURE_SUBSTRINGS;
+  return forbiddenTokens.some(token => lower.includes(token));
 }
 
 const hasFullSizeViewToken = (url) => /fullsizeview|full_size_view/i.test(url || "");
@@ -519,7 +525,7 @@ function isValidTextureUrl(url, tokens = [], options = {}) {
   if (!url) return false;
   const lower = url.toLowerCase();
   const host = getHostname(url);
-  if (!isAllowedTextureHost(url)) return false;
+  if (!isAllowedTextureHost(url, options)) return false;
   if (isForbiddenTextureUrl(url, options)) return false;
 
   const hasBannerKeyword = /banner/i.test(url);
@@ -527,9 +533,24 @@ function isValidTextureUrl(url, tokens = [], options = {}) {
   const hasFullSheetToken = /FullSheet/.test(url);
   const hasSizeTokenMatch = hasSizeToken(url);
   const hasProductToken = tokens.some(token => token && lower.includes(token));
+  const codeLower = typeof options.codeLower === "string" && options.codeLower
+    ? options.codeLower
+    : undefined;
+  const hasCodeToken = codeLower ? lower.includes(codeLower) : hasProductToken;
 
   if (host === "images.wilsonart.com") {
     if (!(hasFullSizeView && hasProductToken)) return false;
+  }
+
+  if (host === "www.wilsonart.com") {
+    if (!options.allowWilsonartSite) return false;
+    if (!hasCodeToken) return false;
+    const nameTokens = Array.isArray(options.productNameTokens) ? options.productNameTokens : [];
+    const hasNameToken = nameTokens.some(token => token && lower.includes(token));
+    if (hasNameToken) return true;
+    if (!options.allowWilsonartWebFullSheet) return false;
+    const hasFullSheetWord = /(full[_-]?sheet|webfullsheet)/i.test(lower);
+    return hasFullSheetWord && hasCodeToken;
   }
 
   return hasBannerKeyword || hasFullSizeView || hasSizeTokenMatch || hasProductToken || hasFullSheetToken;
@@ -551,7 +572,29 @@ function computeTextureUrlScore(url, tokens = []) {
   return score;
 }
 
-function normalizeProductTokens(code, productLink) {
+function buildProductNameTokens(name) {
+  if (!hasString(name)) return [];
+  const base = String(name).toLowerCase();
+  const cleaned = base.trim();
+  if (!cleaned) return [];
+  const tokens = new Set();
+  const compact = cleaned.replace(/[^a-z0-9]+/g, "");
+  const dashed  = cleaned.replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-");
+  const underscored = cleaned.replace(/[^a-z0-9]+/g, "_").replace(/_+/g, "_");
+  tokens.add(cleaned);
+  if (compact) tokens.add(compact);
+  if (dashed) tokens.add(dashed);
+  if (underscored) tokens.add(underscored);
+  const spaced = cleaned.replace(/\s+/g, " ");
+  if (spaced) tokens.add(spaced);
+  const spaceDash = spaced.replace(/\s+/g, "-");
+  if (spaceDash) tokens.add(spaceDash);
+  const spaceUnderscore = spaced.replace(/\s+/g, "_");
+  if (spaceUnderscore) tokens.add(spaceUnderscore);
+  return [...tokens].filter(Boolean);
+}
+
+function normalizeProductTokens(code, productLink, productName) {
   const tokens = [];
   const push = (value) => {
     if (!value) return;
@@ -574,6 +617,10 @@ function normalizeProductTokens(code, productLink) {
       if (compact && compact !== slug) push(compact);
     }
   }
+  if (productName) {
+    const nameTokens = buildProductNameTokens(productName);
+    nameTokens.forEach(push);
+  }
   return tokens;
 }
 
@@ -592,6 +639,8 @@ function listBannerCandidates(page) {
 
 async function resolveTextureImageUrl(page, code, productLink, tokens, options = {}) {
   const searchTokens = Array.isArray(tokens) && tokens.length ? tokens : normalizeProductTokens(code, productLink);
+  const codeLower = hasString(code) ? String(code).trim().toLowerCase() : undefined;
+  const effectiveOptions = { ...options, codeLower };
   const combined = new Set();
   const addAll = (arr = []) => {
     for (const item of arr) {
@@ -607,10 +656,10 @@ async function resolveTextureImageUrl(page, code, productLink, tokens, options =
   addAll(await findAssetLibraryUrlsInHTML(page));
 
   const allCandidates = [...combined];
-  const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens, options));
+  const validCandidates = allCandidates.filter(url => isValidTextureUrl(url, searchTokens, effectiveOptions));
   if (!validCandidates.length) {
     if (allCandidates.length) {
-      const forbiddenSample = allCandidates.find(url => isForbiddenTextureUrl(url, options));
+      const forbiddenSample = allCandidates.find(url => isForbiddenTextureUrl(url, effectiveOptions));
       const sample = forbiddenSample || allCandidates[0];
       logStep(`[${code}] Skipping texture image candidate`, sample);
     }
@@ -636,6 +685,8 @@ const LAST_RESORT_XPATHS = [
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div",
   "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]"
 ];
+const WEBFULLSHEET_FALLBACK_XPATH =
+  "/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div[1]";
 
 const SEL_NO_REPEAT_B =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div > div.qkView_description > div:nth-child(7) > ul > li > p > b";
@@ -836,6 +887,46 @@ async function attemptLastResortClicks(page, code, productLink, productTokens, {
     return { chosenUrl: null, attempted };
   } catch (err) {
     logStep(`[${code}] ${stage} last-resort error: ${err.message || err}`);
+    return { chosenUrl: null, attempted: false };
+  }
+}
+
+async function attemptWebFullSheetFallback(
+  page,
+  code,
+  productLink,
+  productTokens,
+  productNameTokens = [],
+  { stage = "WebFullSheet" } = {}
+) {
+  const stageLabel = stage ? `${stage} webfullsheet fallback` : "WebFullSheet fallback";
+  try {
+    page.__bannerOverrideUrl = null;
+    page.__bannerCandidates = new Set();
+    logStep(`[${code}] ${stageLabel}: reloading product page`);
+    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+    await waitForMain(page);
+
+    const triggerLabel = `${stageLabel} trigger`;
+    const clicked = await robustClickXPath(
+      page,
+      WEBFULLSHEET_FALLBACK_XPATH,
+      triggerLabel,
+      { waitTimeout: 6000, waitPolling: 200 }
+    );
+    if (!clicked) {
+      logStep(`[${code}] ${stageLabel}: trigger click failed`);
+    }
+    await afterStepCheckForBanner(page);
+
+    const chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens, {
+      allowWilsonartSite: true,
+      allowWilsonartWebFullSheet: true,
+      productNameTokens
+    });
+    return { chosenUrl, attempted: true };
+  } catch (err) {
+    logStep(`[${code}] ${stageLabel}: error ${err.message || err}`);
     return { chosenUrl: null, attempted: false };
   }
 }
@@ -1097,7 +1188,9 @@ function codesMissingFromDetails(indexArr, detailsArr) {
 // -------------------- Scrape one product --------------------
 async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {}) {
   logStep(`[${code}] → ${productLink}`);
-  const productTokens = normalizeProductTokens(code, productLink);
+  const productName = hasString(indexRow?.name) ? indexRow.name : (hasString(existingRow?.name) ? existingRow.name : undefined);
+  const productNameTokens = buildProductNameTokens(productName);
+  const productTokens = normalizeProductTokens(code, productLink, productName);
   page.__bannerOverrideUrl = null;
   page.__bannerCandidates = new Set();
   await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
@@ -1106,13 +1199,20 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   let chosenUrl = null;
   const runLastResortFirst = Boolean(MISSING_FIELD);
   if (runLastResortFirst) {
-    const earlyResult = await attemptLastResortClicks(page, code, productLink, productTokens, { reload: false, stage: "Early" });
+    const earlyResult = await attemptWebFullSheetFallback(
+      page,
+      code,
+      productLink,
+      productTokens,
+      productNameTokens,
+      { stage: "Early" }
+    );
     if (earlyResult.chosenUrl) {
       chosenUrl = earlyResult.chosenUrl;
     } else if (earlyResult.attempted) {
       page.__bannerOverrideUrl = null;
       page.__bannerCandidates = new Set();
-      logStep(`[${code}] Reloading product page after early last-resort attempt`);
+      logStep(`[${code}] Reloading product page after early webfullsheet fallback`);
       await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
       await waitForMain(page);
     }
@@ -1139,6 +1239,20 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     const finalResult = await attemptLastResortClicks(page, code, productLink, productTokens, { reload: true, stage: "Final" });
     if (finalResult.chosenUrl) {
       chosenUrl = finalResult.chosenUrl;
+    }
+  }
+
+  if (!chosenUrl) {
+    const ultimateResult = await attemptWebFullSheetFallback(
+      page,
+      code,
+      productLink,
+      productTokens,
+      productNameTokens,
+      { stage: "Ultimate" }
+    );
+    if (ultimateResult.chosenUrl) {
+      chosenUrl = ultimateResult.chosenUrl;
     }
   }
 
