@@ -1,0 +1,284 @@
+{
+  "assetCategories": {
+    "imperfection": {
+      "metal": {
+        "scratched": {}
+      }
+    }
+  },
+  "averageColor": "#808080",
+  "categories": [
+    "surface",
+    "imperfections",
+    "micro scratches"
+  ],
+  "comp_version": 1,
+  "description": "",
+  "environment": {
+    "biome": "undefined",
+    "region": "undefined"
+  },
+  "highest_available_res": 8192,
+  "id": "sdixdedc",
+  "json": {
+    "contentLength": 5999,
+    "uri": "sdixdedc.json"
+  },
+  "maps": [
+    {
+      "averageColor": "#6C6C6C",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 138084225,
+      "maxIntensity": 198,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "sdixdedc_8K_Gloss.exr"
+    },
+    {
+      "averageColor": "#6C6C6C",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 50224903,
+      "maxIntensity": 198,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "sdixdedc_8K_Gloss.jpg"
+    },
+    {
+      "averageColor": "#939393",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 119226885,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 57,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "sdixdedc_8K_Roughness.exr"
+    },
+    {
+      "averageColor": "#939393",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 49715416,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 57,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "sdixdedc_8K_Roughness.jpg"
+    }
+  ],
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "1x1 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "20 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": true
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "8196 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "GretagMacbeth ColorChecker Color Rendition Chart"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "MKX"
+    }
+  ],
+  "models": [],
+  "name": "Brushed Aluminum",
+  "pack": {
+    "_id": "pure-imperfections",
+    "name": "Pure Imperfections"
+  },
+  "physicalSize": null,
+  "points": 1,
+  "previews": {
+    "images": [
+      {
+        "contentLength": 156339,
+        "resolution": "360x360",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "sdixdedc_Grid_360.png"
+      },
+      {
+        "contentLength": 212576,
+        "resolution": "420x420",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "sdixdedc_Grid_420.png"
+      },
+      {
+        "contentLength": 617897,
+        "resolution": "720x720",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "sdixdedc_Grid_720.png"
+      },
+      {
+        "contentLength": 841459,
+        "resolution": "840x840",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "sdixdedc_Grid_840.png"
+      },
+      {
+        "contentLength": 1630941,
+        "resolution": "1440x768",
+        "tags": [
+          "preview"
+        ],
+        "uri": "sdixdedc_Popup_1440.png"
+      },
+      {
+        "contentLength": 3059123,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview"
+        ],
+        "uri": "sdixdedc_Popup_1920.png"
+      },
+      {
+        "contentLength": 6515784,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "sdixdedc_Popup_2880.png"
+      },
+      {
+        "contentLength": 12197265,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "sdixdedc_Popup_3840.png"
+      }
+    ],
+    "relativeSize": "1x1",
+    "scaleReferences": []
+  },
+  "process_date": "2024-04-18 09:39:52",
+  "properties": [],
+  "referencePreviews": {
+    "maps": [],
+    "models": []
+  },
+  "references": [],
+  "revised": false,
+  "semanticTags": {
+    "architectural_style": {},
+    "asset_type": "imperfection",
+    "contains": [
+      "brushed",
+      "polished"
+    ],
+    "environment": [
+      "industrial"
+    ],
+    "industry": [
+      "archviz",
+      "games",
+      "VFX"
+    ],
+    "interior_exterior": [
+      "interior",
+      "exterior"
+    ],
+    "latin_name": [],
+    "locations": {},
+    "maxSize": 1,
+    "minSize": 1,
+    "name": "Brushed Aluminum",
+    "resolution": 8192,
+    "season": [],
+    "subject_matter": "manmade",
+    "theme": [
+      "aluminium"
+    ]
+  },
+  "tags": [
+    "surface imperfection",
+    "brushed metal",
+    "textured metal",
+    "rough",
+    "aluminium",
+    "blemished",
+    "archviz"
+  ],
+  "texelDensity": 8192,
+  "texture_type": "basic",
+  "ue_plugin_archives": [
+    {
+      "contentLength": 78662974,
+      "gltfVersion": "2.0",
+      "tier": 0,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_0/sdixdedc_tier_0.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 21402707,
+      "gltfVersion": "2.0",
+      "tier": 1,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_1/sdixdedc_tier_1.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 5569101,
+      "gltfVersion": "2.0",
+      "tier": 2,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_2/sdixdedc_tier_2.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 2049683,
+      "gltfVersion": "2.0",
+      "tier": 3,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_3/sdixdedc_tier_3.zip",
+      "version": 1
+    }
+  ],
+  "version": 2
+}

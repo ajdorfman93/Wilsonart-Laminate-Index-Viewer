@@ -72,6 +72,9 @@ const { present: FLAG_MISSING,  value: MISSING_VALUE } = getArgPair("missing");
 const { present: FLAG_REMAINING } = getArgPair("remaining");
 const { present: FLAG_UPDATE }    = getArgPair("update");
 const { present: FLAG_REPORT,   value: REPORT_VALUE }  = getArgPair("report");
+const { present: FLAG_ORGANIZE } = getArgPair("organize");
+const CLI_FLAGS = process.argv.slice(2).filter(arg => arg.startsWith("--"));
+const ORGANIZE_ONLY_MODE = FLAG_ORGANIZE && CLI_FLAGS.every(flag => flag === "--organize" || flag.startsWith("--organize="));
 
 const LIMIT = parseInt(
   process.env.LIMIT ??
@@ -88,13 +91,28 @@ const BATCH_SIZE = parseInt(
   (process.argv.find(a => a.startsWith("--batch=")) || "").split("=")[1] ??
   "5", 10
 );
-const HEADLESS = (process.env.HEADLESS ?? "true") !== "true";
+const headlessArg = (process.argv.find(a => a.startsWith("--headless=")) || "").split("=")[1];
+const headlessSource = process.env.HEADLESS ?? headlessArg;
+const HEADLESS = (() => {
+  if (headlessSource == null || headlessSource === "") return true;
+  const normalized = `${headlessSource}`.trim().toLowerCase();
+  if (normalized === "new") return "new";
+  if (["false", "0", "off", "no"].includes(normalized)) return false;
+  return true;
+})();
 
 // How many times to retry scraping a product before giving up
 const MAX_FETCH_ATTEMPTS = parseInt(
   process.env.MAX_FETCH_ATTEMPTS ??
   (process.argv.find(a => a.startsWith("--max-attempts=")) || "").split("=")[1] ??
   "3",
+  10
+);
+
+const MAX_CONCURRENCY = parseInt(
+  process.env.MAX_CONCURRENCY ??
+  (process.argv.find(a => a.startsWith("--max-concurrency=")) || "").split("=")[1] ??
+  "5",
   10
 );
 
@@ -112,7 +130,7 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 const SHEET_SIZE_ALLOWED_RE = /^\d+' x \d+'$/;
 
-function collectValidSheetSizes(values) {
+function filterValidSheetSizes(values) {
   const seenValid = new Set();
   const invalid = [];
   const valid = [];
@@ -169,6 +187,32 @@ function parseSheetSizes(values) {
     parsed.push(parsedScale);
   }
   return parsed;
+}
+
+function sortSheetSizeLabels(values) {
+  if (!Array.isArray(values)) return values;
+  const decorated = values.map((label, index) => {
+    if (typeof label !== "string") return { index, label, invalid: true };
+    const match = SHEET_SIZE_PARSE_RE.exec(label.trim());
+    if (!match) return { index, label, invalid: true };
+    const widthFeet = Number(match[1]);
+    const heightFeet = Number(match[2]);
+    if (!Number.isFinite(widthFeet) || !Number.isFinite(heightFeet)) {
+      return { index, label, invalid: true };
+    }
+    return { index, label, invalid: false, widthFeet, heightFeet };
+  });
+
+  decorated.sort((a, b) => {
+    if (a.invalid && b.invalid) return a.index - b.index;
+    if (a.invalid) return 1;
+    if (b.invalid) return -1;
+    if (a.widthFeet !== b.widthFeet) return a.widthFeet - b.widthFeet;
+    if (a.heightFeet !== b.heightFeet) return a.heightFeet - b.heightFeet;
+    return a.index - b.index;
+  });
+
+  return decorated.map(item => item.label);
 }
 
 function validSize(obj) { return !!obj && isFinite(obj.width) && isFinite(obj.height) && obj.width > 0 && obj.height > 0; }
@@ -355,10 +399,10 @@ async function fetchSheetSizesFromApi(page, code, surfaceGroup) {
       return values;
     }, markup);
 
-    const collected = collectValidSheetSizes(Array.isArray(parsed) ? parsed : []);
+    const collected = filterValidSheetSizes(Array.isArray(parsed) ? parsed : []);
     return collected;
   } catch (err) {
-    logStep(`  • Sheet sizes fetch error: ${err && err.message ? err.message : err}`);
+    logStep(`  - Sheet sizes fetch error: ${err && err.message ? err.message : err}`);
     return { valid: [], invalid: [] };
   }
 }
@@ -383,35 +427,35 @@ async function extractSheetSizes(page, code, surfaceGroup) {
       }
       return out;
     });
-    const { valid: pageValid, invalid: pageInvalid } = collectValidSheetSizes(sizes);
+    const { valid: pageValid, invalid: pageInvalid } = filterValidSheetSizes(sizes);
 
     if (pageValid.length) {
-      logStep(`  • Sheet sizes found: ${pageValid.join(", ")}`);
+      logStep(`  - Sheet sizes found: ${pageValid.join(", ")}`);
       return pageValid;
     }
 
     if (Array.isArray(sizes) && sizes.length === 0) {
-      logStep("  • Sheet sizes found: none");
+      logStep("  - Sheet sizes found: none");
       const preview = await page.evaluate(() => {
         const section = document.querySelector("#pa_features");
         if (!section) return null;
         const text = section.textContent || "";
         return text.replace(/\s+/g, " ").trim().slice(0, 160);
       }).catch(() => null);
-      if (preview) logStep(`  • #pa_features preview: ${preview}`);
+      if (preview) logStep(`  - #pa_features preview: ${preview}`);
     } else if (pageInvalid.length) {
-      logStep(`  • Sheet sizes discarded (invalid format): ${pageInvalid.join(", ")}`);
+      logStep(`  - Sheet sizes discarded (invalid format): ${pageInvalid.join(", ")}`);
     } else {
-      logStep("  • Sheet sizes found: none");
+      logStep("  - Sheet sizes found: none");
     }
 
     const { valid: apiValid = [], invalid: apiInvalid = [] } = await fetchSheetSizesFromApi(page, code, surfaceGroup);
     if (apiValid.length) {
-      logStep(`  • Sheet sizes fetched via API: ${apiValid.join(", ")}`);
+      logStep(`  - Sheet sizes fetched via API: ${apiValid.join(", ")}`);
       return apiValid;
     }
     if (apiInvalid.length) {
-      logStep(`  • API sheet sizes discarded (invalid format): ${apiInvalid.join(", ")}`);
+      logStep(`  - API sheet sizes discarded (invalid format): ${apiInvalid.join(", ")}`);
     }
     return [];
   } catch {
@@ -421,7 +465,7 @@ async function extractSheetSizes(page, code, surfaceGroup) {
 
 const FEET_SIZE_TOKEN_RE = /(^|[^A-Za-z0-9])(\d+(?:\.\d+)?)\s*[xX\u00D7]\s*(\d+(?:\.\d+)?)(?![A-Za-z0-9])/;
 
-// Prefer width token "5x12" → inches (width = max*12)
+// Prefer width token "5x12" -> inches (width = max*12)
 function parseUrlFeetSize(url) {
   if (!url) return undefined;
   const m = url.match(FEET_SIZE_TOKEN_RE);
@@ -707,7 +751,7 @@ function normalizeProductTokens(code, productLink, productName) {
   return tokens;
 }
 
-function listBannerCandidates(page) {
+function gatherBannerCandidates(page) {
   const seen = new Set();
   const out = [];
   const candidates = page.__bannerCandidates instanceof Set ? Array.from(page.__bannerCandidates) : [];
@@ -720,7 +764,7 @@ function listBannerCandidates(page) {
   return out;
 }
 
-async function resolveTextureImageUrl(page, code, productLink, tokens, options = {}) {
+async function selectTextureImageUrl(page, code, productLink, tokens, options = {}) {
   const searchTokens = Array.isArray(tokens) && tokens.length ? tokens : normalizeProductTokens(code, productLink);
   const codeLower = hasString(code) ? String(code).trim().toLowerCase() : undefined;
   const effectiveOptions = { ...options, codeLower, productTokens: searchTokens };
@@ -739,7 +783,7 @@ async function resolveTextureImageUrl(page, code, productLink, tokens, options =
     }
   };
 
-  addAll(listBannerCandidates(page));
+  addAll(gatherBannerCandidates(page));
   addAll(await findFullSheetUrlsInHTML(page));
   addAll(await findFullSizeUrlsInHTML(page));
   addAll(await findAssetLibraryUrlsInHTML(page));
@@ -787,13 +831,13 @@ const SEL_DESC_P2 =
   "#maincontent > div.columns > div > div.product_detailed_info_main > div.product-info-main > div.product-info-price > div > div.wa_product_title > div.qkView_description > p:nth-child(2)";
 
 // -------------------- Wait helpers --------------------
-async function waitForMain(page) {
-  logStep("  • waitForSettled: waiting for document ready");
+async function waitForProductContent(page) {
+  logStep("  - waitForSettled: waiting for document ready");
   try { await page.waitForFunction(() => document.readyState === "complete", { timeout: 30000 }); } catch {}
   try { await page.waitForSelector("#maincontent", { timeout: 30000 }); } catch {}
   await sleep(150);
-  await afterStepCheckForBanner(page); // <— NEW: check after step
-  logStep("  • waitForSettled: done");
+  await updateBannerCandidates(page); // keep banner state up to date
+  logStep("  - waitForSettled: done");
 }
 async function waitForXPathPresence(page, xpath, timeout = 8000, poll = 150) {
   return page
@@ -807,10 +851,10 @@ async function waitForXPathPresence(page, xpath, timeout = 8000, poll = 150) {
 
 // -------------------- After-step banner hook --------------------
 /**
- * Stores the last banner URL (if any) in page.__bannerOverrideUrl
- * We run this after every “step”: goto, waits, clicks, etc.
+ * Stores the last banner URL (if any) in page.__bannerOverrideUrl.
+ * We run this after every "step": goto, waits, clicks, etc.
  */
-async function afterStepCheckForBanner(page) {
+async function updateBannerCandidates(page) {
   try {
     const banners = await findBannerUrlsInHTML(page);
     if (banners && banners.length) {
@@ -835,16 +879,30 @@ async function afterStepCheckForBanner(page) {
   } catch {}
 }
 
+function resetBannerTracking(page) {
+  if (!page) return;
+  page.__bannerOverrideUrl = null;
+  page.__bannerCandidates = new Set();
+}
+
+async function loadProductPage(page, url, { label } = {}) {
+  if (!page || !url) return;
+  if (label) logStep(label);
+  resetBannerTracking(page);
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
+  await waitForProductContent(page);
+}
+
 // Robust click using element center coords; tries inner .fotorama__arr__arr too
-async function robustClickXPath(page, xpath, label, options = {}) {
-  logStep(`  • Waiting for ${label}…`);
+async function clickXPathWithRetries(page, xpath, label, options = {}) {
+  logStep(`  - Waiting for ${label}...`);
   const waitTimeout = ("waitTimeout" in options) ? options.waitTimeout : 10000;
   const waitPolling = ("waitPolling" in options) ? options.waitPolling : 150;
   const present = await waitForXPathPresence(page, xpath, waitTimeout, waitPolling);
-  if (!present) { logStep(`  • ${label}: not found`); return false; }
+  if (!present) { logStep(`  - ${label}: not found`); return false; }
 
   for (let attempt = 1; attempt <= 3; attempt++) {
-    logStep(`  • ${label}: click attempt ${attempt}…`);
+    logStep(`  - ${label}: click attempt ${attempt}...`);
     const coords = await page.evaluate((xp) => {
       const el = document.evaluate(xp, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
       if (!el) return null;
@@ -865,11 +923,11 @@ async function robustClickXPath(page, xpath, label, options = {}) {
       try {
         await page.mouse.move(cx, cy);
         await page.mouse.down(); await page.mouse.up();
-        logStep(`  • ${label}: clicked inner arrow at ${cx},${cy}`);
+        logStep(`  - ${label}: clicked inner arrow at ${cx},${cy}`);
         await sleep(1200);
-        await afterStepCheckForBanner(page); // <— NEW
+        await updateBannerCandidates(page);
         return true;
-      } catch (e) { logStep(`  • ${label}: inner mouse click failed: ${e.message || e}`); }
+      } catch (e) { logStep(`  - ${label}: inner mouse click failed: ${e.message || e}`); }
     }
 
     // 2) Mouse click main element center
@@ -879,11 +937,11 @@ async function robustClickXPath(page, xpath, label, options = {}) {
       try {
         await page.mouse.move(cx, cy);
         await page.mouse.down(); await page.mouse.up();
-        logStep(`  • ${label}: clicked main box at ${cx},${cy}`);
+        logStep(`  - ${label}: clicked main box at ${cx},${cy}`);
         await sleep(1200);
-        await afterStepCheckForBanner(page); // <— NEW
+        await updateBannerCandidates(page);
         return true;
-      } catch (e) { logStep(`  • ${label}: main mouse click failed: ${e.message || e}`); }
+      } catch (e) { logStep(`  - ${label}: main mouse click failed: ${e.message || e}`); }
     }
 
     // 3) JS click fallback
@@ -898,19 +956,19 @@ async function robustClickXPath(page, xpath, label, options = {}) {
     }, xpath).catch(() => false);
 
     if (ok) {
-      logStep(`  • ${label}: JS click dispatched`);
+      logStep(`  - ${label}: JS click dispatched`);
       await sleep(1200);
-      await afterStepCheckForBanner(page); // <— NEW
+      await updateBannerCandidates(page);
       return true;
     }
     await sleep(200);
   }
 
-  logStep(`  • ${label}: all click attempts failed`);
+  logStep(`  - ${label}: all click attempts failed`);
   return false;
 }
 
-async function clickSecondCarouselImage(page, attemptLabel = "") {
+async function activateSecondCarouselImage(page, attemptLabel = "") {
   let frameCount = 0;
   try {
     frameCount = await page.evaluate(() => {
@@ -920,7 +978,7 @@ async function clickSecondCarouselImage(page, attemptLabel = "") {
   } catch {}
 
   if (frameCount < 2) {
-    logStep(`  • Second carousel image unavailable (${frameCount} frame${frameCount === 1 ? "" : "s"})`);
+    logStep(`  - Second carousel image unavailable (${frameCount} frame${frameCount === 1 ? "" : "s"})`);
     return false;
   }
 
@@ -928,32 +986,30 @@ async function clickSecondCarouselImage(page, attemptLabel = "") {
   for (let idx = 0; idx < SECOND_IMAGE_XPATHS.length; idx++) {
     const xpath = SECOND_IMAGE_XPATHS[idx];
     const label = `Carousel Thumb #2${suffix} [${idx + 1}]`;
-    const clicked = await robustClickXPath(page, xpath, label, { waitTimeout: 6000, waitPolling: 200 });
+    const clicked = await clickXPathWithRetries(page, xpath, label, { waitTimeout: 6000, waitPolling: 200 });
     if (clicked) return true;
   }
 
-  logStep(`  • Second carousel image click attempts failed${suffix}`);
+  logStep(`  - Second carousel image click attempts failed${suffix}`);
   return false;
 }
 
 async function clickLastResortTextureTrigger(page, xpath, idx) {
   const suffix = LAST_RESORT_XPATHS.length > 1 ? ` [${idx + 1}]` : "";
-  return robustClickXPath(page, xpath, `Last-resort texture trigger${suffix}`, { waitTimeout: 6000, waitPolling: 200 });
+  return clickXPathWithRetries(page, xpath, `Last-resort texture trigger${suffix}`, { waitTimeout: 6000, waitPolling: 200 });
 }
 
-async function attemptLastResortClicks(page, code, productLink, productTokens, { reload = false, stage = "Last-resort" } = {}) {
+// -------------------- Texture acquisition flows --------------------
+async function tryTextureTriggerSequence(page, code, productLink, productTokens, { reload = false, stage = "Last-resort" } = {}) {
   try {
     if (reload) {
-      page.__bannerOverrideUrl = null;
-      page.__bannerCandidates = new Set();
-      logStep(`[${code}] Reloading product page before last-resort clicks`);
-      await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-      await waitForMain(page);
+      await loadProductPage(page, productLink, { label: `[${code}] Reloading product page before last-resort clicks` });
     } else {
       logStep(`[${code}] ${stage} last-resort attempt (no reload)`);
+      resetBannerTracking(page);
     }
 
-    await afterStepCheckForBanner(page);
+    await updateBannerCandidates(page);
 
     let chosenUrl = null;
     let attempted = false;
@@ -962,16 +1018,16 @@ async function attemptLastResortClicks(page, code, productLink, productTokens, {
       attempted = true;
       const lastResortClick = await clickLastResortTextureTrigger(page, xpath, idx);
       if (!lastResortClick) continue;
-      await afterStepCheckForBanner(page);
-      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      await updateBannerCandidates(page);
+      chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens);
       if (chosenUrl) return { chosenUrl, attempted: true };
     }
 
     if (attempted) {
-      await afterStepCheckForBanner(page);
+      await updateBannerCandidates(page);
       const sweepLabel = reload ? "(post-reload)" : "(initial pass)";
       logStep(`[${code}] Last-resort HTML sweep ${sweepLabel}`);
-      chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
+      chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens);
       if (chosenUrl) return { chosenUrl, attempted: true };
     }
 
@@ -982,7 +1038,28 @@ async function attemptLastResortClicks(page, code, productLink, productTokens, {
   }
 }
 
-async function attemptWebFullSheetFallback(
+// Try to surface the second gallery frame and capture a higher resolution texture.
+async function collectTextureFromCarousel(page, code, productLink, productTokens) {
+  for (let k = 0; k < 2; k += 1) {
+    await clickXPathWithRetries(page, XPATH_ARROW, "Carousel -> Next");
+  }
+
+  await activateSecondCarouselImage(page, "initial");
+  await updateBannerCandidates(page);
+
+  let chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens);
+  if (!chosenUrl) {
+    const retryClick = await activateSecondCarouselImage(page, "retry");
+    if (retryClick) {
+      await updateBannerCandidates(page);
+      chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens);
+    }
+  }
+
+  return chosenUrl;
+}
+
+async function fetchTextureFromWebFullSheet(
   page,
   code,
   productLink,
@@ -992,14 +1069,10 @@ async function attemptWebFullSheetFallback(
 ) {
   const stageLabel = stage ? `${stage} webfullsheet fallback` : "WebFullSheet fallback";
   try {
-    page.__bannerOverrideUrl = null;
-    page.__bannerCandidates = new Set();
-    logStep(`[${code}] ${stageLabel}: reloading product page`);
-    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-    await waitForMain(page);
+    await loadProductPage(page, productLink, { label: `[${code}] ${stageLabel}: reloading product page` });
 
     const triggerLabel = `${stageLabel} trigger`;
-    const clicked = await robustClickXPath(
+    const clicked = await clickXPathWithRetries(
       page,
       WEBFULLSHEET_FALLBACK_XPATH,
       triggerLabel,
@@ -1008,9 +1081,9 @@ async function attemptWebFullSheetFallback(
     if (!clicked) {
       logStep(`[${code}] ${stageLabel}: trigger click failed`);
     }
-    await afterStepCheckForBanner(page);
+    await updateBannerCandidates(page);
 
-    const chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens, {
+    const chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens, {
       allowWilsonartSite: true,
       allowWilsonartWebFullSheet: true,
       allowAssetLibraryWebFullSheet: true,
@@ -1023,7 +1096,7 @@ async function attemptWebFullSheetFallback(
   }
 }
 
-async function attemptCatalogProductFallback(
+async function fetchTextureFromCatalog(
   page,
   code,
   productLink,
@@ -1033,14 +1106,10 @@ async function attemptCatalogProductFallback(
 ) {
   const stageLabel = stage ? `${stage} catalog product fallback` : "Catalog product fallback";
   try {
-    page.__bannerOverrideUrl = null;
-    page.__bannerCandidates = new Set();
-    logStep(`[${code}] ${stageLabel}: reloading product page`);
-    await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-    await waitForMain(page);
+    await loadProductPage(page, productLink, { label: `[${code}] ${stageLabel}: reloading product page` });
 
     const triggerLabel = `${stageLabel} trigger`;
-    const clicked = await robustClickXPath(
+    const clicked = await clickXPathWithRetries(
       page,
       WEBFULLSHEET_FALLBACK_XPATH,
       triggerLabel,
@@ -1049,9 +1118,9 @@ async function attemptCatalogProductFallback(
     if (!clicked) {
       logStep(`[${code}] ${stageLabel}: trigger click failed`);
     }
-    await afterStepCheckForBanner(page);
+    await updateBannerCandidates(page);
 
-    const chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens, {
+    const chosenUrl = await selectTextureImageUrl(page, code, productLink, productTokens, {
       allowCatalogProductImages: true,
       productNameTokens
     });
@@ -1064,12 +1133,12 @@ async function attemptCatalogProductFallback(
 
 // -------------------- Metadata extractors --------------------
 async function detectNoRepeat(page) {
-  logStep("  • Checking 'No Repeat'…");
+  logStep("  - Checking 'No Repeat'...");
   const exact = await page.$eval(SEL_NO_REPEAT_B, el => (el.textContent || "").trim().toLowerCase()).catch(() => null);
-  if (exact && exact.includes("no repeat")) { logStep("  • No Repeat? YES"); return true; }
+  if (exact && exact.includes("no repeat")) { logStep("  - No Repeat? YES"); return true; }
   const list = await page.$$eval(".qkView_description b", ns => ns.map(n => (n.textContent || "").trim().toLowerCase())).catch(() => []);
   const found = list.some(t => t.includes("no repeat"));
-  logStep(`  • No Repeat? ${found ? "YES (fallback)" : "NO"}`);
+  logStep(`  - No Repeat? ${found ? "YES (fallback)" : "NO"}`);
   return found;
 }
 async function extractDescription(page) {
@@ -1099,18 +1168,18 @@ async function getImagePixels(page, url, timeoutMs = 15000) {
     return (res && (res.width > 0 || res.height > 0)) ? res : undefined;
   } catch { return undefined; }
 }
-function applyBannerCrop(url, pixels) {
+function applyBannerCropIfNeeded(url, pixels) {
   if (!validSize(pixels)) return pixels;
   if (!looksBanner(url)) return pixels;
   const croppedHeight = Math.max(1, Math.round(pixels.height - 93));
   if (croppedHeight !== pixels.height) {
-    logStep(`  • Banner detected → cropping 93px: ${pixels.width}×${pixels.height} → ${pixels.width}×${croppedHeight}`);
+    logStep(`  - Banner detected -> cropping 93px: ${pixels.width}x${pixels.height} -> ${pixels.width}x${croppedHeight}`);
   }
   return { width: Math.round(pixels.width), height: croppedHeight };
 }
 
 // -------------------- Scale decision --------------------
-function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat, existingNoRepeatScale, sheetSizeScales }) {
+function chooseTextureScale({ imageUrl, pixels, currentScale, parsedScale, noRepeat, existingNoRepeatScale, sheetSizeScales }) {
   const urlToken = extractUrlFeetToken(imageUrl || "");
   const urlScale = orientMaxAsWidth(parseUrlFeetSize(imageUrl || "") || {});
   const normalizedCurrent = orientMaxAsWidth(currentScale || {});
@@ -1228,7 +1297,7 @@ function chooseFinalScale({ imageUrl, pixels, currentScale, parsedScale, noRepea
   return { scale: chosen, reason: reasons.join("; "), noRepeatScale: finalNoRepeat };
 }
 
-async function computeParsedScale(page, isNoRepeat, imageUrl) {
+async function parseTextureScaleFromPage(page, isNoRepeat, imageUrl) {
   const urlFeet = parseUrlFeetSize(imageUrl || "");
   if (validSize(urlFeet)) { logStep(`  Parsed scale (URL feet->inches): ${urlFeet.width}"x${urlFeet.height}"`); return orientMaxAsWidth(urlFeet); }
   if (isNoRepeat)         { logStep('  Parsed scale (No Repeat default): 96"x48"'); return { width: 96, height: 48 }; }
@@ -1248,11 +1317,11 @@ async function computeParsedScale(page, isNoRepeat, imageUrl) {
 }
 
 // -------------------- IO helpers --------------------
-function readJsonSafe(p) {
+function readJsonFileSafe(p) {
   try { return JSON.parse(fs.readFileSync(p, "utf8")); }
   catch { return []; }
 }
-function writeJsonPretty(p, data) {
+function writeJsonFilePretty(p, data) {
   fs.writeFileSync(p, JSON.stringify(data, null, 2), "utf8");
 }
 
@@ -1261,6 +1330,105 @@ function toKeyString(value) {
   if (value === undefined || value === null) return null;
   const str = String(value).trim();
   return str ? str : null;
+}
+
+// -------------------- Organize helpers --------------------
+function arraysShallowEqual(a, b) {
+  if (a === b) return true;
+  if (!Array.isArray(a) || !Array.isArray(b)) return false;
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+}
+
+function sortFinishEntries(entries) {
+  if (!Array.isArray(entries)) return entries;
+  const decorated = entries.map((entry, index) => {
+    if (!entry || typeof entry !== "object") return { index, entry, invalid: true };
+    const code = toKeyString(entry.code);
+    if (!code) return { index, entry, invalid: true };
+    const numericMatch = code.match(/\d+/);
+    const numeric = numericMatch ? Number(numericMatch[0]) : NaN;
+    return { index, entry, invalid: false, code, numeric };
+  });
+
+  const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+
+  decorated.sort((a, b) => {
+    if (a.invalid && b.invalid) return a.index - b.index;
+    if (a.invalid) return 1;
+    if (b.invalid) return -1;
+    const aHasNumeric = Number.isFinite(a.numeric);
+    const bHasNumeric = Number.isFinite(b.numeric);
+    if (aHasNumeric && bHasNumeric && a.numeric !== b.numeric) return a.numeric - b.numeric;
+    if (aHasNumeric && !bHasNumeric) return -1;
+    if (!aHasNumeric && bHasNumeric) return 1;
+    const cmp = collator.compare(a.code, b.code);
+    if (cmp !== 0) return cmp;
+    return a.index - b.index;
+  });
+
+  return decorated.map(item => item.entry);
+}
+
+function organizeDetailsRows(rows) {
+  if (!Array.isArray(rows)) {
+    return { rows: [], changed: false, sheetLists: 0, finishLists: 0 };
+  }
+
+  let sheetLists = 0;
+  let finishLists = 0;
+  let changed = false;
+
+  const nextRows = rows.map((row) => {
+    if (!row || typeof row !== "object") return row;
+    let mutated = false;
+    const out = { ...row };
+
+    if (Array.isArray(row.sheet_sizes) && row.sheet_sizes.length) {
+      const sortedSizes = sortSheetSizeLabels(row.sheet_sizes);
+      if (!arraysShallowEqual(sortedSizes, row.sheet_sizes)) {
+        out.sheet_sizes = sortedSizes;
+        sheetLists += 1;
+        changed = true;
+        mutated = true;
+      }
+    }
+
+    if (Array.isArray(row.finish) && row.finish.length) {
+      const sortedFinish = sortFinishEntries(row.finish);
+      if (!arraysShallowEqual(sortedFinish, row.finish)) {
+        out.finish = sortedFinish;
+        finishLists += 1;
+        changed = true;
+        mutated = true;
+      }
+    }
+
+    return mutated ? out : row;
+  });
+
+  return { rows: nextRows, changed, sheetLists, finishLists };
+}
+
+function organizeDetailsFile(p = OUT_JSON) {
+  const detailsArr = readJsonFileSafe(p);
+  if (!Array.isArray(detailsArr)) {
+    logStep(`[organize] Skipped ${path.basename(p)}; expected an array.`);
+    return { changed: false, sheetLists: 0, finishLists: 0 };
+  }
+
+  const { rows, changed, sheetLists, finishLists } = organizeDetailsRows(detailsArr);
+  if (!changed) {
+    logStep(`[organize] ${path.basename(p)} already organized.`);
+    return { changed: false, sheetLists, finishLists };
+  }
+
+  writeJsonFilePretty(p, rows);
+  logStep(`[organize] Sorted ${sheetLists} sheet_sizes and ${finishLists} finish list(s) in ${path.basename(p)}.`);
+  return { changed: true, sheetLists, finishLists };
 }
 function byCodeMap(arr) {
   const map = new Map();
@@ -1343,7 +1511,7 @@ function updateDetailsInPlaceFromIndex(indexArr, detailsArr) {
   return out;
 }
 
-function clearCarouselTextureUrls(detailsArr) {
+function dropCarouselTextureUrls(detailsArr) {
   const cleared = [];
   if (!Array.isArray(detailsArr)) return cleared;
   for (const row of detailsArr) {
@@ -1358,7 +1526,7 @@ function clearCarouselTextureUrls(detailsArr) {
 }
 
 // -------------------- Filters for scraping --------------------
-function filterCodesForMissingField(detailsArr, field) {
+function findCodesMissingField(detailsArr, field) {
   const dmap = byCodeMap(detailsArr);
   const missing = [];
   for (const [code, row] of dmap.entries()) {
@@ -1366,7 +1534,7 @@ function filterCodesForMissingField(detailsArr, field) {
   }
   return { missing, present: [...dmap.keys()].filter(c => !missing.includes(c)) };
 }
-function codesMissingFromDetails(indexArr, detailsArr) {
+function findMissingDetailCodes(indexArr, detailsArr) {
   const idxCodes = new Set((indexArr || []).map(r => String(r.code)));
   const detCodes = new Set((detailsArr || []).map(r => String(r.code)));
   const missing = [...idxCodes].filter(c => !detCodes.has(c));
@@ -1375,19 +1543,30 @@ function codesMissingFromDetails(indexArr, detailsArr) {
 
 // -------------------- Scrape one product --------------------
 async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {}) {
-  logStep(`[${code}] → ${productLink}`);
+  logStep(`[${code}] -> ${productLink}`);
   const productName = hasString(indexRow?.name) ? indexRow.name : (hasString(existingRow?.name) ? existingRow.name : undefined);
   const productNameTokens = buildProductNameTokens(productName);
   const productTokens = normalizeProductTokens(code, productLink, productName);
-  page.__bannerOverrideUrl = null;
-  page.__bannerCandidates = new Set();
-  await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-  await waitForMain(page);
+  await loadProductPage(page, productLink, { label: `[${code}] Loading product page` });
 
   let chosenUrl = null;
-  const runLastResortFirst = Boolean(MISSING_FIELD);
-  if (runLastResortFirst) {
-    const earlyResult = await attemptWebFullSheetFallback(
+
+  const primaryLastResort = await tryTextureTriggerSequence(
+    page,
+    code,
+    productLink,
+    productTokens,
+    { reload: false, stage: "Primary" }
+  );
+  if (primaryLastResort.chosenUrl) {
+    chosenUrl = primaryLastResort.chosenUrl;
+  } else if (primaryLastResort.attempted) {
+    await loadProductPage(page, productLink, { label: `[${code}] Reloading product page after primary last-resort attempt` });
+  }
+
+  const runEarlyWebFullsheet = Boolean(MISSING_FIELD);
+  if (!chosenUrl && runEarlyWebFullsheet) {
+    const earlyResult = await fetchTextureFromWebFullSheet(
       page,
       code,
       productLink,
@@ -1398,40 +1577,23 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     if (earlyResult.chosenUrl) {
       chosenUrl = earlyResult.chosenUrl;
     } else if (earlyResult.attempted) {
-      page.__bannerOverrideUrl = null;
-      page.__bannerCandidates = new Set();
-      logStep(`[${code}] Reloading product page after early webfullsheet fallback`);
-      await page.goto(productLink, { waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => {});
-      await waitForMain(page);
+      await loadProductPage(page, productLink, { label: `[${code}] Reloading product page after early webfullsheet fallback` });
     }
   }
 
   if (!chosenUrl) {
-    for (let k = 0; k < 2; k++) {
-      await robustClickXPath(page, XPATH_ARROW, "Carousel → Next");
-    }
-    await clickSecondCarouselImage(page, "initial");
-    await afterStepCheckForBanner(page);
-
-    chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
-    if (!chosenUrl) {
-      const retryClick = await clickSecondCarouselImage(page, "retry");
-      if (retryClick) {
-        await afterStepCheckForBanner(page);
-        chosenUrl = await resolveTextureImageUrl(page, code, productLink, productTokens);
-      }
-    }
+    chosenUrl = await collectTextureFromCarousel(page, code, productLink, productTokens);
   }
 
   if (!chosenUrl) {
-    const finalResult = await attemptLastResortClicks(page, code, productLink, productTokens, { reload: true, stage: "Final" });
+    const finalResult = await tryTextureTriggerSequence(page, code, productLink, productTokens, { reload: true, stage: "Final" });
     if (finalResult.chosenUrl) {
       chosenUrl = finalResult.chosenUrl;
     }
   }
 
   if (!chosenUrl) {
-    const ultimateResult = await attemptWebFullSheetFallback(
+    const ultimateResult = await fetchTextureFromWebFullSheet(
       page,
       code,
       productLink,
@@ -1445,7 +1607,7 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   }
 
   if (!chosenUrl) {
-    const catalogFallback = await attemptCatalogProductFallback(
+    const catalogFallback = await fetchTextureFromCatalog(
       page,
       code,
       productLink,
@@ -1479,7 +1641,7 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
     texture_image_pixels = await getImagePixels(page, chosenUrl);
     if (looksBanner(chosenUrl)) {
       banner_cropped = true;
-      texture_image_pixels = applyBannerCrop(chosenUrl, texture_image_pixels);
+      texture_image_pixels = applyBannerCropIfNeeded(chosenUrl, texture_image_pixels);
     }
   }
 
@@ -1503,9 +1665,9 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
   const sheetSizeScales = parseSheetSizes(sheetSizes);
 
   const no_repeat   = await detectNoRepeat(page);
-  const parsedScale = await computeParsedScale(page, no_repeat, chosenUrl || "");
+  const parsedScale = await parseTextureScaleFromPage(page, no_repeat, chosenUrl || "");
   const currentScale = orientMaxAsWidth(existingRow?.texture_scale || parsedScale || { width: 144, height: 60 });
-  const { scale: chosenScale, noRepeatScale } = chooseFinalScale({
+  const { scale: chosenScale, noRepeatScale } = chooseTextureScale({
     imageUrl: chosenUrl, pixels: texture_image_pixels,
     currentScale, parsedScale, noRepeat: no_repeat,
     existingNoRepeatScale: existingRow?.no_repeat_texture_scale,
@@ -1532,9 +1694,14 @@ async function scrapeOne(page, code, productLink, existingRow = {}, indexRow = {
 
 // -------------------- Main --------------------
 async function main() {
-  const indexArr   = readJsonSafe(INDEX_JSON);
-  const detailsArr = readJsonSafe(OUT_JSON);
-  const clearedCarouselCodes = clearCarouselTextureUrls(detailsArr);
+  if (FLAG_ORGANIZE && ORGANIZE_ONLY_MODE) {
+    organizeDetailsFile(OUT_JSON);
+    return;
+  }
+
+  const indexArr   = readJsonFileSafe(INDEX_JSON);
+  const detailsArr = readJsonFileSafe(OUT_JSON);
+  const clearedCarouselCodes = dropCarouselTextureUrls(detailsArr);
   if (clearedCarouselCodes.length) {
     logStep(`[precheck] Cleared carousel texture_image_url for ${clearedCarouselCodes.length} product(s)`, clearedCarouselCodes.slice(0, 5));
   }
@@ -1542,7 +1709,7 @@ async function main() {
   // Handle --report early
   if (FLAG_REPORT) {
     const field = REPORT_FIELD;
-    const missing = filterCodesForMissingField(detailsArr, field).missing;
+    const missing = findCodesMissingField(detailsArr, field).missing;
     if (!missing.length) {
       console.log(`[report] No products missing "${field}".`);
     } else {
@@ -1555,8 +1722,9 @@ async function main() {
   // Handle --update early (in place, no scraping)
   if (FLAG_UPDATE) {
     const updated = updateDetailsInPlaceFromIndex(indexArr, detailsArr);
-    writeJsonPretty(OUT_JSON, updated);
+    writeJsonFilePretty(OUT_JSON, updated);
     console.log(`[update] Updated ${path.basename(OUT_JSON)} with missing fields from ${path.basename(INDEX_JSON)}.`);
+    organizeDetailsFile(OUT_JSON);
     return;
   }
 
@@ -1565,14 +1733,14 @@ async function main() {
 
   // --remaining: only codes missing entirely from details
   if (FLAG_REMAINING) {
-    const { missing } = codesMissingFromDetails(indexArr, detailsArr);
+    const { missing } = findMissingDetailCodes(indexArr, detailsArr);
     codesToProcess = missing;
   }
 
   // --missing=<field>: intersect with codes whose field is missing/empty
   if (MISSING_FIELD) {
-    const { missing } = filterCodesForMissingField(detailsArr, MISSING_FIELD);
-    const { missing: missingEntries } = codesMissingFromDetails(indexArr, detailsArr);
+    const { missing } = findCodesMissingField(detailsArr, MISSING_FIELD);
+    const { missing: missingEntries } = findMissingDetailCodes(indexArr, detailsArr);
     const set = new Set(missing);
     for (const code of missingEntries) set.add(code);
     codesToProcess = codesToProcess.filter(c => set.has(c));
@@ -1583,62 +1751,110 @@ async function main() {
   if (LIMIT > 0) codesToProcess = codesToProcess.slice(0, LIMIT);
 
   if (!codesToProcess.length && clearedCarouselCodes.length) {
-    writeJsonPretty(OUT_JSON, detailsArr);
+    writeJsonFilePretty(OUT_JSON, detailsArr);
     logStep(`[precheck] Persisted carousel clears to ${OUT_JSON}`);
   }
 
   console.log(`[plan] ${codesToProcess.length} code(s) to process.`);
 
   // Build quick lookups
-  const dmap = byCodeMap(detailsArr);
   const imap = byCodeMap(indexArr);
+
+  const outMap  = byCodeMap(detailsArr);
+  const totalToProcess = codesToProcess.length;
+  const safeBatchSize = Number.isFinite(BATCH_SIZE) && BATCH_SIZE > 0 ? BATCH_SIZE : Math.max(totalToProcess, 1);
+  const desiredConcurrency = Number.isFinite(MAX_CONCURRENCY) && MAX_CONCURRENCY > 0 ? MAX_CONCURRENCY : 1;
+  const activeConcurrency = Math.max(1, Math.min(desiredConcurrency, Math.max(totalToProcess, 1)));
+  if (totalToProcess > 0) {
+    console.log(`[plan] Using concurrency=${activeConcurrency} (max=${desiredConcurrency})`);
+  }
+
+  let nextIndex = 0;
+  let completedCount = 0;
+  let flushChain = Promise.resolve();
+
+  const nextCode = () => {
+    if (nextIndex >= totalToProcess) return null;
+    const code = codesToProcess[nextIndex];
+    nextIndex += 1;
+    return code;
+  };
+
+  const queueFlush = (reason) => {
+    const snapshot = [...outMap.values()];
+    flushChain = flushChain.then(() => {
+      writeJsonFilePretty(OUT_JSON, snapshot);
+      logStep(`[flush] Wrote ${OUT_JSON}${reason ? ` (${reason})` : ""}`);
+    });
+    return flushChain;
+  };
 
   // Launch Puppeteer
   const browser = await puppeteer.launch({ headless: HEADLESS });
   try {
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1440, height: 900 });
+    const workers = Array.from({ length: activeConcurrency }, (_, workerIndex) => (async () => {
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1440, height: 900 });
+      try {
+        while (true) {
+          const code = nextCode();
+          if (!code) break;
 
-    const outRows = [...detailsArr]; // start from existing
-    const outMap  = byCodeMap(outRows);
+          const idxRow = imap.get(code);
+          const link = idxRow?.["product-link"];
+          if (!hasString(link)) {
+            logStep(`[${code}] Missing product-link in index; skipping`);
+            continue;
+          }
 
-    for (let i = 0; i < codesToProcess.length; i += BATCH_SIZE) {
-      const batch = codesToProcess.slice(i, i + BATCH_SIZE);
+          let attempts = 0;
+          let scraped = null;
+          while (attempts < MAX_FETCH_ATTEMPTS && !scraped) {
+            attempts += 1;
+            try {
+              scraped = await scrapeOne(page, code, link, outMap.get(code), idxRow);
+            } catch (e) {
+              logStep(`[${code}] attempt ${attempts} failed: ${e.message || e}`);
+              if (attempts < MAX_FETCH_ATTEMPTS) {
+                await sleep(500);
+              }
+            }
+          }
 
-      for (const code of batch) {
-        const idxRow = imap.get(code);
-        const link = idxRow?.["product-link"];
-        if (!hasString(link)) { logStep(`[${code}] Missing product-link in index; skipping`); continue; }
+          if (!scraped) {
+            logStep(`[${code}] FAILED after ${MAX_FETCH_ATTEMPTS} attempts`);
+            continue;
+          }
 
-        let attempts = 0, scraped = null;
-        while (attempts < MAX_FETCH_ATTEMPTS && !scraped) {
-          attempts++;
-          try {
-            scraped = await scrapeOne(page, code, link, outMap.get(code), idxRow);
-          } catch (e) {
-            logStep(`[${code}] attempt ${attempts} failed: ${e.message || e}`);
-            await sleep(1000);
+          // Merge into out map (preserve, add missing; texture_scale overwritten in scrapeOne)
+          if (outMap.has(code)) {
+            const merged = { ...outMap.get(code), ...scraped };
+            outMap.set(code, merged);
+          } else {
+            outMap.set(code, { ...idxRow, ...scraped });
+          }
+
+          completedCount += 1;
+          if (completedCount % safeBatchSize === 0) {
+            await queueFlush();
           }
         }
-        if (!scraped) { logStep(`[${code}] FAILED after ${MAX_FETCH_ATTEMPTS} attempts`); continue; }
-
-        // Merge into out map (preserve, add missing; texture_scale overwritten in scrapeOne)
-        if (outMap.has(code)) {
-          const merged = { ...outMap.get(code), ...scraped };
-          outMap.set(code, merged);
-        } else {
-          outMap.set(code, { ...idxRow, ...scraped });
-        }
+      } finally {
+        await page.close().catch(() => {});
       }
+    })());
 
-      // Flush to disk after each batch
-      writeJsonPretty(OUT_JSON, [...outMap.values()]);
-      logStep(`[flush] Wrote ${OUT_JSON}`);
+    await Promise.all(workers);
+
+    if (completedCount > 0 && completedCount % safeBatchSize !== 0) {
+      await queueFlush("final");
     }
+    await flushChain;
   } finally {
     await browser.close().catch(() => {});
   }
 
+  organizeDetailsFile(OUT_JSON);
   console.log("Done.");
 }
 
